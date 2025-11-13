@@ -1,0 +1,11 @@
+[
+  { "id": "crm", "name": "CRM Tools", "icon": "📊" },
+  { "id": "automation", "name": "Automation", "icon": "⚡" },
+  { "id": "ai", "name": "AI Integrations", "icon": "🤖" },
+  { "id": "widgets", "name": "Widgets", "icon": "🧩" },
+  { "id": "templates", "name": "Templates", "icon": "📄" },
+  { "id": "analytics", "name": "Analytics", "icon": "📈" },
+  { "id": "communication", "name": "Communication", "icon": "💬" },
+  { "id": "payments", "name": "Payments", "icon": "💳" },
+  { "id": "white-label", "name": "White Label", "icon": "🏷️" }
+]
