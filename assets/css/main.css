@@ -5,8 +5,15 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    background-color: #0a1628;
+  }
+
   body {
-    @apply bg-navy-950 text-white antialiased;
+    background-color: #0a1628;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
