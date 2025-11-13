@@ -57,9 +57,7 @@
           <Button
             as="a"
             href="/submit"
-            severity="primary"
             size="small"
-            severity="primary"
             style="padding: 0.5rem 0.875rem;"
           >
             <template #default>
