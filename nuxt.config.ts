@@ -5,13 +5,8 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
     '@vueuse/nuxt'
   ],
-
-  colorMode: {
-    classSuffix: ''
-  },
 
   nitro: {
     prerender: {
@@ -32,7 +27,10 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      ]
+      ],
+      htmlAttrs: {
+        class: 'dark'
+      }
     }
   }
 })

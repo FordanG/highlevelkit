@@ -5,7 +5,10 @@
   >
     <!-- Logo and Badges -->
     <div class="flex items-start justify-between mb-3">
-      <div class="text-5xl">{{ app.logo }}</div>
+      <div v-if="app.image" class="w-16 h-16 rounded-lg overflow-hidden ring-1 ring-white/10 flex-shrink-0">
+        <img :src="app.image" :alt="app.name" class="w-full h-full object-cover" />
+      </div>
+      <div v-else class="text-5xl flex-shrink-0">{{ app.logo }}</div>
       <div class="flex flex-col gap-1.5">
         <span
           v-if="app.featured"
