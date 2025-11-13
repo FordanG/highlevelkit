@@ -261,7 +261,7 @@
     "slug": "supercloner",
     "tagline": "Clone and duplicate your GoHighLevel assets instantly",
     "description": "Save hours of manual work by instantly cloning your funnels, workflows, campaigns, and entire sub-accounts. Perfect for agencies managing multiple clients who need to duplicate successful setups quickly and efficiently.",
-    "logo": "🔄",
+    "logo": "https://assets.cdn.filesafe.space/Sr99nTAsuyCabfQCL1JQ/media/68a2968025dfa384b83252fd.png",
     "category": ["automation", "widgets"],
     "pricing": {
       "model": "paid",
@@ -293,7 +293,7 @@
     "slug": "zapier",
     "tagline": "Connect GoHighLevel to 6000+ apps",
     "description": "Zapier is the go-to automation platform that connects GoHighLevel with over 6000 different applications. Automate repetitive tasks, create custom workflows, and integrate with tools like Slack, Google Sheets, and calendars without any code.",
-    "logo": "⚡",
+    "logo": "https://res.cloudinary.com/zapier-media/image/upload/v1745941190/Homepage/og-homepage_zls2qi.png",
     "category": ["automation", "integration"],
     "pricing": {
       "model": "freemium",
@@ -325,7 +325,7 @@
     "slug": "stripe",
     "tagline": "Complete payment processing solution",
     "description": "Stripe integrates seamlessly with GoHighLevel for sending invoices, collecting payments, and triggering automated workflows when customers make purchases. Handle subscriptions, one-time payments, and complex billing scenarios with ease.",
-    "logo": "💰",
+    "logo": "https://cdn.simpleicons.org/stripe",
     "category": ["payments", "automation"],
     "pricing": {
       "model": "free",
@@ -356,7 +356,7 @@
     "slug": "twilio",
     "tagline": "Powerful SMS and calling platform",
     "description": "Connect Twilio to GoHighLevel for advanced calling and SMS capabilities. Enable two-way texting, voicemail drops, phone call routing, and automated communications to enhance your customer engagement.",
-    "logo": "📞",
+    "logo": "https://cdn.simpleicons.org/twilio",
     "category": ["communication", "automation"],
     "pricing": {
       "model": "freemium",
@@ -388,7 +388,7 @@
     "slug": "calendly",
     "tagline": "Smart scheduling made simple",
     "description": "Calendly is a smart scheduling tool that integrates with GoHighLevel to make meeting booking effortless. Features include time zone detection, buffer time settings, calendar integration, and automated reminders to reduce no-shows.",
-    "logo": "📆",
+    "logo": "https://cdn.simpleicons.org/calendly",
     "category": ["automation", "widgets"],
     "pricing": {
       "model": "freemium",
@@ -420,7 +420,7 @@
     "slug": "clickup",
     "tagline": "All-in-one project management",
     "description": "Integrate ClickUp with GoHighLevel to automate project management tasks. When a new lead comes in, automatically create tasks in ClickUp, ensuring efficient lead follow-up and seamless project tracking.",
-    "logo": "✅",
+    "logo": "https://cdn.simpleicons.org/clickup",
     "category": ["automation", "crm"],
     "pricing": {
       "model": "freemium",
@@ -452,7 +452,7 @@
     "slug": "mailgun",
     "tagline": "Reliable email delivery service",
     "description": "Mailgun ensures your GoHighLevel emails reach the inbox, not the spam folder. With advanced deliverability features, real-time analytics, and powerful APIs, it's the perfect solution for high-volume email sending.",
-    "logo": "📬",
+    "logo": "https://cdn.simpleicons.org/mailgun",
     "category": ["communication", "automation"],
     "pricing": {
       "model": "freemium",
@@ -484,7 +484,7 @@
     "slug": "activecampaign",
     "tagline": "Advanced email marketing automation",
     "description": "ActiveCampaign is a powerful email marketing platform that integrates with GoHighLevel. Features include dynamic content, AI-driven workflows, and connections to 950+ apps for comprehensive marketing automation.",
-    "logo": "📨",
+    "logo": "https://cdn.simpleicons.org/activecampaign",
     "category": ["communication", "automation"],
     "pricing": {
       "model": "paid",
@@ -516,7 +516,7 @@
     "slug": "quickbooks",
     "tagline": "Professional accounting made easy",
     "description": "QuickBooks integrates directly with GoHighLevel to transfer financial data seamlessly. Perfect for tax compliance, reporting, invoicing, expense tracking, and comprehensive financial management.",
-    "logo": "💼",
+    "logo": "https://cdn.simpleicons.org/quickbooks",
     "category": ["payments", "crm"],
     "pricing": {
       "model": "paid",
@@ -548,7 +548,7 @@
     "slug": "lemlist",
     "tagline": "Personalized outreach at scale",
     "description": "Lemlist connects to GoHighLevel workflows to sync contacts and start personalized, multi-channel outreach sequences. Automatically trigger actions based on prospect activity and engagement.",
-    "logo": "💌",
+    "logo": "https://cdn.simpleicons.org/lemlist",
     "category": ["communication", "automation"],
     "pricing": {
       "model": "paid",
@@ -580,7 +580,7 @@
     "slug": "nuacom",
     "tagline": "Advanced phone system for GHL",
     "description": "NUACOM offers streamlined workflow with click-to-call functionality. Features include automatic call logging, text messaging, call recordings, AI analysis, advanced call routing, IVR, and comprehensive analytics.",
-    "logo": "☎️",
+    "logo": "https://nuacom.com/wp-content/themes/nuacom/assets/images/logo.svg",
     "category": ["communication", "automation"],
     "pricing": {
       "model": "paid",
