@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-navy-950 min-h-screen">
+  <div class="bg-navy-950 min-h-screen p-dark">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -7,9 +7,17 @@
 </template>
 
 <script setup lang="ts">
+// Enable PrimeVue dark mode
+onMounted(() => {
+  if (process.client) {
+    document.documentElement.classList.add('p-dark')
+  }
+})
+
 useHead({
   htmlAttrs: {
-    lang: 'en'
+    lang: 'en',
+    class: 'p-dark'
   }
 })
 </script>

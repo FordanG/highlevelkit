@@ -34,12 +34,8 @@
 
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up mb-8">
-            <NuxtLink to="/apps" class="btn-primary">
-              Browse All Apps
-            </NuxtLink>
-            <NuxtLink to="/submit" class="btn-secondary">
-              Submit Your App
-            </NuxtLink>
+            <Button as="a" href="/apps" label="Browse All Apps" />
+            <Button as="a" href="/submit" label="Submit Your App" severity="secondary" />
           </div>
 
           <!-- Quick Stats -->
@@ -149,15 +145,19 @@
             <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
               Join thousands of agencies and entrepreneurs who have found their perfect tools
             </p>
-            <NuxtLink
-              to="/apps"
-              class="inline-flex items-center gap-2 px-8 py-4 bg-primary-500/90 hover:bg-primary-400 text-white font-semibold rounded-lg transition-all ring-1 ring-primary-400/30"
+            <Button
+              as="a"
+              href="/apps"
+              severity="primary"
+              size="large"
             >
-              Explore All Apps
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </NuxtLink>
+              <template #default>
+                <span>Explore All Apps</span>
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </template>
+            </Button>
           </div>
         </div>
       </div>

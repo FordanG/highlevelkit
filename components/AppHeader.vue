@@ -36,38 +36,54 @@
         <!-- Right Side Actions -->
         <div class="flex items-center gap-2">
           <!-- Search Button -->
-          <button
+          <Button
             @click="openSearch"
-            class="hidden sm:flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md border border-white/10 hover:border-white/20 hover:bg-white/5"
+            severity="secondary"
+            size="small"
+            text
+            class="hidden sm:flex p-button-text"
             aria-label="Search"
+            style="padding: 0.5rem 0.75rem;"
           >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <span>Search</span>
-          </button>
+            <template #default>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <span class="ml-2">Search</span>
+            </template>
+          </Button>
 
           <!-- Submit Button -->
-          <NuxtLink
-            to="/submit"
-            class="inline-flex items-center gap-2 text-sm px-3.5 py-2 rounded-md bg-primary-500/90 hover:bg-primary-400 text-white transition-colors ring-1 ring-primary-400/30"
+          <Button
+            as="a"
+            href="/submit"
+            size="small"
+            style="padding: 0.5rem 0.875rem;"
           >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-            </svg>
-            <span class="hidden sm:inline">Submit App</span>
-          </NuxtLink>
+            <template #default>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+              <span class="hidden sm:inline ml-2">Submit App</span>
+            </template>
+          </Button>
 
           <!-- Mobile Menu Button -->
-          <button
+          <Button
             @click="toggleMenu"
-            class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-md border border-white/10 hover:border-white/20 hover:bg-white/5 transition-colors"
+            severity="secondary"
+            text
+            icon-only
+            class="md:inline-flex md:!hidden p-button-text"
             aria-label="Toggle menu"
+            style="height: 2.25rem; width: 2.25rem; padding: 0;"
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+            <template #default>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </template>
+          </Button>
         </div>
       </div>
 

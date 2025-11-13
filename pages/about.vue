@@ -54,9 +54,12 @@
           <p class="text-slate-300 mb-6">
             Have an app you'd like to feature? Submit it today!
           </p>
-          <NuxtLink to="/submit" class="btn-primary">
-            Submit Your App
-          </NuxtLink>
+          <Button
+            as="a"
+            href="/submit"
+            label="Submit Your App"
+            severity="primary"
+          />
         </section>
       </div>
     </div>

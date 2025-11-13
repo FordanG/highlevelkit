@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import './primevue-theme.css';
 
 @tailwind base;
 @tailwind components;
@@ -37,4 +38,7 @@
   .input-field {
     @apply w-full px-4 py-3 border border-white/10 rounded-lg bg-navy-950/80 text-white placeholder-slate-400 focus:outline-none focus:border-primary-400/50 focus:ring-2 focus:ring-primary-400/30 transition-all;
   }
+
+  /* PrimeVue component styling handled in primevue-theme.css */
+  /* Keep only legacy custom classes for non-PrimeVue elements */
 }

@@ -18,20 +18,21 @@
 
         <form @submit.prevent="handleSubmit" class="max-w-md mx-auto">
           <div class="flex flex-col sm:flex-row gap-2">
-            <input
+            <InputText
               v-model="email"
               type="email"
               placeholder="you@agency.com"
               required
-              class="input-field flex-1 h-10"
+              class="flex-1"
+              style="height: 2.5rem;"
             />
-            <button
+            <Button
               type="submit"
-              class="h-10 px-6 rounded-md bg-primary-500/90 hover:bg-primary-400 text-white transition ring-1 ring-primary-400/30 font-medium whitespace-nowrap"
+              :label="isSubmitting ? 'Subscribing...' : 'Subscribe'"
               :disabled="isSubmitting"
-            >
-              {{ isSubmitting ? 'Subscribing...' : 'Subscribe' }}
-            </button>
+              class="whitespace-nowrap"
+              style="height: 2.5rem;"
+            />
           </div>
           <p v-if="submitted" class="mt-3 text-sm text-emerald-300 inline-flex items-center gap-1">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

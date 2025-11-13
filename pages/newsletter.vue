@@ -31,24 +31,22 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Email Address *
             </label>
-            <input
+            <InputText
               v-model="email"
               type="email"
               required
-              class="input-field"
               placeholder="your@email.com"
             />
           </div>
 
           <!-- Submit Button -->
           <div>
-            <button
+            <Button
               type="submit"
               :disabled="isSubmitting"
-              class="btn-primary w-full"
-            >
-              {{ isSubmitting ? 'Subscribing...' : 'Subscribe to Newsletter' }}
-            </button>
+              :label="isSubmitting ? 'Subscribing...' : 'Subscribe to Newsletter'"
+              class="w-full"
+            />
           </div>
 
           <p v-if="submitted" class="text-center text-green-400">

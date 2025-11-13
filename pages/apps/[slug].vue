@@ -75,27 +75,30 @@
 
             <!-- CTA Buttons -->
             <div class="flex flex-wrap gap-3">
-              <a
+              <Button
                 v-if="app.website"
+                as="a"
                 :href="app.website"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-6 py-3 bg-primary-500/90 hover:bg-primary-400 text-white font-semibold rounded-lg transition-all ring-1 ring-primary-400/30"
+                severity="primary"
               >
-                Visit Website
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-              <a
+                <template #default>
+                  <span>Visit Website</span>
+                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </template>
+              </Button>
+              <Button
                 v-if="app.affiliateLink"
+                as="a"
                 :href="app.affiliateLink"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/7 border border-white/10 hover:border-white/20 text-slate-200 font-semibold rounded-lg transition-all"
-              >
-                Get Special Offer
-              </a>
+                label="Get Special Offer"
+                severity="secondary"
+              />
             </div>
           </div>
         </div>
@@ -132,9 +135,12 @@
     <div class="text-center">
       <h1 class="text-4xl font-semibold tracking-tight text-white mb-4" style="letter-spacing:-0.02em">App Not Found</h1>
       <p class="text-slate-400 mb-8">The app you're looking for doesn't exist.</p>
-      <NuxtLink to="/apps" class="btn-primary">
-        Browse All Apps
-      </NuxtLink>
+      <Button
+        as="a"
+        href="/apps"
+        label="Browse All Apps"
+        severity="primary"
+      />
     </div>
   </div>
 </template>

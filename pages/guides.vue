@@ -21,9 +21,12 @@
       <p class="text-slate-300 mb-8">
         We're working on comprehensive integration guides. Stay tuned!
       </p>
-      <NuxtLink to="/apps" class="btn-primary">
-        Browse Apps
-      </NuxtLink>
+      <Button
+        as="a"
+        href="/apps"
+        label="Browse Apps"
+        severity="primary"
+      />
     </div>
   </div>
 </template>
