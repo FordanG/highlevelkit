@@ -5,8 +5,19 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@primevue/nuxt-module'
   ],
+
+  primevue: {
+    options: {
+      theme: 'none',
+      ripple: true,
+    },
+    components: {
+      include: ['Button', 'InputText', 'Textarea', 'Dropdown', 'Select']
+    }
+  },
 
   nitro: {
     prerender: {

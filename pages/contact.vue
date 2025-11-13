@@ -21,11 +21,10 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Name *
             </label>
-            <input
+            <InputText
               v-model="form.name"
               type="text"
               required
-              class="input-field"
               placeholder="Your name"
             />
           </div>
@@ -35,11 +34,10 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Email *
             </label>
-            <input
+            <InputText
               v-model="form.email"
               type="email"
               required
-              class="input-field"
               placeholder="your@email.com"
             />
           </div>
@@ -49,11 +47,10 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Subject *
             </label>
-            <input
+            <InputText
               v-model="form.subject"
               type="text"
               required
-              class="input-field"
               placeholder="What's this about?"
             />
           </div>
@@ -63,24 +60,22 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Message *
             </label>
-            <textarea
+            <Textarea
               v-model="form.message"
               required
               rows="6"
-              class="input-field"
               placeholder="Tell us what you're thinking..."
-            ></textarea>
+            />
           </div>
 
           <!-- Submit Button -->
           <div>
-            <button
+            <Button
               type="submit"
               :disabled="isSubmitting"
-              class="btn-primary w-full"
-            >
-              {{ isSubmitting ? 'Sending...' : 'Send Message' }}
-            </button>
+              :label="isSubmitting ? 'Sending...' : 'Send Message'"
+              class="p-button-primary w-full"
+            />
           </div>
 
           <p v-if="submitted" class="text-center text-green-400">

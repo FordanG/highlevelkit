@@ -19,11 +19,10 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               App Name *
             </label>
-            <input
+            <InputText
               v-model="form.name"
               type="text"
               required
-              class="input-field"
               placeholder="Your awesome app"
             />
           </div>
@@ -33,11 +32,10 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Tagline *
             </label>
-            <input
+            <InputText
               v-model="form.tagline"
               type="text"
               required
-              class="input-field"
               placeholder="A brief description of what your app does"
             />
           </div>
@@ -47,13 +45,12 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Description *
             </label>
-            <textarea
+            <Textarea
               v-model="form.description"
               required
               rows="4"
-              class="input-field"
               placeholder="Detailed description of your app's features and benefits"
-            ></textarea>
+            />
           </div>
 
           <!-- Website URL -->
@@ -61,11 +58,10 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Website URL *
             </label>
-            <input
+            <InputText
               v-model="form.website"
               type="url"
               required
-              class="input-field"
               placeholder="https://yourapp.com"
             />
           </div>
@@ -75,12 +71,14 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Primary Category *
             </label>
-            <select v-model="form.category" required class="input-field">
-              <option value="">Select a category</option>
-              <option v-for="cat in categories" :key="cat.id" :value="cat.id">
-                {{ cat.icon }} {{ cat.name }}
-              </option>
-            </select>
+            <Select
+              v-model="form.category"
+              :options="categoryOptions"
+              optionLabel="label"
+              optionValue="value"
+              placeholder="Select a category"
+              required
+            />
           </div>
 
           <!-- Pricing -->
@@ -88,13 +86,14 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Pricing Model *
             </label>
-            <select v-model="form.pricingModel" required class="input-field">
-              <option value="">Select pricing model</option>
-              <option value="free">Free</option>
-              <option value="freemium">Freemium</option>
-              <option value="paid">Paid</option>
-              <option value="one-time">One-time Payment</option>
-            </select>
+            <Select
+              v-model="form.pricingModel"
+              :options="pricingOptions"
+              optionLabel="label"
+              optionValue="value"
+              placeholder="Select pricing model"
+              required
+            />
           </div>
 
           <!-- Contact Email -->
@@ -102,24 +101,22 @@
             <label class="block text-sm font-medium text-slate-200 mb-2">
               Contact Email *
             </label>
-            <input
+            <InputText
               v-model="form.email"
               type="email"
               required
-              class="input-field"
               placeholder="your@email.com"
             />
           </div>
 
           <!-- Submit Button -->
           <div>
-            <button
+            <Button
               type="submit"
               :disabled="isSubmitting"
-              class="btn-primary w-full"
-            >
-              {{ isSubmitting ? 'Submitting...' : 'Submit App for Review' }}
-            </button>
+              :label="isSubmitting ? 'Submitting...' : 'Submit App for Review'"
+              class="p-button-primary w-full"
+            />
           </div>
 
           <p v-if="submitted" class="text-center text-green-400">
@@ -160,6 +157,18 @@
 import categoriesData from '~/data/categories.json'
 
 const categories = categoriesData
+
+const categoryOptions = categories.map(cat => ({
+  label: `${cat.icon} ${cat.name}`,
+  value: cat.id
+}))
+
+const pricingOptions = [
+  { label: 'Free', value: 'free' },
+  { label: 'Freemium', value: 'freemium' },
+  { label: 'Paid', value: 'paid' },
+  { label: 'One-time Payment', value: 'one-time' }
+]
 
 const form = reactive({
   name: '',
