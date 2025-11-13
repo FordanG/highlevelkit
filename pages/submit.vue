@@ -122,7 +122,7 @@
             </button>
           </div>
 
-          <p v-if="submitted" class="text-center text-green-600 dark:text-green-400">
+          <p v-if="submitted" class="text-center text-green-400">
             ✓ Thank you! We'll review your submission and get back to you soon.
           </p>
         </form>
