@@ -24,11 +24,10 @@
               <label class="block text-sm font-medium text-slate-200 mb-2">
                 Search
               </label>
-              <input
+              <InputText
                 v-model="searchQuery"
                 type="text"
                 placeholder="Search apps..."
-                class="input-field"
               />
             </div>
 
@@ -37,12 +36,13 @@
               <label class="block text-sm font-medium text-slate-200 mb-2">
                 Category
               </label>
-              <select v-model="selectedCategory" class="input-field">
-                <option value="">All Categories</option>
-                <option v-for="cat in categories" :key="cat.id" :value="cat.id">
-                  {{ cat.icon }} {{ cat.name }}
-                </option>
-              </select>
+              <Select
+                v-model="selectedCategory"
+                :options="categoryOptions"
+                optionLabel="label"
+                optionValue="value"
+                placeholder="All Categories"
+              />
             </div>
 
             <!-- Pricing Filter -->
@@ -86,12 +86,13 @@
               <label class="block text-sm font-medium text-slate-200 mb-2">
                 Setup Difficulty
               </label>
-              <select v-model="selectedDifficulty" class="input-field">
-                <option value="">All Levels</option>
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="advanced">Advanced</option>
-              </select>
+              <Select
+                v-model="selectedDifficulty"
+                :options="difficultyOptions"
+                optionLabel="label"
+                optionValue="value"
+                placeholder="All Levels"
+              />
             </div>
 
             <!-- Tags -->
@@ -102,38 +103,36 @@
                 </label>
               </div>
               <div class="flex flex-wrap gap-2">
-                <button
+                <Button
                   @click="toggleFeatured"
-                  :class="[
-                    'px-3 py-1 text-sm rounded-full transition-colors',
-                    showFeatured
-                      ? 'bg-accent-600 text-white'
-                      : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10'
-                  ]"
-                >
-                  ⭐ Featured
-                </button>
-                <button
+                  :label="'⭐ Featured'"
+                  size="small"
+                  :class="showFeatured ? '' : 'p-button-secondary'"
+                  :severity="showFeatured ? 'warning' : 'secondary'"
+                  text
+                  style="border-radius: 9999px; padding: 0.25rem 0.75rem;"
+                />
+                <Button
                   @click="toggleTrending"
-                  :class="[
-                    'px-3 py-1 text-sm rounded-full transition-colors',
-                    showTrending
-                      ? 'bg-primary-600 text-white'
-                      : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10'
-                  ]"
-                >
-                  🔥 Trending
-                </button>
+                  :label="'🔥 Trending'"
+                  size="small"
+                  :class="showTrending ? 'p-button-primary' : 'p-button-secondary'"
+                  :severity="showTrending ? 'primary' : 'secondary'"
+                  text
+                  style="border-radius: 9999px; padding: 0.25rem 0.75rem;"
+                />
               </div>
             </div>
 
             <!-- Clear Filters -->
-            <button
+            <Button
               @click="clearFilters"
-              class="w-full text-sm text-primary-400 hover:text-primary-300 hover:underline"
-            >
-              Clear All Filters
-            </button>
+              label="Clear All Filters"
+              text
+              size="small"
+              class="p-button-text w-full"
+              style="color: rgb(96 165 250); padding: 0.5rem;"
+            />
           </div>
         </aside>
 
@@ -144,13 +143,13 @@
             <p class="text-sm text-slate-400">
               Showing {{ filteredApps.length }} apps
             </p>
-            <select v-model="sortBy" class="input-field w-auto">
-              <option value="rating">Highest Rated</option>
-              <option value="reviews">Most Reviews</option>
-              <option value="name">Name (A-Z)</option>
-              <option value="price-low">Price (Low to High)</option>
-              <option value="price-high">Price (High to Low)</option>
-            </select>
+            <Select
+              v-model="sortBy"
+              :options="sortOptions"
+              optionLabel="label"
+              optionValue="value"
+              style="width: auto; min-width: 180px;"
+            />
           </div>
 
           <!-- Apps List -->
@@ -171,9 +170,11 @@
             <p class="text-slate-300 mb-6">
               Try adjusting your filters to see more results
             </p>
-            <button @click="clearFilters" class="btn-primary">
-              Clear Filters
-            </button>
+            <Button
+              @click="clearFilters"
+              label="Clear Filters"
+              class="p-button-primary"
+            />
           </div>
         </div>
       </div>
@@ -187,6 +188,30 @@ import categoriesData from '~/data/categories.json'
 
 const apps = appsData
 const categories = categoriesData
+
+// Options for Select components
+const categoryOptions = [
+  { label: 'All Categories', value: '' },
+  ...categories.map(cat => ({
+    label: `${cat.icon} ${cat.name}`,
+    value: cat.id
+  }))
+]
+
+const difficultyOptions = [
+  { label: 'All Levels', value: '' },
+  { label: 'Easy', value: 'easy' },
+  { label: 'Medium', value: 'medium' },
+  { label: 'Advanced', value: 'advanced' }
+]
+
+const sortOptions = [
+  { label: 'Highest Rated', value: 'rating' },
+  { label: 'Most Reviews', value: 'reviews' },
+  { label: 'Name (A-Z)', value: 'name' },
+  { label: 'Price (Low to High)', value: 'price-low' },
+  { label: 'Price (High to Low)', value: 'price-high' }
+]
 
 // Filters
 const searchQuery = ref('')

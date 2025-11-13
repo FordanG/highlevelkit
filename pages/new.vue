@@ -34,9 +34,12 @@
         <p class="text-slate-300 mb-6">
           Check back soon for new additions to our directory
         </p>
-        <NuxtLink to="/apps" class="btn-primary">
-          Browse All Apps
-        </NuxtLink>
+        <Button
+          as="a"
+          href="/apps"
+          label="Browse All Apps"
+          class="p-button-primary"
+        />
       </div>
     </div>
   </div>

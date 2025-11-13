@@ -21,9 +21,12 @@
       <p class="text-slate-300 mb-8">
         We're building a community space for GoHighLevel users. Stay tuned!
       </p>
-      <NuxtLink to="/apps" class="btn-primary">
-        Browse Apps
-      </NuxtLink>
+      <Button
+        as="a"
+        href="/apps"
+        label="Browse Apps"
+        class="p-button-primary"
+      />
     </div>
   </div>
 </template>
