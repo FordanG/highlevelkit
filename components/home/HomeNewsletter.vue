@@ -30,7 +30,7 @@
               type="submit"
               :label="isSubmitting ? 'Subscribing...' : 'Subscribe'"
               :disabled="isSubmitting"
-              class="p-button-primary whitespace-nowrap"
+              class="whitespace-nowrap"
               style="height: 2.5rem;"
             />
           </div>
