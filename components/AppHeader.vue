@@ -1,76 +1,70 @@
 <template>
-  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/70 border-b border-white/5">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
-        <NuxtLink to="/" class="flex items-center space-x-2 group">
-          <div class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-            Highlevel Kit
+        <NuxtLink to="/" class="inline-flex items-center gap-2 group">
+          <div class="h-7 w-7 rounded-md bg-primary-500/10 ring-1 ring-primary-500/30 grid place-items-center">
+            <span class="text-primary-400 text-[11px] font-semibold tracking-tight" style="letter-spacing:-0.02em">HK</span>
           </div>
+          <span class="text-slate-100 text-base sm:text-[17px] font-semibold tracking-tight group-hover:text-white transition-colors" style="letter-spacing:-0.02em">Highlevel Kit</span>
+          <span class="hidden sm:inline-flex text-[11px] text-slate-400/80 px-2 py-0.5 rounded border border-white/10">Beta</span>
         </NuxtLink>
 
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8">
+        <div class="hidden md:flex items-center gap-6">
           <NuxtLink
             to="/apps"
-            class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors"
+            class="text-sm text-slate-300 hover:text-white transition-colors"
           >
-            Browse Apps
+            Apps
           </NuxtLink>
           <NuxtLink
             to="/categories"
-            class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors"
+            class="text-sm text-slate-300 hover:text-white transition-colors"
           >
             Categories
           </NuxtLink>
           <NuxtLink
             to="/new"
-            class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors"
+            class="text-sm text-slate-300 hover:text-white transition-colors"
           >
             New Releases
-          </NuxtLink>
-          <NuxtLink
-            to="/submit"
-            class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors"
-          >
-            Submit App
           </NuxtLink>
         </div>
 
         <!-- Right Side Actions -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center gap-2">
           <!-- Search Button -->
           <button
             @click="openSearch"
-            class="p-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+            class="hidden sm:flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors px-3 py-2 rounded-md border border-white/10 hover:border-white/20 hover:bg-white/5"
             aria-label="Search"
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
+            <span>Search</span>
           </button>
 
-          <!-- Theme Toggle -->
-          <button
-            @click="toggleTheme"
-            class="p-2 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-            aria-label="Toggle theme"
+          <!-- Submit Button -->
+          <NuxtLink
+            to="/submit"
+            class="inline-flex items-center gap-2 text-sm px-3.5 py-2 rounded-md bg-primary-500/90 hover:bg-primary-400 text-white transition-colors ring-1 ring-primary-400/30"
           >
-            <svg v-if="colorMode.value === 'dark'" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
-            <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-          </button>
+            <span class="hidden sm:inline">Submit App</span>
+          </NuxtLink>
 
           <!-- Mobile Menu Button -->
           <button
             @click="toggleMenu"
-            class="md:hidden p-2 text-gray-600 dark:text-gray-400"
+            class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-md border border-white/10 hover:border-white/20 hover:bg-white/5 transition-colors"
             aria-label="Toggle menu"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
@@ -78,31 +72,31 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div v-if="isMenuOpen" class="md:hidden py-4 space-y-3">
+      <div v-if="isMenuOpen" class="md:hidden py-4 space-y-3 border-t border-white/5">
         <NuxtLink
           to="/apps"
-          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium"
+          class="block py-2 text-sm text-slate-300 hover:text-white transition-colors"
           @click="closeMenu"
         >
-          Browse Apps
+          Apps
         </NuxtLink>
         <NuxtLink
           to="/categories"
-          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium"
+          class="block py-2 text-sm text-slate-300 hover:text-white transition-colors"
           @click="closeMenu"
         >
           Categories
         </NuxtLink>
         <NuxtLink
           to="/new"
-          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium"
+          class="block py-2 text-sm text-slate-300 hover:text-white transition-colors"
           @click="closeMenu"
         >
           New Releases
         </NuxtLink>
         <NuxtLink
           to="/submit"
-          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium"
+          class="block py-2 text-sm text-slate-300 hover:text-white transition-colors"
           @click="closeMenu"
         >
           Submit App
@@ -113,12 +107,7 @@
 </template>
 
 <script setup lang="ts">
-const colorMode = useColorMode()
 const isMenuOpen = ref(false)
-
-const toggleTheme = () => {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-}
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
