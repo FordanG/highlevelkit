@@ -11,6 +11,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        navy: {
+          950: '#0a1628',
+        },
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',

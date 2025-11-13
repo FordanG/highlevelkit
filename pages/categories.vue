@@ -1,11 +1,11 @@
 <template>
-  <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
-    <div class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+  <div class="min-h-screen">
+    <div class="border-b border-white/5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <h1 class="text-4xl font-bold text-white mb-4">
           Categories
         </h1>
-        <p class="text-gray-600 dark:text-gray-400">
+        <p class="text-slate-300">
           Browse apps by category
         </p>
       </div>
@@ -20,10 +20,10 @@
           class="card p-8 hover:scale-105 transition-all cursor-pointer"
         >
           <div class="text-5xl mb-4">{{ category.icon }}</div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+          <h3 class="text-xl font-bold text-white mb-2">
             {{ category.name }}
           </h3>
-          <p class="text-gray-600 dark:text-gray-400">
+          <p class="text-slate-300">
             {{ category.count }} apps
           </p>
         </NuxtLink>

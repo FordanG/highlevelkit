@@ -6,8 +6,8 @@
         <div class="flex flex-col md:flex-row gap-8">
           <!-- Logo -->
           <div class="flex-shrink-0">
-            <div v-if="app.image" class="w-32 h-32 rounded-2xl overflow-hidden ring-1 ring-white/10">
-              <img :src="app.image" :alt="app.name" class="w-full h-full object-cover" />
+            <div v-if="app.image || isLogoUrl(app.logo)" class="w-32 h-32 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5 flex items-center justify-center p-4">
+              <img :src="app.image || app.logo" :alt="app.name" class="w-full h-full object-contain" />
             </div>
             <div v-else class="w-32 h-32 bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-2xl flex items-center justify-center ring-1 ring-white/10">
               <span class="text-6xl">{{ app.logo }}</span>
@@ -158,6 +158,10 @@ const relatedApps = app
       )
       .slice(0, 3)
   : []
+
+const isLogoUrl = (logo: string) => {
+  return logo && (logo.startsWith('http://') || logo.startsWith('https://'))
+}
 
 const getCategoryName = (id: string) => {
   const category = categoriesData.find(c => c.id === id)

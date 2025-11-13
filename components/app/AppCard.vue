@@ -5,8 +5,8 @@
   >
     <!-- Logo and Badges -->
     <div class="flex items-start justify-between mb-3">
-      <div v-if="app.image" class="w-16 h-16 rounded-lg overflow-hidden ring-1 ring-white/10 flex-shrink-0">
-        <img :src="app.image" :alt="app.name" class="w-full h-full object-cover" />
+      <div v-if="app.image || isLogoUrl" class="w-16 h-16 rounded-lg overflow-hidden ring-1 ring-white/10 flex-shrink-0 bg-white/5 flex items-center justify-center p-2">
+        <img :src="app.image || app.logo" :alt="app.name" class="w-full h-full object-contain" />
       </div>
       <div v-else class="text-5xl flex-shrink-0">{{ app.logo }}</div>
       <div class="flex flex-col gap-1.5">
@@ -106,6 +106,10 @@ interface App {
 const props = defineProps<{
   app: App
 }>()
+
+const isLogoUrl = computed(() => {
+  return props.app.logo && (props.app.logo.startsWith('http://') || props.app.logo.startsWith('https://'))
+})
 
 const getCategoryName = (id: string) => {
   const category = categoriesData.find(c => c.id === id)
