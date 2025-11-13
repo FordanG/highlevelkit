@@ -13,6 +13,12 @@ export default defineNuxtConfig({
     classSuffix: ''
   },
 
+  nitro: {
+    prerender: {
+      failOnError: false
+    }
+  },
+
   app: {
     head: {
       title: 'Highlevel Kit - Discover the Best GoHighLevel Apps & Integrations',
