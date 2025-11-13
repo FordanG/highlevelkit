@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 
   primevue: {
     options: {
-      theme: 'none',
+      unstyled: true,
       ripple: true,
     },
     components: {
