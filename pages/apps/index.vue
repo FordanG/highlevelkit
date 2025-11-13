@@ -1,12 +1,12 @@
 <template>
-  <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+  <div class="min-h-screen">
     <!-- Header -->
-    <div class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+    <div class="border-b border-white/5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <h1 class="text-4xl font-bold text-white mb-4">
           Browse Apps
         </h1>
-        <p class="text-gray-600 dark:text-gray-400">
+        <p class="text-slate-300">
           Discover {{ filteredApps.length }} apps to enhance your GoHighLevel experience
         </p>
       </div>
@@ -17,11 +17,11 @@
         <!-- Filters Sidebar -->
         <aside class="lg:col-span-1 mb-8 lg:mb-0">
           <div class="card p-6 sticky top-20">
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Filters</h3>
+            <h3 class="text-lg font-bold text-white mb-4">Filters</h3>
 
             <!-- Search -->
             <div class="mb-6">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="block text-sm font-medium text-slate-200 mb-2">
                 Search
               </label>
               <input
@@ -34,7 +34,7 @@
 
             <!-- Category Filter -->
             <div class="mb-6">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="block text-sm font-medium text-slate-200 mb-2">
                 Category
               </label>
               <select v-model="selectedCategory" class="input-field">
@@ -47,7 +47,7 @@
 
             <!-- Pricing Filter -->
             <div class="mb-6">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="block text-sm font-medium text-slate-200 mb-2">
                 Pricing
               </label>
               <div class="space-y-2">
@@ -56,34 +56,34 @@
                     type="checkbox"
                     value="free"
                     v-model="selectedPricing"
-                    class="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                    class="rounded border-white/20 bg-white/5 text-primary-500 focus:ring-primary-500"
                   />
-                  <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Free</span>
+                  <span class="ml-2 text-sm text-slate-300">Free</span>
                 </label>
                 <label class="flex items-center">
                   <input
                     type="checkbox"
                     value="freemium"
                     v-model="selectedPricing"
-                    class="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                    class="rounded border-white/20 bg-white/5 text-primary-500 focus:ring-primary-500"
                   />
-                  <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Freemium</span>
+                  <span class="ml-2 text-sm text-slate-300">Freemium</span>
                 </label>
                 <label class="flex items-center">
                   <input
                     type="checkbox"
                     value="paid"
                     v-model="selectedPricing"
-                    class="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                    class="rounded border-white/20 bg-white/5 text-primary-500 focus:ring-primary-500"
                   />
-                  <span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Paid</span>
+                  <span class="ml-2 text-sm text-slate-300">Paid</span>
                 </label>
               </div>
             </div>
 
             <!-- Setup Difficulty -->
             <div class="mb-6">
-              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              <label class="block text-sm font-medium text-slate-200 mb-2">
                 Setup Difficulty
               </label>
               <select v-model="selectedDifficulty" class="input-field">
@@ -97,7 +97,7 @@
             <!-- Tags -->
             <div class="mb-6">
               <div class="flex items-center justify-between mb-2">
-                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                <label class="block text-sm font-medium text-slate-200">
                   Quick Filters
                 </label>
               </div>
@@ -108,7 +108,7 @@
                     'px-3 py-1 text-sm rounded-full transition-colors',
                     showFeatured
                       ? 'bg-accent-600 text-white'
-                      : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+                      : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10'
                   ]"
                 >
                   ⭐ Featured
@@ -119,7 +119,7 @@
                     'px-3 py-1 text-sm rounded-full transition-colors',
                     showTrending
                       ? 'bg-primary-600 text-white'
-                      : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+                      : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10'
                   ]"
                 >
                   🔥 Trending
@@ -130,7 +130,7 @@
             <!-- Clear Filters -->
             <button
               @click="clearFilters"
-              class="w-full text-sm text-primary-600 dark:text-primary-400 hover:underline"
+              class="w-full text-sm text-primary-400 hover:text-primary-300 hover:underline"
             >
               Clear All Filters
             </button>
@@ -141,7 +141,7 @@
         <div class="lg:col-span-3">
           <!-- Sort -->
           <div class="flex items-center justify-between mb-6">
-            <p class="text-sm text-gray-600 dark:text-gray-400">
+            <p class="text-sm text-slate-400">
               Showing {{ filteredApps.length }} apps
             </p>
             <select v-model="sortBy" class="input-field w-auto">
@@ -165,10 +165,10 @@
           <!-- Empty State -->
           <div v-else class="text-center py-16">
             <div class="text-6xl mb-4">🔍</div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            <h3 class="text-xl font-bold text-white mb-2">
               No apps found
             </h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-6">
+            <p class="text-slate-300 mb-6">
               Try adjusting your filters to see more results
             </p>
             <button @click="clearFilters" class="btn-primary">
