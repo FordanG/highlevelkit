@@ -115,7 +115,7 @@
               type="submit"
               :disabled="isSubmitting"
               :label="isSubmitting ? 'Submitting...' : 'Submit App for Review'"
-              class="p-button-primary w-full"
+              class="w-full"
             />
           </div>
 

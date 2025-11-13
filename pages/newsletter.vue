@@ -45,7 +45,7 @@
               type="submit"
               :disabled="isSubmitting"
               :label="isSubmitting ? 'Subscribing...' : 'Subscribe to Newsletter'"
-              class="p-button-primary w-full"
+              class="w-full"
             />
           </div>
 

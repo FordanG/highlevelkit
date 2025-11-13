@@ -130,7 +130,7 @@
               label="Clear All Filters"
               text
               size="small"
-              class="p-button-text w-full"
+              class="w-full text"
               style="color: rgb(96 165 250); padding: 0.5rem;"
             />
           </div>
@@ -173,7 +173,7 @@
             <Button
               @click="clearFilters"
               label="Clear Filters"
-              class="p-button-primary"
+              severity="primary"
             />
           </div>
         </div>

@@ -25,7 +25,7 @@
         as="a"
         href="/apps"
         label="Browse Apps"
-        class="p-button-primary"
+        severity="primary"
       />
     </div>
   </div>

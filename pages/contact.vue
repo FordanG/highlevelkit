@@ -74,7 +74,7 @@
               type="submit"
               :disabled="isSubmitting"
               :label="isSubmitting ? 'Sending...' : 'Send Message'"
-              class="p-button-primary w-full"
+              class="w-full"
             />
           </div>
 

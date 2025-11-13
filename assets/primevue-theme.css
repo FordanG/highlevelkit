@@ -1,0 +1,157 @@
+/* PrimeVue Dark Theme Customization for Navy Design */
+
+:root {
+  /* Override PrimeVue color palette to match our design */
+  --p-primary-50: #eff6ff;
+  --p-primary-100: #dbeafe;
+  --p-primary-200: #bfdbfe;
+  --p-primary-300: #93c5fd;
+  --p-primary-400: #60a5fa;
+  --p-primary-500: #3b82f6;
+  --p-primary-600: #2563eb;
+  --p-primary-700: #1d4ed8;
+  --p-primary-800: #1e40af;
+  --p-primary-900: #1e3a8a;
+  --p-primary-950: #172554;
+
+  /* Surface colors for dark mode */
+  --p-surface-0: #0a1628;
+  --p-surface-50: #1e293b;
+  --p-surface-100: #334155;
+  --p-surface-200: #475569;
+  --p-surface-300: #64748b;
+  --p-surface-400: #94a3b8;
+  --p-surface-500: #cbd5e1;
+  --p-surface-600: #e2e8f0;
+  --p-surface-700: #f1f5f9;
+  --p-surface-800: #f8fafc;
+  --p-surface-900: #ffffff;
+  --p-surface-950: #0a1628;
+}
+
+.p-dark {
+  --p-primary-color: var(--p-primary-500);
+  --p-primary-contrast-color: #ffffff;
+  --p-primary-hover-color: var(--p-primary-400);
+  --p-primary-active-color: var(--p-primary-600);
+
+  --p-surface-ground: #0a1628;
+  --p-surface-section: #0f1e33;
+  --p-surface-card: rgba(255, 255, 255, 0.05);
+  --p-surface-overlay: #1e293b;
+  --p-surface-border: rgba(255, 255, 255, 0.1);
+  --p-surface-hover: rgba(255, 255, 255, 0.07);
+
+  --p-content-color: #e2e8f0;
+  --p-content-hover-color: #ffffff;
+  --p-text-color: #cbd5e1;
+  --p-text-hover-color: #ffffff;
+  --p-text-muted-color: #94a3b8;
+  --p-border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Button Customization */
+.p-button {
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.25), 0 4px 6px -4px rgba(59, 130, 246, 0.25);
+}
+
+.p-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4), 0 4px 6px -4px rgba(59, 130, 246, 0.4);
+}
+
+.p-button:active {
+  transform: scale(1.0);
+}
+
+.p-button:disabled {
+  transform: none !important;
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.25), 0 4px 6px -4px rgba(59, 130, 246, 0.25);
+}
+
+.p-button-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  box-shadow: none;
+}
+
+.p-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.p-button-text {
+  background: transparent;
+  border-color: transparent;
+  color: #94a3b8;
+  box-shadow: none;
+}
+
+.p-button-text:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+/* Input Fields */
+.p-inputtext,
+.p-textarea,
+.p-select {
+  background: rgba(10, 22, 40, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.p-inputtext:hover,
+.p-textarea:hover,
+.p-select:not(.p-disabled):hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.p-inputtext:focus,
+.p-textarea:focus,
+.p-select:not(.p-disabled).p-focus {
+  outline: none;
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.3);
+}
+
+.p-inputtext::placeholder,
+.p-textarea::placeholder {
+  color: #64748b;
+}
+
+/* Select/Dropdown */
+.p-select-overlay {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+}
+
+.p-select-option {
+  color: #cbd5e1;
+}
+
+.p-select-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.p-select-option.p-focus {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.p-select-option.p-select-option-selected {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+.p-select-label.p-placeholder {
+  color: #64748b;
+}

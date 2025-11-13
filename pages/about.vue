@@ -58,7 +58,7 @@
             as="a"
             href="/submit"
             label="Submit Your App"
-            class="p-button-primary"
+            severity="primary"
           />
         </section>
       </div>

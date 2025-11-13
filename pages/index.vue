@@ -34,8 +34,8 @@
 
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up mb-8">
-            <Button as="a" href="/apps" label="Browse All Apps" severity="primary" class="p-button-primary" />
-            <Button as="a" href="/submit" label="Submit Your App" severity="secondary" class="p-button-secondary" />
+            <Button as="a" href="/apps" label="Browse All Apps" severity="primary" severity="primary" />
+            <Button as="a" href="/submit" label="Submit Your App" severity="secondary" severity="secondary" />
           </div>
 
           <!-- Quick Stats -->
@@ -148,7 +148,7 @@
             <Button
               as="a"
               href="/apps"
-              class="p-button-primary"
+              severity="primary"
               size="large"
             >
               <template #default>

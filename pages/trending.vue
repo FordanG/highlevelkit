@@ -38,7 +38,7 @@
           as="a"
           href="/apps"
           label="Browse All Apps"
-          class="p-button-primary"
+          severity="primary"
         />
       </div>
     </div>

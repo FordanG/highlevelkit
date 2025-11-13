@@ -81,7 +81,7 @@
                 :href="app.website"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="p-button-primary"
+                severity="primary"
               >
                 <template #default>
                   <span>Visit Website</span>
@@ -97,7 +97,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 label="Get Special Offer"
-                class="p-button-secondary"
+                severity="secondary"
               />
             </div>
           </div>
@@ -139,7 +139,7 @@
         as="a"
         href="/apps"
         label="Browse All Apps"
-        class="p-button-primary"
+        severity="primary"
       />
     </div>
   </div>
