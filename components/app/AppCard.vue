@@ -1,29 +1,30 @@
 <template>
   <NuxtLink
     :to="`/apps/${app.slug}`"
-    class="group rounded-xl border border-white/10 bg-white/5 hover:bg-white/7 transition p-4 cursor-pointer"
+    class="group block rounded-xl border border-white/10 bg-white/5 hover:bg-white/7 transition-all duration-300 p-4 cursor-pointer hover:scale-[1.02] hover:shadow-xl hover:shadow-primary-500/10 hover:border-white/20 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950"
+    :aria-label="`View details for ${app.name}`"
   >
     <!-- Logo and Badges -->
     <div class="flex items-start justify-between mb-3">
-      <div v-if="app.image || isLogoUrl" class="w-16 h-16 rounded-lg overflow-hidden ring-1 ring-white/10 flex-shrink-0 bg-white/5 flex items-center justify-center p-2">
-        <img :src="app.image || app.logo" :alt="app.name" class="w-full h-full object-contain" />
+      <div v-if="app.image || isLogoUrl" class="w-16 h-16 rounded-lg overflow-hidden ring-1 ring-white/10 group-hover:ring-primary-500/30 flex-shrink-0 bg-white/5 group-hover:bg-white/10 flex items-center justify-center p-2 transition-all duration-300">
+        <img :src="app.image || app.logo" :alt="`${app.name} logo`" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300" loading="lazy" />
       </div>
-      <div v-else class="text-5xl flex-shrink-0">{{ app.logo }}</div>
+      <div v-else class="text-5xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300" role="img" :aria-label="`${app.name} icon`">{{ app.logo }}</div>
       <div class="flex flex-col gap-1.5">
         <span
           v-if="app.featured"
-          class="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded bg-primary-500/15 border border-primary-500/30 text-primary-200"
+          class="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded bg-primary-500/15 border border-primary-500/30 text-primary-200 group-hover:border-primary-500/50 group-hover:bg-primary-500/20 transition-all duration-300"
         >
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-3 h-3 group-hover:rotate-180 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
           </svg>
           <span>Featured</span>
         </span>
         <span
           v-if="app.trending"
-          class="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/30 text-amber-200"
+          class="inline-flex items-center gap-1 text-[11px] px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/30 text-amber-200 group-hover:border-amber-500/50 group-hover:bg-amber-500/20 transition-all duration-300"
         >
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-3 h-3 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
           </svg>
           <span>Trending</span>
@@ -45,7 +46,7 @@
         <span
           v-for="cat in app.category.slice(0, 2)"
           :key="cat"
-          class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300"
+          class="text-[11px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 group-hover:bg-white/10 group-hover:border-white/20 group-hover:text-white transition-all duration-300"
         >
           {{ getCategoryName(cat) }}
         </span>
@@ -53,8 +54,8 @@
 
       <!-- Rating and Pricing -->
       <div class="flex items-center justify-between pt-3 border-t border-white/5">
-        <div class="flex items-center gap-1">
-          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+        <div class="flex items-center gap-1" role="group" :aria-label="`Rating: ${app.rating} out of 5 stars, ${app.reviewCount} reviews`">
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
           </svg>
           <span class="text-sm font-semibold text-white">{{ app.rating }}</span>

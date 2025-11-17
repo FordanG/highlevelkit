@@ -17,26 +17,190 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Typography base styles */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    font-feature-settings: 'ss01', 'ss02', 'cv05', 'cv11';
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl leading-snug;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl leading-snug;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl leading-normal;
+  }
+
+  h6 {
+    @apply text-base md:text-lg leading-normal;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary-400 ring-offset-2 ring-offset-navy-950 rounded;
+  }
+
+  /* Ensure keyboard focus is always visible */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-none ring-2 ring-primary-400 ring-offset-2 ring-offset-navy-950;
+  }
+
+  /* Screen reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: initial;
+    margin: initial;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
   ::selection {
     @apply bg-primary-500/30 text-primary-100;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 hover:scale-105 active:scale-100 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-primary-500/25;
+    @apply px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/40 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-primary-500/25 focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:ring-offset-2 focus:ring-offset-navy-950;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-slate-200 hover:text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105 active:scale-100;
+    @apply px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-slate-200 hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-white/5 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-navy-950;
   }
 
   .card {
-    @apply bg-white/5 rounded-xl hover:bg-white/7 transition-all duration-300 border border-white/10 hover:border-white/15;
+    @apply bg-white/5 rounded-xl hover:bg-white/7 transition-all duration-300 border border-white/10 hover:border-white/15 hover:shadow-lg hover:shadow-white/5;
   }
 
   .input-field {
-    @apply w-full px-4 py-3 border border-white/10 rounded-lg bg-navy-950/80 text-white placeholder-slate-400 focus:outline-none focus:border-primary-400/50 focus:ring-2 focus:ring-primary-400/30 transition-all;
+    @apply w-full px-4 py-3 border border-white/10 rounded-lg bg-navy-950/80 text-white placeholder-slate-400 focus:outline-none focus:border-primary-400/50 focus:ring-2 focus:ring-primary-400/30 focus:shadow-lg focus:shadow-primary-500/20 transition-all duration-300;
+  }
+
+  /* Animated gradient button */
+  .btn-gradient {
+    @apply relative px-6 py-3 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:ring-offset-2 focus:ring-offset-navy-950;
+    background: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+  }
+
+  .btn-gradient::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+  }
+
+  .btn-gradient:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Typography utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .heading-1 {
+    @apply text-5xl md:text-6xl font-semibold tracking-tight leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight leading-snug;
+  }
+
+  .body-large {
+    @apply text-lg leading-relaxed text-slate-300;
+  }
+
+  .body-regular {
+    @apply text-base leading-relaxed text-slate-400;
+  }
+
+  .caption {
+    @apply text-sm leading-normal text-slate-500;
+  }
+
+  .label {
+    @apply text-xs font-medium tracking-wide uppercase text-slate-400;
+  }
+
+  /* Code and monospace */
+  code {
+    @apply px-1.5 py-0.5 rounded bg-white/10 text-primary-300 text-sm font-mono;
+  }
+
+  pre {
+    @apply p-4 rounded-lg bg-white/5 border border-white/10 overflow-x-auto;
+  }
+
+  pre code {
+    @apply p-0 bg-transparent;
+  }
+
+  /* Quotes */
+  blockquote {
+    @apply pl-4 border-l-4 border-primary-500/50 italic text-slate-300;
+  }
+
+  /* Links in content */
+  .prose a {
+    @apply text-primary-400 hover:text-primary-300 underline underline-offset-2 decoration-primary-500/30 hover:decoration-primary-500;
   }
 
   /* PrimeVue component styling handled in primevue-theme.css */
