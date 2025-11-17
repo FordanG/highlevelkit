@@ -1,8 +1,13 @@
 <template>
   <div v-if="app">
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+      <Breadcrumbs :items="breadcrumbItems" />
+    </div>
+
     <!-- Hero Section -->
     <div class="border-b border-white/5">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div class="flex flex-col md:flex-row gap-8">
           <!-- Logo -->
           <div class="flex-shrink-0">
@@ -174,14 +179,53 @@ const getCategoryName = (id: string) => {
   return category ? category.name : id
 }
 
-// SEO
-useHead({
-  title: app ? `${app.name} - ${app.tagline} | Highlevel Kit` : 'App Not Found',
-  meta: [
-    {
-      name: 'description',
-      content: app?.description || 'App not found'
-    }
+// Breadcrumb items
+const breadcrumbItems = app ? [
+  { name: 'Home', url: '/' },
+  { name: 'Apps', url: '/apps' },
+  { name: app.name, url: `/apps/${app.slug}` },
+] : []
+
+// SEO Configuration
+const { setPageMeta, generateAppSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+if (app) {
+  // Set page meta tags with Open Graph
+  setPageMeta({
+    title: `${app.name} - ${app.tagline} | Highlevel Kit`,
+    description: app.description,
+    image: app.image || `${siteUrl}/og-app-${app.slug}.png`,
+    url: `${siteUrl}/apps/${app.slug}`,
+    type: 'article',
+  })
+
+  // Add structured data
+  const schemas = [
+    generateAppSchema({
+      name: app.name,
+      description: app.description,
+      image: app.image,
+      logo: app.logo,
+      rating: app.rating,
+      reviewCount: app.reviewCount,
+      pricing: app.pricing,
+      category: app.category,
+      slug: app.slug,
+    }),
+    generateBreadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Apps', url: '/apps' },
+      { name: app.name, url: `/apps/${app.slug}` },
+    ]),
   ]
-})
+
+  setMultipleSchemas(schemas)
+} else {
+  // 404 page
+  setPageMeta({
+    title: 'App Not Found | Highlevel Kit',
+    description: 'The app you are looking for could not be found.',
+    url: `${siteUrl}/apps/${slug}`,
+  })
+}
 </script>

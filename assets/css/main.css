@@ -1,5 +1,15 @@
+/* Import Inter font with font-display: swap for better performance */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import './primevue-theme.css';
+
+/* Optimize font loading */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: local('Inter');
+}
 
 @tailwind base;
 @tailwind components;

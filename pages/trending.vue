@@ -51,13 +51,14 @@ import appsData from '~/data/apps.json'
 // Filter trending apps
 const trendingApps = appsData.filter((app: any) => app.trending)
 
-useHead({
-  title: 'Trending Apps - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Explore the most popular GoHighLevel apps and integrations trending right now in the community.'
-    }
-  ]
+// SEO Configuration
+const { setPageMeta, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Trending GoHighLevel Apps | Highlevel Kit',
+  description: 'Explore the most popular GoHighLevel apps and integrations trending this week. Discover what top agencies and SaaS companies are using to scale their businesses.',
+  image: `${siteUrl}/og-trending.png`,
+  url: `${siteUrl}/trending`,
+  type: 'website',
 })
 </script>

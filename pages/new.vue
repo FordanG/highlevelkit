@@ -53,13 +53,14 @@ const newApps = appsData
   .sort((a: any, b: any) => b.id - a.id)
   .slice(0, 12)
 
-useHead({
-  title: 'New Releases - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Discover the latest apps and integrations added to Highlevel Kit. Stay up to date with new GoHighLevel tools.'
-    }
-  ]
+// SEO Configuration
+const { setPageMeta, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'New GoHighLevel Apps & Integrations | Highlevel Kit',
+  description: 'Discover the latest GoHighLevel apps and integrations recently added to our directory. Stay current with new tools, features, and solutions for your agency or SaaS business.',
+  image: `${siteUrl}/og-new.png`,
+  url: `${siteUrl}/new`,
+  type: 'website',
 })
 </script>

@@ -231,13 +231,20 @@ onMounted(() => {
   }, 500)
 })
 
-useHead({
+// SEO Configuration
+const { setPageMeta, generateOrganizationSchema, generateWebsiteSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
   title: 'Highlevel Kit - Discover the Best GoHighLevel Apps & Integrations',
-  meta: [
-    {
-      name: 'description',
-      content: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers.'
-    }
-  ]
+  description: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers.',
+  image: `${siteUrl}/og-home.png`,
+  url: siteUrl,
+  type: 'website',
 })
+
+// Add structured data
+setMultipleSchemas([
+  generateOrganizationSchema(),
+  generateWebsiteSchema(),
+])
 </script>

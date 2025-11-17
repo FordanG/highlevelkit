@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^7.4.7",
     "@primevue/nuxt-module": "^4.4.1",
     "nuxt": "^4.2.1",
     "primevue": "^4.4.1",
