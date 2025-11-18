@@ -34,6 +34,9 @@ export const categories = [
   { id: 'communication', name: 'Communication', icon: '💬' },
   { id: 'payments', name: 'Payments', icon: '💳' },
   { id: 'white-label', name: 'White Label', icon: '🏷️' },
+  { id: 'integration', name: 'Integration', icon: '🔗' },
+  { id: 'video', name: 'Video Tools', icon: '🎥' },
+  { id: 'data-enrichment', name: 'Data Enrichment', icon: '💎' },
 ]
 
 export const useCases = [
@@ -47,6 +50,12 @@ export const useCases = [
   'Email Marketing',
   'SMS Marketing',
   'Appointment Booking',
+  'Data Enrichment',
+  'Video Prospecting',
+  'Cold Email Outreach',
+  'Multi-Channel Outreach',
+  'Sales Intelligence',
+  'Integration',
 ]
 
 export const userTypes = [
