@@ -4,53 +4,65 @@
     <section class="relative overflow-hidden">
       <!-- Background Effects -->
       <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute -top-32 left-1/2 -translate-x-1/2 h-72 w-[1100px] bg-primary-500/10 blur-3xl rounded-full"></div>
+        <div class="absolute -top-32 left-1/2 -translate-x-1/2 h-72 w-[1100px] bg-primary-500/10 blur-3xl rounded-full animate-pulse-slow"></div>
+        <div class="absolute -top-20 left-1/4 h-48 w-48 bg-accent-500/20 blur-3xl rounded-full animate-float"></div>
+        <div class="absolute top-40 right-1/4 h-64 w-64 bg-primary-600/15 blur-3xl rounded-full animate-float-delay"></div>
         <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-12">
         <div class="text-center max-w-4xl mx-auto relative">
           <!-- Badge -->
-          <div class="inline-flex items-center gap-2 text-xs text-slate-400 border border-white/10 rounded-full px-2.5 py-1 bg-white/5 mb-5">
-            <svg class="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="inline-flex items-center gap-2 text-xs text-slate-400 border border-white/10 rounded-full px-2.5 py-1 bg-white/5 mb-5 animate-scale-in hover:border-primary-500/30 transition-all duration-300">
+            <svg class="w-4 h-4 text-primary-400 animate-bounce-gentle" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
             <span>Curated directory for the GoHighLevel ecosystem</span>
           </div>
 
           <!-- Heading -->
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-white mb-4 animate-fade-in" style="letter-spacing:-0.02em">
-            Discover the Best
-            <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
-              GoHighLevel
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-white mb-4" style="letter-spacing:-0.02em">
+            <span class="inline-block animate-fade-in">Discover the Best</span>
+            <span class="block animate-slide-up-delay-1">
+              <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent inline-block animate-gradient-shift" style="background-size: 200% 200%">
+                GoHighLevel
+              </span>
             </span>
-            Apps & Integrations
+            <span class="inline-block animate-slide-up-delay-2">Apps & Integrations</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-400 mb-8 animate-slide-up">
+          <p class="text-base sm:text-lg text-slate-400 mb-8 animate-slide-up-delay-2 max-w-2xl mx-auto">
             Curated directory of apps, integrations, and tools to supercharge your GoHighLevel experience.
             Find solutions for agencies, SaaS providers, and freelancers.
           </p>
 
           <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up mb-8">
-            <Button as="a" href="/apps" label="Browse All Apps" />
+          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up-delay-3 mb-8">
+            <Button as="a" href="/apps" label="Browse All Apps" class="group relative overflow-hidden">
+              <span class="relative z-10">Browse All Apps</span>
+            </Button>
             <Button as="a" href="/submit" label="Submit Your App" severity="secondary" />
           </div>
 
           <!-- Quick Stats -->
           <div class="grid grid-cols-3 gap-3 max-w-2xl mx-auto mt-12">
-            <div class="rounded-lg border border-white/10 bg-white/5 p-3">
-              <p class="text-xs text-slate-400">Apps curated</p>
-              <p class="text-xl font-semibold tracking-tight text-white" style="letter-spacing:-0.02em">{{ apps.length }}+</p>
+            <div class="rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-primary-500/20 transition-all duration-300 group animate-scale-in">
+              <p class="text-xs text-slate-400 mb-1">Apps curated</p>
+              <p class="text-xl font-semibold tracking-tight text-white group-hover:text-primary-400 transition-colors" style="letter-spacing:-0.02em">
+                <span ref="appsCounter">0</span>+
+              </p>
             </div>
-            <div class="rounded-lg border border-white/10 bg-white/5 p-3">
-              <p class="text-xs text-slate-400">Categories</p>
-              <p class="text-xl font-semibold tracking-tight text-white" style="letter-spacing:-0.02em">{{ categories.length }}</p>
+            <div class="rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-primary-500/20 transition-all duration-300 group animate-scale-in" style="animation-delay: 0.1s">
+              <p class="text-xs text-slate-400 mb-1">Categories</p>
+              <p class="text-xl font-semibold tracking-tight text-white group-hover:text-primary-400 transition-colors" style="letter-spacing:-0.02em">
+                <span ref="categoriesCounter">0</span>
+              </p>
             </div>
-            <div class="rounded-lg border border-white/10 bg-white/5 p-3">
-              <p class="text-xs text-slate-400">Happy users</p>
-              <p class="text-xl font-semibold tracking-tight text-white" style="letter-spacing:-0.02em">1000+</p>
+            <div class="rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-primary-500/20 transition-all duration-300 group animate-scale-in" style="animation-delay: 0.2s">
+              <p class="text-xs text-slate-400 mb-1">Happy users</p>
+              <p class="text-xl font-semibold tracking-tight text-white group-hover:text-primary-400 transition-colors" style="letter-spacing:-0.02em">
+                <span ref="usersCounter">0</span>+
+              </p>
             </div>
           </div>
         </div>
@@ -69,10 +81,10 @@
             v-for="category in categories"
             :key="category.id"
             :to="`/apps?category=${category.id}`"
-            class="group rounded-xl border border-white/10 bg-white/5 hover:bg-white/7 transition p-6 text-center cursor-pointer"
+            class="group rounded-xl border border-white/10 bg-white/5 hover:bg-white/7 hover:border-primary-500/30 transition-all duration-300 p-6 text-center cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary-500/10 active:scale-95"
           >
-            <div class="text-4xl mb-3">{{ category.icon }}</div>
-            <div class="font-medium text-white text-sm">{{ category.name }}</div>
+            <div class="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{{ category.icon }}</div>
+            <div class="font-medium text-slate-300 group-hover:text-white text-sm transition-colors">{{ category.name }}</div>
           </NuxtLink>
         </div>
       </div>
@@ -177,13 +189,62 @@ const categories = categoriesData
 const featuredApps = apps.filter((app: any) => app.featured).slice(0, 6)
 const trendingApps = apps.filter((app: any) => app.trending).slice(0, 4)
 
-useHead({
-  title: 'Highlevel Kit - Discover the Best GoHighLevel Apps & Integrations',
-  meta: [
-    {
-      name: 'description',
-      content: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers.'
+// Counter animation refs
+const appsCounter = ref<HTMLElement | null>(null)
+const categoriesCounter = ref<HTMLElement | null>(null)
+const usersCounter = ref<HTMLElement | null>(null)
+
+// Animate counter from 0 to target value
+const animateCounter = (element: HTMLElement | null, target: number, duration: number = 2000) => {
+  if (!element) return
+
+  const start = 0
+  const startTime = performance.now()
+
+  const updateCounter = (currentTime: number) => {
+    const elapsed = currentTime - startTime
+    const progress = Math.min(elapsed / duration, 1)
+
+    // Easing function for smooth animation
+    const easeOutQuart = 1 - Math.pow(1 - progress, 4)
+    const current = Math.floor(start + (target - start) * easeOutQuart)
+
+    element.textContent = current.toString()
+
+    if (progress < 1) {
+      requestAnimationFrame(updateCounter)
+    } else {
+      element.textContent = target.toString()
     }
-  ]
+  }
+
+  requestAnimationFrame(updateCounter)
+}
+
+// Start animations when component mounts
+onMounted(() => {
+  // Delay counters slightly to start after hero animations
+  setTimeout(() => {
+    animateCounter(appsCounter.value, apps.length, 2000)
+    animateCounter(categoriesCounter.value, categories.length, 1500)
+    animateCounter(usersCounter.value, 1000, 2500)
+  }, 500)
 })
+
+// SEO Configuration
+const { setPageMeta, generateOrganizationSchema, generateWebsiteSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Highlevel Kit - Discover the Best GoHighLevel Apps & Integrations',
+  description: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers.',
+  image: `${siteUrl}/og-home.png`,
+  url: siteUrl,
+  type: 'website',
+})
+
+// Add structured data
+setMultipleSchemas([
+  generateOrganizationSchema(),
+  generateWebsiteSchema(),
+])
 </script>

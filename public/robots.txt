@@ -1,2 +1,20 @@
-User-Agent: *
-Disallow:
+# robots.txt for Highlevel Kit
+# Allow all crawlers
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths (if any in future)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://highlevelkit.com/sitemap.xml
+
+# Crawl-delay for specific bots (optional)
+# User-agent: Googlebot
+# Crawl-delay: 0
+
+# Block bad bots (optional - uncomment if needed)
+# User-agent: BadBot
+# Disallow: /

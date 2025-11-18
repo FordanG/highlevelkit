@@ -43,13 +43,14 @@ const categoriesWithCounts = categoriesData.map(category => ({
   ).length
 }))
 
-useHead({
-  title: 'Categories - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Browse GoHighLevel apps by category. Find CRM tools, automation, AI integrations, and more.'
-    }
-  ]
+// SEO Configuration
+const { setPageMeta, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Browse Apps by Category | Highlevel Kit',
+  description: 'Explore GoHighLevel apps organized by category. Find CRM tools, automation software, AI integrations, payment processors, analytics, and more for your agency.',
+  image: `${siteUrl}/og-categories.png`,
+  url: `${siteUrl}/categories`,
+  type: 'website',
 })
 </script>

@@ -6,8 +6,29 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
-    '@primevue/nuxt-module'
+    '@primevue/nuxt-module',
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    hostname: 'https://highlevelkit.com',
+    gzip: true,
+    routes: async () => {
+      // Import apps data to generate dynamic routes
+      const apps = await import('./data/apps.json').then(m => m.default)
+      return apps.map((app: any) => ({
+        url: `/apps/${app.slug}`,
+        changefreq: 'weekly',
+        priority: 0.8,
+        lastmod: new Date().toISOString()
+      }))
+    },
+    defaults: {
+      changefreq: 'daily',
+      priority: 0.7,
+      lastmod: new Date().toISOString()
+    }
+  },
 
   primevue: {
     options: {
@@ -73,11 +94,24 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers.'
-        }
+        },
+        // Theme color for mobile browsers
+        { name: 'theme-color', content: '#0a1628' },
+        // MS Application tiles
+        { name: 'msapplication-TileColor', content: '#0a1628' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      ]
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        // Preconnect to Google Fonts for better performance
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+        // DNS prefetch for external domains
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' }
+      ],
+      // Preload critical fonts
+      __dangerouslyDisableSanitizersByTagID: {
+        'font-inter': ['innerHTML']
+      }
     }
   }
 })

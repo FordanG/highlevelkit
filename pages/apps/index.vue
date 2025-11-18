@@ -328,13 +328,14 @@ const clearFilters = () => {
   showTrending.value = false
 }
 
-useHead({
-  title: 'Browse Apps - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Browse and discover GoHighLevel apps, integrations, and tools. Filter by category, pricing, and difficulty level.'
-    }
-  ]
+// SEO Configuration
+const { setPageMeta, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Browse GoHighLevel Apps & Integrations | Highlevel Kit',
+  description: 'Discover 100+ curated GoHighLevel apps, integrations, and tools. Filter by category, pricing, and setup difficulty. Find the perfect solution for your agency or SaaS business.',
+  image: `${siteUrl}/og-apps.png`,
+  url: `${siteUrl}/apps`,
+  type: 'website',
 })
 </script>
