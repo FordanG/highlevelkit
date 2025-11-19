@@ -7,5 +7,8 @@
   { "id": "analytics", "name": "Analytics", "icon": "📈" },
   { "id": "communication", "name": "Communication", "icon": "💬" },
   { "id": "payments", "name": "Payments", "icon": "💳" },
-  { "id": "white-label", "name": "White Label", "icon": "🏷️" }
+  { "id": "white-label", "name": "White Label", "icon": "🏷️" },
+  { "id": "integration", "name": "Integration", "icon": "🔗" },
+  { "id": "video", "name": "Video Tools", "icon": "🎥" },
+  { "id": "data-enrichment", "name": "Data Enrichment", "icon": "💎" }
 ]
