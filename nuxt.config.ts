@@ -16,12 +16,23 @@ export default defineNuxtConfig({
     routes: async () => {
       // Import apps data to generate dynamic routes
       const apps = await import('./data/apps.json').then(m => m.default)
-      return apps.map((app: any) => ({
+      const blogPosts = await import('./data/blog-posts.json').then(m => m.default)
+
+      const appRoutes = apps.map((app: any) => ({
         url: `/apps/${app.slug}`,
         changefreq: 'weekly',
         priority: 0.8,
         lastmod: new Date().toISOString()
       }))
+
+      const blogRoutes = blogPosts.map((post: any) => ({
+        url: `/blog/${post.slug}`,
+        changefreq: 'weekly',
+        priority: 0.9, // Higher priority for fresh content
+        lastmod: post.updatedAt || post.publishedAt
+      }))
+
+      return [...appRoutes, ...blogRoutes]
     },
     defaults: {
       changefreq: 'daily',

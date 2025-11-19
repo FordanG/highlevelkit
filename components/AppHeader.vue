@@ -28,6 +28,13 @@
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover/nav:w-full transition-all duration-300"></span>
           </NuxtLink>
           <NuxtLink
+            to="/blog"
+            class="relative text-sm text-slate-300 hover:text-white transition-colors group/nav"
+          >
+            Blog
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover/nav:w-full transition-all duration-300"></span>
+          </NuxtLink>
+          <NuxtLink
             to="/new"
             class="relative text-sm text-slate-300 hover:text-white transition-colors group/nav"
           >
@@ -114,6 +121,13 @@
           @click="closeMenu"
         >
           Categories
+        </NuxtLink>
+        <NuxtLink
+          to="/blog"
+          class="block py-2 text-sm text-slate-300 hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-navy-950 rounded transition-colors"
+          @click="closeMenu"
+        >
+          Blog
         </NuxtLink>
         <NuxtLink
           to="/new"
