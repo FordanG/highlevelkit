@@ -7,9 +7,10 @@ export interface App {
   logo: string
   category: string[]
   pricing: {
-    model: 'free' | 'freemium' | 'paid' | 'one-time'
+    model: 'free' | 'freemium' | 'paid' | 'one-time' | 'usage-based' | 'credit-based'
     startingPrice?: number
     currency: string
+    pricingDetails?: string
   }
   rating: number
   reviewCount: number
@@ -17,45 +18,156 @@ export interface App {
   trending: boolean
   useCase: string[]
   userType: string[]
-  integrationLevel: 'native' | 'webhook' | 'zapier' | 'api'
+  integrationLevel: 'native' | 'webhook' | 'zapier' | 'api' | 'csv' | 'manual'
   setupDifficulty: 'easy' | 'medium' | 'advanced'
   features: string[]
   website?: string
   affiliateLink?: string
+  // ColdIQ-inspired enhancements
+  ghlCompatibility?: {
+    rating: number // 1-5 stars
+    description: string
+    integrationMethod?: string
+  }
+  alternatives?: string[] // IDs of alternative apps
+  comparisonPoints?: string[] // Key comparison points vs alternatives
+  videoDemo?: string // URL to video demo
+  setupGuide?: string // URL to setup guide or integration tutorial
+  dataSource?: boolean // Is this a data/lead source?
+  aiPowered?: boolean // Is this AI-powered?
 }
 
+// Category Sections for organization
+export const categorySections = [
+  { id: 'prospecting-lead-gen', name: 'Prospecting & Lead Generation', icon: '🎯' },
+  { id: 'outreach-communication', name: 'Outreach & Communication', icon: '📧' },
+  { id: 'crm-sales', name: 'CRM & Sales', icon: '📊' },
+  { id: 'automation-workflow', name: 'Automation & Workflow', icon: '⚡' },
+  { id: 'analytics-optimization', name: 'Analytics & Optimization', icon: '📈' },
+  { id: 'content-marketing', name: 'Content & Marketing', icon: '✍️' },
+  { id: 'support-service', name: 'Support & Service', icon: '💬' },
+  { id: 'agency-tools', name: 'Agency Tools', icon: '🏢' },
+  { id: 'infrastructure', name: 'Infrastructure', icon: '🔧' },
+]
+
 export const categories = [
-  { id: 'crm', name: 'CRM Tools', icon: '📊' },
-  { id: 'automation', name: 'Automation', icon: '⚡' },
-  { id: 'ai', name: 'AI Integrations', icon: '🤖' },
-  { id: 'widgets', name: 'Widgets', icon: '🧩' },
-  { id: 'templates', name: 'Templates', icon: '📄' },
-  { id: 'analytics', name: 'Analytics', icon: '📈' },
-  { id: 'communication', name: 'Communication', icon: '💬' },
-  { id: 'payments', name: 'Payments', icon: '💳' },
-  { id: 'white-label', name: 'White Label', icon: '🏷️' },
-  { id: 'integration', name: 'Integration', icon: '🔗' },
-  { id: 'video', name: 'Video Tools', icon: '🎥' },
-  { id: 'data-enrichment', name: 'Data Enrichment', icon: '💎' },
+  // Prospecting & Lead Generation
+  { id: 'prospecting', name: 'Lead Prospecting', icon: '🎯', section: 'prospecting-lead-gen' },
+  { id: 'lead-generation', name: 'Lead Generation', icon: '🔍', section: 'prospecting-lead-gen' },
+  { id: 'data-enrichment', name: 'Data Enrichment', icon: '💎', section: 'prospecting-lead-gen' },
+  { id: 'visitor-identification', name: 'Visitor Identification', icon: '👁️', section: 'prospecting-lead-gen' },
+  { id: 'sales-intelligence', name: 'Sales Intelligence', icon: '🧠', section: 'prospecting-lead-gen' },
+  { id: 'intent-data', name: 'Intent Data', icon: '📡', section: 'prospecting-lead-gen' },
+
+  // Outreach & Communication
+  { id: 'email-outreach', name: 'Email Outreach', icon: '📧', section: 'outreach-communication' },
+  { id: 'email-deliverability', name: 'Email Deliverability', icon: '✉️', section: 'outreach-communication' },
+  { id: 'multichannel-outreach', name: 'Multi-Channel Outreach', icon: '🌐', section: 'outreach-communication' },
+  { id: 'video-prospecting', name: 'Video Prospecting', icon: '🎥', section: 'outreach-communication' },
+  { id: 'linkedin-outreach', name: 'LinkedIn Outreach', icon: '💼', section: 'outreach-communication' },
+  { id: 'sms-marketing', name: 'SMS Marketing', icon: '📱', section: 'outreach-communication' },
+  { id: 'voice-calling', name: 'Voice & Calling', icon: '📞', section: 'outreach-communication' },
+
+  // CRM & Sales
+  { id: 'crm', name: 'CRM Tools', icon: '📊', section: 'crm-sales' },
+  { id: 'pipeline-management', name: 'Pipeline Management', icon: '🔄', section: 'crm-sales' },
+  { id: 'sales-engagement', name: 'Sales Engagement', icon: '🤝', section: 'crm-sales' },
+  { id: 'deal-intelligence', name: 'Deal Intelligence', icon: '💡', section: 'crm-sales' },
+
+  // Automation & Workflow
+  { id: 'automation', name: 'Workflow Automation', icon: '⚡', section: 'automation-workflow' },
+  { id: 'ai-automation', name: 'AI Automation', icon: '🤖', section: 'automation-workflow' },
+  { id: 'ai-assistant', name: 'AI Assistants', icon: '🧙', section: 'automation-workflow' },
+  { id: 'ai-bdr', name: 'AI BDR', icon: '🎓', section: 'automation-workflow' },
+  { id: 'integration', name: 'Integration Platforms', icon: '🔗', section: 'automation-workflow' },
+
+  // Analytics & Optimization
+  { id: 'analytics', name: 'Analytics & Reporting', icon: '📈', section: 'analytics-optimization' },
+  { id: 'conversion-optimization', name: 'Conversion Optimization', icon: '🎯', section: 'analytics-optimization' },
+  { id: 'ab-testing', name: 'A/B Testing', icon: '🧪', section: 'analytics-optimization' },
+  { id: 'sales-coaching', name: 'Sales Coaching', icon: '📚', section: 'analytics-optimization' },
+
+  // Content & Marketing
+  { id: 'ai-copywriting', name: 'AI Copywriting', icon: '✍️', section: 'content-marketing' },
+  { id: 'email-templates', name: 'Email Templates', icon: '📄', section: 'content-marketing' },
+  { id: 'landing-pages', name: 'Landing Pages', icon: '🖼️', section: 'content-marketing' },
+  { id: 'social-media', name: 'Social Media', icon: '📣', section: 'content-marketing' },
+
+  // Support & Service
+  { id: 'communication', name: 'Communication', icon: '💬', section: 'support-service' },
+  { id: 'chatbots', name: 'Chatbots', icon: '💭', section: 'support-service' },
+  { id: 'customer-success', name: 'Customer Success', icon: '⭐', section: 'support-service' },
+  { id: 'appointment-booking', name: 'Appointment Booking', icon: '📅', section: 'support-service' },
+
+  // Agency Tools
+  { id: 'white-label', name: 'White Label', icon: '🏷️', section: 'agency-tools' },
+  { id: 'agency-management', name: 'Agency Management', icon: '🏢', section: 'agency-tools' },
+  { id: 'client-reporting', name: 'Client Reporting', icon: '📊', section: 'agency-tools' },
+  { id: 'marketplace', name: 'Marketplace', icon: '🛒', section: 'agency-tools' },
+
+  // Infrastructure
+  { id: 'payments', name: 'Payment Processing', icon: '💳', section: 'infrastructure' },
+  { id: 'forms', name: 'Forms & Surveys', icon: '📋', section: 'infrastructure' },
+  { id: 'widgets', name: 'Widgets', icon: '🧩', section: 'infrastructure' },
+  { id: 'data-management', name: 'Data Management', icon: '🗄️', section: 'infrastructure' },
+  { id: 'reputation-management', name: 'Reputation Management', icon: '🌟', section: 'infrastructure' },
+  { id: 'project-management', name: 'Project Management', icon: '📁', section: 'infrastructure' },
+  { id: 'accounting', name: 'Accounting & Finance', icon: '💰', section: 'infrastructure' },
 ]
 
 export const useCases = [
+  // Prospecting & Lead Generation
   'Lead Generation',
-  'Client Communication',
-  'Workflow Automation',
-  'White-label Solutions',
-  'Analytics & Reporting',
-  'Payment Processing',
-  'AI Assistants',
-  'Email Marketing',
-  'SMS Marketing',
-  'Appointment Booking',
+  'B2B Prospecting',
   'Data Enrichment',
-  'Video Prospecting',
-  'Cold Email Outreach',
-  'Multi-Channel Outreach',
   'Sales Intelligence',
+  'Visitor Identification',
+  'Intent Tracking',
+
+  // Outreach & Communication
+  'Cold Email Outreach',
+  'Email Deliverability',
+  'Multi-Channel Outreach',
+  'Video Prospecting',
+  'LinkedIn Outreach',
+  'SMS Marketing',
+  'Voice Calling',
+
+  // Automation & Sales
+  'Workflow Automation',
+  'AI Automation',
+  'Sales Engagement',
+  'Pipeline Management',
+  'Deal Intelligence',
+
+  // Analytics & Optimization
+  'Analytics & Reporting',
+  'Conversion Optimization',
+  'A/B Testing',
+  'Sales Coaching',
+
+  // Content & Marketing
+  'AI Copywriting',
+  'Email Marketing',
+  'Content Creation',
+  'Social Media Management',
+
+  // Client & Customer
+  'Client Communication',
+  'Customer Success',
+  'Appointment Booking',
+  'Chat & Messaging',
+
+  // Agency Operations
+  'White-label Solutions',
+  'Agency Management',
+  'Client Reporting',
+
+  // Infrastructure
+  'Payment Processing',
   'Integration',
+  'Data Management',
+  'Project Management',
 ]
 
 export const userTypes = [
