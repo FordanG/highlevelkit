@@ -103,36 +103,38 @@
                 </label>
               </div>
               <div class="flex flex-wrap gap-2">
-                <Button
+                <button
                   @click="toggleFeatured"
-                  :label="'⭐ Featured'"
-                  size="small"
-                  :class="showFeatured ? '' : 'p-button-secondary'"
-                  :severity="showFeatured ? 'warning' : 'secondary'"
-                  text
-                  style="border-radius: 9999px; padding: 0.25rem 0.75rem;"
-                />
-                <Button
+                  :class="[
+                    'px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-200',
+                    showFeatured
+                      ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30'
+                      : 'bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
+                  ]"
+                >
+                  ⭐ Featured
+                </button>
+                <button
                   @click="toggleTrending"
-                  :label="'🔥 Trending'"
-                  size="small"
-                  :class="showTrending ? 'p-button-primary' : 'p-button-secondary'"
-                  :severity="showTrending ? 'primary' : 'secondary'"
-                  text
-                  style="border-radius: 9999px; padding: 0.25rem 0.75rem;"
-                />
+                  :class="[
+                    'px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-200',
+                    showTrending
+                      ? 'bg-primary-500/20 text-primary-300 border border-primary-500/40 hover:bg-primary-500/30'
+                      : 'bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
+                  ]"
+                >
+                  🔥 Trending
+                </button>
               </div>
             </div>
 
             <!-- Clear Filters -->
-            <Button
+            <button
               @click="clearFilters"
-              label="Clear All Filters"
-              text
-              size="small"
-              class="w-full text"
-              style="color: rgb(96 165 250); padding: 0.5rem;"
-            />
+              class="w-full py-2 text-sm font-medium text-primary-400 hover:text-primary-300 hover:bg-white/5 rounded-lg transition-all duration-200"
+            >
+              Clear All Filters
+            </button>
           </div>
         </aside>
 
@@ -170,11 +172,12 @@
             <p class="text-slate-300 mb-6">
               Try adjusting your filters to see more results
             </p>
-            <Button
+            <button
               @click="clearFilters"
-              label="Clear Filters"
-              severity="primary"
-            />
+              class="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 rounded-lg shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-200"
+            >
+              Clear Filters
+            </button>
           </div>
         </div>
       </div>

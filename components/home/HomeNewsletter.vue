@@ -26,13 +26,13 @@
               class="flex-1"
               style="height: 2.5rem;"
             />
-            <Button
+            <button
               type="submit"
-              :label="isSubmitting ? 'Subscribing...' : 'Subscribe'"
               :disabled="isSubmitting"
-              class="whitespace-nowrap"
-              style="height: 2.5rem;"
-            />
+              class="whitespace-nowrap px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 disabled:from-primary-700 disabled:to-primary-600 disabled:opacity-70 disabled:cursor-not-allowed rounded-lg shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-200"
+            >
+              {{ isSubmitting ? 'Subscribing...' : 'Subscribe' }}
+            </button>
           </div>
           <p v-if="submitted" class="mt-3 text-sm text-emerald-300 inline-flex items-center gap-1">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -111,12 +111,13 @@
 
           <!-- Submit Button -->
           <div>
-            <Button
+            <button
               type="submit"
               :disabled="isSubmitting"
-              :label="isSubmitting ? 'Submitting...' : 'Submit App for Review'"
-              class="w-full"
-            />
+              class="w-full py-3 text-base font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 disabled:from-primary-700 disabled:to-primary-600 disabled:opacity-70 disabled:cursor-not-allowed rounded-lg shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-200"
+            >
+              {{ isSubmitting ? 'Submitting...' : 'Submit App for Review' }}
+            </button>
           </div>
 
           <p v-if="submitted" class="text-center text-green-400">

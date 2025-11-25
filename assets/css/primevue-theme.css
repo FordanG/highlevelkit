@@ -1,0 +1,179 @@
+/* PrimeVue Theme Customizations for Dark Mode */
+
+/* Primary Button - Enhanced visibility */
+.p-button {
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.p-button:not(.p-button-text):not(.p-button-outlined):not(.p-button-secondary) {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+}
+
+.p-button:not(.p-button-text):not(.p-button-outlined):not(.p-button-secondary):hover {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
+}
+
+.p-button:not(.p-button-text):not(.p-button-outlined):not(.p-button-secondary):active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+}
+
+/* Secondary Button - Improved visibility on dark backgrounds */
+.p-button-secondary:not(.p-button-text):not(.p-button-outlined) {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.p-button-secondary:not(.p-button-text):not(.p-button-outlined):hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Button - Better visibility */
+.p-button-text {
+  color: #94a3b8;
+  background: transparent;
+}
+
+.p-button-text:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+.p-button-text.p-button-secondary {
+  color: #cbd5e1;
+}
+
+.p-button-text.p-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Outlined Button */
+.p-button-outlined {
+  background: transparent;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  color: #60a5fa;
+}
+
+.p-button-outlined:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.7);
+  color: #93c5fd;
+}
+
+.p-button-outlined.p-button-secondary {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+}
+
+.p-button-outlined.p-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Button sizes */
+.p-button-sm {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.p-button-lg {
+  font-size: 1.125rem;
+  padding: 0.875rem 1.75rem;
+}
+
+/* Focus states for accessibility */
+.p-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #0a1628, 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+/* Input styling for dark mode */
+.p-inputtext {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.p-inputtext::placeholder {
+  color: #64748b;
+}
+
+.p-inputtext:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.p-inputtext:focus {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  outline: none;
+}
+
+/* Select/Dropdown styling */
+.p-select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  border-radius: 0.5rem;
+}
+
+.p-select:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.p-select:focus,
+.p-select.p-focus {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.p-select-panel {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.p-select-option {
+  color: #e2e8f0;
+  padding: 0.75rem 1rem;
+}
+
+.p-select-option:hover {
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.p-select-option.p-highlight {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+/* Checkbox styling */
+.p-checkbox .p-checkbox-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.25rem;
+}
+
+.p-checkbox .p-checkbox-box:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.p-checkbox.p-checkbox-checked .p-checkbox-box {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}

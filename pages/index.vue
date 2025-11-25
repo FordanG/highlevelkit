@@ -38,10 +38,21 @@
 
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up-delay-3 mb-8">
-            <Button as="a" href="/apps" label="Browse All Apps" class="group relative overflow-hidden">
-              <span class="relative z-10">Browse All Apps</span>
-            </Button>
-            <Button as="a" href="/submit" label="Submit Your App" severity="secondary" />
+            <NuxtLink
+              to="/apps"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 rounded-lg shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/40 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Browse All Apps
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </NuxtLink>
+            <NuxtLink
+              to="/submit"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/20 hover:border-white/30 rounded-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              Submit Your App
+            </NuxtLink>
           </div>
 
           <!-- Quick Stats -->
@@ -157,19 +168,15 @@
             <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
               Join thousands of agencies and entrepreneurs who have found their perfect tools
             </p>
-            <Button
-              as="a"
-              href="/apps"
-              severity="primary"
-              size="large"
+            <NuxtLink
+              to="/apps"
+              class="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/40 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             >
-              <template #default>
-                <span>Explore All Apps</span>
-                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </template>
-            </Button>
+              Explore All Apps
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </NuxtLink>
           </div>
         </div>
       </div>

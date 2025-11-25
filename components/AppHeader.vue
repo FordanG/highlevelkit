@@ -39,57 +39,42 @@
         <!-- Right Side Actions -->
         <div class="flex items-center gap-2">
           <!-- Search Button -->
-          <Button
+          <button
             @click="openSearch"
-            severity="secondary"
-            size="small"
-            text
-            class="hidden sm:flex p-button-text"
+            class="hidden sm:flex items-center gap-2 px-3 py-2 text-sm text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg transition-all duration-200"
             aria-label="Search"
-            style="padding: 0.5rem 0.75rem;"
           >
-            <template #default>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <span class="ml-2">Search</span>
-            </template>
-          </Button>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <span>Search</span>
+            <kbd class="hidden lg:inline-flex items-center px-1.5 py-0.5 text-xs text-slate-400 bg-white/5 border border-white/10 rounded">⌘K</kbd>
+          </button>
 
           <!-- Submit Button -->
-          <Button
-            as="a"
-            href="/submit"
-            size="small"
-            style="padding: 0.5rem 0.875rem;"
+          <NuxtLink
+            to="/submit"
+            class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 rounded-lg shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
-            <template #default>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-              </svg>
-              <span class="hidden sm:inline ml-2">Submit App</span>
-            </template>
-          </Button>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            <span class="hidden sm:inline">Submit App</span>
+          </NuxtLink>
 
           <!-- Mobile Menu Button -->
-          <Button
+          <button
             @click="toggleMenu"
-            severity="secondary"
-            text
-            icon-only
-            class="md:inline-flex md:!hidden p-button-text"
+            class="md:hidden flex items-center justify-center w-9 h-9 text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg transition-all duration-200"
             :aria-label="isMenuOpen ? 'Close menu' : 'Open menu'"
             :aria-expanded="isMenuOpen"
             aria-controls="mobile-menu"
-            style="height: 2.25rem; width: 2.25rem; padding: 0;"
           >
-            <template #default>
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path v-if="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </template>
-          </Button>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path v-if="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
       </div>
 
