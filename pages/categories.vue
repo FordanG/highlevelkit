@@ -17,15 +17,24 @@
           v-for="category in categoriesWithCounts"
           :key="category.id"
           :to="`/apps?category=${category.id}`"
-          class="card p-8 hover:scale-105 transition-all cursor-pointer"
+          class="card p-6 hover:scale-[1.02] transition-all cursor-pointer group"
         >
-          <div class="text-5xl mb-4">{{ category.icon }}</div>
-          <h3 class="text-xl font-bold text-white mb-2">
-            {{ category.name }}
-          </h3>
-          <p class="text-slate-300">
-            {{ category.count }} apps
-          </p>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary-500/30 transition-colors">
+              <i :class="['pi', category.icon, 'text-xl text-primary-400']"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg font-bold text-white mb-1 group-hover:text-primary-300 transition-colors">
+                {{ category.name }}
+              </h3>
+              <p class="text-sm text-slate-400 mb-2 line-clamp-2">
+                {{ category.description }}
+              </p>
+              <span class="text-xs text-primary-400 font-medium">
+                {{ category.count }} {{ category.count === 1 ? 'app' : 'apps' }}
+              </span>
+            </div>
+          </div>
         </NuxtLink>
       </div>
     </div>
@@ -44,13 +53,36 @@ const categoriesWithCounts = categoriesData.map(category => ({
 })).filter(category => category.count > 0)
 
 // SEO Configuration
-const { setPageMeta, siteUrl } = useSEO()
+const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
 
 setPageMeta({
-  title: 'Browse Apps by Category | Highlevel Kit',
+  title: 'Browse GoHighLevel Apps by Category | Highlevel Kit',
   description: 'Explore GoHighLevel apps organized by category. Find CRM tools, automation software, AI integrations, payment processors, analytics, and more for your agency.',
   image: `${siteUrl}/og-categories.png`,
   url: `${siteUrl}/categories`,
   type: 'website',
+  tags: ['GoHighLevel categories', 'app categories', 'CRM tools', 'automation', 'AI tools', 'analytics'],
 })
+
+// Generate category list for structured data
+const categoryItems = categoriesWithCounts.map((cat, index) => ({
+  name: cat.name,
+  url: `/apps?category=${cat.id}`,
+  description: cat.description,
+  position: index + 1,
+}))
+
+setMultipleSchemas([
+  generateCollectionPageSchema(
+    'GoHighLevel App Categories',
+    'Browse GoHighLevel apps organized by category - CRM, automation, AI, payments, and more.',
+    '/categories',
+    categoryItems
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Categories', url: '/categories' },
+  ]),
+  generateItemListSchema(categoryItems, 'GoHighLevel App Categories'),
+])
 </script>

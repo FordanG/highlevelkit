@@ -5,8 +5,10 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Breadcrumbs :items="breadcrumbs" class="mb-6" />
 
-        <div class="flex items-center gap-3 mb-4">
-          <span class="text-5xl">{{ categoryData?.icon }}</span>
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-14 h-14 rounded-xl bg-primary-500/20 flex items-center justify-center flex-shrink-0">
+            <i :class="['pi', categoryData?.icon, 'text-2xl text-primary-400']"></i>
+          </div>
           <h1 class="text-4xl font-bold text-white">
             Best {{ categoryData?.name }} for GoHighLevel in 2025
           </h1>
@@ -18,7 +20,7 @@
 
         <!-- Meta info -->
         <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
-          <span>📅 Updated: {{ currentDate }}</span>
+          <span><i class="pi pi-calendar mr-1.5"></i>Updated: {{ currentDate }}</span>
           <span>•</span>
           <span>{{ categoryTools.length }} tools reviewed</span>
         </div>
@@ -296,8 +298,44 @@ const getAppInitials = (name: string) => {
   return words.slice(0, 2).map(w => w[0]).join('').toUpperCase()
 }
 
-useSEO({
-  title: `Best ${categoryData.value?.name} for GoHighLevel in 2025 | HighLevelKit`,
-  description: `Discover the top ${categoryData.value?.name} that integrate with GoHighLevel. Compare features, pricing, and reviews to find the perfect tools for your business.`,
+// SEO Configuration
+const { setPageMeta, generateArticleSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+const seoTitle = computed(() => `Best ${categoryData.value?.name || 'Tools'} for GoHighLevel in 2025 | Highlevel Kit`)
+const seoDescription = computed(() => `Discover the top ${categoryData.value?.name || 'tools'} that integrate with GoHighLevel. Compare features, pricing, and reviews to find the perfect tools for your business.`)
+
+watchEffect(() => {
+  if (categoryData.value) {
+    setPageMeta({
+      title: seoTitle.value,
+      description: seoDescription.value,
+      url: `${siteUrl}/guides/category/${categorySlug.value}`,
+      type: 'article',
+      tags: ['GoHighLevel', categoryData.value.name, 'integration guide', 'best tools', '2025'],
+    })
+
+    const itemListItems = categoryTools.value.slice(0, 10).map((app, index) => ({
+      name: app.name,
+      url: `/apps/${app.slug}`,
+      description: app.tagline,
+      position: index + 1,
+    }))
+
+    setMultipleSchemas([
+      generateArticleSchema(
+        seoTitle.value,
+        seoDescription.value,
+        `/guides/category/${categorySlug.value}`,
+        `${siteUrl}/og-guide-${categorySlug.value}.png`,
+        new Date().toISOString().split('T')[0],
+      ),
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Guides', url: '/guides' },
+        { name: categoryData.value.name, url: `/guides/category/${categorySlug.value}` },
+      ]),
+      generateItemListSchema(itemListItems, `Best ${categoryData.value.name} for GoHighLevel`),
+    ])
+  }
 })
 </script>

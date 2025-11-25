@@ -252,17 +252,29 @@ const breadcrumbItems = app ? [
 ] : []
 
 // SEO Configuration
-const { setPageMeta, generateAppSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+const { setPageMeta, generateAppSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
 
 if (app) {
+  // Generate category names for SEO tags
+  const categoryNames = app.category.map((catId: string) => getCategoryName(catId))
+
   // Set page meta tags with Open Graph
   setPageMeta({
     title: `${app.name} - ${app.tagline} | Highlevel Kit`,
-    description: app.description,
+    description: `${app.description} Rating: ${app.rating}/5 from ${app.reviewCount} reviews. ${app.pricing.model === 'free' ? 'Free to use.' : `Starting at $${app.pricing.startingPrice}/mo.`}`,
     image: app.image || `${siteUrl}/og-app-${app.slug}.png`,
     url: `${siteUrl}/apps/${app.slug}`,
-    type: 'article',
+    type: 'product',
+    tags: [app.name, 'GoHighLevel', ...categoryNames, app.pricing.model, 'GHL integration'],
   })
+
+  // Related apps for structured data
+  const relatedAppsItems = relatedApps.map((relApp: any, index: number) => ({
+    name: relApp.name,
+    url: `/apps/${relApp.slug}`,
+    description: relApp.tagline,
+    position: index + 1,
+  }))
 
   // Add structured data
   const schemas = [
@@ -276,6 +288,8 @@ if (app) {
       pricing: app.pricing,
       category: app.category,
       slug: app.slug,
+      features: app.features,
+      website: app.website,
     }),
     generateBreadcrumbSchema([
       { name: 'Home', url: '/' },
@@ -284,6 +298,11 @@ if (app) {
     ]),
   ]
 
+  // Add related apps schema if there are related apps
+  if (relatedAppsItems.length > 0) {
+    schemas.push(generateItemListSchema(relatedAppsItems, `Related to ${app.name}`))
+  }
+
   setMultipleSchemas(schemas)
 } else {
   // 404 page
@@ -291,6 +310,7 @@ if (app) {
     title: 'App Not Found | Highlevel Kit',
     description: 'The app you are looking for could not be found.',
     url: `${siteUrl}/apps/${slug}`,
+    noindex: true,
   })
 }
 </script>

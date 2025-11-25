@@ -1,5 +1,9 @@
 /**
  * SEO Composable for managing meta tags, Open Graph, and structured data
+ * Provides comprehensive SEO functionality including:
+ * - Meta tags and Open Graph
+ * - JSON-LD structured data (Organization, WebSite, SoftwareApplication, etc.)
+ * - Breadcrumbs, FAQs, ItemLists, and more
  */
 
 interface SEOConfig {
@@ -12,6 +16,7 @@ interface SEOConfig {
   publishedTime?: string
   modifiedTime?: string
   tags?: string[]
+  noindex?: boolean
 }
 
 interface AppSEO {
@@ -28,16 +33,30 @@ interface AppSEO {
   }
   category?: string[]
   slug: string
+  features?: string[]
+  website?: string
+}
+
+interface FAQItem {
+  question: string
+  answer: string
+}
+
+interface ItemListItem {
+  name: string
+  url: string
+  image?: string
+  description?: string
+  position?: number
 }
 
 export const useSEO = () => {
-  const config = useRuntimeConfig()
   const route = useRoute()
 
   // Base site URL
-  const siteUrl = 'https://highlevelkit.com' // TODO: Move to env variable
+  const siteUrl = 'https://highlevelkit.com'
   const siteName = 'Highlevel Kit'
-  const defaultImage = `${siteUrl}/og-default.png`
+  const defaultImage = `${siteUrl}/og-image.png`
 
   /**
    * Generate comprehensive meta tags for a page
@@ -47,36 +66,43 @@ export const useSEO = () => {
     const ogImage = seo.image || defaultImage
     const pageType = seo.type || 'website'
 
+    const metaTags: any[] = [
+      // Basic meta tags
+      { name: 'description', content: seo.description },
+      { name: 'author', content: seo.author || 'Highlevel Kit' },
+
+      // Open Graph
+      { property: 'og:site_name', content: siteName },
+      { property: 'og:type', content: pageType },
+      { property: 'og:title', content: seo.title },
+      { property: 'og:description', content: seo.description },
+      { property: 'og:image', content: ogImage },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:url', content: canonicalUrl },
+      { property: 'og:locale', content: 'en_US' },
+
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: seo.title },
+      { name: 'twitter:description', content: seo.description },
+      { name: 'twitter:image', content: ogImage },
+      { name: 'twitter:site', content: '@highlevelkit' },
+
+      // Additional meta tags
+      ...(seo.tags ? [{ name: 'keywords', content: seo.tags.join(', ') }] : []),
+      ...(seo.publishedTime ? [{ property: 'article:published_time', content: seo.publishedTime }] : []),
+      ...(seo.modifiedTime ? [{ property: 'article:modified_time', content: seo.modifiedTime }] : []),
+    ]
+
+    // Add noindex if specified
+    if (seo.noindex) {
+      metaTags.push({ name: 'robots', content: 'noindex, nofollow' })
+    }
+
     useHead({
       title: seo.title,
-      meta: [
-        // Basic meta tags
-        { name: 'description', content: seo.description },
-        { name: 'author', content: seo.author || 'Highlevel Kit' },
-
-        // Open Graph
-        { property: 'og:site_name', content: siteName },
-        { property: 'og:type', content: pageType },
-        { property: 'og:title', content: seo.title },
-        { property: 'og:description', content: seo.description },
-        { property: 'og:image', content: ogImage },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { property: 'og:url', content: canonicalUrl },
-        { property: 'og:locale', content: 'en_US' },
-
-        // Twitter Card
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: seo.title },
-        { name: 'twitter:description', content: seo.description },
-        { name: 'twitter:image', content: ogImage },
-        { name: 'twitter:site', content: '@highlevelkit' }, // TODO: Update with actual Twitter handle
-
-        // Additional meta tags
-        ...(seo.tags ? seo.tags.map(tag => ({ name: 'keywords', content: tag })) : []),
-        ...(seo.publishedTime ? [{ property: 'article:published_time', content: seo.publishedTime }] : []),
-        ...(seo.modifiedTime ? [{ property: 'article:modified_time', content: seo.modifiedTime }] : []),
-      ],
+      meta: metaTags,
       link: [
         { rel: 'canonical', href: canonicalUrl },
       ],
@@ -95,9 +121,7 @@ export const useSEO = () => {
       logo: `${siteUrl}/logo.png`,
       description: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers.',
       sameAs: [
-        // TODO: Add social media URLs
-        // 'https://twitter.com/highlevelkit',
-        // 'https://facebook.com/highlevelkit',
+        'https://twitter.com/highlevelkit',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
@@ -122,6 +146,7 @@ export const useSEO = () => {
         '@type': 'Offer',
         price: app.pricing?.model === 'free' ? '0' : app.pricing?.startingPrice?.toString() || '0',
         priceCurrency: app.pricing?.currency || 'USD',
+        availability: 'https://schema.org/InStock',
       },
       url: `${siteUrl}/apps/${app.slug}`,
     }
@@ -142,6 +167,11 @@ export const useSEO = () => {
       }
     }
 
+    // Add features if available
+    if (app.features && app.features.length > 0) {
+      schema.featureList = app.features.join(', ')
+    }
+
     return schema
   }
 
@@ -156,7 +186,7 @@ export const useSEO = () => {
         '@type': 'ListItem',
         position: index + 1,
         name: item.name,
-        item: `${siteUrl}${item.url}`,
+        item: item.url.startsWith('http') ? item.url : `${siteUrl}${item.url}`,
       })),
     }
   }
@@ -170,6 +200,15 @@ export const useSEO = () => {
       '@type': 'WebSite',
       name: siteName,
       url: siteUrl,
+      description: 'The ultimate directory for GoHighLevel apps, integrations, and tools.',
+      publisher: {
+        '@type': 'Organization',
+        name: siteName,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/logo.png`,
+        },
+      },
       potentialAction: {
         '@type': 'SearchAction',
         target: {
@@ -178,6 +217,227 @@ export const useSEO = () => {
         },
         'query-input': 'required name=search_term_string',
       },
+    }
+  }
+
+  /**
+   * Generate FAQ Page structured data
+   */
+  const generateFAQSchema = (faqs: FAQItem[]) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map(faq => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    }
+  }
+
+  /**
+   * Generate ItemList structured data (for product collections, listings)
+   */
+  const generateItemListSchema = (items: ItemListItem[], listName: string) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: listName,
+      numberOfItems: items.length,
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: item.position || index + 1,
+        name: item.name,
+        url: item.url.startsWith('http') ? item.url : `${siteUrl}${item.url}`,
+        ...(item.image && { image: item.image }),
+        ...(item.description && { description: item.description }),
+      })),
+    }
+  }
+
+  /**
+   * Generate CollectionPage structured data (for category/collection pages)
+   */
+  const generateCollectionPageSchema = (
+    name: string,
+    description: string,
+    url: string,
+    items?: ItemListItem[]
+  ) => {
+    const schema: any = {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name,
+      description,
+      url: url.startsWith('http') ? url : `${siteUrl}${url}`,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: siteName,
+        url: siteUrl,
+      },
+    }
+
+    if (items && items.length > 0) {
+      schema.mainEntity = {
+        '@type': 'ItemList',
+        numberOfItems: items.length,
+        itemListElement: items.map((item, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: item.url.startsWith('http') ? item.url : `${siteUrl}${item.url}`,
+          name: item.name,
+        })),
+      }
+    }
+
+    return schema
+  }
+
+  /**
+   * Generate WebPage structured data
+   */
+  const generateWebPageSchema = (
+    name: string,
+    description: string,
+    url: string,
+    datePublished?: string,
+    dateModified?: string
+  ) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name,
+      description,
+      url: url.startsWith('http') ? url : `${siteUrl}${url}`,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: siteName,
+        url: siteUrl,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: siteName,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/logo.png`,
+        },
+      },
+      ...(datePublished && { datePublished }),
+      ...(dateModified && { dateModified }),
+    }
+  }
+
+  /**
+   * Generate AboutPage structured data
+   */
+  const generateAboutPageSchema = () => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: `About ${siteName}`,
+      description: 'Learn about Highlevel Kit, your trusted directory for discovering the best GoHighLevel apps and integrations.',
+      url: `${siteUrl}/about`,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: siteName,
+        url: siteUrl,
+      },
+      mainEntity: {
+        '@type': 'Organization',
+        name: siteName,
+        url: siteUrl,
+        description: 'The ultimate directory for GoHighLevel apps, integrations, and tools.',
+      },
+    }
+  }
+
+  /**
+   * Generate ContactPage structured data
+   */
+  const generateContactPageSchema = () => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: `Contact ${siteName}`,
+      description: 'Get in touch with the Highlevel Kit team for questions, feedback, and support.',
+      url: `${siteUrl}/contact`,
+      isPartOf: {
+        '@type': 'WebSite',
+        name: siteName,
+        url: siteUrl,
+      },
+      mainEntity: {
+        '@type': 'Organization',
+        name: siteName,
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'Customer Support',
+          email: 'support@highlevelkit.com',
+        },
+      },
+    }
+  }
+
+  /**
+   * Generate Article structured data (for blog posts, guides)
+   */
+  const generateArticleSchema = (
+    headline: string,
+    description: string,
+    url: string,
+    image: string,
+    datePublished: string,
+    dateModified?: string,
+    author?: string
+  ) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline,
+      description,
+      url: url.startsWith('http') ? url : `${siteUrl}${url}`,
+      image,
+      datePublished,
+      dateModified: dateModified || datePublished,
+      author: {
+        '@type': 'Organization',
+        name: author || siteName,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: siteName,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/logo.png`,
+        },
+      },
+    }
+  }
+
+  /**
+   * Generate HowTo structured data (for guides)
+   */
+  const generateHowToSchema = (
+    name: string,
+    description: string,
+    steps: Array<{ name: string; text: string; url?: string; image?: string }>
+  ) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name,
+      description,
+      step: steps.map((step, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        name: step.name,
+        text: step.text,
+        ...(step.url && { url: step.url.startsWith('http') ? step.url : `${siteUrl}${step.url}` }),
+        ...(step.image && { image: step.image }),
+      })),
     }
   }
 
@@ -213,6 +473,14 @@ export const useSEO = () => {
     generateAppSchema,
     generateBreadcrumbSchema,
     generateWebsiteSchema,
+    generateFAQSchema,
+    generateItemListSchema,
+    generateCollectionPageSchema,
+    generateWebPageSchema,
+    generateAboutPageSchema,
+    generateContactPageSchema,
+    generateArticleSchema,
+    generateHowToSchema,
     setStructuredData,
     setMultipleSchemas,
     siteUrl,

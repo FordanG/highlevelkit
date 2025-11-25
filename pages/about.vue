@@ -67,13 +67,21 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'About Us - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Learn about Highlevel Kit, your trusted directory for discovering the best GoHighLevel apps and integrations.'
-    }
-  ]
+// SEO Configuration
+const { setPageMeta, generateAboutPageSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'About Us - Highlevel Kit | GoHighLevel App Directory',
+  description: 'Learn about Highlevel Kit, your trusted directory for discovering the best GoHighLevel apps and integrations. Our mission is to help agencies and SaaS providers find the perfect tools.',
+  url: `${siteUrl}/about`,
+  tags: ['about Highlevel Kit', 'GoHighLevel directory', 'app directory', 'agency tools'],
 })
+
+setMultipleSchemas([
+  generateAboutPageSchema(),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'About', url: '/about' },
+  ]),
+])
 </script>

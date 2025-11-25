@@ -239,10 +239,27 @@ import { ref, computed } from 'vue'
 import appsData from '~/data/apps.json'
 import { categories } from '~/data/apps'
 
-useSEO({
-  title: 'Compare GoHighLevel Tools | HighLevelKit',
-  description: 'Compare GoHighLevel tools side-by-side. Analyze features, pricing, integrations, and more to find the best solution for your business.',
+// SEO Configuration
+const { setPageMeta, generateWebPageSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Compare GoHighLevel Tools Side-by-Side | Highlevel Kit',
+  description: 'Compare GoHighLevel tools side-by-side. Analyze features, pricing, integrations, and setup difficulty to find the best solution for your agency or SaaS business.',
+  url: `${siteUrl}/compare`,
+  tags: ['GoHighLevel comparison', 'GHL tools compare', 'app comparison', 'software comparison'],
 })
+
+setMultipleSchemas([
+  generateWebPageSchema(
+    'Compare GoHighLevel Tools',
+    'Compare GoHighLevel tools side-by-side. Analyze features, pricing, integrations, and more.',
+    '/compare'
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Compare Tools', url: '/compare' },
+  ]),
+])
 
 const selectedTools = ref<(string | null)[]>([null, null])
 

@@ -15,25 +15,26 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div class="lg:grid lg:grid-cols-4 lg:gap-8">
         <!-- Filters Sidebar -->
-        <aside class="lg:col-span-1 mb-8 lg:mb-0">
-          <div class="card p-6 sticky top-20">
-            <h3 class="text-lg font-bold text-white mb-4">Filters</h3>
+        <aside class="lg:col-span-1 mb-6 lg:mb-0">
+          <div class="card p-4 sticky top-20">
+            <h3 class="text-base font-semibold text-white mb-3">Filters</h3>
 
             <!-- Search -->
-            <div class="mb-6">
-              <label class="block text-sm font-medium text-slate-200 mb-2">
+            <div class="mb-4">
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">
                 Search
               </label>
               <InputText
                 v-model="searchQuery"
                 type="text"
                 placeholder="Search apps..."
+                class="!py-2 !text-sm"
               />
             </div>
 
             <!-- Category Filter -->
-            <div class="mb-6">
-              <label class="block text-sm font-medium text-slate-200 mb-2">
+            <div class="mb-4">
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">
                 Category
               </label>
               <Select
@@ -42,48 +43,49 @@
                 optionLabel="label"
                 optionValue="value"
                 placeholder="All Categories"
+                class="!text-sm"
               />
             </div>
 
             <!-- Pricing Filter -->
-            <div class="mb-6">
-              <label class="block text-sm font-medium text-slate-200 mb-2">
+            <div class="mb-4">
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">
                 Pricing
               </label>
-              <div class="space-y-2">
-                <label class="flex items-center">
+              <div class="flex flex-wrap gap-x-4 gap-y-1.5">
+                <label class="flex items-center cursor-pointer">
                   <input
                     type="checkbox"
                     value="free"
                     v-model="selectedPricing"
-                    class="rounded border-white/20 bg-white/5 text-primary-500 focus:ring-primary-500"
+                    class="w-3.5 h-3.5 rounded border-white/20 bg-white/5 text-primary-500 focus:ring-primary-500"
                   />
-                  <span class="ml-2 text-sm text-slate-300">Free</span>
+                  <span class="ml-1.5 text-xs text-slate-300">Free</span>
                 </label>
-                <label class="flex items-center">
+                <label class="flex items-center cursor-pointer">
                   <input
                     type="checkbox"
                     value="freemium"
                     v-model="selectedPricing"
-                    class="rounded border-white/20 bg-white/5 text-primary-500 focus:ring-primary-500"
+                    class="w-3.5 h-3.5 rounded border-white/20 bg-white/5 text-primary-500 focus:ring-primary-500"
                   />
-                  <span class="ml-2 text-sm text-slate-300">Freemium</span>
+                  <span class="ml-1.5 text-xs text-slate-300">Freemium</span>
                 </label>
-                <label class="flex items-center">
+                <label class="flex items-center cursor-pointer">
                   <input
                     type="checkbox"
                     value="paid"
                     v-model="selectedPricing"
-                    class="rounded border-white/20 bg-white/5 text-primary-500 focus:ring-primary-500"
+                    class="w-3.5 h-3.5 rounded border-white/20 bg-white/5 text-primary-500 focus:ring-primary-500"
                   />
-                  <span class="ml-2 text-sm text-slate-300">Paid</span>
+                  <span class="ml-1.5 text-xs text-slate-300">Paid</span>
                 </label>
               </div>
             </div>
 
             <!-- Setup Difficulty -->
-            <div class="mb-6">
-              <label class="block text-sm font-medium text-slate-200 mb-2">
+            <div class="mb-4">
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">
                 Setup Difficulty
               </label>
               <Select
@@ -92,38 +94,37 @@
                 optionLabel="label"
                 optionValue="value"
                 placeholder="All Levels"
+                class="!text-sm"
               />
             </div>
 
-            <!-- Tags -->
-            <div class="mb-6">
-              <div class="flex items-center justify-between mb-2">
-                <label class="block text-sm font-medium text-slate-200">
-                  Quick Filters
-                </label>
-              </div>
-              <div class="flex flex-wrap gap-2">
+            <!-- Quick Filters -->
+            <div class="mb-4">
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">
+                Quick Filters
+              </label>
+              <div class="flex flex-wrap gap-1.5">
                 <button
                   @click="toggleFeatured"
                   :class="[
-                    'px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-200',
+                    'px-2.5 py-1 text-xs font-medium rounded-full transition-all duration-200',
                     showFeatured
                       ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30'
                       : 'bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
                   ]"
                 >
-                  ⭐ Featured
+                  <i class="pi pi-star-fill mr-1 text-[10px]"></i>Featured
                 </button>
                 <button
                   @click="toggleTrending"
                   :class="[
-                    'px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-200',
+                    'px-2.5 py-1 text-xs font-medium rounded-full transition-all duration-200',
                     showTrending
                       ? 'bg-primary-500/20 text-primary-300 border border-primary-500/40 hover:bg-primary-500/30'
                       : 'bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
                   ]"
                 >
-                  🔥 Trending
+                  <i class="pi pi-bolt mr-1 text-[10px]"></i>Trending
                 </button>
               </div>
             </div>
@@ -131,7 +132,7 @@
             <!-- Clear Filters -->
             <button
               @click="clearFilters"
-              class="w-full py-2 text-sm font-medium text-primary-400 hover:text-primary-300 hover:bg-white/5 rounded-lg transition-all duration-200"
+              class="w-full py-1.5 text-xs font-medium text-primary-400 hover:text-primary-300 hover:bg-white/5 rounded-lg transition-all duration-200"
             >
               Clear All Filters
             </button>
@@ -196,7 +197,7 @@ const categories = categoriesData
 const categoryOptions = [
   { label: 'All Categories', value: '' },
   ...categories.map(cat => ({
-    label: `${cat.icon} ${cat.name}`,
+    label: cat.name,
     value: cat.id
   }))
 ]
@@ -235,6 +236,9 @@ if (route.query.featured) {
 }
 if (route.query.trending) {
   showTrending.value = true
+}
+if (route.query.search) {
+  searchQuery.value = route.query.search as string
 }
 
 // Computed filtered apps
@@ -332,7 +336,7 @@ const clearFilters = () => {
 }
 
 // SEO Configuration
-const { setPageMeta, siteUrl } = useSEO()
+const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
 
 setPageMeta({
   title: 'Browse GoHighLevel Apps & Integrations | Highlevel Kit',
@@ -340,5 +344,31 @@ setPageMeta({
   image: `${siteUrl}/og-apps.png`,
   url: `${siteUrl}/apps`,
   type: 'website',
+  tags: ['GoHighLevel apps', 'GHL integrations', 'agency software', 'CRM tools', 'automation apps'],
 })
+
+// Generate top apps list for structured data
+const topAppsItems = apps
+  .sort((a: any, b: any) => b.rating - a.rating)
+  .slice(0, 10)
+  .map((app: any, index: number) => ({
+    name: app.name,
+    url: `/apps/${app.slug}`,
+    description: app.tagline,
+    position: index + 1,
+  }))
+
+setMultipleSchemas([
+  generateCollectionPageSchema(
+    'GoHighLevel Apps & Integrations',
+    'Browse 100+ curated GoHighLevel apps, integrations, and tools for agencies and SaaS businesses.',
+    '/apps',
+    topAppsItems
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Apps', url: '/apps' },
+  ]),
+  generateItemListSchema(topAppsItems, 'Top Rated GoHighLevel Apps'),
+])
 </script>

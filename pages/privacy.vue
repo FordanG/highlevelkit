@@ -86,13 +86,27 @@ const currentDate = new Date().toLocaleDateString('en-US', {
   day: 'numeric'
 })
 
-useHead({
+// SEO Configuration
+const { setPageMeta, generateWebPageSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
   title: 'Privacy Policy - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Read Highlevel Kit\'s privacy policy to understand how we collect, use, and protect your personal information.'
-    }
-  ]
+  description: 'Read Highlevel Kit\'s privacy policy to understand how we collect, use, and protect your personal information when using our GoHighLevel app directory.',
+  url: `${siteUrl}/privacy`,
+  tags: ['privacy policy', 'data protection', 'privacy', 'Highlevel Kit'],
 })
+
+setMultipleSchemas([
+  generateWebPageSchema(
+    'Privacy Policy',
+    'Highlevel Kit\'s privacy policy explaining how we collect, use, and protect your information.',
+    '/privacy',
+    '2024-01-01',
+    currentDate
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Privacy Policy', url: '/privacy' },
+  ]),
+])
 </script>

@@ -92,9 +92,11 @@
             v-for="category in categories"
             :key="category.id"
             :to="`/apps?category=${category.id}`"
-            class="group rounded-xl border border-white/10 bg-white/5 hover:bg-white/7 hover:border-primary-500/30 transition-all duration-300 p-6 text-center cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary-500/10 active:scale-95"
+            class="group rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-primary-500/30 transition-all duration-300 p-5 text-center cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary-500/10 active:scale-95"
           >
-            <div class="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{{ category.icon }}</div>
+            <div class="w-10 h-10 mx-auto mb-3 rounded-lg bg-primary-500/20 flex items-center justify-center group-hover:bg-primary-500/30 group-hover:scale-110 transition-all duration-300">
+              <i :class="['pi', category.icon, 'text-lg text-primary-400']"></i>
+            </div>
             <div class="font-medium text-slate-300 group-hover:text-white text-sm transition-colors">{{ category.name }}</div>
           </NuxtLink>
         </div>
@@ -215,19 +217,50 @@ onMounted(() => {
 })
 
 // SEO Configuration
-const { setPageMeta, generateOrganizationSchema, generateWebsiteSchema, setMultipleSchemas, siteUrl } = useSEO()
+const { setPageMeta, generateOrganizationSchema, generateWebsiteSchema, generateFAQSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
 
 setPageMeta({
   title: 'Highlevel Kit - Discover the Best GoHighLevel Apps & Integrations',
-  description: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers.',
+  description: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers. Browse 100+ apps across 40+ categories.',
   image: `${siteUrl}/og-home.png`,
   url: siteUrl,
   type: 'website',
+  tags: ['GoHighLevel', 'GHL apps', 'GoHighLevel integrations', 'agency tools', 'SaaS tools', 'CRM integrations'],
 })
+
+// Generate featured apps list for structured data
+const featuredAppsItems = featuredApps.map((app: any, index: number) => ({
+  name: app.name,
+  url: `/apps/${app.slug}`,
+  description: app.tagline,
+  position: index + 1,
+}))
+
+// FAQ Schema for common questions
+const homeFAQs = [
+  {
+    question: 'What is Highlevel Kit?',
+    answer: 'Highlevel Kit is the ultimate directory for GoHighLevel apps, integrations, and tools. We curate the best solutions for agencies, SaaS providers, and freelancers to enhance their GoHighLevel experience.',
+  },
+  {
+    question: 'How do I find the right GoHighLevel app?',
+    answer: 'You can browse apps by category, filter by pricing model (free, freemium, paid), setup difficulty, and use our search feature to find specific tools. Each app listing includes ratings, reviews, and detailed descriptions.',
+  },
+  {
+    question: 'Can I submit my own app to Highlevel Kit?',
+    answer: 'Yes! We welcome app submissions from developers and companies. Visit our Submit page to add your GoHighLevel app or integration to our directory for review.',
+  },
+  {
+    question: 'Are all apps on Highlevel Kit free?',
+    answer: 'No, our directory includes both free and paid apps. Each listing clearly shows the pricing model - Free, Freemium, or Paid - so you can filter based on your budget.',
+  },
+]
 
 // Add structured data
 setMultipleSchemas([
   generateOrganizationSchema(),
   generateWebsiteSchema(),
+  generateFAQSchema(homeFAQs),
+  generateItemListSchema(featuredAppsItems, 'Featured GoHighLevel Apps'),
 ])
 </script>

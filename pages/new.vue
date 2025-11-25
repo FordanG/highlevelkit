@@ -54,7 +54,7 @@ const newApps = appsData
   .slice(0, 12)
 
 // SEO Configuration
-const { setPageMeta, siteUrl } = useSEO()
+const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
 
 setPageMeta({
   title: 'New GoHighLevel Apps & Integrations | Highlevel Kit',
@@ -62,5 +62,28 @@ setPageMeta({
   image: `${siteUrl}/og-new.png`,
   url: `${siteUrl}/new`,
   type: 'website',
+  tags: ['new apps', 'latest GoHighLevel apps', 'new GHL integrations', 'new releases'],
 })
+
+// Generate new apps list for structured data
+const newAppsItems = newApps.map((app: any, index: number) => ({
+  name: app.name,
+  url: `/apps/${app.slug}`,
+  description: app.tagline,
+  position: index + 1,
+}))
+
+setMultipleSchemas([
+  generateCollectionPageSchema(
+    'New GoHighLevel Apps',
+    'The latest GoHighLevel apps and integrations recently added to our directory.',
+    '/new',
+    newAppsItems
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'New Releases', url: '/new' },
+  ]),
+  generateItemListSchema(newAppsItems, 'New GoHighLevel Apps'),
+])
 </script>

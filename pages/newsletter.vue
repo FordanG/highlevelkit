@@ -82,13 +82,25 @@ const handleSubmit = async () => {
   }, 5000)
 }
 
-useHead({
-  title: 'Newsletter - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Subscribe to the Highlevel Kit newsletter for weekly updates on new apps, features, and GoHighLevel tips.'
-    }
-  ]
+// SEO Configuration
+const { setPageMeta, generateWebPageSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Newsletter - Highlevel Kit | Weekly GoHighLevel Updates',
+  description: 'Subscribe to the Highlevel Kit newsletter for weekly updates on new GoHighLevel apps, features, integrations, and tips for agencies and SaaS providers.',
+  url: `${siteUrl}/newsletter`,
+  tags: ['GoHighLevel newsletter', 'GHL updates', 'agency tips', 'app updates'],
 })
+
+setMultipleSchemas([
+  generateWebPageSchema(
+    'Highlevel Kit Newsletter',
+    'Subscribe for weekly updates on new GoHighLevel apps, features, and tips.',
+    '/newsletter'
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Newsletter', url: '/newsletter' },
+  ]),
+])
 </script>

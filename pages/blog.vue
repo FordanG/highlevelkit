@@ -32,13 +32,21 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Blog - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Read the latest articles, tips, and insights about GoHighLevel apps and integrations.'
-    }
-  ]
+// SEO Configuration - noindex since coming soon
+const { setPageMeta, generateBreadcrumbSchema, setStructuredData, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Blog - Highlevel Kit | GoHighLevel Tips & Insights',
+  description: 'Read the latest articles, tips, and insights about GoHighLevel apps and integrations. Discover best practices for agencies and SaaS providers.',
+  url: `${siteUrl}/blog`,
+  noindex: true, // Coming soon page - don't index
+  tags: ['GoHighLevel blog', 'GHL tips', 'agency insights', 'SaaS tips'],
 })
+
+setStructuredData(
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog' },
+  ])
+)
 </script>

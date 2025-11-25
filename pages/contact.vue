@@ -118,13 +118,21 @@ const handleSubmit = async () => {
   }, 5000)
 }
 
-useHead({
-  title: 'Contact Us - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Get in touch with the Highlevel Kit team. We\'re here to help with questions, feedback, and support.'
-    }
-  ]
+// SEO Configuration
+const { setPageMeta, generateContactPageSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Contact Us - Highlevel Kit | Get Support & Help',
+  description: 'Get in touch with the Highlevel Kit team. We\'re here to help with questions, feedback, app submissions, and support for GoHighLevel users.',
+  url: `${siteUrl}/contact`,
+  tags: ['contact', 'support', 'help', 'GoHighLevel', 'Highlevel Kit'],
 })
+
+setMultipleSchemas([
+  generateContactPageSchema(),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Contact', url: '/contact' },
+  ]),
+])
 </script>

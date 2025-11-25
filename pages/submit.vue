@@ -129,21 +129,27 @@
       <!-- Why Submit Section -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="text-center">
-          <div class="text-4xl mb-3">🎯</div>
+          <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-primary-500/20 flex items-center justify-center">
+            <i class="pi pi-bullseye text-2xl text-primary-400"></i>
+          </div>
           <h3 class="font-bold text-white mb-2">Targeted Exposure</h3>
           <p class="text-sm text-slate-300">
             Reach thousands of GoHighLevel users actively looking for solutions
           </p>
         </div>
         <div class="text-center">
-          <div class="text-4xl mb-3">📈</div>
+          <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-emerald-500/20 flex items-center justify-center">
+            <i class="pi pi-chart-line text-2xl text-emerald-400"></i>
+          </div>
           <h3 class="font-bold text-white mb-2">Increase Signups</h3>
           <p class="text-sm text-slate-300">
             Get qualified leads from agencies and entrepreneurs
           </p>
         </div>
         <div class="text-center">
-          <div class="text-4xl mb-3">⭐</div>
+          <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-amber-500/20 flex items-center justify-center">
+            <i class="pi pi-star-fill text-2xl text-amber-400"></i>
+          </div>
           <h3 class="font-bold text-white mb-2">Build Credibility</h3>
           <p class="text-sm text-slate-300">
             Collect reviews and testimonials from real users
@@ -160,7 +166,7 @@ import categoriesData from '~/data/categories.json'
 const categories = categoriesData
 
 const categoryOptions = categories.map(cat => ({
-  label: `${cat.icon} ${cat.name}`,
+  label: cat.name,
   value: cat.id
 }))
 
@@ -203,13 +209,25 @@ const handleSubmit = async () => {
   }, 5000)
 }
 
-useHead({
-  title: 'Submit Your App - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Submit your GoHighLevel app to be featured on Highlevel Kit and reach thousands of potential users.'
-    }
-  ]
+// SEO Configuration
+const { setPageMeta, generateWebPageSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Submit Your App - Get Featured on Highlevel Kit',
+  description: 'Submit your GoHighLevel app to be featured on Highlevel Kit. Reach thousands of agencies, SaaS providers, and entrepreneurs looking for the best GHL integrations.',
+  url: `${siteUrl}/submit`,
+  tags: ['submit app', 'GoHighLevel app', 'app submission', 'get featured', 'app directory'],
 })
+
+setMultipleSchemas([
+  generateWebPageSchema(
+    'Submit Your GoHighLevel App',
+    'Get your GoHighLevel app featured on Highlevel Kit and reach thousands of potential users.',
+    '/submit'
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Submit App', url: '/submit' },
+  ]),
+])
 </script>

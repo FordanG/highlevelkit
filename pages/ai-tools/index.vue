@@ -135,10 +135,27 @@
 import { ref, computed } from 'vue'
 import appsData from '~/data/apps.json'
 
-useSEO({
-  title: 'AI Tools for GoHighLevel | HighLevelKit',
-  description: 'Discover the best AI-powered tools to automate workflows, enhance sales, and scale your GoHighLevel business with artificial intelligence.',
+// SEO Configuration
+const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'AI Tools for GoHighLevel - AI Automation & Assistants | Highlevel Kit',
+  description: 'Discover the best AI-powered tools to automate workflows, enhance sales, and scale your GoHighLevel business. Find AI assistants, chatbots, AI copywriting, and automation tools.',
+  url: `${siteUrl}/ai-tools`,
+  tags: ['AI tools', 'GoHighLevel AI', 'AI automation', 'AI assistants', 'chatbots', 'AI copywriting'],
 })
+
+setMultipleSchemas([
+  generateCollectionPageSchema(
+    'AI Tools for GoHighLevel',
+    'Discover AI-powered tools to automate workflows and scale your GoHighLevel business.',
+    '/ai-tools'
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'AI Tools', url: '/ai-tools' },
+  ]),
+])
 
 const searchQuery = ref('')
 const selectedCategory = ref('')

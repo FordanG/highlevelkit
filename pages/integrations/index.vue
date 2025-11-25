@@ -143,10 +143,27 @@
 import { ref, computed } from 'vue'
 import appsData from '~/data/apps.json'
 
-useSEO({
-  title: 'Integration Platforms & Tools for GoHighLevel | HighLevelKit',
-  description: 'Find the best integration platforms to connect GoHighLevel with thousands of apps. Compare Zapier, Make, n8n, and more automation tools.',
+// SEO Configuration
+const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Integration Platforms & Tools for GoHighLevel | Highlevel Kit',
+  description: 'Find the best integration platforms to connect GoHighLevel with thousands of apps. Compare Zapier, Make, n8n, Pabbly, and more workflow automation tools.',
+  url: `${siteUrl}/integrations`,
+  tags: ['GoHighLevel integrations', 'Zapier', 'Make', 'n8n', 'workflow automation', 'API integration'],
 })
+
+setMultipleSchemas([
+  generateCollectionPageSchema(
+    'Integration Platforms & Tools for GoHighLevel',
+    'Find the best integration platforms to connect GoHighLevel with thousands of apps.',
+    '/integrations'
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Integration Platforms', url: '/integrations' },
+  ]),
+])
 
 const searchQuery = ref('')
 const selectedCategory = ref('')

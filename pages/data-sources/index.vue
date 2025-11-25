@@ -152,10 +152,27 @@
 import { ref, computed } from 'vue'
 import appsData from '~/data/apps.json'
 
-useSEO({
-  title: 'B2B Data Sources & Lead Generation Tools | HighLevelKit',
-  description: 'Find the best B2B data providers, sales intelligence platforms, and lead generation tools to fill your GoHighLevel CRM with quality prospects.',
+// SEO Configuration
+const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'B2B Data Sources & Lead Generation Tools for GoHighLevel | Highlevel Kit',
+  description: 'Find the best B2B data providers, sales intelligence platforms, and lead generation tools to fill your GoHighLevel CRM with quality prospects and verified contacts.',
+  url: `${siteUrl}/data-sources`,
+  tags: ['B2B data', 'lead generation', 'sales intelligence', 'data enrichment', 'prospecting tools'],
 })
+
+setMultipleSchemas([
+  generateCollectionPageSchema(
+    'B2B Data Sources & Lead Generation Tools',
+    'Find the best B2B data providers and lead generation tools for GoHighLevel.',
+    '/data-sources'
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Data Sources', url: '/data-sources' },
+  ]),
+])
 
 const searchQuery = ref('')
 const selectedCategory = ref('')

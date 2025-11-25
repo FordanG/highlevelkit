@@ -32,13 +32,21 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Community - Highlevel Kit',
-  meta: [
-    {
-      name: 'description',
-      content: 'Join the Highlevel Kit community to connect with other GoHighLevel users and developers.'
-    }
-  ]
+// SEO Configuration - noindex since coming soon
+const { setPageMeta, generateBreadcrumbSchema, setStructuredData, siteUrl } = useSEO()
+
+setPageMeta({
+  title: 'Community - Highlevel Kit | GoHighLevel Users & Developers',
+  description: 'Join the Highlevel Kit community to connect with other GoHighLevel users, developers, and agency owners. Share tips, get support, and grow together.',
+  url: `${siteUrl}/community`,
+  noindex: true, // Coming soon page - don't index
+  tags: ['GoHighLevel community', 'GHL users', 'agency community', 'developer network'],
 })
+
+setStructuredData(
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Community', url: '/community' },
+  ])
+)
 </script>

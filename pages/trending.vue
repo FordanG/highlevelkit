@@ -52,7 +52,7 @@ import appsData from '~/data/apps.json'
 const trendingApps = appsData.filter((app: any) => app.trending)
 
 // SEO Configuration
-const { setPageMeta, siteUrl } = useSEO()
+const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
 
 setPageMeta({
   title: 'Trending GoHighLevel Apps | Highlevel Kit',
@@ -60,5 +60,28 @@ setPageMeta({
   image: `${siteUrl}/og-trending.png`,
   url: `${siteUrl}/trending`,
   type: 'website',
+  tags: ['trending apps', 'popular GoHighLevel apps', 'hot GHL integrations', 'top tools'],
 })
+
+// Generate trending apps list for structured data
+const trendingAppsItems = trendingApps.map((app: any, index: number) => ({
+  name: app.name,
+  url: `/apps/${app.slug}`,
+  description: app.tagline,
+  position: index + 1,
+}))
+
+setMultipleSchemas([
+  generateCollectionPageSchema(
+    'Trending GoHighLevel Apps',
+    'The most popular GoHighLevel apps and integrations trending right now.',
+    '/trending',
+    trendingAppsItems
+  ),
+  generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Trending', url: '/trending' },
+  ]),
+  generateItemListSchema(trendingAppsItems, 'Trending GoHighLevel Apps'),
+])
 </script>
