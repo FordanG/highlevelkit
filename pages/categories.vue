@@ -41,7 +41,7 @@ const categoriesWithCounts = categoriesData.map(category => ({
   count: appsData.filter((app: any) =>
     app.category.includes(category.id)
   ).length
-}))
+})).filter(category => category.count > 0)
 
 // SEO Configuration
 const { setPageMeta, siteUrl } = useSEO()

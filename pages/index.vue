@@ -126,31 +126,6 @@
       </div>
     </section>
 
-    <!-- Trending Apps -->
-    <section class="py-10 sm:py-14">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between mb-8">
-          <div>
-            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-2" style="letter-spacing:-0.02em">Trending Now</h2>
-            <p class="text-slate-400">Most popular this week</p>
-          </div>
-          <NuxtLink to="/apps?trending=true" class="text-sm text-slate-300 hover:text-white inline-flex items-center gap-1">
-            View all
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </NuxtLink>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          <AppCard
-            v-for="app in trendingApps"
-            :key="app.id"
-            :app="app"
-          />
-        </div>
-      </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="py-10 sm:py-14">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,9 +167,10 @@ import appsData from '~/data/apps.json'
 import categoriesData from '~/data/categories.json'
 
 const apps = appsData
-const categories = categoriesData
+const categories = categoriesData.filter(category =>
+  appsData.some((app: any) => app.category.includes(category.id))
+)
 const featuredApps = apps.filter((app: any) => app.featured).slice(0, 6)
-const trendingApps = apps.filter((app: any) => app.trending).slice(0, 4)
 
 // Counter animation refs
 const appsCounter = ref<HTMLElement | null>(null)

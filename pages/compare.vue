@@ -67,7 +67,14 @@
               </th>
               <th v-for="app in comparisonApps" :key="app.id" class="p-4 bg-slate-800/50">
                 <div class="text-center">
-                  <div class="text-4xl mb-2">{{ app.logo }}</div>
+                  <div class="flex justify-center mb-2">
+                    <div v-if="isLogoUrl(app.logo)" class="w-16 h-16 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white/5 flex items-center justify-center p-2">
+                      <img :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
+                    </div>
+                    <div v-else class="w-16 h-16 rounded-xl flex items-center justify-center ring-1 ring-white/10" :style="getLogoGradient(app.name)">
+                      <span class="text-xl font-bold text-white drop-shadow">{{ getAppInitials(app.name) }}</span>
+                    </div>
+                  </div>
                   <div class="text-lg font-bold text-white">{{ app.name }}</div>
                   <div class="text-sm text-slate-400">{{ app.tagline }}</div>
                 </div>
@@ -257,6 +264,48 @@ const comparisonApps = computed(() => {
 const getCategoryName = (categoryId: string) => {
   const category = categories.find(cat => cat.id === categoryId)
   return category ? category.name : categoryId
+}
+
+const isLogoUrl = (logo: string) => {
+  return logo && (logo.startsWith('http://') || logo.startsWith('https://') || logo.startsWith('/'))
+}
+
+// Generate a hash number from string for consistent colors
+const hashString = (str: string): number => {
+  let hash = 0
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i)
+    hash = ((hash << 5) - hash) + char
+    hash = hash & hash
+  }
+  return Math.abs(hash)
+}
+
+const gradientPairs = [
+  ['#667eea', '#764ba2'],
+  ['#f093fb', '#f5576c'],
+  ['#4facfe', '#00f2fe'],
+  ['#43e97b', '#38f9d7'],
+  ['#fa709a', '#fee140'],
+  ['#a8edea', '#fed6e3'],
+  ['#ff9a9e', '#fecfef'],
+  ['#ffecd2', '#fcb69f'],
+]
+
+const getLogoGradient = (name: string) => {
+  const hash = hashString(name + 'logo')
+  const pair = gradientPairs[hash % gradientPairs.length]
+  return {
+    background: `linear-gradient(135deg, ${pair[0]}, ${pair[1]})`
+  }
+}
+
+const getAppInitials = (name: string) => {
+  const words = name.split(/[\s-]+/)
+  if (words.length === 1) {
+    return words[0].substring(0, 2).toUpperCase()
+  }
+  return words.slice(0, 2).map(w => w[0]).join('').toUpperCase()
 }
 
 const addComparisonSlot = () => {

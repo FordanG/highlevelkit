@@ -31,6 +31,7 @@ export default defineNuxtConfig({
   },
 
   primevue: {
+    autoImport: true,
     options: {
       theme: {
         preset: {
@@ -98,19 +99,44 @@ export default defineNuxtConfig({
         // Theme color for mobile browsers
         { name: 'theme-color', content: '#0a1628' },
         // MS Application tiles
-        { name: 'msapplication-TileColor', content: '#0a1628' }
+        { name: 'msapplication-TileColor', content: '#0a1628' },
+        // Open Graph
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'HighLevel Kit' },
+        { property: 'og:image', content: 'https://highlevelkit.com/og-image.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        // Twitter Card
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: 'https://highlevelkit.com/og-image.png' }
       ],
       link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         // Preconnect to Google Fonts for better performance
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
         // DNS prefetch for external domains
         { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' }
       ],
+      script: [
+        // Google Analytics
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-M2B2K2THNQ',
+          async: true
+        },
+        {
+          innerHTML: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-M2B2K2THNQ');`
+        }
+      ],
       // Preload critical fonts
       __dangerouslyDisableSanitizersByTagID: {
-        'font-inter': ['innerHTML']
+        'font-inter': ['innerHTML'],
+        'gtag-inline': ['innerHTML']
       }
     }
   }

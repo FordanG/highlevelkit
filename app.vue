@@ -7,13 +7,7 @@
 </template>
 
 <script setup lang="ts">
-// Enable PrimeVue dark mode
-onMounted(() => {
-  if (process.client) {
-    document.documentElement.classList.add('p-dark')
-  }
-})
-
+// Enable PrimeVue dark mode via useHead - no direct DOM manipulation needed
 useHead({
   htmlAttrs: {
     lang: 'en',

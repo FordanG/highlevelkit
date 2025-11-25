@@ -1,7 +1,21 @@
 <template>
   <div v-if="app">
+    <!-- Preview Banner -->
+    <div class="w-full h-48 sm:h-64 overflow-hidden relative" :style="!app.image ? gradientStyle : {}">
+      <img
+        v-if="app.image"
+        :src="app.image"
+        :alt="`${app.name} preview`"
+        class="w-full h-full object-cover"
+      />
+      <div v-else class="w-full h-full flex items-center justify-center">
+        <span class="text-3xl sm:text-4xl font-bold text-white/80 text-center drop-shadow-lg px-4">{{ app.name }}</span>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/50 to-transparent"></div>
+    </div>
+
     <!-- Breadcrumbs -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 -mt-16 relative z-10">
       <Breadcrumbs :items="breadcrumbItems" />
     </div>
 
@@ -11,11 +25,11 @@
         <div class="flex flex-col md:flex-row gap-8">
           <!-- Logo -->
           <div class="flex-shrink-0">
-            <div v-if="app.image || isLogoUrl(app.logo)" class="w-32 h-32 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5 flex items-center justify-center p-4">
-              <img :src="app.image || app.logo" :alt="app.name" class="w-full h-full object-contain" />
+            <div v-if="isLogoUrl(app.logo)" class="w-32 h-32 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5 flex items-center justify-center p-4">
+              <img :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
             </div>
-            <div v-else class="w-32 h-32 bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-2xl flex items-center justify-center ring-1 ring-white/10">
-              <span class="text-6xl">{{ app.logo }}</span>
+            <div v-else class="w-32 h-32 rounded-2xl flex items-center justify-center ring-1 ring-white/10" :style="logoGradientStyle">
+              <span class="text-4xl font-bold text-white drop-shadow">{{ appInitials }}</span>
             </div>
           </div>
 
@@ -58,13 +72,18 @@
 
             <!-- Stats -->
             <div class="flex flex-wrap gap-6 mb-6">
-              <div class="flex items-center gap-2">
+              <a
+                :href="`https://www.g2.com/search/products?query=${encodeURIComponent(app.name)}`"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 hover:opacity-80 transition-opacity"
+              >
                 <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
                 <span class="text-lg font-semibold text-white">{{ app.rating }}</span>
-                <span class="text-slate-400">({{ app.reviewCount }} reviews)</span>
-              </div>
+                <span class="text-slate-400">({{ app.reviewCount }} reviews on G2)</span>
+              </a>
               <div class="flex items-center gap-2">
                 <span class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm font-medium">
                   <span v-if="app.pricing.model === 'free'">Free</span>
@@ -78,32 +97,20 @@
               </div>
             </div>
 
-            <!-- CTA Buttons -->
+            <!-- CTA Button -->
             <div class="flex flex-wrap gap-3">
-              <Button
-                v-if="app.website"
-                as="a"
-                :href="app.website"
+              <a
+                v-if="app.affiliateLink || app.website"
+                :href="app.affiliateLink || app.website"
                 target="_blank"
                 rel="noopener noreferrer"
-                severity="primary"
+                class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-white bg-primary-500 hover:bg-primary-400 rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-primary-400/30 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
               >
-                <template #default>
-                  <span>Visit Website</span>
-                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </template>
-              </Button>
-              <Button
-                v-if="app.affiliateLink"
-                as="a"
-                :href="app.affiliateLink"
-                target="_blank"
-                rel="noopener noreferrer"
-                label="Get Special Offer"
-                severity="secondary"
-              />
+                Visit Website
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -171,13 +178,71 @@ const relatedApps = app
   : []
 
 const isLogoUrl = (logo: string) => {
-  return logo && (logo.startsWith('http://') || logo.startsWith('https://'))
+  return logo && (logo.startsWith('http://') || logo.startsWith('https://') || logo.startsWith('/'))
 }
 
 const getCategoryName = (id: string) => {
   const category = categoriesData.find(c => c.id === id)
   return category ? category.name : id
 }
+
+// Generate a hash number from string for consistent colors
+const hashString = (str: string): number => {
+  let hash = 0
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i)
+    hash = ((hash << 5) - hash) + char
+    hash = hash & hash
+  }
+  return Math.abs(hash)
+}
+
+// Gradient color pairs for aesthetic placeholders
+const gradientPairs = [
+  ['#667eea', '#764ba2'], // Purple to violet
+  ['#f093fb', '#f5576c'], // Pink to coral
+  ['#4facfe', '#00f2fe'], // Blue to cyan
+  ['#43e97b', '#38f9d7'], // Green to teal
+  ['#fa709a', '#fee140'], // Pink to yellow
+  ['#a8edea', '#fed6e3'], // Teal to pink
+  ['#ff9a9e', '#fecfef'], // Salmon to rose
+  ['#ffecd2', '#fcb69f'], // Peach to orange
+  ['#667eea', '#764ba2'], // Indigo to purple
+  ['#48c6ef', '#6f86d6'], // Sky to periwinkle
+  ['#feada6', '#f5efef'], // Peach to cream
+  ['#a18cd1', '#fbc2eb'], // Lavender to pink
+  ['#fad0c4', '#ffd1ff'], // Blush to lavender
+  ['#30cfd0', '#330867'], // Cyan to deep purple
+  ['#6a11cb', '#2575fc'], // Purple to blue
+]
+
+const gradientStyle = computed(() => {
+  if (!app) return {}
+  const hash = hashString(app.name)
+  const pair = gradientPairs[hash % gradientPairs.length]
+  const angle = (hash % 360)
+  return {
+    background: `linear-gradient(${angle}deg, ${pair[0]}, ${pair[1]})`
+  }
+})
+
+const logoGradientStyle = computed(() => {
+  if (!app) return {}
+  const hash = hashString(app.name + 'logo')
+  const pair = gradientPairs[hash % gradientPairs.length]
+  return {
+    background: `linear-gradient(135deg, ${pair[0]}, ${pair[1]})`
+  }
+})
+
+const appInitials = computed(() => {
+  if (!app) return ''
+  const words = app.name.split(/[\s-]+/)
+  if (words.length === 1) {
+    return words[0].substring(0, 2).toUpperCase()
+  }
+  return words.slice(0, 2).map(w => w[0]).join('').toUpperCase()
+})
 
 // Breadcrumb items
 const breadcrumbItems = app ? [

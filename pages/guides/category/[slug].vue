@@ -57,7 +57,12 @@
               >
                 <td class="p-4 border-r border-white/10">
                   <div class="flex items-center gap-3">
-                    <span class="text-2xl">{{ app.logo }}</span>
+                    <div v-if="isLogoUrl(app.logo)" class="w-10 h-10 rounded-lg overflow-hidden ring-1 ring-white/10 bg-white/5 flex items-center justify-center p-1.5 flex-shrink-0">
+                      <img :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
+                    </div>
+                    <div v-else class="w-10 h-10 rounded-lg flex items-center justify-center ring-1 ring-white/10 flex-shrink-0" :style="getLogoGradient(app.name)">
+                      <span class="text-sm font-bold text-white drop-shadow">{{ getAppInitials(app.name) }}</span>
+                    </div>
                     <div>
                       <div class="font-bold text-white">{{ app.name }}</div>
                       <div class="text-sm text-slate-400">{{ app.rating }} ⭐ ({{ app.reviewCount }})</div>
@@ -97,7 +102,12 @@
           <!-- Tool Header -->
           <div class="flex items-start justify-between mb-6">
             <div class="flex items-center gap-4">
-              <span class="text-5xl">{{ app.logo }}</span>
+              <div v-if="isLogoUrl(app.logo)" class="w-16 h-16 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white/5 flex items-center justify-center p-2 flex-shrink-0">
+                <img :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
+              </div>
+              <div v-else class="w-16 h-16 rounded-xl flex items-center justify-center ring-1 ring-white/10 flex-shrink-0" :style="getLogoGradient(app.name)">
+                <span class="text-xl font-bold text-white drop-shadow">{{ getAppInitials(app.name) }}</span>
+              </div>
               <div>
                 <div class="flex items-center gap-3 mb-2">
                   <h3 class="text-2xl font-bold text-white">{{ index + 1 }}. {{ app.name }}</h3>
@@ -242,6 +252,48 @@ const breadcrumbs = computed(() => [
 const getCategoryIntro = () => {
   // This would ideally be customized per category
   return `${categoryData.value?.description || ''} In this comprehensive guide, we'll review the best ${categoryData.value?.name} that integrate with GoHighLevel, helping you choose the right solution for your agency or business. We've analyzed pricing, features, integration methods, and real user reviews to bring you this curated list.`
+}
+
+const isLogoUrl = (logo: string) => {
+  return logo && (logo.startsWith('http://') || logo.startsWith('https://') || logo.startsWith('/'))
+}
+
+// Generate a hash number from string for consistent colors
+const hashString = (str: string): number => {
+  let hash = 0
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i)
+    hash = ((hash << 5) - hash) + char
+    hash = hash & hash
+  }
+  return Math.abs(hash)
+}
+
+const gradientPairs = [
+  ['#667eea', '#764ba2'],
+  ['#f093fb', '#f5576c'],
+  ['#4facfe', '#00f2fe'],
+  ['#43e97b', '#38f9d7'],
+  ['#fa709a', '#fee140'],
+  ['#a8edea', '#fed6e3'],
+  ['#ff9a9e', '#fecfef'],
+  ['#ffecd2', '#fcb69f'],
+]
+
+const getLogoGradient = (name: string) => {
+  const hash = hashString(name + 'logo')
+  const pair = gradientPairs[hash % gradientPairs.length]
+  return {
+    background: `linear-gradient(135deg, ${pair[0]}, ${pair[1]})`
+  }
+}
+
+const getAppInitials = (name: string) => {
+  const words = name.split(/[\s-]+/)
+  if (words.length === 1) {
+    return words[0].substring(0, 2).toUpperCase()
+  }
+  return words.slice(0, 2).map(w => w[0]).join('').toUpperCase()
 }
 
 useSEO({

@@ -5,8 +5,11 @@
     "slug": "supercloner",
     "tagline": "Clone and duplicate your GoHighLevel assets instantly",
     "description": "Save hours of manual work by instantly cloning your funnels, workflows, campaigns, and entire sub-accounts. Perfect for agencies managing multiple clients who need to duplicate successful setups quickly and efficiently.",
-    "logo": "https://assets.cdn.filesafe.space/Sr99nTAsuyCabfQCL1JQ/media/68a2968025dfa384b83252fd.png",
-    "category": ["automation", "widgets"],
+    "logo": "/apps/supercloner/logo.png",
+    "category": [
+      "automation",
+      "widgets"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 47,
@@ -16,8 +19,15 @@
     "reviewCount": 218,
     "featured": true,
     "trending": true,
-    "useCase": ["Workflow Automation", "White-label Solutions"],
-    "userType": ["Agency Owners", "SaaS Providers", "Freelancers"],
+    "useCase": [
+      "Workflow Automation",
+      "White-label Solutions"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Freelancers"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "easy",
     "features": [
@@ -29,7 +39,10 @@
       "Asset management"
     ],
     "website": "https://supercloner.app",
-    "affiliateLink": "https://supercloner.app/?ref=3nojbk"
+    "affiliateLink": "https://supercloner.app/?ref=3nojbk",
+    "image": "/apps/supercloner/og.jpg",
+    "logoOriginal": "https://assets.cdn.filesafe.space/Sr99nTAsuyCabfQCL1JQ/media/68a2968025dfa384b83252fd.png",
+    "imageOriginal": "https://assets.cdn.filesafe.space/Sr99nTAsuyCabfQCL1JQ/media/68a2968025dfa384b83252fd.png"
   },
   {
     "id": "10",
@@ -37,8 +50,11 @@
     "slug": "zapier",
     "tagline": "Connect GoHighLevel to 6000+ apps",
     "description": "Zapier is the go-to automation platform that connects GoHighLevel with over 6000 different applications. Automate repetitive tasks, create custom workflows, and integrate with tools like Slack, Google Sheets, and calendars without any code.",
-    "logo": "https://res.cloudinary.com/zapier-media/image/upload/v1745941190/Homepage/og-homepage_zls2qi.png",
-    "category": ["automation", "integration"],
+    "logo": "/apps/zapier/logo.png",
+    "category": [
+      "automation",
+      "integration"
+    ],
     "pricing": {
       "model": "freemium",
       "startingPrice": 19,
@@ -46,10 +62,18 @@
     },
     "rating": 4.7,
     "reviewCount": 342,
-    "featured": true,
+    "featured": false,
     "trending": true,
-    "useCase": ["Workflow Automation", "Integration", "Lead Generation"],
-    "userType": ["Agency Owners", "SaaS Providers", "Freelancers"],
+    "useCase": [
+      "Workflow Automation",
+      "Integration",
+      "Lead Generation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Freelancers"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "easy",
     "features": [
@@ -61,7 +85,55 @@
       "No-code automation"
     ],
     "website": "https://zapier.com",
-    "affiliateLink": "https://zapier.com"
+    "affiliateLink": "https://zapier.com",
+    "image": "/apps/zapier/og.jpg",
+    "logoOriginal": "https://zapier.com/l/favicon-180.png?v=1",
+    "imageOriginal": "https://res.cloudinary.com/zapier-media/image/upload/v1745941190/Homepage/og-homepage_zls2qi.png"
+  },
+  {
+    "id": "41",
+    "name": "Make",
+    "slug": "make",
+    "tagline": "Visual automation platform for complex workflows",
+    "description": "Make (formerly Integromat) is a powerful visual automation platform that connects GoHighLevel with thousands of apps. Build complex multi-step workflows with branching logic, data transformation, and error handling. Perfect for agencies needing advanced automation beyond simple triggers.",
+    "logo": "/apps/make/logo.png",
+    "image": "https://images.ctfassets.net/qqlj6g4ee76j/01MrmdnCuwubZzjQjuvNu3/ccfab63d50e05c2ccfb5b14d5b8cee7f/automation-bg.png",
+    "category": [
+      "automation",
+      "integration"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "startingPrice": 9,
+      "currency": "USD"
+    },
+    "rating": 4.8,
+    "reviewCount": 456,
+    "featured": true,
+    "trending": true,
+    "useCase": [
+      "Workflow Automation",
+      "Integration",
+      "Data Transformation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Freelancers"
+    ],
+    "integrationLevel": "webhook",
+    "setupDifficulty": "medium",
+    "features": [
+      "Visual workflow builder",
+      "1000+ app integrations",
+      "Branching and conditional logic",
+      "Data transformation tools",
+      "Error handling and retries",
+      "Scheduled automations"
+    ],
+    "website": "https://www.make.com",
+    "affiliateLink": "https://www.make.com/en/register?pc=highlevelkit",
+    "logoOriginal": "https://images.ctfassets.net/qqlj6g4ee76j/2OaXDLCkb6G2W0wkOAGUAC/1e38d4bb5c37e73b24ae6c7b5b68f98f/make-favicon.png"
   },
   {
     "id": "11",
@@ -69,18 +141,28 @@
     "slug": "stripe",
     "tagline": "Complete payment processing solution",
     "description": "Stripe integrates seamlessly with GoHighLevel for sending invoices, collecting payments, and triggering automated workflows when customers make purchases. Handle subscriptions, one-time payments, and complex billing scenarios with ease.",
-    "logo": "https://cdn.simpleicons.org/stripe",
-    "category": ["payments", "automation"],
+    "logo": "/apps/stripe/logo.png",
+    "category": [
+      "payments",
+      "automation"
+    ],
     "pricing": {
       "model": "free",
       "currency": "USD"
     },
     "rating": 4.8,
     "reviewCount": 521,
-    "featured": true,
+    "featured": false,
     "trending": false,
-    "useCase": ["Payment Processing", "Workflow Automation"],
-    "userType": ["Agency Owners", "SaaS Providers", "Course Creators"],
+    "useCase": [
+      "Payment Processing",
+      "Workflow Automation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Course Creators"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "easy",
     "features": [
@@ -92,7 +174,10 @@
       "Fraud detection"
     ],
     "website": "https://stripe.com",
-    "affiliateLink": "https://stripe.com"
+    "affiliateLink": "https://stripe.com",
+    "image": "/apps/stripe/og.jpg",
+    "imageOriginal": "https://images.stripeassets.com/fzn2n1nzq965/3AGidihOJl4nH9D1vDjM84/9540155d584be52fc54c443b6efa4ae6/homepage.png?q=80",
+    "logoOriginal": "https://images.stripeassets.com/fzn2n1nzq965/4vVgZi0ZMoEzOhkcv7EVwK/8cce6fdcf2733b2ec8e99548908847ed/favicon.png?w=180&amp;h=180"
   },
   {
     "id": "12",
@@ -100,8 +185,11 @@
     "slug": "twilio",
     "tagline": "Powerful SMS and calling platform",
     "description": "Connect Twilio to GoHighLevel for advanced calling and SMS capabilities. Enable two-way texting, voicemail drops, phone call routing, and automated communications to enhance your customer engagement.",
-    "logo": "https://cdn.simpleicons.org/twilio",
-    "category": ["communication", "automation"],
+    "logo": "/apps/twilio/logo.png",
+    "category": [
+      "communication",
+      "automation"
+    ],
     "pricing": {
       "model": "freemium",
       "startingPrice": 0,
@@ -111,8 +199,16 @@
     "reviewCount": 287,
     "featured": false,
     "trending": true,
-    "useCase": ["SMS Marketing", "Client Communication", "Phone Systems"],
-    "userType": ["Agency Owners", "SaaS Providers", "Consultants"],
+    "useCase": [
+      "SMS Marketing",
+      "Client Communication",
+      "Phone Systems"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Consultants"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "medium",
     "features": [
@@ -124,7 +220,10 @@
       "Programmable messaging"
     ],
     "website": "https://twilio.com",
-    "affiliateLink": "https://twilio.com"
+    "affiliateLink": "https://twilio.com",
+    "image": "/apps/twilio/og.jpg",
+    "logoOriginal": "https://twilio.com/content/dam/twilio-com/core-assets/social/apple-touch-icon.png",
+    "imageOriginal": "https://www.twilio.com/content/dam/twilio-com/core-assets/social/twilio-com-default-ogimage.png"
   },
   {
     "id": "13",
@@ -132,8 +231,11 @@
     "slug": "calendly",
     "tagline": "Smart scheduling made simple",
     "description": "Calendly is a smart scheduling tool that integrates with GoHighLevel to make meeting booking effortless. Features include time zone detection, buffer time settings, calendar integration, and automated reminders to reduce no-shows.",
-    "logo": "https://cdn.simpleicons.org/calendly",
-    "category": ["automation", "widgets"],
+    "logo": "https://calendly.com/media/favicon/favicon.ico",
+    "category": [
+      "automation",
+      "widgets"
+    ],
     "pricing": {
       "model": "freemium",
       "startingPrice": 12,
@@ -141,10 +243,18 @@
     },
     "rating": 4.7,
     "reviewCount": 412,
-    "featured": true,
+    "featured": false,
     "trending": false,
-    "useCase": ["Appointment Booking", "Client Communication", "Workflow Automation"],
-    "userType": ["Agency Owners", "Consultants", "Freelancers"],
+    "useCase": [
+      "Appointment Booking",
+      "Client Communication",
+      "Workflow Automation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Consultants",
+      "Freelancers"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "easy",
     "features": [
@@ -156,7 +266,9 @@
       "Meeting reminders"
     ],
     "website": "https://calendly.com",
-    "affiliateLink": "https://calendly.com"
+    "affiliateLink": "https://calendly.com",
+    "image": "/apps/calendly/og.jpg",
+    "imageOriginal": "https://images.ctfassets.net/k0lk9kiuza3o/6sN1GkuaBoQ67Nhkqa8Hgn/bcefc60aa064f94237bac2524bad875c/homepage.png"
   },
   {
     "id": "14",
@@ -164,8 +276,11 @@
     "slug": "clickup",
     "tagline": "All-in-one project management",
     "description": "Integrate ClickUp with GoHighLevel to automate project management tasks. When a new lead comes in, automatically create tasks in ClickUp, ensuring efficient lead follow-up and seamless project tracking.",
-    "logo": "https://cdn.simpleicons.org/clickup",
-    "category": ["automation", "crm"],
+    "logo": "/apps/clickup/logo.png",
+    "category": [
+      "automation",
+      "crm"
+    ],
     "pricing": {
       "model": "freemium",
       "startingPrice": 7,
@@ -175,8 +290,16 @@
     "reviewCount": 298,
     "featured": false,
     "trending": true,
-    "useCase": ["Workflow Automation", "Project Management", "Lead Generation"],
-    "userType": ["Agency Owners", "Freelancers", "Consultants"],
+    "useCase": [
+      "Workflow Automation",
+      "Project Management",
+      "Lead Generation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers",
+      "Consultants"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "medium",
     "features": [
@@ -188,7 +311,10 @@
       "Custom workflows"
     ],
     "website": "https://clickup.com",
-    "affiliateLink": "https://clickup.com"
+    "affiliateLink": "https://clickup.com",
+    "image": "/apps/clickup/og.jpg",
+    "logoOriginal": "https://clickup.com/favicons/apple-touch-icon.png",
+    "imageOriginal": "https://clickup.com/assets/brand/clickup-meta.png"
   },
   {
     "id": "15",
@@ -196,8 +322,11 @@
     "slug": "mailgun",
     "tagline": "Reliable email delivery service",
     "description": "Mailgun ensures your GoHighLevel emails reach the inbox, not the spam folder. With advanced deliverability features, real-time analytics, and powerful APIs, it's the perfect solution for high-volume email sending.",
-    "logo": "https://cdn.simpleicons.org/mailgun",
-    "category": ["communication", "automation"],
+    "logo": "/apps/mailgun/logo.png",
+    "category": [
+      "communication",
+      "automation"
+    ],
     "pricing": {
       "model": "freemium",
       "startingPrice": 0,
@@ -207,8 +336,15 @@
     "reviewCount": 176,
     "featured": false,
     "trending": false,
-    "useCase": ["Email Marketing", "Client Communication"],
-    "userType": ["Agency Owners", "SaaS Providers", "Course Creators"],
+    "useCase": [
+      "Email Marketing",
+      "Client Communication"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Course Creators"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "medium",
     "features": [
@@ -220,7 +356,8 @@
       "Powerful API"
     ],
     "website": "https://mailgun.com",
-    "affiliateLink": "https://mailgun.com"
+    "affiliateLink": "https://mailgun.com",
+    "logoOriginal": "https://www.mailgun.com/wp-content/themes/simpletexting-theme-blank/assets/favicon/apple-touch-icon-180x180.png"
   },
   {
     "id": "16",
@@ -228,8 +365,11 @@
     "slug": "activecampaign",
     "tagline": "Advanced email marketing automation",
     "description": "ActiveCampaign is a powerful email marketing platform that integrates with GoHighLevel. Features include dynamic content, AI-driven workflows, and connections to 950+ apps for comprehensive marketing automation.",
-    "logo": "https://cdn.simpleicons.org/activecampaign",
-    "category": ["communication", "automation"],
+    "logo": "/apps/activecampaign/logo.png",
+    "category": [
+      "communication",
+      "automation"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 29,
@@ -239,8 +379,16 @@
     "reviewCount": 389,
     "featured": false,
     "trending": true,
-    "useCase": ["Email Marketing", "Workflow Automation", "Lead Generation"],
-    "userType": ["Agency Owners", "SaaS Providers", "Course Creators"],
+    "useCase": [
+      "Email Marketing",
+      "Workflow Automation",
+      "Lead Generation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Course Creators"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "medium",
     "features": [
@@ -252,7 +400,9 @@
       "Predictive sending"
     ],
     "website": "https://activecampaign.com",
-    "affiliateLink": "https://activecampaign.com"
+    "affiliateLink": "https://activecampaign.com",
+    "image": "https://active-campaign.transforms.svdcdn.com/production/general/AC_Opengraph-1.png?w=1200&amp;h=630&amp;q=82&amp;auto=format&amp;fit=clip&amp;dm=1753306175&amp;s=1b0f698fac52d45ef9b2f8a250d6f8f5",
+    "logoOriginal": "https://activecampaign.com/dist/favicon-180x180.png"
   },
   {
     "id": "17",
@@ -260,8 +410,11 @@
     "slug": "quickbooks",
     "tagline": "Professional accounting made easy",
     "description": "QuickBooks integrates directly with GoHighLevel to transfer financial data seamlessly. Perfect for tax compliance, reporting, invoicing, expense tracking, and comprehensive financial management.",
-    "logo": "https://cdn.simpleicons.org/quickbooks",
-    "category": ["payments", "crm"],
+    "logo": "/apps/quickbooks/logo.png",
+    "category": [
+      "payments",
+      "crm"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 30,
@@ -271,8 +424,15 @@
     "reviewCount": 267,
     "featured": false,
     "trending": false,
-    "useCase": ["Payment Processing", "Analytics & Reporting"],
-    "userType": ["Agency Owners", "SaaS Providers", "Consultants"],
+    "useCase": [
+      "Payment Processing",
+      "Analytics & Reporting"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Consultants"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "medium",
     "features": [
@@ -284,7 +444,8 @@
       "Bank reconciliation"
     ],
     "website": "https://quickbooks.intuit.com",
-    "affiliateLink": "https://quickbooks.intuit.com"
+    "affiliateLink": "https://quickbooks.intuit.com",
+    "logoOriginal": "https://quickbooks.intuit.com/cas/dam/IMAGE/A6Mfhf7Ef/apple-touch-icon-60x60.png"
   },
   {
     "id": "18",
@@ -292,8 +453,11 @@
     "slug": "lemlist",
     "tagline": "Personalized outreach at scale",
     "description": "Lemlist connects to GoHighLevel workflows to sync contacts and start personalized, multi-channel outreach sequences. Automatically trigger actions based on prospect activity and engagement.",
-    "logo": "https://cdn.simpleicons.org/lemlist",
-    "category": ["communication", "automation"],
+    "logo": "/apps/lemlist/logo.png",
+    "category": [
+      "communication",
+      "automation"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 59,
@@ -303,8 +467,16 @@
     "reviewCount": 234,
     "featured": true,
     "trending": true,
-    "useCase": ["Lead Generation", "Email Marketing", "Client Communication"],
-    "userType": ["Agency Owners", "Freelancers", "Consultants"],
+    "useCase": [
+      "Lead Generation",
+      "Email Marketing",
+      "Client Communication"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers",
+      "Consultants"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "easy",
     "features": [
@@ -316,7 +488,10 @@
       "LinkedIn integration"
     ],
     "website": "https://lemlist.com",
-    "affiliateLink": "https://lemlist.com"
+    "affiliateLink": "https://lemlist.com",
+    "image": "/apps/lemlist/og.jpg",
+    "logoOriginal": "https://cdn.prod.website-files.com/5de921a1902d8d8b7a99f774/64eee4dd45b217c3c3e0bec6_lemlist%20logo.png",
+    "imageOriginal": "https://cdn.prod.website-files.com/5de921a1902d8d8b7a99f774/682c395e15de060dd10f83a7_home_graph_image.webp"
   },
   {
     "id": "19",
@@ -324,8 +499,11 @@
     "slug": "nuacom",
     "tagline": "Advanced phone system for GHL",
     "description": "NUACOM offers streamlined workflow with click-to-call functionality. Features include automatic call logging, text messaging, call recordings, AI analysis, advanced call routing, IVR, and comprehensive analytics.",
-    "logo": "https://nuacom.com/wp-content/themes/nuacom/assets/images/logo.svg",
-    "category": ["communication", "automation"],
+    "logo": "/apps/nuacom/logo.png",
+    "category": [
+      "communication",
+      "automation"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 25,
@@ -333,10 +511,18 @@
     },
     "rating": 4.9,
     "reviewCount": 156,
-    "featured": true,
+    "featured": false,
     "trending": false,
-    "useCase": ["Phone Systems", "Client Communication", "Analytics & Reporting"],
-    "userType": ["Agency Owners", "SaaS Providers", "Consultants"],
+    "useCase": [
+      "Phone Systems",
+      "Client Communication",
+      "Analytics & Reporting"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Consultants"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "medium",
     "features": [
@@ -348,7 +534,10 @@
       "IVR system"
     ],
     "website": "https://nuacom.com",
-    "affiliateLink": "https://nuacom.com"
+    "affiliateLink": "https://nuacom.com",
+    "image": "/apps/nuacom/og.jpg",
+    "imageOriginal": "https://nuacom.com/wp-content/uploads/2021/04/02-3.png",
+    "logoOriginal": "https://nuacom.com/wp-content/themes/nuacom/assets/images/logo.svg"
   },
   {
     "id": "20",
@@ -357,7 +546,11 @@
     "tagline": "Premium snapshots & white-label support",
     "description": "Industry-leading snapshots, 24/7 white-label tech support, done-for-you client onboarding, and captivating demo videos. Save 3-6 months of development time and $15,000+ in costs with comprehensive templates for SaaS, small business, and webinar niches.",
     "logo": "https://extendly.com/wp-content/uploads/2023/09/extendly-logo.svg",
-    "category": ["templates", "white-label", "automation"],
+    "category": [
+      "templates",
+      "white-label",
+      "automation"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 199,
@@ -367,8 +560,15 @@
     "reviewCount": 432,
     "featured": true,
     "trending": true,
-    "useCase": ["White-label Solutions", "Client Onboarding", "Workflow Automation"],
-    "userType": ["Agency Owners", "SaaS Providers"],
+    "useCase": [
+      "White-label Solutions",
+      "Client Onboarding",
+      "Workflow Automation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "easy",
     "features": [
@@ -388,8 +588,11 @@
     "slug": "hl-pro-tools",
     "tagline": "24/7 unlimited white-label support",
     "description": "Unlimited branded support via live chat, email, and Zoom. Includes SaaS snapshot, industry funnels, white-label demo videos, theme builder, and power trainings. Your clients get support under your brand with 3.5-hour average response time.",
-    "logo": "https://hlprotools.com/wp-content/uploads/2023/hl-pro-tools-logo.svg",
-    "category": ["white-label", "templates"],
+    "logo": "/apps/hl-pro-tools/logo.png",
+    "category": [
+      "white-label",
+      "templates"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 197,
@@ -399,8 +602,15 @@
     "reviewCount": 389,
     "featured": true,
     "trending": true,
-    "useCase": ["White-label Solutions", "Client Communication", "Client Onboarding"],
-    "userType": ["Agency Owners", "SaaS Providers"],
+    "useCase": [
+      "White-label Solutions",
+      "Client Communication",
+      "Client Onboarding"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "easy",
     "features": [
@@ -412,7 +622,10 @@
       "Custom onboarding calls"
     ],
     "website": "https://hlprotools.com",
-    "affiliateLink": "https://hlprotools.com"
+    "affiliateLink": "https://hlprotools.com",
+    "image": "/apps/hl-pro-tools/og.jpg",
+    "imageOriginal": "https://hlprotools.com/wp-content/uploads/2024/10/HL-Pro-Tools-Website-Image.png",
+    "logoOriginal": "https://hlprotools.com/wp-content/uploads/2023/hl-pro-tools-logo.svg"
   },
   {
     "id": "22",
@@ -421,7 +634,11 @@
     "tagline": "Unlimited apps for GoHighLevel agencies",
     "description": "Access 150+ apps with a single subscription. Fully white-labeled solution for CRM, marketing, e-commerce, and more. Includes unlimited support, 100+ video tutorials, and weekly new app releases. Powers 45% of the GHL App Marketplace.",
     "logo": "https://levelupmarketplace.com/assets/logo.svg",
-    "category": ["automation", "widgets", "templates"],
+    "category": [
+      "automation",
+      "widgets",
+      "templates"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 97,
@@ -431,8 +648,15 @@
     "reviewCount": 567,
     "featured": true,
     "trending": true,
-    "useCase": ["Workflow Automation", "Integration", "White-label Solutions"],
-    "userType": ["Agency Owners", "SaaS Providers"],
+    "useCase": [
+      "Workflow Automation",
+      "Integration",
+      "White-label Solutions"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "easy",
     "features": [
@@ -444,7 +668,9 @@
       "One subscription access"
     ],
     "website": "https://levelupmarketplace.com",
-    "affiliateLink": "https://marketplace.ghlcentral.com/business-tools/level-up-marketplace/"
+    "affiliateLink": "https://marketplace.ghlcentral.com/business-tools/level-up-marketplace/",
+    "image": "/apps/level-up-marketplace/og.jpg",
+    "imageOriginal": "https://assets.cdn.filesafe.space/OTzVLJMI3aHvXJhuMe5c/media/668d4a4a0ec0203670e34179.png"
   },
   {
     "id": "23",
@@ -453,7 +679,10 @@
     "tagline": "Ultimate GoHighLevel resource hub",
     "description": "Community-driven platform offering training courses, playbooks, snapshots, and white-label services. Features GHL 101 free course, University training, and marketplace partnerships with Extendly and other providers.",
     "logo": "https://ghlcentral.com/wp-content/uploads/ghl-central-logo.svg",
-    "category": ["templates", "analytics"],
+    "category": [
+      "templates",
+      "analytics"
+    ],
     "pricing": {
       "model": "freemium",
       "startingPrice": 0,
@@ -463,8 +692,16 @@
     "reviewCount": 298,
     "featured": true,
     "trending": false,
-    "useCase": ["Training & Education", "Community", "Resources"],
-    "userType": ["Agency Owners", "Freelancers", "Consultants"],
+    "useCase": [
+      "Training & Education",
+      "Community",
+      "Resources"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers",
+      "Consultants"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "easy",
     "features": [
@@ -476,7 +713,9 @@
       "Discount codes"
     ],
     "website": "https://ghlcentral.com",
-    "affiliateLink": "https://ghlcentral.com"
+    "affiliateLink": "https://ghlcentral.com",
+    "image": "/apps/ghl-central/og.jpg",
+    "imageOriginal": "https://ghlcentral.com/wp-content/uploads/2024/03/GHL-Central-1-min-2.png"
   },
   {
     "id": "24",
@@ -485,7 +724,10 @@
     "tagline": "#1 snapshot solution for agencies",
     "description": "Premium marketplace with 100+ done-for-you snapshots and 57+ more in development. Ready-to-deploy templates for any niche including sales funnels, pipelines, automated workflows, and message templates.",
     "logo": "https://thesnapshotmarketplace.com/assets/logo.svg",
-    "category": ["templates", "automation"],
+    "category": [
+      "templates",
+      "automation"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 97,
@@ -495,8 +737,15 @@
     "reviewCount": 234,
     "featured": false,
     "trending": true,
-    "useCase": ["Templates", "Workflow Automation", "Lead Generation"],
-    "userType": ["Agency Owners", "Freelancers"],
+    "useCase": [
+      "Templates",
+      "Workflow Automation",
+      "Lead Generation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "easy",
     "features": [
@@ -508,7 +757,9 @@
       "Pipeline configurations"
     ],
     "website": "https://thesnapshotmarketplace.com",
-    "affiliateLink": "https://thesnapshotmarketplace.com"
+    "affiliateLink": "https://thesnapshotmarketplace.com",
+    "image": "/apps/snapshot-marketplace/og.jpg",
+    "imageOriginal": "https://assets.cdn.filesafe.space/HvLNHd8Nu4e5YTvcuIhM/media/66b7dfc97eda5ceb2c646033.png"
   },
   {
     "id": "25",
@@ -517,7 +768,10 @@
     "tagline": "Turnkey plug & play solutions",
     "description": "Offering turnkey snapshots, themes, UI/UX designs, graphic kits, and white-label support services. Includes 15 days of customization support after purchase for any snapshot needs.",
     "logo": "https://gohighlevelshop.com/assets/logo.svg",
-    "category": ["templates", "widgets"],
+    "category": [
+      "templates",
+      "widgets"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 149,
@@ -527,8 +781,15 @@
     "reviewCount": 187,
     "featured": false,
     "trending": false,
-    "useCase": ["Templates", "Design", "White-label Solutions"],
-    "userType": ["Agency Owners", "Freelancers"],
+    "useCase": [
+      "Templates",
+      "Design",
+      "White-label Solutions"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "easy",
     "features": [
@@ -540,7 +801,9 @@
       "Mortgage calculators"
     ],
     "website": "https://gohighlevelshop.com",
-    "affiliateLink": "https://gohighlevelshop.com"
+    "affiliateLink": "https://gohighlevelshop.com",
+    "image": "/apps/gohighlevel-shop/og.jpg",
+    "imageOriginal": "https://topghlsnapshots.com/wp-admin/admin-ajax.php?action=rank_math_overlay_thumb&id=11487&type=top-ghl-snapshots&hash=6fa899390902e2f824735a90f8c03f45"
   },
   {
     "id": "26",
@@ -548,8 +811,11 @@
     "slug": "yext",
     "tagline": "Reputation management for 150+ sites",
     "description": "Expand reputation management across 150+ listing sites beyond Google and Facebook. Update brand facts on 70+ publisher sites, monitor reviews, and manage your online presence. USA-only, resellable at $30/month agency cost.",
-    "logo": "https://cdn.simpleicons.org/yext",
-    "category": ["analytics", "communication"],
+    "logo": "/apps/yext/logo.png",
+    "category": [
+      "analytics",
+      "communication"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 30,
@@ -559,8 +825,15 @@
     "reviewCount": 156,
     "featured": false,
     "trending": false,
-    "useCase": ["Reputation Management", "Analytics & Reporting", "Client Communication"],
-    "userType": ["Agency Owners", "SaaS Providers"],
+    "useCase": [
+      "Reputation Management",
+      "Analytics & Reporting",
+      "Client Communication"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "medium",
     "features": [
@@ -572,7 +845,10 @@
       "USA businesses only"
     ],
     "website": "https://www.yext.com",
-    "affiliateLink": "https://www.yext.com"
+    "affiliateLink": "https://www.yext.com",
+    "image": "/apps/yext/og.jpg",
+    "logoOriginal": "https://www.yext.com/favicon.ico",
+    "imageOriginal": "https://a.mktgcdn.com/p/I5kFfbmt0qrd2xbZ85jarDud_D2GASAT2NXD6yfZOLg/1920x1081.jpg"
   },
   {
     "id": "27",
@@ -580,8 +856,11 @@
     "slug": "agencyanalytics",
     "tagline": "Customizable GoHighLevel dashboards",
     "description": "White-label reporting and analytics platform that integrates with GoHighLevel. Create customizable dashboards to monitor KPIs, track opportunities, contacts, conversations, and visualize campaign success for clients.",
-    "logo": "https://cdn.simpleicons.org/agencyanalytics",
-    "category": ["analytics", "white-label"],
+    "logo": "https://agencyanalytics.com/favicon.ico",
+    "category": [
+      "analytics",
+      "white-label"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 49,
@@ -591,8 +870,15 @@
     "reviewCount": 289,
     "featured": false,
     "trending": true,
-    "useCase": ["Analytics & Reporting", "White-label Solutions", "Client Communication"],
-    "userType": ["Agency Owners", "SaaS Providers"],
+    "useCase": [
+      "Analytics & Reporting",
+      "White-label Solutions",
+      "Client Communication"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "medium",
     "features": [
@@ -604,7 +890,9 @@
       "Multi-platform analytics"
     ],
     "website": "https://agencyanalytics.com",
-    "affiliateLink": "https://agencyanalytics.com/integrations/highlevel"
+    "affiliateLink": "https://agencyanalytics.com/integrations/highlevel",
+    "image": "/apps/agencyanalytics/og.jpg",
+    "imageOriginal": "https://agencyanalytics.com/img/og-dashboard.png"
   },
   {
     "id": "28",
@@ -612,8 +900,11 @@
     "slug": "supplygem",
     "tagline": "GoHighLevel snapshots & guides",
     "description": "Comprehensive resource for GoHighLevel snapshots covering 26+ niches including real estate, fitness, dental, and more. Detailed guides, workflows, and templates to help agencies implement effective strategies quickly.",
-    "logo": "https://supplygem.com/assets/logo.svg",
-    "category": ["templates", "analytics"],
+    "logo": "/apps/supplygem/logo.png",
+    "category": [
+      "templates",
+      "analytics"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 97,
@@ -623,8 +914,15 @@
     "reviewCount": 178,
     "featured": false,
     "trending": false,
-    "useCase": ["Templates", "Training & Education", "Workflow Automation"],
-    "userType": ["Agency Owners", "Freelancers"],
+    "useCase": [
+      "Templates",
+      "Training & Education",
+      "Workflow Automation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "easy",
     "features": [
@@ -636,7 +934,8 @@
       "Best practices"
     ],
     "website": "https://supplygem.com",
-    "affiliateLink": "https://supplygem.com/gohighlevel-snapshots/"
+    "affiliateLink": "https://supplygem.com/gohighlevel-snapshots/",
+    "logoOriginal": "https://supplygem.com/assets/logo.svg"
   },
   {
     "id": "29",
@@ -645,7 +944,10 @@
     "tagline": "150+ ready-to-implement snapshots",
     "description": "Massive collection of 150+ GHL snapshots, white-label support partners, and done-for-you implementations. Comprehensive training and support for agencies looking to scale quickly with proven templates.",
     "logo": "https://streamlineresults.com/assets/logo.svg",
-    "category": ["templates", "white-label"],
+    "category": [
+      "templates",
+      "white-label"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 197,
@@ -655,8 +957,15 @@
     "reviewCount": 201,
     "featured": false,
     "trending": true,
-    "useCase": ["Templates", "White-label Solutions", "Workflow Automation"],
-    "userType": ["Agency Owners", "SaaS Providers"],
+    "useCase": [
+      "Templates",
+      "White-label Solutions",
+      "Workflow Automation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers"
+    ],
     "integrationLevel": "native",
     "setupDifficulty": "easy",
     "features": [
@@ -668,7 +977,9 @@
       "Proven templates"
     ],
     "website": "https://streamlineresults.com",
-    "affiliateLink": "https://streamlineresults.com/ghl-snapshots/"
+    "affiliateLink": "https://streamlineresults.com/ghl-snapshots/",
+    "image": "/apps/streamline-results/og.jpg",
+    "imageOriginal": "https://streamlineresults.com/wp-content/uploads/2021/10/Full-SCale-Digital-Marketing.png"
   },
   {
     "id": "30",
@@ -676,8 +987,11 @@
     "slug": "apollo-io",
     "tagline": "B2B contact database with millions of verified contacts",
     "description": "Apollo.io is a sales intelligence and engagement platform with millions of verified B2B contacts and companies. Find leads with advanced filtering by industry, job title, location, and company size. Import quality leads directly into GoHighLevel to fuel your campaigns.",
-    "logo": "https://cdn.simpleicons.org/apollographql",
-    "category": ["data-enrichment", "crm"],
+    "logo": "/apps/apollo-io/logo.png",
+    "category": [
+      "data-enrichment",
+      "crm"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 99,
@@ -687,8 +1001,16 @@
     "reviewCount": 1247,
     "featured": true,
     "trending": true,
-    "useCase": ["Lead Generation", "Data Enrichment", "Sales Intelligence"],
-    "userType": ["Agency Owners", "SaaS Providers", "Freelancers"],
+    "useCase": [
+      "Lead Generation",
+      "Data Enrichment",
+      "Sales Intelligence"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Freelancers"
+    ],
     "integrationLevel": "api",
     "setupDifficulty": "easy",
     "features": [
@@ -700,7 +1022,10 @@
       "CSV export to GHL"
     ],
     "website": "https://apollo.io",
-    "affiliateLink": "https://apollo.io"
+    "affiliateLink": "https://apollo.io",
+    "image": "/apps/apollo-io/og.jpg",
+    "logoOriginal": "https://apollo.io/apple-icon.png?f8ea77d0286d0ebc",
+    "imageOriginal": "https://www.apollo.io/og-images/home.jpg"
   },
   {
     "id": "31",
@@ -708,8 +1033,12 @@
     "slug": "clay",
     "tagline": "Access 100+ data sources with AI-powered enrichment",
     "description": "Clay helps Go-To-Market teams access unique data from 100+ sources and AI agents for automating growth workflows. Enrich customer data in your GHL CRM, track intent signals, format data with AI, and constantly update your tools with fresh, accurate information.",
-    "logo": "https://cdn.simpleicons.org/clay",
-    "category": ["data-enrichment", "ai", "automation"],
+    "logo": "/apps/clay/logo.png",
+    "category": [
+      "data-enrichment",
+      "ai",
+      "automation"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 134,
@@ -719,8 +1048,16 @@
     "reviewCount": 892,
     "featured": true,
     "trending": true,
-    "useCase": ["Data Enrichment", "Lead Generation", "Sales Intelligence", "Workflow Automation"],
-    "userType": ["Agency Owners", "SaaS Providers"],
+    "useCase": [
+      "Data Enrichment",
+      "Lead Generation",
+      "Sales Intelligence",
+      "Workflow Automation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers"
+    ],
     "integrationLevel": "api",
     "setupDifficulty": "medium",
     "features": [
@@ -732,7 +1069,10 @@
       "Cascading enrichment waterfall"
     ],
     "website": "https://clay.com",
-    "affiliateLink": "https://clay.com"
+    "affiliateLink": "https://clay.com",
+    "image": "/apps/clay/og.jpg",
+    "logoOriginal": "https://cdn.prod.website-files.com/61477f2c24a826836f969afe/67857ffd2b90b00c726bfa4a_Clay_Favicon_webclip.png",
+    "imageOriginal": "https://cdn.prod.website-files.com/61477f2c24a826836f969afe/68c9e68477e0b636f5ed4b34_new_homepage%20OG.jpg"
   },
   {
     "id": "32",
@@ -740,8 +1080,12 @@
     "slug": "instantly-ai",
     "tagline": "Unlimited email sending with advanced deliverability",
     "description": "Scale your email outreach with unlimited email account connections and advanced deliverability optimization. Perfect for agencies and teams who need to send high volumes of cold emails alongside GHL's built-in email capabilities. AI-powered personalization and lead enrichment included.",
-    "logo": "https://instantly.ai/favicon.ico",
-    "category": ["communication", "ai", "automation"],
+    "logo": "/apps/instantly-ai/logo.png",
+    "category": [
+      "communication",
+      "ai",
+      "automation"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 37,
@@ -751,8 +1095,16 @@
     "reviewCount": 634,
     "featured": true,
     "trending": true,
-    "useCase": ["Cold Email Outreach", "Email Marketing", "Lead Generation"],
-    "userType": ["Agency Owners", "Freelancers", "SaaS Providers"],
+    "useCase": [
+      "Cold Email Outreach",
+      "Email Marketing",
+      "Lead Generation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers",
+      "SaaS Providers"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "easy",
     "features": [
@@ -764,7 +1116,10 @@
       "Volume-based pricing (not per-profile)"
     ],
     "website": "https://instantly.ai",
-    "affiliateLink": "https://instantly.ai"
+    "affiliateLink": "https://instantly.ai",
+    "image": "/apps/instantly-ai/og.jpg",
+    "logoOriginal": "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/63f62e4d1df86f1bf7f133d5_cleaned_rounded.png",
+    "imageOriginal": "https://cdn.prod.website-files.com/63860c8c65e7bef4a1eeebeb/68bfa9a2f510c2f697a9a4f1_Frame%202147228399%201%20(3).webp"
   },
   {
     "id": "33",
@@ -772,8 +1127,11 @@
     "slug": "smartlead",
     "tagline": "Unlimited cold email under $100/month",
     "description": "Smartlead offers unlimited email sending with volume-based pricing that's perfect for agencies scaling their outreach. Unlike per-profile pricing tools, Smartlead lets you use unlimited profiles and send unlimited emails. Ideal for running cold email campaigns parallel to your GHL workflows.",
-    "logo": "https://smartlead.ai/favicon.ico",
-    "category": ["communication", "automation"],
+    "logo": "/apps/smartlead/logo.png",
+    "category": [
+      "communication",
+      "automation"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 39,
@@ -783,8 +1141,15 @@
     "reviewCount": 521,
     "featured": true,
     "trending": true,
-    "useCase": ["Cold Email Outreach", "Email Marketing", "Lead Generation"],
-    "userType": ["Agency Owners", "Freelancers"],
+    "useCase": [
+      "Cold Email Outreach",
+      "Email Marketing",
+      "Lead Generation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "easy",
     "features": [
@@ -796,7 +1161,10 @@
       "Inbox rotation for better delivery"
     ],
     "website": "https://smartlead.ai",
-    "affiliateLink": "https://smartlead.ai"
+    "affiliateLink": "https://smartlead.ai",
+    "image": "/apps/smartlead/og.jpg",
+    "logoOriginal": "https://cdn.prod.website-files.com/6204a703ff61516512c04f55/631b012f135f706978f4f8e5_Group_6608_256x256.png",
+    "imageOriginal": "https://all-blog-assets.s3.ap-southeast-2.amazonaws.com/og/Smartlead-banner.png"
   },
   {
     "id": "34",
@@ -804,8 +1172,12 @@
     "slug": "potion",
     "tagline": "AI-powered personalized video at scale",
     "description": "Create multiple personalized videos featuring your own face and voice with automatically generated subtitles, logos, images, and GIFs. Customize landing pages with your branded domains, colors, CTAs, and calendar embeds. Perfect for adding high-touch video personalization to your GHL email campaigns.",
-    "logo": "https://www.sendpotion.com/favicon.ico",
-    "category": ["video", "ai", "communication"],
+    "logo": "/apps/potion/logo.png",
+    "category": [
+      "video",
+      "ai",
+      "communication"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 247,
@@ -815,8 +1187,16 @@
     "reviewCount": 387,
     "featured": true,
     "trending": true,
-    "useCase": ["Video Prospecting", "Lead Generation", "Client Communication"],
-    "userType": ["Agency Owners", "SaaS Providers", "Consultants"],
+    "useCase": [
+      "Video Prospecting",
+      "Lead Generation",
+      "Client Communication"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Consultants"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "easy",
     "features": [
@@ -828,7 +1208,10 @@
       "Bulk video generation"
     ],
     "website": "https://www.sendpotion.com",
-    "affiliateLink": "https://www.sendpotion.com"
+    "affiliateLink": "https://www.sendpotion.com",
+    "image": "/apps/potion/og.jpg",
+    "logoOriginal": "https://www.sendpotion.com/apple-touch-icon.png",
+    "imageOriginal": "https://www.sendpotion.com/cover.png"
   },
   {
     "id": "35",
@@ -836,8 +1219,11 @@
     "slug": "n8n",
     "tagline": "Self-hosted workflow automation platform",
     "description": "n8n is a powerful, self-hosted automation platform that connects GoHighLevel with hundreds of tools and APIs without extensive coding. Create custom workflows, automate complex processes, and integrate with any service that has an API. Perfect for agencies needing advanced automation beyond GHL's built-in workflows.",
-    "logo": "https://cdn.simpleicons.org/n8n",
-    "category": ["automation", "integration"],
+    "logo": "/apps/n8n/logo.png",
+    "category": [
+      "automation",
+      "integration"
+    ],
     "pricing": {
       "model": "freemium",
       "startingPrice": 0,
@@ -847,8 +1233,16 @@
     "reviewCount": 756,
     "featured": true,
     "trending": true,
-    "useCase": ["Workflow Automation", "Integration", "AI Assistants"],
-    "userType": ["Agency Owners", "SaaS Providers", "Consultants"],
+    "useCase": [
+      "Workflow Automation",
+      "Integration",
+      "AI Assistants"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Consultants"
+    ],
     "integrationLevel": "api",
     "setupDifficulty": "medium",
     "features": [
@@ -860,7 +1254,10 @@
       "Webhook triggers and actions"
     ],
     "website": "https://n8n.io",
-    "affiliateLink": "https://n8n.io"
+    "affiliateLink": "https://n8n.io",
+    "image": "/apps/n8n/og.jpg",
+    "imageOriginal": "https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/og_image_website_3_afd66761a9_017b94d87b.png",
+    "logoOriginal": "https://n8n.io/favicon.ico"
   },
   {
     "id": "36",
@@ -868,8 +1265,11 @@
     "slug": "lagrowth-machine",
     "tagline": "Multi-channel outreach automation (Email + LinkedIn + Twitter)",
     "description": "LaGrowthMachine is the best multi-channel outreach automation platform, enabling you to reach prospects through email, LinkedIn, and Twitter in coordinated campaigns. Automatically sync with your GHL CRM and trigger multi-channel sequences based on prospect behavior.",
-    "logo": "https://www.lagrowthmachine.com/favicon.ico",
-    "category": ["communication", "automation"],
+    "logo": "/apps/lagrowth-machine/logo.png",
+    "category": [
+      "communication",
+      "automation"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 80,
@@ -879,8 +1279,16 @@
     "reviewCount": 423,
     "featured": true,
     "trending": true,
-    "useCase": ["Multi-Channel Outreach", "Lead Generation", "Sales Intelligence"],
-    "userType": ["Agency Owners", "SaaS Providers", "Freelancers"],
+    "useCase": [
+      "Multi-Channel Outreach",
+      "Lead Generation",
+      "Sales Intelligence"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Freelancers"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "medium",
     "features": [
@@ -892,7 +1300,8 @@
       "CRM sync with GHL"
     ],
     "website": "https://www.lagrowthmachine.com",
-    "affiliateLink": "https://www.lagrowthmachine.com"
+    "affiliateLink": "https://www.lagrowthmachine.com",
+    "logoOriginal": "https://cdn.prod.website-files.com/6866d7c6ccdb9f9f82800626/686e2a6d298d164518517027_Webclip.png"
   },
   {
     "id": "37",
@@ -900,8 +1309,12 @@
     "slug": "vidyard",
     "tagline": "Professional video messaging for sales",
     "description": "Vidyard is a professional screen recorder and video hosting platform for sales teams. Create high-quality, impactful videos that effectively articulate your message. Embed videos in your GHL email campaigns to increase engagement and reply rates. Track who watches your videos and for how long.",
-    "logo": "https://cdn.simpleicons.org/vidyard",
-    "category": ["video", "communication", "analytics"],
+    "logo": "/apps/vidyard/logo.png",
+    "category": [
+      "video",
+      "communication",
+      "analytics"
+    ],
     "pricing": {
       "model": "freemium",
       "startingPrice": 19,
@@ -911,8 +1324,16 @@
     "reviewCount": 512,
     "featured": false,
     "trending": true,
-    "useCase": ["Video Prospecting", "Client Communication", "Analytics & Reporting"],
-    "userType": ["Agency Owners", "Freelancers", "Consultants"],
+    "useCase": [
+      "Video Prospecting",
+      "Client Communication",
+      "Analytics & Reporting"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers",
+      "Consultants"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "easy",
     "features": [
@@ -924,7 +1345,10 @@
       "Chrome extension for quick recording"
     ],
     "website": "https://www.vidyard.com",
-    "affiliateLink": "https://www.vidyard.com"
+    "affiliateLink": "https://www.vidyard.com",
+    "image": "/apps/vidyard/og.jpg",
+    "logoOriginal": "https://www.vidyard.com/wp-content/themes/vidyard-website/favicon/apple-touch-icon.png",
+    "imageOriginal": "https://www.vidyard.com/wp-content/uploads/Website-Sharing-3-1-1.jpg"
   },
   {
     "id": "38",
@@ -932,8 +1356,11 @@
     "slug": "hippo-video",
     "tagline": "Video prospecting for every sales stage",
     "description": "Hippo Video stands out with unique features and sales video flows that cater to various stages of your sales process. Create personalized video messages, screen recordings, and video emails that can be embedded in your GHL campaigns. Share via email, LinkedIn, SMS, or social media.",
-    "logo": "https://www.hippovideo.io/favicon.ico",
-    "category": ["video", "communication"],
+    "logo": "https://www.hippovideo.io/ico/favicon.ico",
+    "category": [
+      "video",
+      "communication"
+    ],
     "pricing": {
       "model": "paid",
       "startingPrice": 30,
@@ -943,8 +1370,15 @@
     "reviewCount": 341,
     "featured": false,
     "trending": true,
-    "useCase": ["Video Prospecting", "Client Communication", "Lead Generation"],
-    "userType": ["Agency Owners", "Freelancers"],
+    "useCase": [
+      "Video Prospecting",
+      "Client Communication",
+      "Lead Generation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "easy",
     "features": [
@@ -956,7 +1390,8 @@
       "CRM integrations"
     ],
     "website": "https://www.hippovideo.io",
-    "affiliateLink": "https://www.hippovideo.io"
+    "affiliateLink": "https://www.hippovideo.io",
+    "image": "https://www.hippovideo.io/images/home-2024/og-img.jpg"
   },
   {
     "id": "39",
@@ -964,8 +1399,11 @@
     "slug": "sendspark",
     "tagline": "Simple, effective video messaging",
     "description": "Sendspark makes video prospecting simple and effective with an easy-to-use platform for creating personalized video messages. Rated 4.8/5 on G2 with 341 reviews. Record videos quickly, customize thumbnails, and track engagement. Perfect for adding a personal touch to your GHL outreach campaigns.",
-    "logo": "https://www.sendspark.com/favicon.ico",
-    "category": ["video", "communication"],
+    "logo": "/apps/sendspark/logo.png",
+    "category": [
+      "video",
+      "communication"
+    ],
     "pricing": {
       "model": "freemium",
       "startingPrice": 15,
@@ -975,8 +1413,16 @@
     "reviewCount": 341,
     "featured": false,
     "trending": false,
-    "useCase": ["Video Prospecting", "Client Communication", "Lead Generation"],
-    "userType": ["Agency Owners", "Freelancers", "Consultants"],
+    "useCase": [
+      "Video Prospecting",
+      "Client Communication",
+      "Lead Generation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers",
+      "Consultants"
+    ],
     "integrationLevel": "webhook",
     "setupDifficulty": "easy",
     "features": [
@@ -988,7 +1434,10 @@
       "Chrome extension"
     ],
     "website": "https://www.sendspark.com",
-    "affiliateLink": "https://www.sendspark.com"
+    "affiliateLink": "https://www.sendspark.com",
+    "image": "/apps/sendspark/og.jpg",
+    "logoOriginal": "https://www.sendspark.com/hubfs/favicon-96x96.png",
+    "imageOriginal": "https://www.sendspark.com/hubfs/sendspark-search-engine-hero%20(1).jpg"
   },
   {
     "id": "40",
@@ -996,8 +1445,11 @@
     "slug": "bardeen",
     "tagline": "Browser-based automation for GHL workflows",
     "description": "Bardeen is a browser-based automation tool that works seamlessly with web-based GoHighLevel. Automate repetitive tasks like data entry, contact enrichment, and multi-app workflows without leaving your browser. No-code automation that connects your favorite tools together.",
-    "logo": "https://www.bardeen.ai/favicon.ico",
-    "category": ["automation", "ai"],
+    "logo": "/apps/bardeen/logo.png",
+    "category": [
+      "automation",
+      "ai"
+    ],
     "pricing": {
       "model": "freemium",
       "startingPrice": 10,
@@ -1007,8 +1459,15 @@
     "reviewCount": 278,
     "featured": false,
     "trending": true,
-    "useCase": ["Workflow Automation", "Data Enrichment", "Integration"],
-    "userType": ["Agency Owners", "Freelancers"],
+    "useCase": [
+      "Workflow Automation",
+      "Data Enrichment",
+      "Integration"
+    ],
+    "userType": [
+      "Agency Owners",
+      "Freelancers"
+    ],
     "integrationLevel": "api",
     "setupDifficulty": "easy",
     "features": [
@@ -1020,6 +1479,196 @@
       "100+ app integrations"
     ],
     "website": "https://www.bardeen.ai",
-    "affiliateLink": "https://www.bardeen.ai"
+    "affiliateLink": "https://www.bardeen.ai",
+    "image": "/apps/bardeen/og.jpg",
+    "logoOriginal": "https://cdn.prod.website-files.com/61f1e1f5e79d214f7f0df5a0/61f6e6d5e613a5a191f81f42_Webclip.png",
+    "imageOriginal": "https://cdn.prod.website-files.com/61f1e1f5e79d214f7f0df5a0/65a932a0a97b2b23ff5b8682_share_image.webp"
+  },
+  {
+    "id": "42",
+    "name": "Snitcher",
+    "slug": "snitcher",
+    "tagline": "Uncover your hidden website visitors",
+    "description": "Snitcher is a B2B visitor identification platform that reveals companies visiting your website in real-time. Identify, enrich, and engage with anonymous website visitors automatically. Score and prioritize accounts showing buying intent, reveal verified details of key decision-makers, and trigger automations across your entire GTM stack.",
+    "logo": "/apps/snitcher/logo.png",
+    "image": "/apps/snitcher/og.jpg",
+    "category": [
+      "data-enrichment",
+      "analytics"
+    ],
+    "pricing": {
+      "model": "freemium",
+      "startingPrice": 0,
+      "currency": "USD"
+    },
+    "rating": 4.8,
+    "reviewCount": 156,
+    "featured": false,
+    "trending": true,
+    "useCase": [
+      "Lead Generation",
+      "Data Enrichment",
+      "Sales Intelligence"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Freelancers"
+    ],
+    "integrationLevel": "webhook",
+    "setupDifficulty": "easy",
+    "features": [
+      "Real-time visitor identification",
+      "Company and contact reveal",
+      "Lead scoring and prioritization",
+      "GA4 B2B enrichment",
+      "Workflow automation triggers",
+      "API access for integrations"
+    ],
+    "website": "https://snitcher.com",
+    "affiliateLink": "https://snitcher.com/?red=highle",
+    "logoOriginal": "https://cdn.prod.website-files.com/67ab15ad6af5c41c3a02a1dc/67ab33bf05c2fbfe62490e8d_Purple%20logo.svg",
+    "imageOriginal": "https://cdn.prod.website-files.com/67ab15ad6af5c41c3a02a1dc/67e2d6c6fe40ecc273b4bcf3_hero-home.svg"
+  },
+  {
+    "id": "43",
+    "name": "Vapi",
+    "slug": "vapi",
+    "tagline": "Voice AI agents for developers",
+    "description": "Vapi enables you to build, test, and deploy advanced voice AI agents in minutes. Create conversational voice AI that handles phone operations including customer support, appointment booking, and sales calls. Supports both inbound and outbound voice agent deployments with enterprise-grade reliability.",
+    "logo": "/apps/vapi/logo.svg",
+    "image": "/apps/vapi/og.png",
+    "category": [
+      "ai",
+      "communication",
+      "automation"
+    ],
+    "pricing": {
+      "model": "paid",
+      "startingPrice": 0,
+      "currency": "USD"
+    },
+    "rating": 4.8,
+    "reviewCount": 245,
+    "featured": true,
+    "trending": true,
+    "useCase": [
+      "Voice AI",
+      "Customer Support",
+      "Appointment Booking",
+      "Sales Calls"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Consultants"
+    ],
+    "integrationLevel": "api",
+    "setupDifficulty": "medium",
+    "features": [
+      "Multilingual support (100+ languages)",
+      "Sub-500ms latency",
+      "Bring your own models (transcription, LLM, TTS)",
+      "Tool calling for API integration",
+      "A/B testing for prompts and voices",
+      "SOC2, HIPAA, PCI compliance"
+    ],
+    "website": "https://vapi.ai",
+    "affiliateLink": "https://vapi.ai/?aff=vendrato",
+    "logoOriginal": "https://vapi.ai/icon.svg"
+  },
+  {
+    "id": "44",
+    "name": "GHL Utils",
+    "slug": "ghl-utils",
+    "tagline": "Quick navigation tool for GoHighLevel",
+    "description": "A browser extension designed to save GoHighLevel users time by providing AI-powered workflow analysis, instant audit log access, and faster navigation. Debug workflows, analyze contact data, and manage multiple GHL accounts more efficiently.",
+    "logo": "/apps/ghl-utils/logo.png",
+    "image": "/apps/ghl-utils/og.jpg",
+    "category": [
+      "automation",
+      "ai",
+      "widgets"
+    ],
+    "pricing": {
+      "model": "free",
+      "startingPrice": 0,
+      "currency": "USD"
+    },
+    "rating": 4.9,
+    "reviewCount": 127,
+    "featured": true,
+    "trending": true,
+    "useCase": [
+      "Workflow Automation",
+      "Debugging",
+      "Navigation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Freelancers"
+    ],
+    "integrationLevel": "native",
+    "setupDifficulty": "easy",
+    "features": [
+      "AI Workflow Analysis (GPT-4.1 powered)",
+      "Instant audit log access",
+      "Two-click workflow debugging",
+      "Contact field inspector",
+      "Quick search palette",
+      "Bulk contact editor"
+    ],
+    "website": "https://ghlutils.com",
+    "affiliateLink": "https://ghlutils.com",
+    "logoOriginal": "https://ghlutils.com/assets/gcash.png",
+    "imageOriginal": "https://ghlutils.com/assets/og-image.png"
+  },
+  {
+    "id": "45",
+    "name": "FlowKit",
+    "slug": "flowkit",
+    "tagline": "Free n8n, BuildShip & Make.com node library",
+    "description": "A community-driven repository offering 250+ ready-to-use workflow nodes for automation platforms. Browse, search, and copy nodes directly into your workflows with no setup required. Supports n8n, BuildShip, and Make.com platforms.",
+    "logo": "/apps/flowkit/logo.png",
+    "image": "/apps/flowkit/og.jpg",
+    "category": [
+      "automation",
+      "integration",
+      "templates"
+    ],
+    "pricing": {
+      "model": "free",
+      "startingPrice": 0,
+      "currency": "USD"
+    },
+    "rating": 4.8,
+    "reviewCount": 89,
+    "featured": false,
+    "trending": true,
+    "useCase": [
+      "Workflow Automation",
+      "Integration",
+      "Templates"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Freelancers"
+    ],
+    "integrationLevel": "webhook",
+    "setupDifficulty": "easy",
+    "features": [
+      "250+ pre-built workflow nodes",
+      "n8n platform support",
+      "BuildShip platform support",
+      "Make.com platform support",
+      "One-click copy functionality",
+      "Node collections"
+    ],
+    "website": "https://flowkit.directory",
+    "affiliateLink": "https://flowkit.directory",
+    "logoOriginal": "https://flowkit.directory/favicon.svg",
+    "imageOriginal": "https://flowkit.directory/og-image.png"
   }
 ]
