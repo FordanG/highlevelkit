@@ -102,10 +102,12 @@
 
 /* Input styling for dark mode */
 .p-inputtext {
+  width: 100%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #f1f5f9;
   border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
   transition: all 0.2s ease;
 }
 
@@ -123,8 +125,36 @@
   outline: none;
 }
 
+/* Textarea styling for dark mode */
+.p-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  transition: all 0.2s ease;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.p-textarea::placeholder {
+  color: #64748b;
+}
+
+.p-textarea:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.p-textarea:focus {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  outline: none;
+}
+
 /* Select/Dropdown styling */
 .p-select {
+  width: 100%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #f1f5f9;
@@ -141,25 +171,114 @@
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
-.p-select-panel {
-  background: #1e293b;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+/* Select label inside the trigger */
+.p-select .p-select-label {
+  color: #f1f5f9;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
 }
 
-.p-select-option {
-  color: #e2e8f0;
-  padding: 0.75rem 1rem;
+.p-select .p-select-label.p-placeholder {
+  color: #64748b;
+}
+
+/* Compact input/select styles */
+.p-inputtext.\!py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.p-inputtext.\!text-sm,
+.p-select.\!text-sm .p-select-label {
+  font-size: 0.875rem !important;
+}
+
+/* Dropdown arrow */
+.p-select .p-select-dropdown {
+  color: #94a3b8;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-select:hover .p-select-dropdown {
+  color: #cbd5e1;
+}
+
+/* Dropdown panel/overlay - PrimeVue 4 Select overlay */
+.p-select-overlay {
+  background: #1e293b !important;
+  background-color: #1e293b !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4) !important;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+/* Target all nested elements in overlay to ensure solid background */
+.p-select-overlay * {
+  background-color: inherit;
+}
+
+/* Options list container - wrapper and scroller */
+.p-select-list-container {
+  background: #1e293b !important;
+  background-color: #1e293b !important;
+}
+
+.p-virtualscroller {
+  background: #1e293b !important;
+}
+
+.p-virtualscroller-content {
+  background: #1e293b !important;
+}
+
+.p-select-list {
+  padding: 0.25rem 0;
+  background: #1e293b !important;
+  background-color: #1e293b !important;
+}
+
+/* Individual options */
+.p-select-option,
+.p-select-option-label {
+  color: #e2e8f0 !important;
+  padding: 0.625rem 1rem;
+  margin: 0;
+  background: transparent;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
 }
 
 .p-select-option:hover {
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
 }
 
-.p-select-option.p-highlight {
-  background: rgba(59, 130, 246, 0.2);
-  color: #93c5fd;
+.p-select-option.p-focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+.p-select-option.p-highlight,
+.p-select-option.p-select-option-selected {
+  background: rgba(59, 130, 246, 0.2) !important;
+  color: #93c5fd !important;
+}
+
+.p-select-option.p-highlight:hover,
+.p-select-option.p-select-option-selected:hover {
+  background: rgba(59, 130, 246, 0.3) !important;
+  color: #bfdbfe !important;
+}
+
+/* Empty state */
+.p-select-empty-message {
+  color: #64748b;
+  padding: 0.625rem 1rem;
 }
 
 /* Checkbox styling */

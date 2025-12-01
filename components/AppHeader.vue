@@ -38,7 +38,18 @@
 
         <!-- Right Side Actions -->
         <div class="flex items-center gap-2">
-          <!-- Search Button -->
+          <!-- Mobile Search Button -->
+          <button
+            @click="openSearch"
+            class="sm:hidden flex items-center justify-center w-9 h-9 text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg transition-all duration-200"
+            aria-label="Search"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+
+          <!-- Desktop Search Button -->
           <button
             @click="openSearch"
             class="hidden sm:flex items-center gap-2 px-3 py-2 text-sm text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg transition-all duration-200"
@@ -117,10 +128,32 @@
       </div>
     </nav>
   </header>
+
+  <!-- Search Modal -->
+  <SearchModal v-model="isSearchOpen" />
 </template>
 
 <script setup lang="ts">
+import { useMagicKeys } from '@vueuse/core'
+
 const isMenuOpen = ref(false)
+const isSearchOpen = ref(false)
+
+// Keyboard shortcut: Cmd+K or Ctrl+K
+const { meta_k, ctrl_k } = useMagicKeys({
+  passive: false,
+  onEventFired(e) {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault()
+    }
+  }
+})
+
+watch([meta_k, ctrl_k], ([metaK, ctrlK]) => {
+  if (metaK || ctrlK) {
+    isSearchOpen.value = true
+  }
+})
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -131,7 +164,6 @@ const closeMenu = () => {
 }
 
 const openSearch = () => {
-  // TODO: Implement search modal
-  console.log('Search clicked')
+  isSearchOpen.value = true
 }
 </script>

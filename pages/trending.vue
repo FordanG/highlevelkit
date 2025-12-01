@@ -48,8 +48,10 @@
 <script setup lang="ts">
 import appsData from '~/data/apps.json'
 
-// Filter trending apps
-const trendingApps = appsData.filter((app: any) => app.trending)
+const { prioritizeApps } = useAppSort()
+
+// Filter trending apps (with SuperCloner first, affiliate links prioritized)
+const trendingApps = prioritizeApps(appsData.filter((app: any) => app.trending))
 
 // SEO Configuration
 const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()

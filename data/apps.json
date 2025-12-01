@@ -580,7 +580,7 @@
       "One-day installation"
     ],
     "website": "https://extendly.com",
-    "affiliateLink": "https://getextendly.com"
+    "affiliateLink": "https://getextendly.com?deal=f0yjv9"
   },
   {
     "id": "21",
@@ -1670,5 +1670,89 @@
     "affiliateLink": "https://flowkit.directory",
     "logoOriginal": "https://flowkit.directory/favicon.svg",
     "imageOriginal": "https://flowkit.directory/og-image.png"
+  },
+  {
+    "id": "46",
+    "name": "GHL Animation Studios",
+    "slug": "ghl-animation-studios",
+    "tagline": "Animated explainer videos for your white-label GHL",
+    "description": "Engage, explain, and sign up more customers easily with professional animated videos. GHL Animation Studios produces animated explainer videos, promotional content, feature GIFs, and dashboard screenshots to help your white-label GoHighLevel appear as a professional software company.",
+    "logo": "/apps/ghl-animation-studios/logo.png",
+    "category": [
+      "video",
+      "white-label"
+    ],
+    "pricing": {
+      "model": "paid",
+      "startingPrice": 0,
+      "currency": "USD"
+    },
+    "rating": 4.7,
+    "reviewCount": 0,
+    "featured": false,
+    "trending": false,
+    "useCase": [
+      "Video Marketing",
+      "White-label Solutions",
+      "Client Communication"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers"
+    ],
+    "integrationLevel": "native",
+    "setupDifficulty": "easy",
+    "features": [
+      "Animated explainer videos",
+      "Promotional videos",
+      "Feature GIFs and animations",
+      "Dashboard screenshot animations",
+      "Content library for SaaS marketing",
+      "Professional branding assets"
+    ],
+    "website": "https://ghlanimationstudios.com",
+    "affiliateLink": "https://ghlanimationstudios.com/?deal=f0yjv9&playlist=5c92da6&video=6b82048"
+  },
+  {
+    "id": "47",
+    "name": "Snapshot Store",
+    "slug": "snapshot-store",
+    "tagline": "The ultimate GoHighLevel snapshot marketplace",
+    "description": "Access a comprehensive collection of ready-to-use GoHighLevel snapshots across multiple niches. Save time and money by implementing proven templates, workflows, and automations for your agency or SaaS business.",
+    "logo": "/apps/snapshot-store/logo.png",
+    "category": [
+      "templates"
+    ],
+    "pricing": {
+      "model": "paid",
+      "startingPrice": 0,
+      "currency": "USD"
+    },
+    "rating": 4.7,
+    "reviewCount": 0,
+    "featured": false,
+    "trending": false,
+    "useCase": [
+      "Templates",
+      "Workflow Automation",
+      "White-label Solutions"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Freelancers"
+    ],
+    "integrationLevel": "native",
+    "setupDifficulty": "easy",
+    "features": [
+      "Multi-niche snapshots",
+      "Ready-to-use templates",
+      "Pre-built workflows",
+      "Automation setups",
+      "Quick implementation",
+      "Industry-specific solutions"
+    ],
+    "website": "https://extendly.com/highlevel-snapshot-store/",
+    "affiliateLink": "https://getextendly.com/highlevel-snapshot-store/?deal=f0yjv9"
   }
 ]

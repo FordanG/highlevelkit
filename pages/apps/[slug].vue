@@ -161,20 +161,22 @@
 import appsData from '~/data/apps.json'
 import categoriesData from '~/data/categories.json'
 
+const { prioritizeApps } = useAppSort()
+
 const route = useRoute()
 const slug = route.params.slug as string
 
 // Find the app
 const app = appsData.find((a: any) => a.slug === slug)
 
-// Get related apps (same category)
+// Get related apps (same category, prioritized by affiliate links)
 const relatedApps = app
-  ? appsData
-      .filter((a: any) =>
+  ? prioritizeApps(
+      appsData.filter((a: any) =>
         a.id !== app.id &&
         a.category.some((c: string) => app.category.includes(c))
       )
-      .slice(0, 3)
+    ).slice(0, 3)
   : []
 
 const isLogoUrl = (logo: string) => {

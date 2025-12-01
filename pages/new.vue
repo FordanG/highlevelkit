@@ -48,10 +48,12 @@
 <script setup lang="ts">
 import appsData from '~/data/apps.json'
 
-// Sort apps by ID (newest first) and take the first 12
-const newApps = appsData
-  .sort((a: any, b: any) => b.id - a.id)
-  .slice(0, 12)
+const { prioritizeApps } = useAppSort()
+
+// Sort apps by ID (newest first), prioritize affiliate links, and take the first 12
+const newApps = prioritizeApps(
+  [...appsData].sort((a: any, b: any) => Number(b.id) - Number(a.id))
+).slice(0, 12)
 
 // SEO Configuration
 const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()

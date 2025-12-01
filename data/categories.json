@@ -2,315 +2,336 @@
   {
     "id": "prospecting",
     "name": "Lead Prospecting",
-    "icon": "🎯",
+    "icon": "pi-bullseye",
     "section": "prospecting-lead-gen",
     "description": "Tools for finding and identifying potential customers"
   },
   {
     "id": "lead-generation",
     "name": "Lead Generation",
-    "icon": "🔍",
+    "icon": "pi-search",
     "section": "prospecting-lead-gen",
     "description": "Generate new leads for your business"
   },
   {
     "id": "data-enrichment",
     "name": "Data Enrichment",
-    "icon": "💎",
+    "icon": "pi-sparkles",
     "section": "prospecting-lead-gen",
     "description": "Enhance contact data with additional information"
   },
   {
     "id": "visitor-identification",
     "name": "Visitor Identification",
-    "icon": "👁️",
+    "icon": "pi-eye",
     "section": "prospecting-lead-gen",
     "description": "Identify website visitors and anonymous traffic"
   },
   {
     "id": "sales-intelligence",
     "name": "Sales Intelligence",
-    "icon": "🧠",
+    "icon": "pi-lightbulb",
     "section": "prospecting-lead-gen",
     "description": "B2B data and sales insights"
   },
   {
     "id": "intent-data",
     "name": "Intent Data",
-    "icon": "📡",
+    "icon": "pi-wifi",
     "section": "prospecting-lead-gen",
     "description": "Track buyer intent signals"
   },
   {
     "id": "email-outreach",
     "name": "Email Outreach",
-    "icon": "📧",
+    "icon": "pi-envelope",
     "section": "outreach-communication",
     "description": "Cold email and email sequence automation"
   },
   {
     "id": "email-deliverability",
     "name": "Email Deliverability",
-    "icon": "✉️",
+    "icon": "pi-send",
     "section": "outreach-communication",
     "description": "Improve email inbox placement"
   },
   {
     "id": "multichannel-outreach",
     "name": "Multi-Channel Outreach",
-    "icon": "🌐",
+    "icon": "pi-globe",
     "section": "outreach-communication",
     "description": "Coordinate outreach across email, LinkedIn, SMS, etc."
   },
   {
     "id": "video-prospecting",
     "name": "Video Prospecting",
-    "icon": "🎥",
+    "icon": "pi-video",
     "section": "outreach-communication",
     "description": "Personalized video messaging for sales"
   },
   {
+    "id": "video",
+    "name": "Video",
+    "icon": "pi-video",
+    "section": "outreach-communication",
+    "description": "Video creation and messaging tools"
+  },
+  {
     "id": "linkedin-outreach",
     "name": "LinkedIn Outreach",
-    "icon": "💼",
+    "icon": "pi-briefcase",
     "section": "outreach-communication",
     "description": "LinkedIn automation and messaging"
   },
   {
     "id": "sms-marketing",
     "name": "SMS Marketing",
-    "icon": "📱",
+    "icon": "pi-mobile",
     "section": "outreach-communication",
     "description": "Text message marketing and automation"
   },
   {
     "id": "voice-calling",
     "name": "Voice & Calling",
-    "icon": "📞",
+    "icon": "pi-phone",
     "section": "outreach-communication",
     "description": "Phone systems and calling solutions"
   },
   {
     "id": "crm",
     "name": "CRM Tools",
-    "icon": "📊",
+    "icon": "pi-chart-bar",
     "section": "crm-sales",
     "description": "Customer relationship management systems"
   },
   {
     "id": "pipeline-management",
     "name": "Pipeline Management",
-    "icon": "🔄",
+    "icon": "pi-sync",
     "section": "crm-sales",
     "description": "Sales pipeline tracking and optimization"
   },
   {
     "id": "sales-engagement",
     "name": "Sales Engagement",
-    "icon": "🤝",
+    "icon": "pi-users",
     "section": "crm-sales",
     "description": "Engage and nurture prospects"
   },
   {
     "id": "deal-intelligence",
     "name": "Deal Intelligence",
-    "icon": "💡",
+    "icon": "pi-lightbulb",
     "section": "crm-sales",
     "description": "Smart insights for closing deals"
   },
   {
     "id": "automation",
     "name": "Workflow Automation",
-    "icon": "⚡",
+    "icon": "pi-bolt",
     "section": "automation-workflow",
     "description": "Automate repetitive tasks and workflows"
   },
   {
+    "id": "ai",
+    "name": "AI Tools",
+    "icon": "pi-microchip-ai",
+    "section": "automation-workflow",
+    "description": "AI-powered tools and assistants"
+  },
+  {
     "id": "ai-automation",
     "name": "AI Automation",
-    "icon": "🤖",
+    "icon": "pi-microchip-ai",
     "section": "automation-workflow",
     "description": "AI-powered automation and agents"
   },
   {
     "id": "ai-assistant",
     "name": "AI Assistants",
-    "icon": "🧙",
+    "icon": "pi-sparkles",
     "section": "automation-workflow",
     "description": "AI sales and business assistants"
   },
   {
     "id": "ai-bdr",
     "name": "AI BDR",
-    "icon": "🎓",
+    "icon": "pi-user",
     "section": "automation-workflow",
     "description": "AI business development representatives"
   },
   {
     "id": "integration",
     "name": "Integration Platforms",
-    "icon": "🔗",
+    "icon": "pi-link",
     "section": "automation-workflow",
     "description": "Connect tools and services together"
   },
   {
     "id": "analytics",
     "name": "Analytics & Reporting",
-    "icon": "📈",
+    "icon": "pi-chart-line",
     "section": "analytics-optimization",
     "description": "Track and analyze performance metrics"
   },
   {
     "id": "conversion-optimization",
     "name": "Conversion Optimization",
-    "icon": "🎯",
+    "icon": "pi-bullseye",
     "section": "analytics-optimization",
     "description": "Optimize conversion rates and funnels"
   },
   {
     "id": "ab-testing",
     "name": "A/B Testing",
-    "icon": "🧪",
+    "icon": "pi-sliders-h",
     "section": "analytics-optimization",
     "description": "Test and optimize marketing campaigns"
   },
   {
     "id": "sales-coaching",
     "name": "Sales Coaching",
-    "icon": "📚",
+    "icon": "pi-book",
     "section": "analytics-optimization",
     "description": "Training and coaching for sales teams"
   },
   {
     "id": "ai-copywriting",
     "name": "AI Copywriting",
-    "icon": "✍️",
+    "icon": "pi-pencil",
     "section": "content-marketing",
     "description": "AI-powered content and copy generation"
   },
   {
+    "id": "templates",
+    "name": "Templates & Snapshots",
+    "icon": "pi-copy",
+    "section": "content-marketing",
+    "description": "Ready-to-use templates and snapshots"
+  },
+  {
     "id": "email-templates",
     "name": "Email Templates",
-    "icon": "📄",
+    "icon": "pi-file",
     "section": "content-marketing",
     "description": "Pre-built email templates and designs"
   },
   {
     "id": "landing-pages",
     "name": "Landing Pages",
-    "icon": "🖼️",
+    "icon": "pi-image",
     "section": "content-marketing",
     "description": "Landing page builders and templates"
   },
   {
     "id": "social-media",
     "name": "Social Media",
-    "icon": "📣",
+    "icon": "pi-megaphone",
     "section": "content-marketing",
     "description": "Social media management and posting"
   },
   {
     "id": "communication",
     "name": "Communication",
-    "icon": "💬",
+    "icon": "pi-comments",
     "section": "support-service",
     "description": "Team and client communication tools"
   },
   {
     "id": "chatbots",
     "name": "Chatbots",
-    "icon": "💭",
+    "icon": "pi-comment",
     "section": "support-service",
     "description": "Automated chat and messaging bots"
   },
   {
     "id": "customer-success",
     "name": "Customer Success",
-    "icon": "⭐",
+    "icon": "pi-star",
     "section": "support-service",
     "description": "Customer retention and success tools"
   },
   {
     "id": "appointment-booking",
     "name": "Appointment Booking",
-    "icon": "📅",
+    "icon": "pi-calendar",
     "section": "support-service",
     "description": "Calendar and scheduling solutions"
   },
   {
     "id": "white-label",
     "name": "White Label",
-    "icon": "🏷️",
+    "icon": "pi-tag",
     "section": "agency-tools",
     "description": "White-label and rebrandable solutions"
   },
   {
     "id": "agency-management",
     "name": "Agency Management",
-    "icon": "🏢",
+    "icon": "pi-building",
     "section": "agency-tools",
     "description": "Tools for managing agency operations"
   },
   {
     "id": "client-reporting",
     "name": "Client Reporting",
-    "icon": "📊",
+    "icon": "pi-chart-bar",
     "section": "agency-tools",
     "description": "Client-facing reports and dashboards"
   },
   {
     "id": "marketplace",
     "name": "Marketplace",
-    "icon": "🛒",
+    "icon": "pi-shopping-cart",
     "section": "agency-tools",
     "description": "Snapshots, templates, and asset marketplaces"
   },
   {
     "id": "payments",
     "name": "Payment Processing",
-    "icon": "💳",
+    "icon": "pi-credit-card",
     "section": "infrastructure",
     "description": "Payment gateways and billing"
   },
   {
     "id": "forms",
     "name": "Forms & Surveys",
-    "icon": "📋",
+    "icon": "pi-clipboard",
     "section": "infrastructure",
     "description": "Form builders and survey tools"
   },
   {
     "id": "widgets",
     "name": "Widgets",
-    "icon": "🧩",
+    "icon": "pi-th-large",
     "section": "infrastructure",
     "description": "Embeddable widgets and components"
   },
   {
     "id": "data-management",
     "name": "Data Management",
-    "icon": "🗄️",
+    "icon": "pi-database",
     "section": "infrastructure",
     "description": "Database and data storage solutions"
   },
   {
     "id": "reputation-management",
     "name": "Reputation Management",
-    "icon": "🌟",
+    "icon": "pi-star-fill",
     "section": "infrastructure",
     "description": "Review and reputation monitoring"
   },
   {
     "id": "project-management",
     "name": "Project Management",
-    "icon": "📁",
+    "icon": "pi-folder",
     "section": "infrastructure",
     "description": "Task and project tracking tools"
   },
   {
     "id": "accounting",
     "name": "Accounting & Finance",
-    "icon": "💰",
+    "icon": "pi-dollar",
     "section": "infrastructure",
     "description": "Invoicing, accounting, and financial tools"
   }

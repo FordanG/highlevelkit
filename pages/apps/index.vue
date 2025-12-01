@@ -190,6 +190,8 @@
 import appsData from '~/data/apps.json'
 import categoriesData from '~/data/categories.json'
 
+const { sortWithPriority } = useAppSort()
+
 const apps = appsData
 const categories = categoriesData
 
@@ -290,32 +292,9 @@ const filteredApps = computed(() => {
   return filtered
 })
 
-// Computed sorted apps
+// Computed sorted apps (with SuperCloner first, affiliate links prioritized)
 const sortedApps = computed(() => {
-  const sorted = [...filteredApps.value]
-
-  switch (sortBy.value) {
-    case 'rating':
-      return sorted.sort((a: any, b: any) => b.rating - a.rating)
-    case 'reviews':
-      return sorted.sort((a: any, b: any) => b.reviewCount - a.reviewCount)
-    case 'name':
-      return sorted.sort((a: any, b: any) => a.name.localeCompare(b.name))
-    case 'price-low':
-      return sorted.sort((a: any, b: any) => {
-        const priceA = a.pricing.startingPrice || 0
-        const priceB = b.pricing.startingPrice || 0
-        return priceA - priceB
-      })
-    case 'price-high':
-      return sorted.sort((a: any, b: any) => {
-        const priceA = a.pricing.startingPrice || 0
-        const priceB = b.pricing.startingPrice || 0
-        return priceB - priceA
-      })
-    default:
-      return sorted
-  }
+  return sortWithPriority(filteredApps.value, sortBy.value)
 })
 
 const toggleFeatured = () => {

@@ -135,6 +135,8 @@
 import { ref, computed } from 'vue'
 import appsData from '~/data/apps.json'
 
+const { prioritizeApps } = useAppSort()
+
 // SEO Configuration
 const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, setMultipleSchemas, siteUrl } = useSEO()
 
@@ -224,7 +226,8 @@ const filteredApps = computed(() => {
     })
   }
 
-  return filtered
+  // Prioritize apps with affiliate links
+  return prioritizeApps(filtered)
 })
 
 const clearFilters = () => {

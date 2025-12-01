@@ -168,11 +168,13 @@
 import appsData from '~/data/apps.json'
 import categoriesData from '~/data/categories.json'
 
+const { prioritizeApps } = useAppSort()
+
 const apps = appsData
 const categories = categoriesData.filter(category =>
   appsData.some((app: any) => app.category.includes(category.id))
 )
-const featuredApps = apps.filter((app: any) => app.featured).slice(0, 6)
+const featuredApps = prioritizeApps(apps.filter((app: any) => app.featured)).slice(0, 6)
 
 // Counter animation refs
 const appsCounter = ref<HTMLElement | null>(null)

@@ -1,3 +1,5 @@
+import Aura from '@primevue/themes/aura'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -34,51 +36,20 @@ export default defineNuxtConfig({
     autoImport: true,
     options: {
       theme: {
-        preset: {
-          semantic: {
-            primary: {
-              50: '{blue.50}',
-              100: '{blue.100}',
-              200: '{blue.200}',
-              300: '{blue.300}',
-              400: '{blue.400}',
-              500: '{blue.500}',
-              600: '{blue.600}',
-              700: '{blue.700}',
-              800: '{blue.800}',
-              900: '{blue.900}',
-              950: '{blue.950}'
-            },
-            colorScheme: {
-              dark: {
-                primary: {
-                  color: '{blue.400}',
-                  inverseColor: '#ffffff',
-                  hoverColor: '{blue.300}',
-                  activeColor: '{blue.500}'
-                },
-                surface: {
-                  0: '#ffffff',
-                  50: '{slate.50}',
-                  100: '{slate.100}',
-                  200: '{slate.200}',
-                  300: '{slate.300}',
-                  400: '{slate.400}',
-                  500: '{slate.500}',
-                  600: '{slate.600}',
-                  700: '{slate.700}',
-                  800: '{slate.800}',
-                  900: '{slate.900}',
-                  950: '{slate.950}'
-                }
-              }
-            }
-          }
+        preset: Aura,
+        options: {
+          darkModeSelector: '.p-dark',
+          cssLayer: false
         }
       },
       ripple: true
     }
   },
+
+  css: [
+    'primeicons/primeicons.css',
+    '~/assets/css/main.css'
+  ],
 
   nitro: {
     prerender: {
@@ -111,7 +82,8 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://highlevelkit.com/og-image.png' }
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         // Preconnect to Google Fonts for better performance
