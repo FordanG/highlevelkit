@@ -1754,5 +1754,92 @@
     ],
     "website": "https://extendly.com/highlevel-snapshot-store/",
     "affiliateLink": "https://getextendly.com/highlevel-snapshot-store/?deal=f0yjv9"
+  },
+  {
+    "id": "48",
+    "name": "Super Migrator",
+    "slug": "supermigrator",
+    "tagline": "Seamless GoHighLevel account migration",
+    "description": "Super Migrator is a specialized service for migrating GoHighLevel accounts. Easily transfer your entire GHL setup including contacts, workflows, funnels, and settings between accounts or agencies. Save hours of manual work with automated migration tools.",
+    "logo": "/apps/supermigrator/logo.png",
+    "category": [
+      "automation",
+      "integration"
+    ],
+    "pricing": {
+      "model": "paid",
+      "startingPrice": 0,
+      "currency": "USD"
+    },
+    "rating": 4.8,
+    "reviewCount": 0,
+    "featured": false,
+    "trending": false,
+    "useCase": [
+      "Account Migration",
+      "Data Transfer",
+      "Workflow Automation"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers"
+    ],
+    "integrationLevel": "native",
+    "setupDifficulty": "easy",
+    "features": [
+      "Account migration service",
+      "Contact and data transfer",
+      "Workflow migration",
+      "Funnel and page cloning",
+      "Settings preservation",
+      "Agency-to-agency transfers"
+    ],
+    "website": "https://supermigrator.com",
+    "affiliateLink": "https://supermigrator.com?ref=3nojbk",
+    "logoOriginal": "https://supermigrator.com/favicon.ico"
+  },
+  {
+    "id": "49",
+    "name": "Super Editor",
+    "slug": "supereditor",
+    "tagline": "Editing made easy for GoHighLevel",
+    "description": "Super Editor simplifies content editing within GoHighLevel. A modern, user-friendly editing tool that makes updating funnels, emails, and pages quick and intuitive. Built with a responsive design for seamless editing across all devices.",
+    "logo": "/apps/supereditor/logo.png",
+    "category": [
+      "widgets",
+      "automation"
+    ],
+    "pricing": {
+      "model": "paid",
+      "startingPrice": 0,
+      "currency": "USD"
+    },
+    "rating": 4.8,
+    "reviewCount": 0,
+    "featured": false,
+    "trending": false,
+    "useCase": [
+      "Content Editing",
+      "Funnel Building",
+      "Page Design"
+    ],
+    "userType": [
+      "Agency Owners",
+      "SaaS Providers",
+      "Freelancers"
+    ],
+    "integrationLevel": "native",
+    "setupDifficulty": "easy",
+    "features": [
+      "Easy content editing",
+      "Funnel page editing",
+      "Email template editing",
+      "Responsive design",
+      "User-friendly interface",
+      "Quick updates and changes"
+    ],
+    "website": "https://supereditor.cc",
+    "affiliateLink": "https://supereditor.cc?ref=3nojbk",
+    "logoOriginal": "https://supereditor.cc/favicon.ico"
   }
 ]
