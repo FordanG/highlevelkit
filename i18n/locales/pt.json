@@ -1,0 +1,107 @@
+{
+  "seo": {
+    "title": "Highlevel Kit - Descubra os Melhores Apps e Integrações GoHighLevel",
+    "description": "O diretório definitivo de apps, integrações e ferramentas para GoHighLevel. Encontre soluções selecionadas para agências, provedores SaaS e freelancers."
+  },
+  "home": {
+    "hero": {
+      "badge": "Diretório curado do ecossistema GoHighLevel",
+      "title1": "Descubra os Melhores",
+      "title2": "GoHighLevel",
+      "title3": "Apps e Integrações",
+      "subtitle": "Diretório curado de apps, integrações e ferramentas para potencializar sua experiência com GoHighLevel.",
+      "cta": "Explorar Apps",
+      "ctaSecondary": "Enviar App"
+    },
+    "featured": {
+      "title": "Apps em Destaque",
+      "subtitle": "Selecionados pela nossa equipe",
+      "viewAll": "Ver todos"
+    },
+    "categories": {
+      "title": "Explorar por Categoria",
+      "subtitle": "Encontre as ferramentas perfeitas para suas necessidades"
+    },
+    "stats": {
+      "apps": "Apps",
+      "categories": "Categorias",
+      "users": "Usuários"
+    }
+  },
+  "apps": {
+    "title": "Explorar Apps",
+    "search": "Buscar apps...",
+    "filter": {
+      "all": "Todos",
+      "free": "Grátis",
+      "freemium": "Freemium",
+      "paid": "Pago"
+    },
+    "sort": {
+      "rating": "Avaliação",
+      "reviews": "Avaliações",
+      "name": "Nome",
+      "price": "Preço"
+    },
+    "noResults": "Nenhum app encontrado com seus critérios.",
+    "viewDetails": "Ver Detalhes"
+  },
+  "app": {
+    "about": "Sobre",
+    "features": "Recursos",
+    "pricing": "Preços",
+    "reviews": "avaliações",
+    "visitWebsite": "Visitar Site",
+    "relatedApps": "Apps Relacionados",
+    "exploreMore": "Explorar Mais"
+  },
+  "categories": {
+    "title": "Categorias",
+    "subtitle": "Explorar apps por categoria"
+  },
+  "common": {
+    "apps": "Apps",
+    "categories": "Categorias",
+    "search": "Buscar",
+    "free": "Grátis",
+    "freemium": "Freemium",
+    "paid": "Pago",
+    "rating": "Avaliação",
+    "reviews": "avaliações",
+    "new": "Novo",
+    "trending": "Em Alta",
+    "featured": "Destaque",
+    "viewAll": "Ver Tudo",
+    "loadMore": "Carregar Mais",
+    "loading": "Carregando...",
+    "error": "Erro",
+    "notFound": "Não Encontrado"
+  },
+  "nav": {
+    "home": "Início",
+    "apps": "Apps",
+    "categories": "Categorias",
+    "new": "Novo",
+    "trending": "Em Alta",
+    "aiTools": "Ferramentas IA",
+    "guides": "Guias",
+    "about": "Sobre",
+    "contact": "Contato",
+    "submit": "Enviar App"
+  },
+  "footer": {
+    "description": "O diretório definitivo de apps e integrações para GoHighLevel.",
+    "quickLinks": "Links Rápidos",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "newsletter": {
+      "title": "Fique Atualizado",
+      "description": "Receba os últimos apps e atualizações direto no seu email.",
+      "placeholder": "Digite seu email",
+      "button": "Inscrever-se"
+    },
+    "copyright": "Todos os direitos reservados."
+  }
+}

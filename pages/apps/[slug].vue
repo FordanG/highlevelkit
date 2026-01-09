@@ -2,11 +2,16 @@
   <div v-if="app">
     <!-- Preview Banner -->
     <div class="w-full h-48 sm:h-64 overflow-hidden relative" :style="!app.image ? gradientStyle : {}">
-      <img
+      <NuxtImg
         v-if="app.image"
         :src="app.image"
-        :alt="`${app.name} preview`"
+        :alt="`${app.name} - ${app.tagline} - GoHighLevel integration preview`"
+        width="1200"
+        height="400"
+        format="webp"
+        quality="85"
         class="w-full h-full object-cover"
+        loading="eager"
       />
       <div v-else class="w-full h-full flex items-center justify-center">
         <span class="text-3xl sm:text-4xl font-bold text-white/80 text-center drop-shadow-lg px-4">{{ app.name }}</span>
@@ -140,6 +145,25 @@
         </div>
       </div>
     </section>
+
+    <!-- Explore More Categories - Internal Linking -->
+    <section class="py-10 sm:py-14 border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-xl font-semibold text-white mb-4">
+          Explore More {{ getCategoryName(app.category[0]) }} Apps
+        </h2>
+        <div class="flex flex-wrap gap-3">
+          <NuxtLink
+            v-for="cat in app.category"
+            :key="cat"
+            :to="`/apps?category=${cat}`"
+            class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+          >
+            Browse all {{ getCategoryName(cat) }} apps
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- 404 State -->
@@ -162,6 +186,7 @@ import appsData from '~/data/apps.json'
 import categoriesData from '~/data/categories.json'
 
 const { prioritizeApps } = useAppSort()
+const { getSimilarApps } = useSimilarApps()
 
 const route = useRoute()
 const slug = route.params.slug as string
@@ -169,14 +194,9 @@ const slug = route.params.slug as string
 // Find the app
 const app = appsData.find((a: any) => a.slug === slug)
 
-// Get related apps (same category, prioritized by affiliate links)
+// Get similar apps using improved algorithm with multiple criteria
 const relatedApps = app
-  ? prioritizeApps(
-      appsData.filter((a: any) =>
-        a.id !== app.id &&
-        a.category.some((c: string) => app.category.includes(c))
-      )
-    ).slice(0, 3)
+  ? prioritizeApps(getSimilarApps(app as any, appsData as any[], 4))
   : []
 
 const isLogoUrl = (logo: string) => {
@@ -254,21 +274,44 @@ const breadcrumbItems = app ? [
 ] : []
 
 // SEO Configuration
-const { setPageMeta, generateAppSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
+const {
+  setPageMetaWithHreflang,
+  setPageMeta,
+  generateAppSchema,
+  generateProductSchema,
+  generateBreadcrumbSchema,
+  generateItemListSchema,
+  setMultipleSchemas,
+  siteUrl
+} = useSEO()
 
 if (app) {
   // Generate category names for SEO tags
   const categoryNames = app.category.map((catId: string) => getCategoryName(catId))
 
-  // Set page meta tags with Open Graph
-  setPageMeta({
-    title: `${app.name} - ${app.tagline} | Highlevel Kit`,
-    description: `${app.description} Rating: ${app.rating}/5 from ${app.reviewCount} reviews. ${app.pricing.model === 'free' ? 'Free to use.' : `Starting at $${app.pricing.startingPrice}/mo.`}`,
-    image: app.image || `${siteUrl}/og-app-${app.slug}.png`,
+  // Enhanced page title with long-tail keywords for better rankings
+  const pageTitle = `${app.name} for GoHighLevel - ${app.tagline} | Best GHL Integration`
+  const pageDescription = `${app.description} Compare ${app.name} with other GoHighLevel apps. Rating: ${app.rating}/5 from ${app.reviewCount} reviews. ${app.pricing.model === 'free' ? 'Free to use.' : `Starting at $${app.pricing.startingPrice}/mo.`} Perfect for agencies and SaaS businesses.`
+
+  // Set page meta tags with Open Graph and hreflang
+  setPageMetaWithHreflang({
+    title: pageTitle,
+    description: pageDescription,
+    image: app.image || `${siteUrl}/og-image.png`,
     url: `${siteUrl}/apps/${app.slug}`,
     type: 'product',
-    tags: [app.name, 'GoHighLevel', ...categoryNames, app.pricing.model, 'GHL integration'],
-  })
+    tags: [
+      app.name,
+      'GoHighLevel',
+      'GHL apps',
+      'GoHighLevel integration',
+      'GHL integration',
+      ...categoryNames,
+      app.pricing.model,
+      'agency tools',
+      'SaaS tools'
+    ],
+  }, true) // Enable hreflang
 
   // Related apps for structured data
   const relatedAppsItems = relatedApps.map((relApp: any, index: number) => ({
@@ -278,21 +321,25 @@ if (app) {
     position: index + 1,
   }))
 
-  // Add structured data
+  // App SEO data for schema generation
+  const appSeoData = {
+    name: app.name,
+    description: app.description,
+    image: app.image,
+    logo: app.logo,
+    rating: app.rating,
+    reviewCount: app.reviewCount,
+    pricing: app.pricing,
+    category: app.category,
+    slug: app.slug,
+    features: app.features,
+    website: app.website,
+  }
+
+  // Add structured data - include both SoftwareApplication and Product schemas
   const schemas = [
-    generateAppSchema({
-      name: app.name,
-      description: app.description,
-      image: app.image,
-      logo: app.logo,
-      rating: app.rating,
-      reviewCount: app.reviewCount,
-      pricing: app.pricing,
-      category: app.category,
-      slug: app.slug,
-      features: app.features,
-      website: app.website,
-    }),
+    generateAppSchema(appSeoData),
+    generateProductSchema(appSeoData),
     generateBreadcrumbSchema([
       { name: 'Home', url: '/' },
       { name: 'Apps', url: '/apps' },

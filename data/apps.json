@@ -97,7 +97,6 @@
     "tagline": "Visual automation platform for complex workflows",
     "description": "Make (formerly Integromat) is a powerful visual automation platform that connects GoHighLevel with thousands of apps. Build complex multi-step workflows with branching logic, data transformation, and error handling. Perfect for agencies needing advanced automation beyond simple triggers.",
     "logo": "/apps/make/logo.png",
-    "image": "https://images.ctfassets.net/qqlj6g4ee76j/01MrmdnCuwubZzjQjuvNu3/ccfab63d50e05c2ccfb5b14d5b8cee7f/automation-bg.png",
     "category": [
       "automation",
       "integration"
@@ -357,7 +356,8 @@
     ],
     "website": "https://mailgun.com",
     "affiliateLink": "https://mailgun.com",
-    "logoOriginal": "https://www.mailgun.com/wp-content/themes/simpletexting-theme-blank/assets/favicon/apple-touch-icon-180x180.png"
+    "logoOriginal": "https://www.mailgun.com/wp-content/themes/simpletexting-theme-blank/assets/favicon/apple-touch-icon-180x180.png",
+    "image": "/apps/mailgun/og.webp"
   },
   {
     "id": "16",
@@ -401,7 +401,7 @@
     ],
     "website": "https://activecampaign.com",
     "affiliateLink": "https://activecampaign.com",
-    "image": "https://active-campaign.transforms.svdcdn.com/production/general/AC_Opengraph-1.png?w=1200&amp;h=630&amp;q=82&amp;auto=format&amp;fit=clip&amp;dm=1753306175&amp;s=1b0f698fac52d45ef9b2f8a250d6f8f5",
+    "image": "/apps/activecampaign/og.png",
     "logoOriginal": "https://activecampaign.com/dist/favicon-180x180.png"
   },
   {
@@ -445,7 +445,8 @@
     ],
     "website": "https://quickbooks.intuit.com",
     "affiliateLink": "https://quickbooks.intuit.com",
-    "logoOriginal": "https://quickbooks.intuit.com/cas/dam/IMAGE/A6Mfhf7Ef/apple-touch-icon-60x60.png"
+    "logoOriginal": "https://quickbooks.intuit.com/cas/dam/IMAGE/A6Mfhf7Ef/apple-touch-icon-60x60.png",
+    "image": "/apps/quickbooks/og.svg"
   },
   {
     "id": "18",
@@ -580,7 +581,8 @@
       "One-day installation"
     ],
     "website": "https://extendly.com",
-    "affiliateLink": "https://getextendly.com?deal=f0yjv9"
+    "affiliateLink": "https://getextendly.com?deal=f0yjv9",
+    "image": "/apps/extendly/og.webp"
   },
   {
     "id": "21",
@@ -935,7 +937,8 @@
     ],
     "website": "https://supplygem.com",
     "affiliateLink": "https://supplygem.com/gohighlevel-snapshots/",
-    "logoOriginal": "https://supplygem.com/assets/logo.svg"
+    "logoOriginal": "https://supplygem.com/assets/logo.svg",
+    "image": "/apps/supplygem/og.png"
   },
   {
     "id": "29",
@@ -1301,7 +1304,8 @@
     ],
     "website": "https://www.lagrowthmachine.com",
     "affiliateLink": "https://www.lagrowthmachine.com",
-    "logoOriginal": "https://cdn.prod.website-files.com/6866d7c6ccdb9f9f82800626/686e2a6d298d164518517027_Webclip.png"
+    "logoOriginal": "https://cdn.prod.website-files.com/6866d7c6ccdb9f9f82800626/686e2a6d298d164518517027_Webclip.png",
+    "image": "/apps/lagrowth-machine/og.svg"
   },
   {
     "id": "37",
@@ -1711,7 +1715,8 @@
       "Professional branding assets"
     ],
     "website": "https://ghlanimationstudios.com",
-    "affiliateLink": "https://ghlanimationstudios.com/?deal=f0yjv9&playlist=5c92da6&video=6b82048"
+    "affiliateLink": "https://ghlanimationstudios.com/?deal=f0yjv9&playlist=5c92da6&video=6b82048",
+    "image": "/apps/ghl-animation-studios/og.png"
   },
   {
     "id": "47",
@@ -1753,7 +1758,8 @@
       "Industry-specific solutions"
     ],
     "website": "https://extendly.com/highlevel-snapshot-store/",
-    "affiliateLink": "https://getextendly.com/highlevel-snapshot-store/?deal=f0yjv9"
+    "affiliateLink": "https://getextendly.com/highlevel-snapshot-store/?deal=f0yjv9",
+    "image": "/apps/snapshot-store/og.webp"
   },
   {
     "id": "48",
@@ -1796,7 +1802,8 @@
     ],
     "website": "https://supermigrator.com",
     "affiliateLink": "https://supermigrator.com?ref=3nojbk",
-    "logoOriginal": "https://supermigrator.com/favicon.ico"
+    "logoOriginal": "https://supermigrator.com/favicon.ico",
+    "image": "/apps/supermigrator/og.png"
   },
   {
     "id": "49",
@@ -1840,6 +1847,7 @@
     ],
     "website": "https://supereditor.cc",
     "affiliateLink": "https://supereditor.cc?ref=3nojbk",
-    "logoOriginal": "https://supereditor.cc/favicon.ico"
+    "logoOriginal": "https://supereditor.cc/favicon.ico",
+    "image": "/apps/supereditor/og.svg"
   }
 ]

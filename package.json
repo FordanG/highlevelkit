@@ -10,10 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/i18n": "^10.2.1",
     "@nuxtjs/sitemap": "^7.4.7",
     "@primevue/nuxt-module": "^4.4.1",
     "@primevue/themes": "^4.4.1",
     "nuxt": "^4.2.1",
+    "open-graph-scraper": "^6.11.0",
     "primeicons": "^7.0.0",
     "primevue": "^4.4.1",
     "vue": "^3.5.24",

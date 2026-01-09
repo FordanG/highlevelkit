@@ -50,6 +50,25 @@ interface ItemListItem {
   position?: number
 }
 
+interface VideoSEO {
+  name: string
+  description: string
+  thumbnailUrl: string
+  uploadDate: string
+  duration?: string
+  contentUrl?: string
+  embedUrl?: string
+}
+
+// Supported locales for international SEO
+const SUPPORTED_LOCALES = [
+  { code: 'en', iso: 'en-US', name: 'English' },
+  { code: 'es', iso: 'es-ES', name: 'Español' },
+  { code: 'de', iso: 'de-DE', name: 'Deutsch' },
+  { code: 'fr', iso: 'fr-FR', name: 'Français' },
+  { code: 'pt', iso: 'pt-BR', name: 'Português' },
+]
+
 export const useSEO = () => {
   const route = useRoute()
 
@@ -442,6 +461,201 @@ export const useSEO = () => {
   }
 
   /**
+   * Generate Product schema with AggregateOffer (better for ecommerce/marketplace SEO)
+   */
+  const generateProductSchema = (app: AppSEO) => {
+    const schema: any = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: app.name,
+      description: app.description,
+      image: app.image || app.logo,
+      brand: {
+        '@type': 'Brand',
+        name: app.name,
+      },
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: app.pricing?.currency || 'USD',
+        lowPrice: app.pricing?.model === 'free' ? '0' : app.pricing?.startingPrice?.toString() || '0',
+        offerCount: 1,
+        availability: 'https://schema.org/InStock',
+      },
+      url: `${siteUrl}/apps/${app.slug}`,
+    }
+
+    // Add aggregate rating if available
+    if (app.rating && app.reviewCount) {
+      schema.aggregateRating = {
+        '@type': 'AggregateRating',
+        ratingValue: app.rating.toString(),
+        reviewCount: app.reviewCount.toString(),
+        bestRating: '5',
+        worstRating: '1',
+      }
+    }
+
+    // Add category if available
+    if (app.category && app.category.length > 0) {
+      schema.category = app.category.join(', ')
+    }
+
+    return schema
+  }
+
+  /**
+   * Generate VideoObject schema for app demos and tutorials
+   */
+  const generateVideoSchema = (video: VideoSEO) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'VideoObject',
+      name: video.name,
+      description: video.description,
+      thumbnailUrl: video.thumbnailUrl,
+      uploadDate: video.uploadDate,
+      duration: video.duration || 'PT2M',
+      ...(video.contentUrl && { contentUrl: video.contentUrl }),
+      ...(video.embedUrl && { embedUrl: video.embedUrl }),
+      publisher: {
+        '@type': 'Organization',
+        name: siteName,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/logo.png`,
+        },
+      },
+    }
+  }
+
+  /**
+   * Generate enhanced WebSite schema with sitelinks search box
+   */
+  const generateEnhancedWebsiteSchema = () => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: siteName,
+      url: siteUrl,
+      description: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers.',
+      publisher: {
+        '@type': 'Organization',
+        name: siteName,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/logo.png`,
+          width: 512,
+          height: 512,
+        },
+      },
+      potentialAction: [
+        {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: `${siteUrl}/apps?search={search_term_string}`,
+          },
+          'query-input': 'required name=search_term_string',
+        },
+      ],
+      // Sitelinks for better search appearance
+      hasPart: [
+        { '@type': 'WebPage', name: 'Apps', url: `${siteUrl}/apps` },
+        { '@type': 'WebPage', name: 'Categories', url: `${siteUrl}/categories` },
+        { '@type': 'WebPage', name: 'New Releases', url: `${siteUrl}/new` },
+        { '@type': 'WebPage', name: 'Trending', url: `${siteUrl}/trending` },
+        { '@type': 'WebPage', name: 'AI Tools', url: `${siteUrl}/ai-tools` },
+      ],
+    }
+  }
+
+  /**
+   * Generate hreflang tags for international pages
+   */
+  const generateHreflangTags = (path: string) => {
+    const links = SUPPORTED_LOCALES.map(locale => ({
+      rel: 'alternate',
+      hreflang: locale.iso,
+      href: locale.code === 'en'
+        ? `${siteUrl}${path}`
+        : `${siteUrl}/${locale.code}${path}`,
+    }))
+
+    // Add x-default for search engines
+    links.push({
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: `${siteUrl}${path}`,
+    })
+
+    return links
+  }
+
+  /**
+   * Set page meta with hreflang support for international SEO
+   */
+  const setPageMetaWithHreflang = (seo: SEOConfig, enableHreflang = false) => {
+    const canonicalUrl = seo.url || `${siteUrl}${route.path}`
+    const ogImage = seo.image || defaultImage
+    const pageType = seo.type || 'website'
+
+    const metaTags: any[] = [
+      // Basic meta tags
+      { name: 'description', content: seo.description },
+      { name: 'author', content: seo.author || 'Highlevel Kit' },
+
+      // Open Graph
+      { property: 'og:site_name', content: siteName },
+      { property: 'og:type', content: pageType },
+      { property: 'og:title', content: seo.title },
+      { property: 'og:description', content: seo.description },
+      { property: 'og:image', content: ogImage },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:image:alt', content: seo.title },
+      { property: 'og:url', content: canonicalUrl },
+      { property: 'og:locale', content: 'en_US' },
+
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: seo.title },
+      { name: 'twitter:description', content: seo.description },
+      { name: 'twitter:image', content: ogImage },
+      { name: 'twitter:site', content: '@highlevelkit' },
+
+      // Additional meta tags for social/sharing
+      { name: 'pinterest-rich-pin', content: 'true' },
+
+      // Additional meta tags
+      ...(seo.tags ? [{ name: 'keywords', content: seo.tags.join(', ') }] : []),
+      ...(seo.publishedTime ? [{ property: 'article:published_time', content: seo.publishedTime }] : []),
+      ...(seo.modifiedTime ? [{ property: 'article:modified_time', content: seo.modifiedTime }] : []),
+    ]
+
+    // Add noindex if specified
+    if (seo.noindex) {
+      metaTags.push({ name: 'robots', content: 'noindex, nofollow' })
+    }
+
+    // Build link tags
+    const linkTags: any[] = [
+      { rel: 'canonical', href: canonicalUrl },
+    ]
+
+    // Add hreflang tags if enabled
+    if (enableHreflang) {
+      const hreflangLinks = generateHreflangTags(route.path)
+      linkTags.push(...hreflangLinks)
+    }
+
+    useHead({
+      title: seo.title,
+      meta: metaTags,
+      link: linkTags,
+    })
+  }
+
+  /**
    * Insert structured data into the page
    */
   const setStructuredData = (schema: any) => {
@@ -469,10 +683,14 @@ export const useSEO = () => {
 
   return {
     setPageMeta,
+    setPageMetaWithHreflang,
     generateOrganizationSchema,
     generateAppSchema,
+    generateProductSchema,
+    generateVideoSchema,
     generateBreadcrumbSchema,
     generateWebsiteSchema,
+    generateEnhancedWebsiteSchema,
     generateFAQSchema,
     generateItemListSchema,
     generateCollectionPageSchema,
@@ -481,9 +699,11 @@ export const useSEO = () => {
     generateContactPageSchema,
     generateArticleSchema,
     generateHowToSchema,
+    generateHreflangTags,
     setStructuredData,
     setMultipleSchemas,
     siteUrl,
     siteName,
+    SUPPORTED_LOCALES,
   }
 }

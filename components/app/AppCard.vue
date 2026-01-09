@@ -6,17 +6,27 @@
   >
     <!-- Preview Image with 16:9 aspect ratio -->
     <div class="relative w-full aspect-video overflow-hidden" :style="showPlaceholder ? gradientStyle : {}">
-      <!-- Real image -->
-      <img
+      <!-- Loading placeholder -->
+      <div
+        v-if="!imageLoaded && app.image && !imageError"
+        class="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 animate-pulse"
+      />
+      <!-- Real image with NuxtImg for optimization -->
+      <NuxtImg
         v-if="app.image && !imageError"
         :src="app.image"
-        :alt="`${app.name} preview`"
-        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        :alt="`${app.name} - ${app.tagline} preview screenshot`"
+        width="640"
+        height="360"
         loading="lazy"
+        format="webp"
+        quality="80"
+        :class="['w-full h-full object-cover group-hover:scale-105 transition-all duration-300', imageLoaded ? 'opacity-100' : 'opacity-0']"
+        @load="handleImageLoad"
         @error="handleImageError"
       />
       <!-- Placeholder with gradient and app name -->
-      <div v-else class="w-full h-full flex items-center justify-center p-4">
+      <div v-if="showPlaceholder" class="w-full h-full flex items-center justify-center p-4">
         <span class="text-xl font-bold text-white/90 text-center drop-shadow-lg">{{ app.name }}</span>
       </div>
       <!-- Badges overlay -->
@@ -47,7 +57,16 @@
       <div class="flex items-start gap-3 mb-3">
         <!-- Logo as profile photo -->
         <div v-if="isLogoUrl" class="w-10 h-10 rounded-lg overflow-hidden ring-1 ring-white/10 group-hover:ring-primary-500/30 flex-shrink-0 bg-white/5 group-hover:bg-white/10 flex items-center justify-center p-1.5 transition-all duration-300">
-          <img :src="app.logo" :alt="`${app.name} logo`" class="w-full h-full object-contain" loading="lazy" />
+          <NuxtImg
+            :src="app.logo"
+            :alt="`${app.name} logo - GoHighLevel integration`"
+            width="40"
+            height="40"
+            class="w-full h-full object-contain"
+            loading="lazy"
+            format="webp"
+            quality="90"
+          />
         </div>
         <div v-else class="w-10 h-10 rounded-lg ring-1 ring-white/10 group-hover:ring-primary-500/30 flex items-center justify-center flex-shrink-0 transition-all duration-300" :style="logoGradientStyle">
           <span class="text-sm font-bold text-white drop-shadow">{{ appInitials }}</span>
@@ -141,6 +160,7 @@ const props = defineProps<{
 }>()
 
 const imageError = ref(false)
+const imageLoaded = ref(false)
 
 const showPlaceholder = computed(() => !props.app.image || imageError.value)
 
@@ -206,6 +226,10 @@ const appInitials = computed(() => {
 const getCategoryName = (id: string) => {
   const category = categoriesData.find(c => c.id === id)
   return category ? category.name : id
+}
+
+const handleImageLoad = () => {
+  imageLoaded.value = true
 }
 
 const handleImageError = () => {

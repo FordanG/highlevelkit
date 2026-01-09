@@ -1,0 +1,107 @@
+{
+  "seo": {
+    "title": "Highlevel Kit - Descubre las Mejores Apps e Integraciones de GoHighLevel",
+    "description": "El directorio definitivo de apps, integraciones y herramientas para GoHighLevel. Encuentra soluciones curadas para agencias, proveedores de SaaS y freelancers."
+  },
+  "home": {
+    "hero": {
+      "badge": "Directorio curado del ecosistema GoHighLevel",
+      "title1": "Descubre las Mejores",
+      "title2": "GoHighLevel",
+      "title3": "Apps e Integraciones",
+      "subtitle": "Directorio curado de apps, integraciones y herramientas para potenciar tu experiencia con GoHighLevel.",
+      "cta": "Explorar Apps",
+      "ctaSecondary": "Enviar App"
+    },
+    "featured": {
+      "title": "Apps Destacadas",
+      "subtitle": "Seleccionadas por nuestro equipo",
+      "viewAll": "Ver todas"
+    },
+    "categories": {
+      "title": "Explorar por Categoría",
+      "subtitle": "Encuentra las herramientas perfectas para tus necesidades"
+    },
+    "stats": {
+      "apps": "Apps",
+      "categories": "Categorías",
+      "users": "Usuarios"
+    }
+  },
+  "apps": {
+    "title": "Explorar Apps",
+    "search": "Buscar apps...",
+    "filter": {
+      "all": "Todas",
+      "free": "Gratis",
+      "freemium": "Freemium",
+      "paid": "De pago"
+    },
+    "sort": {
+      "rating": "Valoración",
+      "reviews": "Reseñas",
+      "name": "Nombre",
+      "price": "Precio"
+    },
+    "noResults": "No se encontraron apps que coincidan con tus criterios.",
+    "viewDetails": "Ver Detalles"
+  },
+  "app": {
+    "about": "Acerca de",
+    "features": "Características",
+    "pricing": "Precios",
+    "reviews": "reseñas",
+    "visitWebsite": "Visitar Sitio Web",
+    "relatedApps": "Apps Relacionadas",
+    "exploreMore": "Explorar Más"
+  },
+  "categories": {
+    "title": "Categorías",
+    "subtitle": "Explorar apps por categoría"
+  },
+  "common": {
+    "apps": "Apps",
+    "categories": "Categorías",
+    "search": "Buscar",
+    "free": "Gratis",
+    "freemium": "Freemium",
+    "paid": "De pago",
+    "rating": "Valoración",
+    "reviews": "reseñas",
+    "new": "Nuevo",
+    "trending": "Tendencia",
+    "featured": "Destacado",
+    "viewAll": "Ver Todo",
+    "loadMore": "Cargar Más",
+    "loading": "Cargando...",
+    "error": "Error",
+    "notFound": "No Encontrado"
+  },
+  "nav": {
+    "home": "Inicio",
+    "apps": "Apps",
+    "categories": "Categorías",
+    "new": "Nuevo",
+    "trending": "Tendencia",
+    "aiTools": "Herramientas IA",
+    "guides": "Guías",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "submit": "Enviar App"
+  },
+  "footer": {
+    "description": "El directorio definitivo de apps e integraciones para GoHighLevel.",
+    "quickLinks": "Enlaces Rápidos",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "newsletter": {
+      "title": "Mantente Actualizado",
+      "description": "Recibe las últimas apps y actualizaciones en tu bandeja de entrada.",
+      "placeholder": "Ingresa tu email",
+      "button": "Suscribirse"
+    },
+    "copyright": "Todos los derechos reservados."
+  }
+}
