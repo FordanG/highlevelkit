@@ -436,4 +436,37 @@ export const apps: App[] = [
     website: 'https://example.com/calendar-sync',
     affiliateLink: 'https://example.com/affiliate/calendar-sync'
   },
+  {
+    id: '9',
+    name: 'Miro',
+    slug: 'miro',
+    tagline: 'Visual collaboration whiteboard for teams',
+    description: 'Miro is a collaborative online whiteboard platform for teams to brainstorm, plan workflows, map customer journeys, and visualize strategies. Perfect for agencies managing client projects and team collaboration.',
+    logo: '🎨',
+    category: ['project-management', 'communication'],
+    pricing: {
+      model: 'freemium',
+      startingPrice: 8,
+      currency: 'USD',
+      pricingDetails: 'Free plan available, paid plans start at $8/member/month'
+    },
+    rating: 4.8,
+    reviewCount: 245,
+    featured: false,
+    trending: true,
+    useCase: ['Project Management', 'Client Communication', 'Content Creation'],
+    userType: ['Agency Owners', 'Consultants', 'Enterprise Teams'],
+    integrationLevel: 'api',
+    setupDifficulty: 'easy',
+    features: [
+      'Infinite canvas whiteboard',
+      'Real-time collaboration',
+      'Pre-built templates',
+      'Workflow visualization',
+      'Customer journey mapping',
+      'Integration with popular tools'
+    ],
+    website: 'https://miro.com',
+    affiliateLink: 'https://miro.com/?red=highle&utm_source=highle&utm_medium=revshare&utm_affiliate_network=reditus'
+  },
 ]
