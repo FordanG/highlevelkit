@@ -1,0 +1,12 @@
+# Preserve retired language URLs before the static 404 fallback.
+/es / 301
+/es/* /:splat 301
+/de / 301
+/de/* /:splat 301
+/fr / 301
+/fr/* /:splat 301
+/pt / 301
+/pt/* /:splat 301
+/sitemap_index.xml /sitemap.xml 301
+/__sitemap__/* /sitemap.xml 301
+/* /404.html 404

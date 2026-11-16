@@ -61,3 +61,9 @@ Deployment and Search Console submission outcomes are recorded below after verif
 - Production generation passed: 72 HTML pages, 41 app pages, 754 image references, 67 sitemap URLs; zero build-audit findings. Three search test groups passed.
 - Preview `6afb1a386b71e26570cd0536`: verified HTTP 200 for HTML, JSON search, llms.txt, catalog JSON, per-record Markdown and XML sitemap; locale redirect returned 301; unknown URL returned 404. `GHL jobs remote` returned the hiring guide; `automation` returned 30 matches.
 - Browser: directory images decoded successfully; app and hiring-guide mobile layouts checked. Preview: https://6afb1a386b71e26570cd0536--highlevelkit.netlify.app .
+
+### Production verification and hosting follow-up
+
+- `c79aac0` was published by Netlify deploy `6afb1aaee24a5414af7d903d`. Public domain returned HTTP 200 for llms.txt, catalog JSON, sitemap and both tested API queries.
+- Production Nitro adds a `_redirects` 404 fallback ahead of TOML rules. Moved all routing rules into `public/_redirects`, with the 404 rule last, to preserve locale and legacy-sitemap redirects. Checked against Nitro's actual Netlify redirect writer.
+- Netlify dashboard displays a team-level Functions free-plan limit warning; the tested production API still returned HTTP 200. This warning was not resolved by this release. Static catalog downloads avoid function invocations but do not guarantee availability if Netlify pauses the whole team.
