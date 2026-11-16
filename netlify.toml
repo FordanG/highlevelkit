@@ -78,12 +78,7 @@
   [headers.values]
     Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
 
-# App pages - shorter cache with revalidation
-[[headers]]
-  for = "/apps/*"
-  [headers.values]
-    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
-
+# HTML uses Netlify revalidation; do not cache /apps/* HTML for an hour.
 # HTML pages - short cache
 [[headers]]
   for = "/*.html"
