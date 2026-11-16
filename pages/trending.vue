@@ -59,7 +59,7 @@ const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, gen
 setPageMeta({
   title: 'Trending GoHighLevel Apps | Highlevel Kit',
   description: 'Explore the most popular GoHighLevel apps and integrations trending this week. Discover what top agencies and SaaS companies are using to scale their businesses.',
-  image: `${siteUrl}/og-trending.png`,
+  image: `${siteUrl}/og-image.png`,
   url: `${siteUrl}/trending`,
   type: 'website',
   tags: ['trending apps', 'popular GoHighLevel apps', 'hot GHL integrations', 'top tools'],

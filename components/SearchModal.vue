@@ -57,7 +57,7 @@
                 @click="close"
                 @mouseenter="selectedIndex = index"
               >
-                <img
+                <DirectoryImage
                   :src="app.logo"
                   :alt="app.name"
                   class="w-10 h-10 rounded-lg object-cover bg-white/10"

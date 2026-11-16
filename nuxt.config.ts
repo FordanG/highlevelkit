@@ -1,39 +1,21 @@
 import Aura from '@primevue/themes/aura'
+import apps from './data/apps.json'
+import categories from './data/categories.json'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   modules: [
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     '@primevue/nuxt-module',
     '@nuxtjs/sitemap',
-    '@nuxt/image',
-    '@nuxtjs/i18n'
+    '@nuxt/image'
   ],
 
-  i18n: {
-    locales: [
-      { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
-      { code: 'es', iso: 'es-ES', file: 'es.json', name: 'Español' },
-      { code: 'de', iso: 'de-DE', file: 'de.json', name: 'Deutsch' },
-      { code: 'fr', iso: 'fr-FR', file: 'fr.json', name: 'Français' },
-      { code: 'pt', iso: 'pt-BR', file: 'pt.json', name: 'Português' },
-    ],
-    defaultLocale: 'en',
-    strategy: 'prefix_except_default',
-    lazy: true,
-    langDir: 'locales',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-      alwaysRedirect: false,
-    },
-    baseUrl: 'https://highlevelkit.com',
-  },
+  site: { url: 'https://highlevelkit.com', name: 'HighLevelKit' },
 
   image: {
     format: ['webp', 'png', 'jpg'],
@@ -74,42 +56,13 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    hostname: 'https://highlevelkit.com',
-    gzip: true,
-    exclude: ['/404'],
-    routes: async () => {
-      // Import apps and categories data to generate dynamic routes
-      const apps = await import('./data/apps.json').then(m => m.default)
-      const categories = await import('./data/categories.json').then(m => m.default)
-
-      // App routes with image data for image sitemap
-      const appRoutes = apps.map((app: any) => ({
-        url: `/apps/${app.slug}`,
-        changefreq: 'weekly',
-        priority: 0.8,
-        lastmod: new Date().toISOString(),
-        images: app.image ? [{
-          loc: app.image.startsWith('http') ? app.image : `https://highlevelkit.com${app.image}`,
-          title: `${app.name} - GoHighLevel integration`,
-          caption: app.tagline || app.description?.substring(0, 100),
-        }] : [],
-      }))
-
-      // Category filter routes
-      const categoryRoutes = categories.map((cat: any) => ({
-        url: `/apps?category=${cat.id}`,
-        changefreq: 'weekly',
-        priority: 0.6,
-        lastmod: new Date().toISOString(),
-      }))
-
-      return [...appRoutes, ...categoryRoutes]
-    },
-    defaults: {
-      changefreq: 'weekly',
-      priority: 0.7,
-      lastmod: new Date().toISOString()
-    }
+    autoI18n: false,
+    discoverImages: false,
+    exclude: ['/404', '/200', '/compare', '/newsletter', '/submit', '/community', '/blog'],
+    urls: apps.map(app => ({
+      loc: `/apps/${app.slug}`,
+      images: app.image ? [{ loc: `https://highlevelkit.com${app.image}` }] : [],
+    })),
   },
 
   primevue: {
@@ -133,7 +86,9 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      failOnError: false
+      failOnError: true,
+      ignore: ['/api/search'],
+      routes: ['/sitemap.xml', ...apps.map(app => `/apps/${app.slug}`), ...categories.filter(cat => apps.some(app => app.category.includes(cat.id))).map(cat => `/guides/category/${cat.id}`)]
     }
   },
 
@@ -163,6 +118,7 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://highlevelkit.com/og-image.png' }
       ],
       link: [
+        { rel: 'alternate', type: 'application/json', title: 'HighLevelKit catalog', href: '/catalog.json' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

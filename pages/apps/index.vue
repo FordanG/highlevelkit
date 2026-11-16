@@ -319,8 +319,8 @@ const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, gen
 
 setPageMeta({
   title: 'Browse GoHighLevel Apps & Integrations | Highlevel Kit',
-  description: 'Discover 100+ curated GoHighLevel apps, integrations, and tools. Filter by category, pricing, and setup difficulty. Find the perfect solution for your agency or SaaS business.',
-  image: `${siteUrl}/og-apps.png`,
+  description: 'Discover 41 curated GoHighLevel apps, integrations, and tools. Filter by category, pricing, and setup difficulty. Find the perfect solution for your agency or SaaS business.',
+  image: `${siteUrl}/og-image.png`,
   url: `${siteUrl}/apps`,
   type: 'website',
   tags: ['GoHighLevel apps', 'GHL integrations', 'agency software', 'CRM tools', 'automation apps'],
@@ -340,7 +340,7 @@ const topAppsItems = apps
 setMultipleSchemas([
   generateCollectionPageSchema(
     'GoHighLevel Apps & Integrations',
-    'Browse 100+ curated GoHighLevel apps, integrations, and tools for agencies and SaaS businesses.',
+    'Browse 41 curated GoHighLevel apps, integrations, and tools for agencies and SaaS businesses.',
     '/apps',
     topAppsItems
   ),

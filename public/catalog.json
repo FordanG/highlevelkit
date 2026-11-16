@@ -1,0 +1,1770 @@
+{
+  "schemaVersion": "1.0",
+  "name": "HighLevelKit",
+  "url": "https://highlevelkit.com",
+  "description": "An independent directory of tools used with GoHighLevel. Not the official GoHighLevel marketplace.",
+  "dataCaveat": "Listings are directory descriptions, not hands-on verification. Confirm pricing, compatibility and current availability with the provider. No unverified review counts or ratings are supplied.",
+  "categories": [
+    {
+      "id": "data-enrichment",
+      "name": "Data Enrichment"
+    },
+    {
+      "id": "video",
+      "name": "Video"
+    },
+    {
+      "id": "crm",
+      "name": "CRM Tools"
+    },
+    {
+      "id": "automation",
+      "name": "Workflow Automation"
+    },
+    {
+      "id": "ai",
+      "name": "AI Tools"
+    },
+    {
+      "id": "integration",
+      "name": "Integration Platforms"
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics & Reporting"
+    },
+    {
+      "id": "templates",
+      "name": "Templates & Snapshots"
+    },
+    {
+      "id": "communication",
+      "name": "Communication"
+    },
+    {
+      "id": "white-label",
+      "name": "White Label"
+    },
+    {
+      "id": "payments",
+      "name": "Payment Processing"
+    },
+    {
+      "id": "widgets",
+      "name": "Widgets"
+    },
+    {
+      "id": "hiring",
+      "name": "Hiring & careers"
+    }
+  ],
+  "records": [
+    {
+      "type": "app",
+      "slug": "supercloner",
+      "name": "SuperCloner",
+      "summary": "Clone and duplicate your GoHighLevel assets instantly",
+      "description": "Save hours of manual work by instantly cloning your funnels, workflows, campaigns, and entire sub-accounts. Perfect for agencies managing multiple clients who need to duplicate successful setups quickly and efficiently.",
+      "url": "https://highlevelkit.com/apps/supercloner",
+      "textUrl": "https://highlevelkit.com/catalog/supercloner.md",
+      "website": "https://supercloner.app",
+      "categories": [
+        "automation",
+        "widgets"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "Widgets"
+      ],
+      "features": [
+        "One-click funnel cloning",
+        "Workflow duplication",
+        "Campaign templates",
+        "Sub-account cloning",
+        "Bulk operations",
+        "Asset management"
+      ],
+      "useCases": [
+        "Workflow Automation",
+        "White-label Solutions"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Freelancers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/supercloner/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "zapier",
+      "name": "Zapier",
+      "summary": "Connect GoHighLevel to 6000+ apps",
+      "description": "Zapier is the go-to automation platform that connects GoHighLevel with over 6000 different applications. Automate repetitive tasks, create custom workflows, and integrate with tools like Slack, Google Sheets, and calendars without any code.",
+      "url": "https://highlevelkit.com/apps/zapier",
+      "textUrl": "https://highlevelkit.com/catalog/zapier.md",
+      "website": "https://zapier.com",
+      "categories": [
+        "automation",
+        "integration"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "Integration Platforms"
+      ],
+      "features": [
+        "6000+ app integrations",
+        "Multi-step Zaps",
+        "Custom logic and filters",
+        "Automated workflows",
+        "Real-time data sync",
+        "No-code automation"
+      ],
+      "useCases": [
+        "Workflow Automation",
+        "Integration",
+        "Lead Generation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Freelancers"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/zapier/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "make",
+      "name": "Make",
+      "summary": "Visual automation platform for complex workflows",
+      "description": "Make (formerly Integromat) is a powerful visual automation platform that connects GoHighLevel with thousands of apps. Build complex multi-step workflows with branching logic, data transformation, and error handling. Perfect for agencies needing advanced automation beyond simple triggers.",
+      "url": "https://highlevelkit.com/apps/make",
+      "textUrl": "https://highlevelkit.com/catalog/make.md",
+      "website": "https://www.make.com",
+      "categories": [
+        "automation",
+        "integration"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "Integration Platforms"
+      ],
+      "features": [
+        "Visual workflow builder",
+        "1000+ app integrations",
+        "Branching and conditional logic",
+        "Data transformation tools",
+        "Error handling and retries",
+        "Scheduled automations"
+      ],
+      "useCases": [
+        "Workflow Automation",
+        "Integration",
+        "Data Transformation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Freelancers"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "medium",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": null
+    },
+    {
+      "type": "app",
+      "slug": "stripe",
+      "name": "Stripe",
+      "summary": "Complete payment processing solution",
+      "description": "Stripe integrates seamlessly with GoHighLevel for sending invoices, collecting payments, and triggering automated workflows when customers make purchases. Handle subscriptions, one-time payments, and complex billing scenarios with ease.",
+      "url": "https://highlevelkit.com/apps/stripe",
+      "textUrl": "https://highlevelkit.com/catalog/stripe.md",
+      "website": "https://stripe.com",
+      "categories": [
+        "payments",
+        "automation"
+      ],
+      "categoryNames": [
+        "Payment Processing",
+        "Workflow Automation"
+      ],
+      "features": [
+        "Secure payment processing",
+        "Subscription management",
+        "Invoice creation and tracking",
+        "Automated payment workflows",
+        "Multiple currency support",
+        "Fraud detection"
+      ],
+      "useCases": [
+        "Payment Processing",
+        "Workflow Automation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Course Creators"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "free",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/stripe/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "twilio",
+      "name": "Twilio",
+      "summary": "Powerful SMS and calling platform",
+      "description": "Connect Twilio to GoHighLevel for advanced calling and SMS capabilities. Enable two-way texting, voicemail drops, phone call routing, and automated communications to enhance your customer engagement.",
+      "url": "https://highlevelkit.com/apps/twilio",
+      "textUrl": "https://highlevelkit.com/catalog/twilio.md",
+      "website": "https://twilio.com",
+      "categories": [
+        "communication",
+        "automation"
+      ],
+      "categoryNames": [
+        "Communication",
+        "Workflow Automation"
+      ],
+      "features": [
+        "Two-way SMS texting",
+        "Voice calling and routing",
+        "Voicemail drops",
+        "Call recording",
+        "Phone number provisioning",
+        "Programmable messaging"
+      ],
+      "useCases": [
+        "SMS Marketing",
+        "Client Communication",
+        "Phone Systems"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Consultants"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "medium",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/twilio/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "calendly",
+      "name": "Calendly",
+      "summary": "Smart scheduling made simple",
+      "description": "Calendly is a smart scheduling tool that integrates with GoHighLevel to make meeting booking effortless. Features include time zone detection, buffer time settings, calendar integration, and automated reminders to reduce no-shows.",
+      "url": "https://highlevelkit.com/apps/calendly",
+      "textUrl": "https://highlevelkit.com/catalog/calendly.md",
+      "website": "https://calendly.com",
+      "categories": [
+        "automation",
+        "widgets"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "Widgets"
+      ],
+      "features": [
+        "Automated scheduling",
+        "Time zone detection",
+        "Buffer time settings",
+        "Calendar sync (Google, Outlook)",
+        "Team scheduling",
+        "Meeting reminders"
+      ],
+      "useCases": [
+        "Appointment Booking",
+        "Client Communication",
+        "Workflow Automation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Consultants",
+        "Freelancers"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/calendly/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "clickup",
+      "name": "ClickUp",
+      "summary": "All-in-one project management",
+      "description": "Integrate ClickUp with GoHighLevel to automate project management tasks. When a new lead comes in, automatically create tasks in ClickUp, ensuring efficient lead follow-up and seamless project tracking.",
+      "url": "https://highlevelkit.com/apps/clickup",
+      "textUrl": "https://highlevelkit.com/catalog/clickup.md",
+      "website": "https://clickup.com",
+      "categories": [
+        "automation",
+        "crm"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "CRM Tools"
+      ],
+      "features": [
+        "Task automation from GHL leads",
+        "Custom task templates",
+        "Time tracking",
+        "Team collaboration",
+        "Automated notifications",
+        "Custom workflows"
+      ],
+      "useCases": [
+        "Workflow Automation",
+        "Project Management",
+        "Lead Generation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers",
+        "Consultants"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "medium",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/clickup/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "mailgun",
+      "name": "Mailgun",
+      "summary": "Reliable email delivery service",
+      "description": "Mailgun ensures your GoHighLevel emails reach the inbox, not the spam folder. With advanced deliverability features, real-time analytics, and powerful APIs, it's the perfect solution for high-volume email sending.",
+      "url": "https://highlevelkit.com/apps/mailgun",
+      "textUrl": "https://highlevelkit.com/catalog/mailgun.md",
+      "website": "https://mailgun.com",
+      "categories": [
+        "communication",
+        "automation"
+      ],
+      "categoryNames": [
+        "Communication",
+        "Workflow Automation"
+      ],
+      "features": [
+        "99% email deliverability",
+        "Real-time analytics",
+        "Email validation",
+        "Bounce handling",
+        "Spam complaint management",
+        "Powerful API"
+      ],
+      "useCases": [
+        "Email Marketing",
+        "Client Communication"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Course Creators"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "medium",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/mailgun/og.webp"
+    },
+    {
+      "type": "app",
+      "slug": "activecampaign",
+      "name": "ActiveCampaign",
+      "summary": "Advanced email marketing automation",
+      "description": "ActiveCampaign is a powerful email marketing platform that integrates with GoHighLevel. Features include dynamic content, AI-driven workflows, and connections to 950+ apps for comprehensive marketing automation.",
+      "url": "https://highlevelkit.com/apps/activecampaign",
+      "textUrl": "https://highlevelkit.com/catalog/activecampaign.md",
+      "website": "https://activecampaign.com",
+      "categories": [
+        "communication",
+        "automation"
+      ],
+      "categoryNames": [
+        "Communication",
+        "Workflow Automation"
+      ],
+      "features": [
+        "AI-powered automation",
+        "Dynamic email content",
+        "Advanced segmentation",
+        "CRM integration",
+        "Split testing",
+        "Predictive sending"
+      ],
+      "useCases": [
+        "Email Marketing",
+        "Workflow Automation",
+        "Lead Generation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Course Creators"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "medium",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/activecampaign/og.png"
+    },
+    {
+      "type": "app",
+      "slug": "quickbooks",
+      "name": "QuickBooks",
+      "summary": "Professional accounting made easy",
+      "description": "QuickBooks integrates directly with GoHighLevel to transfer financial data seamlessly. Perfect for tax compliance, reporting, invoicing, expense tracking, and comprehensive financial management.",
+      "url": "https://highlevelkit.com/apps/quickbooks",
+      "textUrl": "https://highlevelkit.com/catalog/quickbooks.md",
+      "website": "https://quickbooks.intuit.com",
+      "categories": [
+        "payments",
+        "crm"
+      ],
+      "categoryNames": [
+        "Payment Processing",
+        "CRM Tools"
+      ],
+      "features": [
+        "Automated invoicing",
+        "Expense tracking",
+        "Financial reporting",
+        "Tax compliance",
+        "Receipt capture",
+        "Bank reconciliation"
+      ],
+      "useCases": [
+        "Payment Processing",
+        "Analytics & Reporting"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Consultants"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "medium",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/quickbooks/og.svg"
+    },
+    {
+      "type": "app",
+      "slug": "lemlist",
+      "name": "Lemlist",
+      "summary": "Personalized outreach at scale",
+      "description": "Lemlist connects to GoHighLevel workflows to sync contacts and start personalized, multi-channel outreach sequences. Automatically trigger actions based on prospect activity and engagement.",
+      "url": "https://highlevelkit.com/apps/lemlist",
+      "textUrl": "https://highlevelkit.com/catalog/lemlist.md",
+      "website": "https://lemlist.com",
+      "categories": [
+        "communication",
+        "automation"
+      ],
+      "categoryNames": [
+        "Communication",
+        "Workflow Automation"
+      ],
+      "features": [
+        "Personalized email sequences",
+        "Multi-channel outreach",
+        "Automated follow-ups",
+        "Email warm-up",
+        "A/B testing",
+        "LinkedIn integration"
+      ],
+      "useCases": [
+        "Lead Generation",
+        "Email Marketing",
+        "Client Communication"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers",
+        "Consultants"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/lemlist/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "nuacom",
+      "name": "NUACOM",
+      "summary": "Advanced phone system for GHL",
+      "description": "NUACOM offers streamlined workflow with click-to-call functionality. Features include automatic call logging, text messaging, call recordings, AI analysis, advanced call routing, IVR, and comprehensive analytics.",
+      "url": "https://highlevelkit.com/apps/nuacom",
+      "textUrl": "https://highlevelkit.com/catalog/nuacom.md",
+      "website": "https://nuacom.com",
+      "categories": [
+        "communication",
+        "automation"
+      ],
+      "categoryNames": [
+        "Communication",
+        "Workflow Automation"
+      ],
+      "features": [
+        "Click-to-call functionality",
+        "Automatic call logging",
+        "Call recording and transcription",
+        "AI call analysis",
+        "Advanced call routing",
+        "IVR system"
+      ],
+      "useCases": [
+        "Phone Systems",
+        "Client Communication",
+        "Analytics & Reporting"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Consultants"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "medium",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/nuacom/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "extendly",
+      "name": "Extendly",
+      "summary": "Premium snapshots & white-label support",
+      "description": "Industry-leading snapshots, 24/7 white-label tech support, done-for-you client onboarding, and captivating demo videos. Save 3-6 months of development time and $15,000+ in costs with comprehensive templates for SaaS, small business, and webinar niches.",
+      "url": "https://highlevelkit.com/apps/extendly",
+      "textUrl": "https://highlevelkit.com/catalog/extendly.md",
+      "website": "https://extendly.com",
+      "categories": [
+        "templates",
+        "white-label",
+        "automation"
+      ],
+      "categoryNames": [
+        "Templates & Snapshots",
+        "White Label",
+        "Workflow Automation"
+      ],
+      "features": [
+        "Ultimate SaaS Snapshot",
+        "Small Business Snapshot",
+        "24/7 white-label support",
+        "Done-for-you onboarding",
+        "Demo videos included",
+        "One-day installation"
+      ],
+      "useCases": [
+        "White-label Solutions",
+        "Client Onboarding",
+        "Workflow Automation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/extendly/og.webp"
+    },
+    {
+      "type": "app",
+      "slug": "hl-pro-tools",
+      "name": "HL Pro Tools",
+      "summary": "24/7 unlimited white-label support",
+      "description": "Unlimited branded support via live chat, email, and Zoom. Includes SaaS snapshot, industry funnels, white-label demo videos, theme builder, and power trainings. Your clients get support under your brand with 3.5-hour average response time.",
+      "url": "https://highlevelkit.com/apps/hl-pro-tools",
+      "textUrl": "https://highlevelkit.com/catalog/hl-pro-tools.md",
+      "website": "https://hlprotools.com",
+      "categories": [
+        "white-label",
+        "templates"
+      ],
+      "categoryNames": [
+        "White Label",
+        "Templates & Snapshots"
+      ],
+      "features": [
+        "24/7 branded support",
+        "Interactive guided tours",
+        "Official SaaS snapshot",
+        "Theme builder",
+        "White-label knowledge base",
+        "Custom onboarding calls"
+      ],
+      "useCases": [
+        "White-label Solutions",
+        "Client Communication",
+        "Client Onboarding"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/hl-pro-tools/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "level-up-marketplace",
+      "name": "Level Up Marketplace",
+      "summary": "Unlimited apps for GoHighLevel agencies",
+      "description": "Access 150+ apps with a single subscription. Fully white-labeled solution for CRM, marketing, e-commerce, and more. Includes unlimited support, 100+ video tutorials, and weekly new app releases. Powers 45% of the GHL App Marketplace.",
+      "url": "https://highlevelkit.com/apps/level-up-marketplace",
+      "textUrl": "https://highlevelkit.com/catalog/level-up-marketplace.md",
+      "website": "https://levelupmarketplace.com",
+      "categories": [
+        "automation",
+        "widgets",
+        "templates"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "Widgets",
+        "Templates & Snapshots"
+      ],
+      "features": [
+        "150+ app integrations",
+        "White-labeled apps",
+        "Unlimited support",
+        "100+ video tutorials",
+        "Weekly new releases",
+        "One subscription access"
+      ],
+      "useCases": [
+        "Workflow Automation",
+        "Integration",
+        "White-label Solutions"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/level-up-marketplace/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "ghl-central",
+      "name": "GHL Central",
+      "summary": "Ultimate GoHighLevel resource hub",
+      "description": "Community-driven platform offering training courses, playbooks, snapshots, and white-label services. Features GHL 101 free course, University training, and marketplace partnerships with Extendly and other providers.",
+      "url": "https://highlevelkit.com/apps/ghl-central",
+      "textUrl": "https://highlevelkit.com/catalog/ghl-central.md",
+      "website": "https://ghlcentral.com",
+      "categories": [
+        "templates",
+        "analytics"
+      ],
+      "categoryNames": [
+        "Templates & Snapshots",
+        "Analytics & Reporting"
+      ],
+      "features": [
+        "GHL 101 free course",
+        "Community marketplace",
+        "Playbooks and guides",
+        "White-label resources",
+        "Training partnerships",
+        "Discount codes"
+      ],
+      "useCases": [
+        "Training & Education",
+        "Community",
+        "Resources"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers",
+        "Consultants"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/ghl-central/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "snapshot-marketplace",
+      "name": "The Snapshot Marketplace",
+      "summary": "#1 snapshot solution for agencies",
+      "description": "Premium marketplace with 100+ done-for-you snapshots and 57+ more in development. Ready-to-deploy templates for any niche including sales funnels, pipelines, automated workflows, and message templates.",
+      "url": "https://highlevelkit.com/apps/snapshot-marketplace",
+      "textUrl": "https://highlevelkit.com/catalog/snapshot-marketplace.md",
+      "website": "https://thesnapshotmarketplace.com",
+      "categories": [
+        "templates",
+        "automation"
+      ],
+      "categoryNames": [
+        "Templates & Snapshots",
+        "Workflow Automation"
+      ],
+      "features": [
+        "100+ ready snapshots",
+        "Industry-specific templates",
+        "Complete funnel systems",
+        "Automated workflows included",
+        "Message templates",
+        "Pipeline configurations"
+      ],
+      "useCases": [
+        "Templates",
+        "Workflow Automation",
+        "Lead Generation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/snapshot-marketplace/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "gohighlevel-shop",
+      "name": "GoHighLevel Shop",
+      "summary": "Turnkey plug & play solutions",
+      "description": "Offering turnkey snapshots, themes, UI/UX designs, graphic kits, and white-label support services. Includes 15 days of customization support after purchase for any snapshot needs.",
+      "url": "https://highlevelkit.com/apps/gohighlevel-shop",
+      "textUrl": "https://highlevelkit.com/catalog/gohighlevel-shop.md",
+      "website": "https://gohighlevelshop.com",
+      "categories": [
+        "templates",
+        "widgets"
+      ],
+      "categoryNames": [
+        "Templates & Snapshots",
+        "Widgets"
+      ],
+      "features": [
+        "Turnkey snapshots",
+        "Custom themes",
+        "UI/UX templates",
+        "Graphic design kits",
+        "15-day support included",
+        "Mortgage calculators"
+      ],
+      "useCases": [
+        "Templates",
+        "Design",
+        "White-label Solutions"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/gohighlevel-shop/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "yext",
+      "name": "Yext",
+      "summary": "Reputation management for 150+ sites",
+      "description": "Expand reputation management across 150+ listing sites beyond Google and Facebook. Update brand facts on 70+ publisher sites, monitor reviews, and manage your online presence. USA-only, resellable at $30/month agency cost.",
+      "url": "https://highlevelkit.com/apps/yext",
+      "textUrl": "https://highlevelkit.com/catalog/yext.md",
+      "website": "https://www.yext.com",
+      "categories": [
+        "analytics",
+        "communication"
+      ],
+      "categoryNames": [
+        "Analytics & Reporting",
+        "Communication"
+      ],
+      "features": [
+        "150+ listing sites",
+        "70+ publisher updates",
+        "Review monitoring",
+        "Online listings analytics",
+        "Resellable to clients",
+        "USA businesses only"
+      ],
+      "useCases": [
+        "Reputation Management",
+        "Analytics & Reporting",
+        "Client Communication"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "medium",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/yext/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "agencyanalytics",
+      "name": "AgencyAnalytics",
+      "summary": "Customizable GoHighLevel dashboards",
+      "description": "White-label reporting and analytics platform that integrates with GoHighLevel. Create customizable dashboards to monitor KPIs, track opportunities, contacts, conversations, and visualize campaign success for clients.",
+      "url": "https://highlevelkit.com/apps/agencyanalytics",
+      "textUrl": "https://highlevelkit.com/catalog/agencyanalytics.md",
+      "website": "https://agencyanalytics.com",
+      "categories": [
+        "analytics",
+        "white-label"
+      ],
+      "categoryNames": [
+        "Analytics & Reporting",
+        "White Label"
+      ],
+      "features": [
+        "White-label dashboards",
+        "GHL data integration",
+        "Custom KPI tracking",
+        "Automated reporting",
+        "Client-facing reports",
+        "Multi-platform analytics"
+      ],
+      "useCases": [
+        "Analytics & Reporting",
+        "White-label Solutions",
+        "Client Communication"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "medium",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/agencyanalytics/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "supplygem",
+      "name": "SupplyGem",
+      "summary": "GoHighLevel snapshots & guides",
+      "description": "Comprehensive resource for GoHighLevel snapshots covering 26+ niches including real estate, fitness, dental, and more. Detailed guides, workflows, and templates to help agencies implement effective strategies quickly.",
+      "url": "https://highlevelkit.com/apps/supplygem",
+      "textUrl": "https://highlevelkit.com/catalog/supplygem.md",
+      "website": "https://supplygem.com",
+      "categories": [
+        "templates",
+        "analytics"
+      ],
+      "categoryNames": [
+        "Templates & Snapshots",
+        "Analytics & Reporting"
+      ],
+      "features": [
+        "26+ niche snapshots",
+        "Industry guides",
+        "Workflow templates",
+        "AI tools documentation",
+        "Setup tutorials",
+        "Best practices"
+      ],
+      "useCases": [
+        "Templates",
+        "Training & Education",
+        "Workflow Automation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/supplygem/og.png"
+    },
+    {
+      "type": "app",
+      "slug": "streamline-results",
+      "name": "Streamline Results",
+      "summary": "150+ ready-to-implement snapshots",
+      "description": "Massive collection of 150+ GHL snapshots, white-label support partners, and done-for-you implementations. Comprehensive training and support for agencies looking to scale quickly with proven templates.",
+      "url": "https://highlevelkit.com/apps/streamline-results",
+      "textUrl": "https://highlevelkit.com/catalog/streamline-results.md",
+      "website": "https://streamlineresults.com",
+      "categories": [
+        "templates",
+        "white-label"
+      ],
+      "categoryNames": [
+        "Templates & Snapshots",
+        "White Label"
+      ],
+      "features": [
+        "150+ snapshots",
+        "White-label partners",
+        "Done-for-you setups",
+        "Agency training",
+        "Implementation support",
+        "Proven templates"
+      ],
+      "useCases": [
+        "Templates",
+        "White-label Solutions",
+        "Workflow Automation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/streamline-results/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "apollo-io",
+      "name": "Apollo.io",
+      "summary": "B2B contact database with millions of verified contacts",
+      "description": "Apollo.io is a sales intelligence and engagement platform with millions of verified B2B contacts and companies. Find leads with advanced filtering by industry, job title, location, and company size. Import quality leads directly into GoHighLevel to fuel your campaigns.",
+      "url": "https://highlevelkit.com/apps/apollo-io",
+      "textUrl": "https://highlevelkit.com/catalog/apollo-io.md",
+      "website": "https://apollo.io",
+      "categories": [
+        "data-enrichment",
+        "crm"
+      ],
+      "categoryNames": [
+        "Data Enrichment",
+        "CRM Tools"
+      ],
+      "features": [
+        "10,000 email addresses/month (99/mo plan)",
+        "Millions of verified contacts and companies",
+        "Advanced filtering (industry, job title, location)",
+        "Company size and technographic data",
+        "Sales engagement tools",
+        "CSV export to GHL"
+      ],
+      "useCases": [
+        "Lead Generation",
+        "Data Enrichment",
+        "Sales Intelligence"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Freelancers"
+      ],
+      "integrationLevel": "api",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/apollo-io/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "clay",
+      "name": "Clay",
+      "summary": "Access 100+ data sources with AI-powered enrichment",
+      "description": "Clay helps Go-To-Market teams access unique data from 100+ sources and AI agents for automating growth workflows. Enrich customer data in your GHL CRM, track intent signals, format data with AI, and constantly update your tools with fresh, accurate information.",
+      "url": "https://highlevelkit.com/apps/clay",
+      "textUrl": "https://highlevelkit.com/catalog/clay.md",
+      "website": "https://clay.com",
+      "categories": [
+        "data-enrichment",
+        "ai",
+        "automation"
+      ],
+      "categoryNames": [
+        "Data Enrichment",
+        "AI Tools",
+        "Workflow Automation"
+      ],
+      "features": [
+        "100+ data sources for enrichment",
+        "AI agents for automation",
+        "GPT-3 powered email personalization",
+        "Intent signal tracking",
+        "CRM and email sequencer updates",
+        "Cascading enrichment waterfall"
+      ],
+      "useCases": [
+        "Data Enrichment",
+        "Lead Generation",
+        "Sales Intelligence",
+        "Workflow Automation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers"
+      ],
+      "integrationLevel": "api",
+      "setupDifficulty": "medium",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/clay/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "instantly-ai",
+      "name": "Instantly.ai",
+      "summary": "Unlimited email sending with advanced deliverability",
+      "description": "Scale your email outreach with unlimited email account connections and advanced deliverability optimization. Perfect for agencies and teams who need to send high volumes of cold emails alongside GHL's built-in email capabilities. AI-powered personalization and lead enrichment included.",
+      "url": "https://highlevelkit.com/apps/instantly-ai",
+      "textUrl": "https://highlevelkit.com/catalog/instantly-ai.md",
+      "website": "https://instantly.ai",
+      "categories": [
+        "communication",
+        "ai",
+        "automation"
+      ],
+      "categoryNames": [
+        "Communication",
+        "AI Tools",
+        "Workflow Automation"
+      ],
+      "features": [
+        "Unlimited email account connections",
+        "Advanced deliverability optimization",
+        "AI-powered personalization",
+        "Lead enrichment built-in",
+        "Campaign pipeline analytics",
+        "Volume-based pricing (not per-profile)"
+      ],
+      "useCases": [
+        "Cold Email Outreach",
+        "Email Marketing",
+        "Lead Generation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers",
+        "SaaS Providers"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/instantly-ai/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "smartlead",
+      "name": "Smartlead",
+      "summary": "Unlimited cold email under $100/month",
+      "description": "Smartlead offers unlimited email sending with volume-based pricing that's perfect for agencies scaling their outreach. Unlike per-profile pricing tools, Smartlead lets you use unlimited profiles and send unlimited emails. Ideal for running cold email campaigns parallel to your GHL workflows.",
+      "url": "https://highlevelkit.com/apps/smartlead",
+      "textUrl": "https://highlevelkit.com/catalog/smartlead.md",
+      "website": "https://smartlead.ai",
+      "categories": [
+        "communication",
+        "automation"
+      ],
+      "categoryNames": [
+        "Communication",
+        "Workflow Automation"
+      ],
+      "features": [
+        "Unlimited email profiles",
+        "Volume-based pricing model",
+        "Advanced warmup system",
+        "Email rotation and deliverability",
+        "Campaign analytics dashboard",
+        "Inbox rotation for better delivery"
+      ],
+      "useCases": [
+        "Cold Email Outreach",
+        "Email Marketing",
+        "Lead Generation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/smartlead/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "potion",
+      "name": "Potion",
+      "summary": "AI-powered personalized video at scale",
+      "description": "Create multiple personalized videos featuring your own face and voice with automatically generated subtitles, logos, images, and GIFs. Customize landing pages with your branded domains, colors, CTAs, and calendar embeds. Perfect for adding high-touch video personalization to your GHL email campaigns.",
+      "url": "https://highlevelkit.com/apps/potion",
+      "textUrl": "https://highlevelkit.com/catalog/potion.md",
+      "website": "https://www.sendpotion.com",
+      "categories": [
+        "video",
+        "ai",
+        "communication"
+      ],
+      "categoryNames": [
+        "Video",
+        "AI Tools",
+        "Communication"
+      ],
+      "features": [
+        "AI-generated personalized videos",
+        "Your face and voice in every video",
+        "Auto-generated subtitles and branding",
+        "Custom landing pages with domains",
+        "Calendar embed integration",
+        "Bulk video generation"
+      ],
+      "useCases": [
+        "Video Prospecting",
+        "Lead Generation",
+        "Client Communication"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Consultants"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/potion/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "n8n",
+      "name": "n8n",
+      "summary": "Self-hosted workflow automation platform",
+      "description": "n8n is a powerful, self-hosted automation platform that connects GoHighLevel with hundreds of tools and APIs without extensive coding. Create custom workflows, automate complex processes, and integrate with any service that has an API. Perfect for agencies needing advanced automation beyond GHL's built-in workflows.",
+      "url": "https://highlevelkit.com/apps/n8n",
+      "textUrl": "https://highlevelkit.com/catalog/n8n.md",
+      "website": "https://n8n.io",
+      "categories": [
+        "automation",
+        "integration"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "Integration Platforms"
+      ],
+      "features": [
+        "Self-hosted or cloud options",
+        "350+ integrations available",
+        "Visual workflow builder",
+        "GHL API connection",
+        "Custom JavaScript code nodes",
+        "Webhook triggers and actions"
+      ],
+      "useCases": [
+        "Workflow Automation",
+        "Integration",
+        "AI Assistants"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Consultants"
+      ],
+      "integrationLevel": "api",
+      "setupDifficulty": "medium",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/n8n/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "lagrowth-machine",
+      "name": "LaGrowthMachine",
+      "summary": "Multi-channel outreach automation (Email + LinkedIn + Twitter)",
+      "description": "LaGrowthMachine is the best multi-channel outreach automation platform, enabling you to reach prospects through email, LinkedIn, and Twitter in coordinated campaigns. Automatically sync with your GHL CRM and trigger multi-channel sequences based on prospect behavior.",
+      "url": "https://highlevelkit.com/apps/lagrowth-machine",
+      "textUrl": "https://highlevelkit.com/catalog/lagrowth-machine.md",
+      "website": "https://www.lagrowthmachine.com",
+      "categories": [
+        "communication",
+        "automation"
+      ],
+      "categoryNames": [
+        "Communication",
+        "Workflow Automation"
+      ],
+      "features": [
+        "Email + LinkedIn + Twitter outreach",
+        "Coordinated multi-channel campaigns",
+        "Automated follow-up sequences",
+        "A/B testing across channels",
+        "LinkedIn automation (connection requests, messages)",
+        "CRM sync with GHL"
+      ],
+      "useCases": [
+        "Multi-Channel Outreach",
+        "Lead Generation",
+        "Sales Intelligence"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Freelancers"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "medium",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/lagrowth-machine/og.svg"
+    },
+    {
+      "type": "app",
+      "slug": "vidyard",
+      "name": "Vidyard",
+      "summary": "Professional video messaging for sales",
+      "description": "Vidyard is a professional screen recorder and video hosting platform for sales teams. Create high-quality, impactful videos that effectively articulate your message. Embed videos in your GHL email campaigns to increase engagement and reply rates. Track who watches your videos and for how long.",
+      "url": "https://highlevelkit.com/apps/vidyard",
+      "textUrl": "https://highlevelkit.com/catalog/vidyard.md",
+      "website": "https://www.vidyard.com",
+      "categories": [
+        "video",
+        "communication",
+        "analytics"
+      ],
+      "categoryNames": [
+        "Video",
+        "Communication",
+        "Analytics & Reporting"
+      ],
+      "features": [
+        "Screen and webcam recording",
+        "Video hosting and sharing",
+        "Viewer analytics and tracking",
+        "Thumbnail customization",
+        "Video CTAs and forms",
+        "Chrome extension for quick recording"
+      ],
+      "useCases": [
+        "Video Prospecting",
+        "Client Communication",
+        "Analytics & Reporting"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers",
+        "Consultants"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/vidyard/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "hippo-video",
+      "name": "Hippo Video",
+      "summary": "Video prospecting for every sales stage",
+      "description": "Hippo Video stands out with unique features and sales video flows that cater to various stages of your sales process. Create personalized video messages, screen recordings, and video emails that can be embedded in your GHL campaigns. Share via email, LinkedIn, SMS, or social media.",
+      "url": "https://highlevelkit.com/apps/hippo-video",
+      "textUrl": "https://highlevelkit.com/catalog/hippo-video.md",
+      "website": "https://www.hippovideo.io",
+      "categories": [
+        "video",
+        "communication"
+      ],
+      "categoryNames": [
+        "Video",
+        "Communication"
+      ],
+      "features": [
+        "Sales video flows for each stage",
+        "Screen + webcam recording",
+        "Video email integration",
+        "Personalized video thumbnails",
+        "Video analytics dashboard",
+        "CRM integrations"
+      ],
+      "useCases": [
+        "Video Prospecting",
+        "Client Communication",
+        "Lead Generation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": null
+    },
+    {
+      "type": "app",
+      "slug": "sendspark",
+      "name": "Sendspark",
+      "summary": "Simple, effective video messaging",
+      "description": "Sendspark makes video prospecting simple and effective with an easy-to-use platform for creating personalized video messages. Rated 4.8/5 on G2 with 341 reviews. Record videos quickly, customize thumbnails, and track engagement. Perfect for adding a personal touch to your GHL outreach campaigns.",
+      "url": "https://highlevelkit.com/apps/sendspark",
+      "textUrl": "https://highlevelkit.com/catalog/sendspark.md",
+      "website": "https://www.sendspark.com",
+      "categories": [
+        "video",
+        "communication"
+      ],
+      "categoryNames": [
+        "Video",
+        "Communication"
+      ],
+      "features": [
+        "Quick video recording",
+        "Personalized video pages",
+        "Custom CTAs and branding",
+        "Video analytics and notifications",
+        "Calendar booking integration",
+        "Chrome extension"
+      ],
+      "useCases": [
+        "Video Prospecting",
+        "Client Communication",
+        "Lead Generation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers",
+        "Consultants"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/sendspark/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "bardeen",
+      "name": "Bardeen",
+      "summary": "Browser-based automation for GHL workflows",
+      "description": "Bardeen is a browser-based automation tool that works seamlessly with web-based GoHighLevel. Automate repetitive tasks like data entry, contact enrichment, and multi-app workflows without leaving your browser. No-code automation that connects your favorite tools together.",
+      "url": "https://highlevelkit.com/apps/bardeen",
+      "textUrl": "https://highlevelkit.com/catalog/bardeen.md",
+      "website": "https://www.bardeen.ai",
+      "categories": [
+        "automation",
+        "ai"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "AI Tools"
+      ],
+      "features": [
+        "Browser-based automation",
+        "No-code workflow builder",
+        "AI-powered automations",
+        "Web scraping capabilities",
+        "GHL data extraction and sync",
+        "100+ app integrations"
+      ],
+      "useCases": [
+        "Workflow Automation",
+        "Data Enrichment",
+        "Integration"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "Freelancers"
+      ],
+      "integrationLevel": "api",
+      "setupDifficulty": "easy",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/bardeen/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "snitcher",
+      "name": "Snitcher",
+      "summary": "Uncover your hidden website visitors",
+      "description": "Snitcher is a B2B visitor identification platform that reveals companies visiting your website in real-time. Identify, enrich, and engage with anonymous website visitors automatically. Score and prioritize accounts showing buying intent, reveal verified details of key decision-makers, and trigger automations across your entire GTM stack.",
+      "url": "https://highlevelkit.com/apps/snitcher",
+      "textUrl": "https://highlevelkit.com/catalog/snitcher.md",
+      "website": "https://snitcher.com",
+      "categories": [
+        "data-enrichment",
+        "analytics"
+      ],
+      "categoryNames": [
+        "Data Enrichment",
+        "Analytics & Reporting"
+      ],
+      "features": [
+        "Real-time visitor identification",
+        "Company and contact reveal",
+        "Lead scoring and prioritization",
+        "GA4 B2B enrichment",
+        "Workflow automation triggers",
+        "API access for integrations"
+      ],
+      "useCases": [
+        "Lead Generation",
+        "Data Enrichment",
+        "Sales Intelligence"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Freelancers"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "freemium",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/snitcher/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "vapi",
+      "name": "Vapi",
+      "summary": "Voice AI agents for developers",
+      "description": "Vapi enables you to build, test, and deploy advanced voice AI agents in minutes. Create conversational voice AI that handles phone operations including customer support, appointment booking, and sales calls. Supports both inbound and outbound voice agent deployments with enterprise-grade reliability.",
+      "url": "https://highlevelkit.com/apps/vapi",
+      "textUrl": "https://highlevelkit.com/catalog/vapi.md",
+      "website": "https://vapi.ai",
+      "categories": [
+        "ai",
+        "communication",
+        "automation"
+      ],
+      "categoryNames": [
+        "AI Tools",
+        "Communication",
+        "Workflow Automation"
+      ],
+      "features": [
+        "Multilingual support (100+ languages)",
+        "Sub-500ms latency",
+        "Bring your own models (transcription, LLM, TTS)",
+        "Tool calling for API integration",
+        "A/B testing for prompts and voices",
+        "SOC2, HIPAA, PCI compliance"
+      ],
+      "useCases": [
+        "Voice AI",
+        "Customer Support",
+        "Appointment Booking",
+        "Sales Calls"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Consultants"
+      ],
+      "integrationLevel": "api",
+      "setupDifficulty": "medium",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/vapi/og.png"
+    },
+    {
+      "type": "app",
+      "slug": "ghl-utils",
+      "name": "GHL Utils",
+      "summary": "Quick navigation tool for GoHighLevel",
+      "description": "A browser extension designed to save GoHighLevel users time by providing AI-powered workflow analysis, instant audit log access, and faster navigation. Debug workflows, analyze contact data, and manage multiple GHL accounts more efficiently.",
+      "url": "https://highlevelkit.com/apps/ghl-utils",
+      "textUrl": "https://highlevelkit.com/catalog/ghl-utils.md",
+      "website": "https://ghlutils.com",
+      "categories": [
+        "automation",
+        "ai",
+        "widgets"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "AI Tools",
+        "Widgets"
+      ],
+      "features": [
+        "AI Workflow Analysis (GPT-4.1 powered)",
+        "Instant audit log access",
+        "Two-click workflow debugging",
+        "Contact field inspector",
+        "Quick search palette",
+        "Bulk contact editor"
+      ],
+      "useCases": [
+        "Workflow Automation",
+        "Debugging",
+        "Navigation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Freelancers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "free",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/ghl-utils/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "flowkit",
+      "name": "FlowKit",
+      "summary": "Free n8n, BuildShip & Make.com node library",
+      "description": "A community-driven repository offering 250+ ready-to-use workflow nodes for automation platforms. Browse, search, and copy nodes directly into your workflows with no setup required. Supports n8n, BuildShip, and Make.com platforms.",
+      "url": "https://highlevelkit.com/apps/flowkit",
+      "textUrl": "https://highlevelkit.com/catalog/flowkit.md",
+      "website": "https://flowkit.directory",
+      "categories": [
+        "automation",
+        "integration",
+        "templates"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "Integration Platforms",
+        "Templates & Snapshots"
+      ],
+      "features": [
+        "250+ pre-built workflow nodes",
+        "n8n platform support",
+        "BuildShip platform support",
+        "Make.com platform support",
+        "One-click copy functionality",
+        "Node collections"
+      ],
+      "useCases": [
+        "Workflow Automation",
+        "Integration",
+        "Templates"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Freelancers"
+      ],
+      "integrationLevel": "webhook",
+      "setupDifficulty": "easy",
+      "pricingModel": "free",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/flowkit/og.jpg"
+    },
+    {
+      "type": "app",
+      "slug": "ghl-animation-studios",
+      "name": "GHL Animation Studios",
+      "summary": "Animated explainer videos for your white-label GHL",
+      "description": "Engage, explain, and sign up more customers easily with professional animated videos. GHL Animation Studios produces animated explainer videos, promotional content, feature GIFs, and dashboard screenshots to help your white-label GoHighLevel appear as a professional software company.",
+      "url": "https://highlevelkit.com/apps/ghl-animation-studios",
+      "textUrl": "https://highlevelkit.com/catalog/ghl-animation-studios.md",
+      "website": "https://ghlanimationstudios.com",
+      "categories": [
+        "video",
+        "white-label"
+      ],
+      "categoryNames": [
+        "Video",
+        "White Label"
+      ],
+      "features": [
+        "Animated explainer videos",
+        "Promotional videos",
+        "Feature GIFs and animations",
+        "Dashboard screenshot animations",
+        "Content library for SaaS marketing",
+        "Professional branding assets"
+      ],
+      "useCases": [
+        "Video Marketing",
+        "White-label Solutions",
+        "Client Communication"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/ghl-animation-studios/og.png"
+    },
+    {
+      "type": "app",
+      "slug": "snapshot-store",
+      "name": "Snapshot Store",
+      "summary": "The ultimate GoHighLevel snapshot marketplace",
+      "description": "Access a comprehensive collection of ready-to-use GoHighLevel snapshots across multiple niches. Save time and money by implementing proven templates, workflows, and automations for your agency or SaaS business.",
+      "url": "https://highlevelkit.com/apps/snapshot-store",
+      "textUrl": "https://highlevelkit.com/catalog/snapshot-store.md",
+      "website": "https://extendly.com/highlevel-snapshot-store/",
+      "categories": [
+        "templates"
+      ],
+      "categoryNames": [
+        "Templates & Snapshots"
+      ],
+      "features": [
+        "Multi-niche snapshots",
+        "Ready-to-use templates",
+        "Pre-built workflows",
+        "Automation setups",
+        "Quick implementation",
+        "Industry-specific solutions"
+      ],
+      "useCases": [
+        "Templates",
+        "Workflow Automation",
+        "White-label Solutions"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Freelancers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/snapshot-store/og.webp"
+    },
+    {
+      "type": "app",
+      "slug": "supermigrator",
+      "name": "Super Migrator",
+      "summary": "Seamless GoHighLevel account migration",
+      "description": "Super Migrator is a specialized service for migrating GoHighLevel accounts. Easily transfer your entire GHL setup including contacts, workflows, funnels, and settings between accounts or agencies. Save hours of manual work with automated migration tools.",
+      "url": "https://highlevelkit.com/apps/supermigrator",
+      "textUrl": "https://highlevelkit.com/catalog/supermigrator.md",
+      "website": "https://supermigrator.com",
+      "categories": [
+        "automation",
+        "integration"
+      ],
+      "categoryNames": [
+        "Workflow Automation",
+        "Integration Platforms"
+      ],
+      "features": [
+        "Account migration service",
+        "Contact and data transfer",
+        "Workflow migration",
+        "Funnel and page cloning",
+        "Settings preservation",
+        "Agency-to-agency transfers"
+      ],
+      "useCases": [
+        "Account Migration",
+        "Data Transfer",
+        "Workflow Automation"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/supermigrator/og.png"
+    },
+    {
+      "type": "app",
+      "slug": "supereditor",
+      "name": "Super Editor",
+      "summary": "Editing made easy for GoHighLevel",
+      "description": "Super Editor simplifies content editing within GoHighLevel. A modern, user-friendly editing tool that makes updating funnels, emails, and pages quick and intuitive. Built with a responsive design for seamless editing across all devices.",
+      "url": "https://highlevelkit.com/apps/supereditor",
+      "textUrl": "https://highlevelkit.com/catalog/supereditor.md",
+      "website": "https://supereditor.cc",
+      "categories": [
+        "widgets",
+        "automation"
+      ],
+      "categoryNames": [
+        "Widgets",
+        "Workflow Automation"
+      ],
+      "features": [
+        "Easy content editing",
+        "Funnel page editing",
+        "Email template editing",
+        "Responsive design",
+        "User-friendly interface",
+        "Quick updates and changes"
+      ],
+      "useCases": [
+        "Content Editing",
+        "Funnel Building",
+        "Page Design"
+      ],
+      "userTypes": [
+        "Agency Owners",
+        "SaaS Providers",
+        "Freelancers"
+      ],
+      "integrationLevel": "native",
+      "setupDifficulty": "easy",
+      "pricingModel": "paid",
+      "providerDetailsVerifiedAt": null,
+      "image": "https://highlevelkit.com/apps/supereditor/og.svg"
+    },
+    {
+      "type": "guide",
+      "slug": "ghl-hire",
+      "name": "GHL Hire: GoHighLevel jobs and hiring specialists",
+      "summary": "A guide to remote GHL jobs, role selection, portfolio evidence and hiring briefs. GHL Hire had a rebuild waitlist when checked on November 16, 2026; this is not a list of open jobs.",
+      "description": "Covers GHL virtual assistants, automation specialists, funnel builders and integration developers. Check the original employer listing for availability and working conditions.",
+      "url": "https://highlevelkit.com/guides/ghl-hire",
+      "textUrl": "https://highlevelkit.com/catalog/ghl-hire.md",
+      "website": "https://ghlhire.com/",
+      "categories": [
+        "hiring"
+      ],
+      "categoryNames": [
+        "Hiring & careers"
+      ],
+      "features": [],
+      "useCases": [
+        "GoHighLevel jobs",
+        "GHL jobs remote",
+        "Hiring GoHighLevel specialists"
+      ],
+      "userTypes": [
+        "Job seekers",
+        "Agency owners"
+      ],
+      "providerDetailsVerifiedAt": "2026-11-16"
+    }
+  ]
+}

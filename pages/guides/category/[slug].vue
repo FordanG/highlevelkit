@@ -10,7 +10,7 @@
             <i :class="['pi', categoryData?.icon, 'text-2xl text-primary-400']"></i>
           </div>
           <h1 class="text-4xl font-bold text-white">
-            Best {{ categoryData?.name }} for GoHighLevel in 2025
+            Best {{ categoryData?.name }} for GoHighLevel
           </h1>
         </div>
 
@@ -20,9 +20,7 @@
 
         <!-- Meta info -->
         <div class="flex items-center gap-4 mt-6 text-sm text-slate-400">
-          <span><i class="pi pi-calendar mr-1.5"></i>Updated: {{ currentDate }}</span>
-          <span>•</span>
-          <span>{{ categoryTools.length }} tools reviewed</span>
+          <span>{{ categoryTools.length }} tools listed</span>
         </div>
       </div>
     </div>
@@ -60,14 +58,14 @@
                 <td class="p-4 border-r border-white/10">
                   <div class="flex items-center gap-3">
                     <div v-if="isLogoUrl(app.logo)" class="w-10 h-10 rounded-lg overflow-hidden ring-1 ring-white/10 bg-white/5 flex items-center justify-center p-1.5 flex-shrink-0">
-                      <img :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
+                      <DirectoryImage :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
                     </div>
                     <div v-else class="w-10 h-10 rounded-lg flex items-center justify-center ring-1 ring-white/10 flex-shrink-0" :style="getLogoGradient(app.name)">
                       <span class="text-sm font-bold text-white drop-shadow">{{ getAppInitials(app.name) }}</span>
                     </div>
                     <div>
                       <div class="font-bold text-white">{{ app.name }}</div>
-                      <div class="text-sm text-slate-400">{{ app.rating }} ⭐ ({{ app.reviewCount }})</div>
+
                     </div>
                   </div>
                 </td>
@@ -92,9 +90,9 @@
         </div>
       </div>
 
-      <!-- Detailed Reviews -->
+      <!-- Tool details -->
       <div class="space-y-8 mb-12">
-        <h2 class="text-2xl font-bold text-white mb-6">Detailed Reviews</h2>
+        <h2 class="text-2xl font-bold text-white mb-6">Tool details</h2>
 
         <div
           v-for="(app, index) in categoryTools"
@@ -105,7 +103,7 @@
           <div class="flex items-start justify-between mb-6">
             <div class="flex items-center gap-4">
               <div v-if="isLogoUrl(app.logo)" class="w-16 h-16 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white/5 flex items-center justify-center p-2 flex-shrink-0">
-                <img :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
+                <DirectoryImage :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
               </div>
               <div v-else class="w-16 h-16 rounded-xl flex items-center justify-center ring-1 ring-white/10 flex-shrink-0" :style="getLogoGradient(app.name)">
                 <span class="text-xl font-bold text-white drop-shadow">{{ getAppInitials(app.name) }}</span>
@@ -124,8 +122,8 @@
               </div>
             </div>
             <div class="text-right">
-              <div class="text-yellow-400 font-bold text-lg">{{ app.rating }} ⭐</div>
-              <div class="text-slate-400 text-sm">{{ app.reviewCount }} reviews</div>
+
+
             </div>
           </div>
 
@@ -219,7 +217,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import appsData from '~/data/apps.json'
-import { categories } from '~/data/apps'
+import categories from '~/data/categories.json'
 
 const route = useRoute()
 const categorySlug = computed(() => route.params.slug as string)
@@ -239,21 +237,19 @@ const categoryTools = computed(() => {
     })
 })
 
+if (!categoryData.value || !categoryTools.value.length) throw createError({ statusCode: 404, statusMessage: 'Category not found' })
+
 const topTools = computed(() => categoryTools.value.slice(0, 10))
 
-const currentDate = computed(() => {
-  return new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
-})
-
 const breadcrumbs = computed(() => [
-  { label: 'Home', to: '/' },
-  { label: 'Guides', to: '/guides' },
-  { label: categoryData.value?.name || 'Category', to: '#' },
+  { name: 'Home', url: '/' },
+  { name: 'Guides', url: '/guides' },
+  { name: categoryData.value?.name || 'Category', url: `/guides/category/${categorySlug.value}` },
 ])
 
 const getCategoryIntro = () => {
   // This would ideally be customized per category
-  return `${categoryData.value?.description || ''} In this comprehensive guide, we'll review the best ${categoryData.value?.name} that integrate with GoHighLevel, helping you choose the right solution for your agency or business. We've analyzed pricing, features, integration methods, and real user reviews to bring you this curated list.`
+  return `${categoryData.value?.description || ''} Compare the listed tools by features and integration approach. Confirm current pricing and compatibility with the provider before choosing a tool for your GoHighLevel workflow.`
 }
 
 const isLogoUrl = (logo: string) => {
@@ -299,10 +295,10 @@ const getAppInitials = (name: string) => {
 }
 
 // SEO Configuration
-const { setPageMeta, generateArticleSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
+const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
 
-const seoTitle = computed(() => `Best ${categoryData.value?.name || 'Tools'} for GoHighLevel in 2025 | Highlevel Kit`)
-const seoDescription = computed(() => `Discover the top ${categoryData.value?.name || 'tools'} that integrate with GoHighLevel. Compare features, pricing, and reviews to find the perfect tools for your business.`)
+const seoTitle = computed(() => `Best ${categoryData.value?.name || 'Tools'} for GoHighLevel | Highlevel Kit`)
+const seoDescription = computed(() => `Discover the top ${categoryData.value?.name || 'tools'} that integrate with GoHighLevel. Compare features, pricing, and setup to find the perfect tools for your business.`)
 
 watchEffect(() => {
   if (categoryData.value) {
@@ -311,7 +307,7 @@ watchEffect(() => {
       description: seoDescription.value,
       url: `${siteUrl}/guides/category/${categorySlug.value}`,
       type: 'article',
-      tags: ['GoHighLevel', categoryData.value.name, 'integration guide', 'best tools', '2025'],
+      tags: ['GoHighLevel', categoryData.value.name, 'integration guide', 'best tools', 'workflow tools'],
     })
 
     const itemListItems = categoryTools.value.slice(0, 10).map((app, index) => ({
@@ -322,12 +318,11 @@ watchEffect(() => {
     }))
 
     setMultipleSchemas([
-      generateArticleSchema(
+      generateCollectionPageSchema(
         seoTitle.value,
         seoDescription.value,
         `/guides/category/${categorySlug.value}`,
-        `${siteUrl}/og-guide-${categorySlug.value}.png`,
-        new Date().toISOString().split('T')[0],
+        itemListItems,
       ),
       generateBreadcrumbSchema([
         { name: 'Home', url: '/' },

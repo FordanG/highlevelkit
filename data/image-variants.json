@@ -1,0 +1,859 @@
+{
+  "/apps/supercloner/logo.png": [
+    {
+      "src": "/apps/supercloner/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/supercloner/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/supercloner/og.jpg": [
+    {
+      "src": "/apps/supercloner/image-640.webp",
+      "width": 640,
+      "height": 400
+    },
+    {
+      "src": "/apps/supercloner/image-1280.webp",
+      "width": 1008,
+      "height": 630
+    }
+  ],
+  "/apps/zapier/logo.png": [
+    {
+      "src": "/apps/zapier/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/zapier/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/zapier/og.jpg": [
+    {
+      "src": "/apps/zapier/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/zapier/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/make/logo.png": [
+    {
+      "src": "/apps/make/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/make/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/stripe/logo.png": [
+    {
+      "src": "/apps/stripe/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/stripe/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/stripe/og.jpg": [
+    {
+      "src": "/apps/stripe/image-640.webp",
+      "width": 640,
+      "height": 320
+    },
+    {
+      "src": "/apps/stripe/image-1280.webp",
+      "width": 1200,
+      "height": 600
+    }
+  ],
+  "/apps/twilio/logo.png": [
+    {
+      "src": "/apps/twilio/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/twilio/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/twilio/og.jpg": [
+    {
+      "src": "/apps/twilio/image-640.webp",
+      "width": 640,
+      "height": 335
+    },
+    {
+      "src": "/apps/twilio/image-1280.webp",
+      "width": 1200,
+      "height": 628
+    }
+  ],
+  "/apps/calendly/logo-local.webp": [
+    {
+      "src": "/apps/calendly/logo-80.webp",
+      "width": 32,
+      "height": 32
+    }
+  ],
+  "/apps/calendly/og.jpg": [
+    {
+      "src": "/apps/calendly/image-640.webp",
+      "width": 640,
+      "height": 334
+    },
+    {
+      "src": "/apps/calendly/image-1280.webp",
+      "width": 1200,
+      "height": 627
+    }
+  ],
+  "/apps/clickup/logo.png": [
+    {
+      "src": "/apps/clickup/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/clickup/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/clickup/og.jpg": [
+    {
+      "src": "/apps/clickup/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/clickup/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/mailgun/logo.png": [
+    {
+      "src": "/apps/mailgun/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/mailgun/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/mailgun/og.webp": [
+    {
+      "src": "/apps/mailgun/image-640.webp",
+      "width": 640,
+      "height": 413
+    },
+    {
+      "src": "/apps/mailgun/image-1280.webp",
+      "width": 1280,
+      "height": 826
+    }
+  ],
+  "/apps/activecampaign/logo.png": [
+    {
+      "src": "/apps/activecampaign/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/activecampaign/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/activecampaign/og.png": [
+    {
+      "src": "/apps/activecampaign/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/activecampaign/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/quickbooks/logo.png": [
+    {
+      "src": "/apps/quickbooks/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/quickbooks/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/quickbooks/og.svg": [
+    {
+      "src": "/apps/quickbooks/image-640.webp",
+      "width": 157,
+      "height": 40
+    }
+  ],
+  "/apps/lemlist/logo.png": [
+    {
+      "src": "/apps/lemlist/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/lemlist/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/lemlist/og.jpg": [
+    {
+      "src": "/apps/lemlist/image-640.webp",
+      "width": 640,
+      "height": 337
+    },
+    {
+      "src": "/apps/lemlist/image-1280.webp",
+      "width": 1197,
+      "height": 630
+    }
+  ],
+  "/apps/nuacom/logo.png": [
+    {
+      "src": "/apps/nuacom/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/nuacom/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/nuacom/og.jpg": [
+    {
+      "src": "/apps/nuacom/image-640.webp",
+      "width": 640,
+      "height": 360
+    },
+    {
+      "src": "/apps/nuacom/image-1280.webp",
+      "width": 768,
+      "height": 432
+    }
+  ],
+  "/apps/extendly/logo-local.webp": [
+    {
+      "src": "/apps/extendly/logo-80.webp",
+      "width": 48,
+      "height": 50
+    }
+  ],
+  "/apps/extendly/og.webp": [
+    {
+      "src": "/apps/extendly/image-640.webp",
+      "width": 640,
+      "height": 200
+    },
+    {
+      "src": "/apps/extendly/image-1280.webp",
+      "width": 1280,
+      "height": 399
+    }
+  ],
+  "/apps/hl-pro-tools/logo.png": [
+    {
+      "src": "/apps/hl-pro-tools/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/hl-pro-tools/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/hl-pro-tools/og.jpg": [
+    {
+      "src": "/apps/hl-pro-tools/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/hl-pro-tools/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/level-up-marketplace/logo-local.webp": [
+    {
+      "src": "/apps/level-up-marketplace/logo-80.webp",
+      "width": 80,
+      "height": 117
+    },
+    {
+      "src": "/apps/level-up-marketplace/logo-160.webp",
+      "width": 160,
+      "height": 234
+    }
+  ],
+  "/apps/level-up-marketplace/og.jpg": [
+    {
+      "src": "/apps/level-up-marketplace/image-640.webp",
+      "width": 640,
+      "height": 361
+    },
+    {
+      "src": "/apps/level-up-marketplace/image-1280.webp",
+      "width": 1118,
+      "height": 630
+    }
+  ],
+  "/apps/ghl-central/logo-local.webp": [
+    {
+      "src": "/apps/ghl-central/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/ghl-central/logo-160.webp",
+      "width": 150,
+      "height": 150
+    }
+  ],
+  "/apps/ghl-central/og.jpg": [
+    {
+      "src": "/apps/ghl-central/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/ghl-central/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/snapshot-marketplace/logo-local.webp": [
+    {
+      "src": "/apps/snapshot-marketplace/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/snapshot-marketplace/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/snapshot-marketplace/og.jpg": [
+    {
+      "src": "/apps/snapshot-marketplace/image-640.webp",
+      "width": 640,
+      "height": 361
+    },
+    {
+      "src": "/apps/snapshot-marketplace/image-1280.webp",
+      "width": 1118,
+      "height": 630
+    }
+  ],
+  "/apps/gohighlevel-shop/og.jpg": [
+    {
+      "src": "/apps/gohighlevel-shop/image-640.webp",
+      "width": 640,
+      "height": 484
+    },
+    {
+      "src": "/apps/gohighlevel-shop/image-1280.webp",
+      "width": 833,
+      "height": 630
+    }
+  ],
+  "/apps/yext/logo.png": [
+    {
+      "src": "/apps/yext/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/yext/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/yext/og.jpg": [
+    {
+      "src": "/apps/yext/image-640.webp",
+      "width": 640,
+      "height": 360
+    },
+    {
+      "src": "/apps/yext/image-1280.webp",
+      "width": 1119,
+      "height": 630
+    }
+  ],
+  "/apps/agencyanalytics/og.jpg": [
+    {
+      "src": "/apps/agencyanalytics/image-640.webp",
+      "width": 640,
+      "height": 334
+    },
+    {
+      "src": "/apps/agencyanalytics/image-1280.webp",
+      "width": 1200,
+      "height": 627
+    }
+  ],
+  "/apps/supplygem/logo.png": [
+    {
+      "src": "/apps/supplygem/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/supplygem/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/supplygem/og.png": [
+    {
+      "src": "/apps/supplygem/image-640.webp",
+      "width": 640,
+      "height": 79
+    },
+    {
+      "src": "/apps/supplygem/image-1280.webp",
+      "width": 1280,
+      "height": 157
+    }
+  ],
+  "/apps/streamline-results/og.jpg": [
+    {
+      "src": "/apps/streamline-results/image-640.webp",
+      "width": 640,
+      "height": 299
+    },
+    {
+      "src": "/apps/streamline-results/image-1280.webp",
+      "width": 800,
+      "height": 374
+    }
+  ],
+  "/apps/apollo-io/logo.png": [
+    {
+      "src": "/apps/apollo-io/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/apollo-io/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/apollo-io/og.jpg": [
+    {
+      "src": "/apps/apollo-io/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/apollo-io/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/clay/logo.png": [
+    {
+      "src": "/apps/clay/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/clay/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/clay/og.jpg": [
+    {
+      "src": "/apps/clay/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/clay/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/instantly-ai/logo.png": [
+    {
+      "src": "/apps/instantly-ai/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/instantly-ai/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/instantly-ai/og.jpg": [
+    {
+      "src": "/apps/instantly-ai/image-640.webp",
+      "width": 640,
+      "height": 334
+    },
+    {
+      "src": "/apps/instantly-ai/image-1280.webp",
+      "width": 1200,
+      "height": 626
+    }
+  ],
+  "/apps/smartlead/logo.png": [
+    {
+      "src": "/apps/smartlead/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/smartlead/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/smartlead/og.jpg": [
+    {
+      "src": "/apps/smartlead/image-640.webp",
+      "width": 640,
+      "height": 337
+    },
+    {
+      "src": "/apps/smartlead/image-1280.webp",
+      "width": 1198,
+      "height": 630
+    }
+  ],
+  "/apps/potion/logo.png": [
+    {
+      "src": "/apps/potion/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/potion/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/potion/og.jpg": [
+    {
+      "src": "/apps/potion/image-640.webp",
+      "width": 640,
+      "height": 357
+    },
+    {
+      "src": "/apps/potion/image-1280.webp",
+      "width": 1129,
+      "height": 630
+    }
+  ],
+  "/apps/n8n/logo.png": [
+    {
+      "src": "/apps/n8n/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/n8n/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/n8n/og.jpg": [
+    {
+      "src": "/apps/n8n/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/n8n/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/lagrowth-machine/logo.png": [
+    {
+      "src": "/apps/lagrowth-machine/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/lagrowth-machine/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/lagrowth-machine/og.svg": [
+    {
+      "src": "/apps/lagrowth-machine/image-640.webp",
+      "width": 130,
+      "height": 33
+    }
+  ],
+  "/apps/vidyard/logo.png": [
+    {
+      "src": "/apps/vidyard/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/vidyard/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/vidyard/og.jpg": [
+    {
+      "src": "/apps/vidyard/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/vidyard/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/sendspark/logo.png": [
+    {
+      "src": "/apps/sendspark/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/sendspark/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/sendspark/og.jpg": [
+    {
+      "src": "/apps/sendspark/image-640.webp",
+      "width": 640,
+      "height": 334
+    },
+    {
+      "src": "/apps/sendspark/image-1280.webp",
+      "width": 1200,
+      "height": 626
+    }
+  ],
+  "/apps/bardeen/logo.png": [
+    {
+      "src": "/apps/bardeen/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/bardeen/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/bardeen/og.jpg": [
+    {
+      "src": "/apps/bardeen/image-640.webp",
+      "width": 640,
+      "height": 320
+    },
+    {
+      "src": "/apps/bardeen/image-1280.webp",
+      "width": 1200,
+      "height": 600
+    }
+  ],
+  "/apps/snitcher/logo.png": [
+    {
+      "src": "/apps/snitcher/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/snitcher/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/snitcher/og.jpg": [
+    {
+      "src": "/apps/snitcher/image-640.webp",
+      "width": 640,
+      "height": 320
+    },
+    {
+      "src": "/apps/snitcher/image-1280.webp",
+      "width": 1200,
+      "height": 600
+    }
+  ],
+  "/apps/vapi/logo.svg": [
+    {
+      "src": "/apps/vapi/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/vapi/logo-160.webp",
+      "width": 96,
+      "height": 96
+    }
+  ],
+  "/apps/vapi/og.png": [
+    {
+      "src": "/apps/vapi/image-640.webp",
+      "width": 640,
+      "height": 360
+    },
+    {
+      "src": "/apps/vapi/image-1280.webp",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "/apps/ghl-utils/logo.png": [
+    {
+      "src": "/apps/ghl-utils/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/ghl-utils/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/ghl-utils/og.jpg": [
+    {
+      "src": "/apps/ghl-utils/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/ghl-utils/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/flowkit/logo.png": [
+    {
+      "src": "/apps/flowkit/logo-80.webp",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "src": "/apps/flowkit/logo-160.webp",
+      "width": 128,
+      "height": 128
+    }
+  ],
+  "/apps/flowkit/og.jpg": [
+    {
+      "src": "/apps/flowkit/image-640.webp",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "src": "/apps/flowkit/image-1280.webp",
+      "width": 1200,
+      "height": 630
+    }
+  ],
+  "/apps/ghl-animation-studios/logo-local.webp": [
+    {
+      "src": "/apps/ghl-animation-studios/logo-80.webp",
+      "width": 32,
+      "height": 32
+    }
+  ],
+  "/apps/ghl-animation-studios/og.png": [
+    {
+      "src": "/apps/ghl-animation-studios/image-640.webp",
+      "width": 571,
+      "height": 545
+    }
+  ],
+  "/apps/snapshot-store/logo-local.webp": [
+    {
+      "src": "/apps/snapshot-store/logo-80.webp",
+      "width": 48,
+      "height": 50
+    }
+  ],
+  "/apps/snapshot-store/og.webp": [
+    {
+      "src": "/apps/snapshot-store/image-640.webp",
+      "width": 640,
+      "height": 200
+    },
+    {
+      "src": "/apps/snapshot-store/image-1280.webp",
+      "width": 1280,
+      "height": 399
+    }
+  ],
+  "/apps/supermigrator/logo.png": [
+    {
+      "src": "/apps/supermigrator/logo-80.webp",
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "/apps/supermigrator/og.png": [
+    {
+      "src": "/apps/supermigrator/image-640.webp",
+      "width": 283,
+      "height": 50
+    }
+  ],
+  "/apps/supereditor/logo.png": [
+    {
+      "src": "/apps/supereditor/logo-80.webp",
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "/apps/supereditor/og.svg": [
+    {
+      "src": "/apps/supereditor/image-640.webp",
+      "width": 234,
+      "height": 43
+    }
+  ]
+}

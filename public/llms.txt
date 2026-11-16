@@ -1,0 +1,61 @@
+# HighLevelKit
+
+> An independent GoHighLevel tools directory with 41 app listings and a practical hiring guide.
+
+Listings are directory descriptions, not hands-on verification. Confirm pricing, compatibility and current availability with the provider. No unverified review counts or ratings are supplied.
+
+## Search and data
+- [Agent documentation](https://highlevelkit.com/for-agents): Query parameters and response semantics.
+- [Search API](https://highlevelkit.com/api/search?q=automation): Public GET endpoint; no key required. Supports q, category, limit and offset.
+- [OpenAPI specification](https://highlevelkit.com/openapi.json): Machine-readable search API contract.
+- [Catalog JSON](https://highlevelkit.com/catalog.json): Complete records, canonical URLs and provider links.
+- [Full text catalog](https://highlevelkit.com/llms-full.txt): All records in one plain-text response.
+- [Sitemap](https://highlevelkit.com/sitemap.xml): Canonical HTML pages.
+
+## Key pages
+- [Browse tools](https://highlevelkit.com/apps)
+- [Guides](https://highlevelkit.com/guides)
+- [GHL jobs and hiring guide](https://highlevelkit.com/guides/ghl-hire): GHL Hire is on a rebuild waitlist as checked November 16, 2026; this guide does not list live jobs.
+
+## App records
+- [SuperCloner](https://highlevelkit.com/catalog/supercloner.md): Clone and duplicate your GoHighLevel assets instantly
+- [Zapier](https://highlevelkit.com/catalog/zapier.md): Connect GoHighLevel to 6000+ apps
+- [Make](https://highlevelkit.com/catalog/make.md): Visual automation platform for complex workflows
+- [Stripe](https://highlevelkit.com/catalog/stripe.md): Complete payment processing solution
+- [Twilio](https://highlevelkit.com/catalog/twilio.md): Powerful SMS and calling platform
+- [Calendly](https://highlevelkit.com/catalog/calendly.md): Smart scheduling made simple
+- [ClickUp](https://highlevelkit.com/catalog/clickup.md): All-in-one project management
+- [Mailgun](https://highlevelkit.com/catalog/mailgun.md): Reliable email delivery service
+- [ActiveCampaign](https://highlevelkit.com/catalog/activecampaign.md): Advanced email marketing automation
+- [QuickBooks](https://highlevelkit.com/catalog/quickbooks.md): Professional accounting made easy
+- [Lemlist](https://highlevelkit.com/catalog/lemlist.md): Personalized outreach at scale
+- [NUACOM](https://highlevelkit.com/catalog/nuacom.md): Advanced phone system for GHL
+- [Extendly](https://highlevelkit.com/catalog/extendly.md): Premium snapshots & white-label support
+- [HL Pro Tools](https://highlevelkit.com/catalog/hl-pro-tools.md): 24/7 unlimited white-label support
+- [Level Up Marketplace](https://highlevelkit.com/catalog/level-up-marketplace.md): Unlimited apps for GoHighLevel agencies
+- [GHL Central](https://highlevelkit.com/catalog/ghl-central.md): Ultimate GoHighLevel resource hub
+- [The Snapshot Marketplace](https://highlevelkit.com/catalog/snapshot-marketplace.md): #1 snapshot solution for agencies
+- [GoHighLevel Shop](https://highlevelkit.com/catalog/gohighlevel-shop.md): Turnkey plug & play solutions
+- [Yext](https://highlevelkit.com/catalog/yext.md): Reputation management for 150+ sites
+- [AgencyAnalytics](https://highlevelkit.com/catalog/agencyanalytics.md): Customizable GoHighLevel dashboards
+- [SupplyGem](https://highlevelkit.com/catalog/supplygem.md): GoHighLevel snapshots & guides
+- [Streamline Results](https://highlevelkit.com/catalog/streamline-results.md): 150+ ready-to-implement snapshots
+- [Apollo.io](https://highlevelkit.com/catalog/apollo-io.md): B2B contact database with millions of verified contacts
+- [Clay](https://highlevelkit.com/catalog/clay.md): Access 100+ data sources with AI-powered enrichment
+- [Instantly.ai](https://highlevelkit.com/catalog/instantly-ai.md): Unlimited email sending with advanced deliverability
+- [Smartlead](https://highlevelkit.com/catalog/smartlead.md): Unlimited cold email under $100/month
+- [Potion](https://highlevelkit.com/catalog/potion.md): AI-powered personalized video at scale
+- [n8n](https://highlevelkit.com/catalog/n8n.md): Self-hosted workflow automation platform
+- [LaGrowthMachine](https://highlevelkit.com/catalog/lagrowth-machine.md): Multi-channel outreach automation (Email + LinkedIn + Twitter)
+- [Vidyard](https://highlevelkit.com/catalog/vidyard.md): Professional video messaging for sales
+- [Hippo Video](https://highlevelkit.com/catalog/hippo-video.md): Video prospecting for every sales stage
+- [Sendspark](https://highlevelkit.com/catalog/sendspark.md): Simple, effective video messaging
+- [Bardeen](https://highlevelkit.com/catalog/bardeen.md): Browser-based automation for GHL workflows
+- [Snitcher](https://highlevelkit.com/catalog/snitcher.md): Uncover your hidden website visitors
+- [Vapi](https://highlevelkit.com/catalog/vapi.md): Voice AI agents for developers
+- [GHL Utils](https://highlevelkit.com/catalog/ghl-utils.md): Quick navigation tool for GoHighLevel
+- [FlowKit](https://highlevelkit.com/catalog/flowkit.md): Free n8n, BuildShip & Make.com node library
+- [GHL Animation Studios](https://highlevelkit.com/catalog/ghl-animation-studios.md): Animated explainer videos for your white-label GHL
+- [Snapshot Store](https://highlevelkit.com/catalog/snapshot-store.md): The ultimate GoHighLevel snapshot marketplace
+- [Super Migrator](https://highlevelkit.com/catalog/supermigrator.md): Seamless GoHighLevel account migration
+- [Super Editor](https://highlevelkit.com/catalog/supereditor.md): Editing made easy for GoHighLevel

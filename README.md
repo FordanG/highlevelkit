@@ -183,3 +183,20 @@ MIT License - feel free to use this project for your own directory!
 ---
 
 Built with Nuxt 3 and Tailwind CSS
+
+## Agent access and SEO checks
+
+The deployed directory exposes `/api/search`, `/catalog.json`, `/llms.txt`,
+`/llms-full.txt`, `/catalog/{slug}.md` and `/openapi.json`. Usage is documented at
+`/for-agents`. The search function is read-only and requires no credentials.
+
+`npm run generate` rebuilds the agent catalog from `data/apps.json` before
+prerendering. After changing app images, run `npm run images:prepare`; inspect
+any fallback notices and commit the generated local variants and manifest.
+Run `npm run test:seo` after generation and `npm run test:agents` to validate
+HTML/image/schema/sitemap output and API search behavior respectively.
+
+Deploy through the existing Netlify site so the `/api/search` function is
+included. A plain static HTTP server serves the catalog files but does not
+execute the search function. See `docs/SEO-AND-AGENT-AUDIT-2026-11-16.md` for
+the measured reporting baseline, changes and verification limits.

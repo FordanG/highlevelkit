@@ -82,7 +82,7 @@ export const useSEO = () => {
    */
   const setPageMeta = (seo: SEOConfig) => {
     const canonicalUrl = seo.url || `${siteUrl}${route.path}`
-    const ogImage = seo.image || defaultImage
+    const ogImage = new URL(seo.image || defaultImage, siteUrl).href
     const pageType = seo.type || 'website'
 
     const metaTags: any[] = [
@@ -116,7 +116,7 @@ export const useSEO = () => {
 
     // Add noindex if specified
     if (seo.noindex) {
-      metaTags.push({ name: 'robots', content: 'noindex, nofollow' })
+      metaTags.push({ name: 'robots', content: 'noindex, follow' })
     }
 
     useHead({
@@ -137,7 +137,7 @@ export const useSEO = () => {
       '@type': 'Organization',
       name: siteName,
       url: siteUrl,
-      logo: `${siteUrl}/logo.png`,
+      logo: `${siteUrl}/android-chrome-512x512.png`,
       description: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers.',
       sameAs: [
         'https://twitter.com/highlevelkit',
@@ -161,30 +161,19 @@ export const useSEO = () => {
       description: app.description,
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
-      offers: {
-        '@type': 'Offer',
-        price: app.pricing?.model === 'free' ? '0' : app.pricing?.startingPrice?.toString() || '0',
-        priceCurrency: app.pricing?.currency || 'USD',
-        availability: 'https://schema.org/InStock',
-      },
       url: `${siteUrl}/apps/${app.slug}`,
+    }
+
+    if (app.pricing?.model === 'free' || (app.pricing?.startingPrice != null && app.pricing.startingPrice > 0)) {
+      schema.offers = { '@type': 'Offer', price: app.pricing.model === 'free' ? 0 : app.pricing.startingPrice, priceCurrency: app.pricing.currency || 'USD', url: app.website || schema.url }
     }
 
     // Add logo if available
     if (app.image || app.logo) {
-      schema.image = app.image || app.logo
+      schema.image = new URL(app.image || app.logo!, siteUrl).href
     }
 
-    // Add aggregate rating if available
-    if (app.rating && app.reviewCount) {
-      schema.aggregateRating = {
-        '@type': 'AggregateRating',
-        ratingValue: app.rating.toString(),
-        reviewCount: app.reviewCount.toString(),
-        bestRating: '5',
-        worstRating: '1',
-      }
-    }
+    // Third-party ratings lack a verified source; do not publish aggregateRating.
 
     // Add features if available
     if (app.features && app.features.length > 0) {
@@ -225,7 +214,7 @@ export const useSEO = () => {
         name: siteName,
         logo: {
           '@type': 'ImageObject',
-          url: `${siteUrl}/logo.png`,
+          url: `${siteUrl}/android-chrome-512x512.png`,
         },
       },
       potentialAction: {
@@ -341,7 +330,7 @@ export const useSEO = () => {
         name: siteName,
         logo: {
           '@type': 'ImageObject',
-          url: `${siteUrl}/logo.png`,
+          url: `${siteUrl}/android-chrome-512x512.png`,
         },
       },
       ...(datePublished && { datePublished }),
@@ -430,7 +419,7 @@ export const useSEO = () => {
         name: siteName,
         logo: {
           '@type': 'ImageObject',
-          url: `${siteUrl}/logo.png`,
+          url: `${siteUrl}/android-chrome-512x512.png`,
         },
       },
     }
@@ -484,16 +473,7 @@ export const useSEO = () => {
       url: `${siteUrl}/apps/${app.slug}`,
     }
 
-    // Add aggregate rating if available
-    if (app.rating && app.reviewCount) {
-      schema.aggregateRating = {
-        '@type': 'AggregateRating',
-        ratingValue: app.rating.toString(),
-        reviewCount: app.reviewCount.toString(),
-        bestRating: '5',
-        worstRating: '1',
-      }
-    }
+    // Third-party ratings lack a verified source; do not publish aggregateRating.
 
     // Add category if available
     if (app.category && app.category.length > 0) {
@@ -522,7 +502,7 @@ export const useSEO = () => {
         name: siteName,
         logo: {
           '@type': 'ImageObject',
-          url: `${siteUrl}/logo.png`,
+          url: `${siteUrl}/android-chrome-512x512.png`,
         },
       },
     }
@@ -543,7 +523,7 @@ export const useSEO = () => {
         name: siteName,
         logo: {
           '@type': 'ImageObject',
-          url: `${siteUrl}/logo.png`,
+          url: `${siteUrl}/android-chrome-512x512.png`,
           width: 512,
           height: 512,
         },
@@ -596,7 +576,7 @@ export const useSEO = () => {
    */
   const setPageMetaWithHreflang = (seo: SEOConfig, enableHreflang = false) => {
     const canonicalUrl = seo.url || `${siteUrl}${route.path}`
-    const ogImage = seo.image || defaultImage
+    const ogImage = new URL(seo.image || defaultImage, siteUrl).href
     const pageType = seo.type || 'website'
 
     const metaTags: any[] = [
@@ -634,7 +614,7 @@ export const useSEO = () => {
 
     // Add noindex if specified
     if (seo.noindex) {
-      metaTags.push({ name: 'robots', content: 'noindex, nofollow' })
+      metaTags.push({ name: 'robots', content: 'noindex, follow' })
     }
 
     // Build link tags
@@ -663,7 +643,7 @@ export const useSEO = () => {
       script: [
         {
           type: 'application/ld+json',
-          children: JSON.stringify(schema),
+          innerHTML: JSON.stringify(schema).replace(/</g, '\\u003c'),
         },
       ],
     })
@@ -676,7 +656,7 @@ export const useSEO = () => {
     useHead({
       script: schemas.map(schema => ({
         type: 'application/ld+json',
-        children: JSON.stringify(schema),
+        innerHTML: JSON.stringify(schema).replace(/</g, '\\u003c'),
       })),
     })
   }

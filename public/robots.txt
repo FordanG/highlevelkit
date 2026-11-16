@@ -1,38 +1,4 @@
-# robots.txt for Highlevel Kit
-# https://highlevelkit.com
-
 User-agent: *
 Allow: /
 
-# Disallow filter/sort URL parameters (duplicate content prevention)
-Disallow: /*?*sort=
-Disallow: /*?*page=
-Disallow: /*?*pricing=*&*pricing=
-Disallow: /*?*category=*&*category=
-
-# Allow important pages explicitly
-Allow: /apps
-Allow: /apps/*
-Allow: /categories
-Allow: /new
-Allow: /trending
-Allow: /ai-tools
-Allow: /data-sources
-Allow: /integrations
-Allow: /guides
-Allow: /about
-Allow: /contact
-
-# Sitemap location
 Sitemap: https://highlevelkit.com/sitemap.xml
-
-# Crawl-delay for courtesy (optional - most major crawlers ignore this)
-Crawl-delay: 1
-
-# Block AI training bots (optional - uncomment if desired)
-# User-agent: GPTBot
-# Disallow: /
-# User-agent: ChatGPT-User
-# Disallow: /
-# User-agent: CCBot
-# Disallow: /

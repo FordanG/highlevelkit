@@ -30,13 +30,13 @@
             <div class="card p-6">
               <h3 class="text-lg font-semibold text-white mb-2">🎯 Curated Directory</h3>
               <p class="text-slate-300">
-                We handpick and review every app in our directory to ensure quality and reliability.
+                We organize tools by use case so you can compare options for your GoHighLevel workflow.
               </p>
             </div>
             <div class="card p-6">
-              <h3 class="text-lg font-semibold text-white mb-2">📊 Detailed Reviews</h3>
+              <h3 class="text-lg font-semibold text-white mb-2">📊 Tool Information</h3>
               <p class="text-slate-300">
-                Get insights from real users and our expert team to make informed decisions.
+                Compare listed features and integration approaches. Confirm current pricing, compatibility and availability directly with the provider.
               </p>
             </div>
             <div class="card p-6">

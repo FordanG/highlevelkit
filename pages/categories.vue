@@ -16,7 +16,7 @@
         <NuxtLink
           v-for="category in categoriesWithCounts"
           :key="category.id"
-          :to="`/apps?category=${category.id}`"
+          :to="`/guides/category/${category.id}`"
           class="card p-6 hover:scale-[1.02] transition-all cursor-pointer group"
         >
           <div class="flex items-start gap-4">
@@ -58,7 +58,7 @@ const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, gen
 setPageMeta({
   title: 'Browse GoHighLevel Apps by Category | Highlevel Kit',
   description: 'Explore GoHighLevel apps organized by category. Find CRM tools, automation software, AI integrations, payment processors, analytics, and more for your agency.',
-  image: `${siteUrl}/og-categories.png`,
+  image: `${siteUrl}/og-image.png`,
   url: `${siteUrl}/categories`,
   type: 'website',
   tags: ['GoHighLevel categories', 'app categories', 'CRM tools', 'automation', 'AI tools', 'analytics'],
@@ -67,7 +67,7 @@ setPageMeta({
 // Generate category list for structured data
 const categoryItems = categoriesWithCounts.map((cat, index) => ({
   name: cat.name,
-  url: `/apps?category=${cat.id}`,
+  url: `/guides/category/${cat.id}`,
   description: cat.description,
   position: index + 1,
 }))

@@ -7,7 +7,12 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test:seo": "node scripts/audit-build.mjs",
+    "images:prepare": "node scripts/prepare-images.mjs",
+    "pregenerate": "node scripts/generate-agent-catalog.mjs",
+    "prebuild": "node scripts/generate-agent-catalog.mjs",
+    "test:agents": "node --test tests/search.test.mjs"
   },
   "dependencies": {
     "@nuxt/image": "^2.0.0",
@@ -26,6 +31,7 @@
     "@nuxtjs/color-mode": "^4.0.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@vueuse/nuxt": "^14.0.0",
+    "cheerio": "1.1.2",
     "png-to-ico": "^3.0.1",
     "sharp": "^0.34.5"
   }

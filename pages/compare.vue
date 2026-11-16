@@ -69,7 +69,7 @@
                 <div class="text-center">
                   <div class="flex justify-center mb-2">
                     <div v-if="isLogoUrl(app.logo)" class="w-16 h-16 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white/5 flex items-center justify-center p-2">
-                      <img :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
+                      <DirectoryImage :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
                     </div>
                     <div v-else class="w-16 h-16 rounded-xl flex items-center justify-center ring-1 ring-white/10" :style="getLogoGradient(app.name)">
                       <span class="text-xl font-bold text-white drop-shadow">{{ getAppInitials(app.name) }}</span>
@@ -82,15 +82,6 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Rating -->
-            <tr class="border-b border-white/5 hover:bg-white/5">
-              <td class="p-4 font-medium text-slate-200 sticky left-0 bg-slate-900 z-10">Rating</td>
-              <td v-for="app in comparisonApps" :key="app.id" class="p-4 text-center">
-                <div class="text-yellow-400 font-bold">{{ app.rating }}</div>
-                <div class="text-xs text-slate-400">{{ app.reviewCount }} reviews</div>
-              </td>
-            </tr>
-
             <!-- Pricing -->
             <tr class="border-b border-white/5 hover:bg-white/5">
               <td class="p-4 font-medium text-slate-200 sticky left-0 bg-slate-900 z-10">Pricing</td>

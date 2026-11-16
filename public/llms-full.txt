@@ -1,0 +1,1253 @@
+# HighLevelKit catalog
+
+An independent directory of tools used with GoHighLevel. Not the official GoHighLevel marketplace.
+
+Listings are directory descriptions, not hands-on verification. Confirm pricing, compatibility and current availability with the provider. No unverified review counts or ratings are supplied.
+
+# SuperCloner
+
+Clone and duplicate your GoHighLevel assets instantly
+
+Canonical page: https://highlevelkit.com/apps/supercloner
+Provider: https://supercloner.app
+Categories: Workflow Automation, Widgets
+
+Save hours of manual work by instantly cloning your funnels, workflows, campaigns, and entire sub-accounts. Perfect for agencies managing multiple clients who need to duplicate successful setups quickly and efficiently.
+
+## Listed features
+- One-click funnel cloning
+- Workflow duplication
+- Campaign templates
+- Sub-account cloning
+- Bulk operations
+- Asset management
+
+## Use cases
+- Workflow Automation
+- White-label Solutions
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/supercloner
+
+---
+
+# Zapier
+
+Connect GoHighLevel to 6000+ apps
+
+Canonical page: https://highlevelkit.com/apps/zapier
+Provider: https://zapier.com
+Categories: Workflow Automation, Integration Platforms
+
+Zapier is the go-to automation platform that connects GoHighLevel with over 6000 different applications. Automate repetitive tasks, create custom workflows, and integrate with tools like Slack, Google Sheets, and calendars without any code.
+
+## Listed features
+- 6000+ app integrations
+- Multi-step Zaps
+- Custom logic and filters
+- Automated workflows
+- Real-time data sync
+- No-code automation
+
+## Use cases
+- Workflow Automation
+- Integration
+- Lead Generation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/zapier
+
+---
+
+# Make
+
+Visual automation platform for complex workflows
+
+Canonical page: https://highlevelkit.com/apps/make
+Provider: https://www.make.com
+Categories: Workflow Automation, Integration Platforms
+
+Make (formerly Integromat) is a powerful visual automation platform that connects GoHighLevel with thousands of apps. Build complex multi-step workflows with branching logic, data transformation, and error handling. Perfect for agencies needing advanced automation beyond simple triggers.
+
+## Listed features
+- Visual workflow builder
+- 1000+ app integrations
+- Branching and conditional logic
+- Data transformation tools
+- Error handling and retries
+- Scheduled automations
+
+## Use cases
+- Workflow Automation
+- Integration
+- Data Transformation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/make
+
+---
+
+# Stripe
+
+Complete payment processing solution
+
+Canonical page: https://highlevelkit.com/apps/stripe
+Provider: https://stripe.com
+Categories: Payment Processing, Workflow Automation
+
+Stripe integrates seamlessly with GoHighLevel for sending invoices, collecting payments, and triggering automated workflows when customers make purchases. Handle subscriptions, one-time payments, and complex billing scenarios with ease.
+
+## Listed features
+- Secure payment processing
+- Subscription management
+- Invoice creation and tracking
+- Automated payment workflows
+- Multiple currency support
+- Fraud detection
+
+## Use cases
+- Payment Processing
+- Workflow Automation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/stripe
+
+---
+
+# Twilio
+
+Powerful SMS and calling platform
+
+Canonical page: https://highlevelkit.com/apps/twilio
+Provider: https://twilio.com
+Categories: Communication, Workflow Automation
+
+Connect Twilio to GoHighLevel for advanced calling and SMS capabilities. Enable two-way texting, voicemail drops, phone call routing, and automated communications to enhance your customer engagement.
+
+## Listed features
+- Two-way SMS texting
+- Voice calling and routing
+- Voicemail drops
+- Call recording
+- Phone number provisioning
+- Programmable messaging
+
+## Use cases
+- SMS Marketing
+- Client Communication
+- Phone Systems
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/twilio
+
+---
+
+# Calendly
+
+Smart scheduling made simple
+
+Canonical page: https://highlevelkit.com/apps/calendly
+Provider: https://calendly.com
+Categories: Workflow Automation, Widgets
+
+Calendly is a smart scheduling tool that integrates with GoHighLevel to make meeting booking effortless. Features include time zone detection, buffer time settings, calendar integration, and automated reminders to reduce no-shows.
+
+## Listed features
+- Automated scheduling
+- Time zone detection
+- Buffer time settings
+- Calendar sync (Google, Outlook)
+- Team scheduling
+- Meeting reminders
+
+## Use cases
+- Appointment Booking
+- Client Communication
+- Workflow Automation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/calendly
+
+---
+
+# ClickUp
+
+All-in-one project management
+
+Canonical page: https://highlevelkit.com/apps/clickup
+Provider: https://clickup.com
+Categories: Workflow Automation, CRM Tools
+
+Integrate ClickUp with GoHighLevel to automate project management tasks. When a new lead comes in, automatically create tasks in ClickUp, ensuring efficient lead follow-up and seamless project tracking.
+
+## Listed features
+- Task automation from GHL leads
+- Custom task templates
+- Time tracking
+- Team collaboration
+- Automated notifications
+- Custom workflows
+
+## Use cases
+- Workflow Automation
+- Project Management
+- Lead Generation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/clickup
+
+---
+
+# Mailgun
+
+Reliable email delivery service
+
+Canonical page: https://highlevelkit.com/apps/mailgun
+Provider: https://mailgun.com
+Categories: Communication, Workflow Automation
+
+Mailgun ensures your GoHighLevel emails reach the inbox, not the spam folder. With advanced deliverability features, real-time analytics, and powerful APIs, it's the perfect solution for high-volume email sending.
+
+## Listed features
+- 99% email deliverability
+- Real-time analytics
+- Email validation
+- Bounce handling
+- Spam complaint management
+- Powerful API
+
+## Use cases
+- Email Marketing
+- Client Communication
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/mailgun
+
+---
+
+# ActiveCampaign
+
+Advanced email marketing automation
+
+Canonical page: https://highlevelkit.com/apps/activecampaign
+Provider: https://activecampaign.com
+Categories: Communication, Workflow Automation
+
+ActiveCampaign is a powerful email marketing platform that integrates with GoHighLevel. Features include dynamic content, AI-driven workflows, and connections to 950+ apps for comprehensive marketing automation.
+
+## Listed features
+- AI-powered automation
+- Dynamic email content
+- Advanced segmentation
+- CRM integration
+- Split testing
+- Predictive sending
+
+## Use cases
+- Email Marketing
+- Workflow Automation
+- Lead Generation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/activecampaign
+
+---
+
+# QuickBooks
+
+Professional accounting made easy
+
+Canonical page: https://highlevelkit.com/apps/quickbooks
+Provider: https://quickbooks.intuit.com
+Categories: Payment Processing, CRM Tools
+
+QuickBooks integrates directly with GoHighLevel to transfer financial data seamlessly. Perfect for tax compliance, reporting, invoicing, expense tracking, and comprehensive financial management.
+
+## Listed features
+- Automated invoicing
+- Expense tracking
+- Financial reporting
+- Tax compliance
+- Receipt capture
+- Bank reconciliation
+
+## Use cases
+- Payment Processing
+- Analytics & Reporting
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/quickbooks
+
+---
+
+# Lemlist
+
+Personalized outreach at scale
+
+Canonical page: https://highlevelkit.com/apps/lemlist
+Provider: https://lemlist.com
+Categories: Communication, Workflow Automation
+
+Lemlist connects to GoHighLevel workflows to sync contacts and start personalized, multi-channel outreach sequences. Automatically trigger actions based on prospect activity and engagement.
+
+## Listed features
+- Personalized email sequences
+- Multi-channel outreach
+- Automated follow-ups
+- Email warm-up
+- A/B testing
+- LinkedIn integration
+
+## Use cases
+- Lead Generation
+- Email Marketing
+- Client Communication
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/lemlist
+
+---
+
+# NUACOM
+
+Advanced phone system for GHL
+
+Canonical page: https://highlevelkit.com/apps/nuacom
+Provider: https://nuacom.com
+Categories: Communication, Workflow Automation
+
+NUACOM offers streamlined workflow with click-to-call functionality. Features include automatic call logging, text messaging, call recordings, AI analysis, advanced call routing, IVR, and comprehensive analytics.
+
+## Listed features
+- Click-to-call functionality
+- Automatic call logging
+- Call recording and transcription
+- AI call analysis
+- Advanced call routing
+- IVR system
+
+## Use cases
+- Phone Systems
+- Client Communication
+- Analytics & Reporting
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/nuacom
+
+---
+
+# Extendly
+
+Premium snapshots & white-label support
+
+Canonical page: https://highlevelkit.com/apps/extendly
+Provider: https://extendly.com
+Categories: Templates & Snapshots, White Label, Workflow Automation
+
+Industry-leading snapshots, 24/7 white-label tech support, done-for-you client onboarding, and captivating demo videos. Save 3-6 months of development time and $15,000+ in costs with comprehensive templates for SaaS, small business, and webinar niches.
+
+## Listed features
+- Ultimate SaaS Snapshot
+- Small Business Snapshot
+- 24/7 white-label support
+- Done-for-you onboarding
+- Demo videos included
+- One-day installation
+
+## Use cases
+- White-label Solutions
+- Client Onboarding
+- Workflow Automation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/extendly
+
+---
+
+# HL Pro Tools
+
+24/7 unlimited white-label support
+
+Canonical page: https://highlevelkit.com/apps/hl-pro-tools
+Provider: https://hlprotools.com
+Categories: White Label, Templates & Snapshots
+
+Unlimited branded support via live chat, email, and Zoom. Includes SaaS snapshot, industry funnels, white-label demo videos, theme builder, and power trainings. Your clients get support under your brand with 3.5-hour average response time.
+
+## Listed features
+- 24/7 branded support
+- Interactive guided tours
+- Official SaaS snapshot
+- Theme builder
+- White-label knowledge base
+- Custom onboarding calls
+
+## Use cases
+- White-label Solutions
+- Client Communication
+- Client Onboarding
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/hl-pro-tools
+
+---
+
+# Level Up Marketplace
+
+Unlimited apps for GoHighLevel agencies
+
+Canonical page: https://highlevelkit.com/apps/level-up-marketplace
+Provider: https://levelupmarketplace.com
+Categories: Workflow Automation, Widgets, Templates & Snapshots
+
+Access 150+ apps with a single subscription. Fully white-labeled solution for CRM, marketing, e-commerce, and more. Includes unlimited support, 100+ video tutorials, and weekly new app releases. Powers 45% of the GHL App Marketplace.
+
+## Listed features
+- 150+ app integrations
+- White-labeled apps
+- Unlimited support
+- 100+ video tutorials
+- Weekly new releases
+- One subscription access
+
+## Use cases
+- Workflow Automation
+- Integration
+- White-label Solutions
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/level-up-marketplace
+
+---
+
+# GHL Central
+
+Ultimate GoHighLevel resource hub
+
+Canonical page: https://highlevelkit.com/apps/ghl-central
+Provider: https://ghlcentral.com
+Categories: Templates & Snapshots, Analytics & Reporting
+
+Community-driven platform offering training courses, playbooks, snapshots, and white-label services. Features GHL 101 free course, University training, and marketplace partnerships with Extendly and other providers.
+
+## Listed features
+- GHL 101 free course
+- Community marketplace
+- Playbooks and guides
+- White-label resources
+- Training partnerships
+- Discount codes
+
+## Use cases
+- Training & Education
+- Community
+- Resources
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/ghl-central
+
+---
+
+# The Snapshot Marketplace
+
+#1 snapshot solution for agencies
+
+Canonical page: https://highlevelkit.com/apps/snapshot-marketplace
+Provider: https://thesnapshotmarketplace.com
+Categories: Templates & Snapshots, Workflow Automation
+
+Premium marketplace with 100+ done-for-you snapshots and 57+ more in development. Ready-to-deploy templates for any niche including sales funnels, pipelines, automated workflows, and message templates.
+
+## Listed features
+- 100+ ready snapshots
+- Industry-specific templates
+- Complete funnel systems
+- Automated workflows included
+- Message templates
+- Pipeline configurations
+
+## Use cases
+- Templates
+- Workflow Automation
+- Lead Generation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/snapshot-marketplace
+
+---
+
+# GoHighLevel Shop
+
+Turnkey plug & play solutions
+
+Canonical page: https://highlevelkit.com/apps/gohighlevel-shop
+Provider: https://gohighlevelshop.com
+Categories: Templates & Snapshots, Widgets
+
+Offering turnkey snapshots, themes, UI/UX designs, graphic kits, and white-label support services. Includes 15 days of customization support after purchase for any snapshot needs.
+
+## Listed features
+- Turnkey snapshots
+- Custom themes
+- UI/UX templates
+- Graphic design kits
+- 15-day support included
+- Mortgage calculators
+
+## Use cases
+- Templates
+- Design
+- White-label Solutions
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/gohighlevel-shop
+
+---
+
+# Yext
+
+Reputation management for 150+ sites
+
+Canonical page: https://highlevelkit.com/apps/yext
+Provider: https://www.yext.com
+Categories: Analytics & Reporting, Communication
+
+Expand reputation management across 150+ listing sites beyond Google and Facebook. Update brand facts on 70+ publisher sites, monitor reviews, and manage your online presence. USA-only, resellable at $30/month agency cost.
+
+## Listed features
+- 150+ listing sites
+- 70+ publisher updates
+- Review monitoring
+- Online listings analytics
+- Resellable to clients
+- USA businesses only
+
+## Use cases
+- Reputation Management
+- Analytics & Reporting
+- Client Communication
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/yext
+
+---
+
+# AgencyAnalytics
+
+Customizable GoHighLevel dashboards
+
+Canonical page: https://highlevelkit.com/apps/agencyanalytics
+Provider: https://agencyanalytics.com
+Categories: Analytics & Reporting, White Label
+
+White-label reporting and analytics platform that integrates with GoHighLevel. Create customizable dashboards to monitor KPIs, track opportunities, contacts, conversations, and visualize campaign success for clients.
+
+## Listed features
+- White-label dashboards
+- GHL data integration
+- Custom KPI tracking
+- Automated reporting
+- Client-facing reports
+- Multi-platform analytics
+
+## Use cases
+- Analytics & Reporting
+- White-label Solutions
+- Client Communication
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/agencyanalytics
+
+---
+
+# SupplyGem
+
+GoHighLevel snapshots & guides
+
+Canonical page: https://highlevelkit.com/apps/supplygem
+Provider: https://supplygem.com
+Categories: Templates & Snapshots, Analytics & Reporting
+
+Comprehensive resource for GoHighLevel snapshots covering 26+ niches including real estate, fitness, dental, and more. Detailed guides, workflows, and templates to help agencies implement effective strategies quickly.
+
+## Listed features
+- 26+ niche snapshots
+- Industry guides
+- Workflow templates
+- AI tools documentation
+- Setup tutorials
+- Best practices
+
+## Use cases
+- Templates
+- Training & Education
+- Workflow Automation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/supplygem
+
+---
+
+# Streamline Results
+
+150+ ready-to-implement snapshots
+
+Canonical page: https://highlevelkit.com/apps/streamline-results
+Provider: https://streamlineresults.com
+Categories: Templates & Snapshots, White Label
+
+Massive collection of 150+ GHL snapshots, white-label support partners, and done-for-you implementations. Comprehensive training and support for agencies looking to scale quickly with proven templates.
+
+## Listed features
+- 150+ snapshots
+- White-label partners
+- Done-for-you setups
+- Agency training
+- Implementation support
+- Proven templates
+
+## Use cases
+- Templates
+- White-label Solutions
+- Workflow Automation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/streamline-results
+
+---
+
+# Apollo.io
+
+B2B contact database with millions of verified contacts
+
+Canonical page: https://highlevelkit.com/apps/apollo-io
+Provider: https://apollo.io
+Categories: Data Enrichment, CRM Tools
+
+Apollo.io is a sales intelligence and engagement platform with millions of verified B2B contacts and companies. Find leads with advanced filtering by industry, job title, location, and company size. Import quality leads directly into GoHighLevel to fuel your campaigns.
+
+## Listed features
+- 10,000 email addresses/month (99/mo plan)
+- Millions of verified contacts and companies
+- Advanced filtering (industry, job title, location)
+- Company size and technographic data
+- Sales engagement tools
+- CSV export to GHL
+
+## Use cases
+- Lead Generation
+- Data Enrichment
+- Sales Intelligence
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/apollo-io
+
+---
+
+# Clay
+
+Access 100+ data sources with AI-powered enrichment
+
+Canonical page: https://highlevelkit.com/apps/clay
+Provider: https://clay.com
+Categories: Data Enrichment, AI Tools, Workflow Automation
+
+Clay helps Go-To-Market teams access unique data from 100+ sources and AI agents for automating growth workflows. Enrich customer data in your GHL CRM, track intent signals, format data with AI, and constantly update your tools with fresh, accurate information.
+
+## Listed features
+- 100+ data sources for enrichment
+- AI agents for automation
+- GPT-3 powered email personalization
+- Intent signal tracking
+- CRM and email sequencer updates
+- Cascading enrichment waterfall
+
+## Use cases
+- Data Enrichment
+- Lead Generation
+- Sales Intelligence
+- Workflow Automation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/clay
+
+---
+
+# Instantly.ai
+
+Unlimited email sending with advanced deliverability
+
+Canonical page: https://highlevelkit.com/apps/instantly-ai
+Provider: https://instantly.ai
+Categories: Communication, AI Tools, Workflow Automation
+
+Scale your email outreach with unlimited email account connections and advanced deliverability optimization. Perfect for agencies and teams who need to send high volumes of cold emails alongside GHL's built-in email capabilities. AI-powered personalization and lead enrichment included.
+
+## Listed features
+- Unlimited email account connections
+- Advanced deliverability optimization
+- AI-powered personalization
+- Lead enrichment built-in
+- Campaign pipeline analytics
+- Volume-based pricing (not per-profile)
+
+## Use cases
+- Cold Email Outreach
+- Email Marketing
+- Lead Generation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/instantly-ai
+
+---
+
+# Smartlead
+
+Unlimited cold email under $100/month
+
+Canonical page: https://highlevelkit.com/apps/smartlead
+Provider: https://smartlead.ai
+Categories: Communication, Workflow Automation
+
+Smartlead offers unlimited email sending with volume-based pricing that's perfect for agencies scaling their outreach. Unlike per-profile pricing tools, Smartlead lets you use unlimited profiles and send unlimited emails. Ideal for running cold email campaigns parallel to your GHL workflows.
+
+## Listed features
+- Unlimited email profiles
+- Volume-based pricing model
+- Advanced warmup system
+- Email rotation and deliverability
+- Campaign analytics dashboard
+- Inbox rotation for better delivery
+
+## Use cases
+- Cold Email Outreach
+- Email Marketing
+- Lead Generation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/smartlead
+
+---
+
+# Potion
+
+AI-powered personalized video at scale
+
+Canonical page: https://highlevelkit.com/apps/potion
+Provider: https://www.sendpotion.com
+Categories: Video, AI Tools, Communication
+
+Create multiple personalized videos featuring your own face and voice with automatically generated subtitles, logos, images, and GIFs. Customize landing pages with your branded domains, colors, CTAs, and calendar embeds. Perfect for adding high-touch video personalization to your GHL email campaigns.
+
+## Listed features
+- AI-generated personalized videos
+- Your face and voice in every video
+- Auto-generated subtitles and branding
+- Custom landing pages with domains
+- Calendar embed integration
+- Bulk video generation
+
+## Use cases
+- Video Prospecting
+- Lead Generation
+- Client Communication
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/potion
+
+---
+
+# n8n
+
+Self-hosted workflow automation platform
+
+Canonical page: https://highlevelkit.com/apps/n8n
+Provider: https://n8n.io
+Categories: Workflow Automation, Integration Platforms
+
+n8n is a powerful, self-hosted automation platform that connects GoHighLevel with hundreds of tools and APIs without extensive coding. Create custom workflows, automate complex processes, and integrate with any service that has an API. Perfect for agencies needing advanced automation beyond GHL's built-in workflows.
+
+## Listed features
+- Self-hosted or cloud options
+- 350+ integrations available
+- Visual workflow builder
+- GHL API connection
+- Custom JavaScript code nodes
+- Webhook triggers and actions
+
+## Use cases
+- Workflow Automation
+- Integration
+- AI Assistants
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/n8n
+
+---
+
+# LaGrowthMachine
+
+Multi-channel outreach automation (Email + LinkedIn + Twitter)
+
+Canonical page: https://highlevelkit.com/apps/lagrowth-machine
+Provider: https://www.lagrowthmachine.com
+Categories: Communication, Workflow Automation
+
+LaGrowthMachine is the best multi-channel outreach automation platform, enabling you to reach prospects through email, LinkedIn, and Twitter in coordinated campaigns. Automatically sync with your GHL CRM and trigger multi-channel sequences based on prospect behavior.
+
+## Listed features
+- Email + LinkedIn + Twitter outreach
+- Coordinated multi-channel campaigns
+- Automated follow-up sequences
+- A/B testing across channels
+- LinkedIn automation (connection requests, messages)
+- CRM sync with GHL
+
+## Use cases
+- Multi-Channel Outreach
+- Lead Generation
+- Sales Intelligence
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/lagrowth-machine
+
+---
+
+# Vidyard
+
+Professional video messaging for sales
+
+Canonical page: https://highlevelkit.com/apps/vidyard
+Provider: https://www.vidyard.com
+Categories: Video, Communication, Analytics & Reporting
+
+Vidyard is a professional screen recorder and video hosting platform for sales teams. Create high-quality, impactful videos that effectively articulate your message. Embed videos in your GHL email campaigns to increase engagement and reply rates. Track who watches your videos and for how long.
+
+## Listed features
+- Screen and webcam recording
+- Video hosting and sharing
+- Viewer analytics and tracking
+- Thumbnail customization
+- Video CTAs and forms
+- Chrome extension for quick recording
+
+## Use cases
+- Video Prospecting
+- Client Communication
+- Analytics & Reporting
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/vidyard
+
+---
+
+# Hippo Video
+
+Video prospecting for every sales stage
+
+Canonical page: https://highlevelkit.com/apps/hippo-video
+Provider: https://www.hippovideo.io
+Categories: Video, Communication
+
+Hippo Video stands out with unique features and sales video flows that cater to various stages of your sales process. Create personalized video messages, screen recordings, and video emails that can be embedded in your GHL campaigns. Share via email, LinkedIn, SMS, or social media.
+
+## Listed features
+- Sales video flows for each stage
+- Screen + webcam recording
+- Video email integration
+- Personalized video thumbnails
+- Video analytics dashboard
+- CRM integrations
+
+## Use cases
+- Video Prospecting
+- Client Communication
+- Lead Generation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/hippo-video
+
+---
+
+# Sendspark
+
+Simple, effective video messaging
+
+Canonical page: https://highlevelkit.com/apps/sendspark
+Provider: https://www.sendspark.com
+Categories: Video, Communication
+
+Sendspark makes video prospecting simple and effective with an easy-to-use platform for creating personalized video messages. Rated 4.8/5 on G2 with 341 reviews. Record videos quickly, customize thumbnails, and track engagement. Perfect for adding a personal touch to your GHL outreach campaigns.
+
+## Listed features
+- Quick video recording
+- Personalized video pages
+- Custom CTAs and branding
+- Video analytics and notifications
+- Calendar booking integration
+- Chrome extension
+
+## Use cases
+- Video Prospecting
+- Client Communication
+- Lead Generation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/sendspark
+
+---
+
+# Bardeen
+
+Browser-based automation for GHL workflows
+
+Canonical page: https://highlevelkit.com/apps/bardeen
+Provider: https://www.bardeen.ai
+Categories: Workflow Automation, AI Tools
+
+Bardeen is a browser-based automation tool that works seamlessly with web-based GoHighLevel. Automate repetitive tasks like data entry, contact enrichment, and multi-app workflows without leaving your browser. No-code automation that connects your favorite tools together.
+
+## Listed features
+- Browser-based automation
+- No-code workflow builder
+- AI-powered automations
+- Web scraping capabilities
+- GHL data extraction and sync
+- 100+ app integrations
+
+## Use cases
+- Workflow Automation
+- Data Enrichment
+- Integration
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/bardeen
+
+---
+
+# Snitcher
+
+Uncover your hidden website visitors
+
+Canonical page: https://highlevelkit.com/apps/snitcher
+Provider: https://snitcher.com
+Categories: Data Enrichment, Analytics & Reporting
+
+Snitcher is a B2B visitor identification platform that reveals companies visiting your website in real-time. Identify, enrich, and engage with anonymous website visitors automatically. Score and prioritize accounts showing buying intent, reveal verified details of key decision-makers, and trigger automations across your entire GTM stack.
+
+## Listed features
+- Real-time visitor identification
+- Company and contact reveal
+- Lead scoring and prioritization
+- GA4 B2B enrichment
+- Workflow automation triggers
+- API access for integrations
+
+## Use cases
+- Lead Generation
+- Data Enrichment
+- Sales Intelligence
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/snitcher
+
+---
+
+# Vapi
+
+Voice AI agents for developers
+
+Canonical page: https://highlevelkit.com/apps/vapi
+Provider: https://vapi.ai
+Categories: AI Tools, Communication, Workflow Automation
+
+Vapi enables you to build, test, and deploy advanced voice AI agents in minutes. Create conversational voice AI that handles phone operations including customer support, appointment booking, and sales calls. Supports both inbound and outbound voice agent deployments with enterprise-grade reliability.
+
+## Listed features
+- Multilingual support (100+ languages)
+- Sub-500ms latency
+- Bring your own models (transcription, LLM, TTS)
+- Tool calling for API integration
+- A/B testing for prompts and voices
+- SOC2, HIPAA, PCI compliance
+
+## Use cases
+- Voice AI
+- Customer Support
+- Appointment Booking
+- Sales Calls
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/vapi
+
+---
+
+# GHL Utils
+
+Quick navigation tool for GoHighLevel
+
+Canonical page: https://highlevelkit.com/apps/ghl-utils
+Provider: https://ghlutils.com
+Categories: Workflow Automation, AI Tools, Widgets
+
+A browser extension designed to save GoHighLevel users time by providing AI-powered workflow analysis, instant audit log access, and faster navigation. Debug workflows, analyze contact data, and manage multiple GHL accounts more efficiently.
+
+## Listed features
+- AI Workflow Analysis (GPT-4.1 powered)
+- Instant audit log access
+- Two-click workflow debugging
+- Contact field inspector
+- Quick search palette
+- Bulk contact editor
+
+## Use cases
+- Workflow Automation
+- Debugging
+- Navigation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/ghl-utils
+
+---
+
+# FlowKit
+
+Free n8n, BuildShip & Make.com node library
+
+Canonical page: https://highlevelkit.com/apps/flowkit
+Provider: https://flowkit.directory
+Categories: Workflow Automation, Integration Platforms, Templates & Snapshots
+
+A community-driven repository offering 250+ ready-to-use workflow nodes for automation platforms. Browse, search, and copy nodes directly into your workflows with no setup required. Supports n8n, BuildShip, and Make.com platforms.
+
+## Listed features
+- 250+ pre-built workflow nodes
+- n8n platform support
+- BuildShip platform support
+- Make.com platform support
+- One-click copy functionality
+- Node collections
+
+## Use cases
+- Workflow Automation
+- Integration
+- Templates
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/flowkit
+
+---
+
+# GHL Animation Studios
+
+Animated explainer videos for your white-label GHL
+
+Canonical page: https://highlevelkit.com/apps/ghl-animation-studios
+Provider: https://ghlanimationstudios.com
+Categories: Video, White Label
+
+Engage, explain, and sign up more customers easily with professional animated videos. GHL Animation Studios produces animated explainer videos, promotional content, feature GIFs, and dashboard screenshots to help your white-label GoHighLevel appear as a professional software company.
+
+## Listed features
+- Animated explainer videos
+- Promotional videos
+- Feature GIFs and animations
+- Dashboard screenshot animations
+- Content library for SaaS marketing
+- Professional branding assets
+
+## Use cases
+- Video Marketing
+- White-label Solutions
+- Client Communication
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/ghl-animation-studios
+
+---
+
+# Snapshot Store
+
+The ultimate GoHighLevel snapshot marketplace
+
+Canonical page: https://highlevelkit.com/apps/snapshot-store
+Provider: https://extendly.com/highlevel-snapshot-store/
+Categories: Templates & Snapshots
+
+Access a comprehensive collection of ready-to-use GoHighLevel snapshots across multiple niches. Save time and money by implementing proven templates, workflows, and automations for your agency or SaaS business.
+
+## Listed features
+- Multi-niche snapshots
+- Ready-to-use templates
+- Pre-built workflows
+- Automation setups
+- Quick implementation
+- Industry-specific solutions
+
+## Use cases
+- Templates
+- Workflow Automation
+- White-label Solutions
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/snapshot-store
+
+---
+
+# Super Migrator
+
+Seamless GoHighLevel account migration
+
+Canonical page: https://highlevelkit.com/apps/supermigrator
+Provider: https://supermigrator.com
+Categories: Workflow Automation, Integration Platforms
+
+Super Migrator is a specialized service for migrating GoHighLevel accounts. Easily transfer your entire GHL setup including contacts, workflows, funnels, and settings between accounts or agencies. Save hours of manual work with automated migration tools.
+
+## Listed features
+- Account migration service
+- Contact and data transfer
+- Workflow migration
+- Funnel and page cloning
+- Settings preservation
+- Agency-to-agency transfers
+
+## Use cases
+- Account Migration
+- Data Transfer
+- Workflow Automation
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/supermigrator
+
+---
+
+# Super Editor
+
+Editing made easy for GoHighLevel
+
+Canonical page: https://highlevelkit.com/apps/supereditor
+Provider: https://supereditor.cc
+Categories: Widgets, Workflow Automation
+
+Super Editor simplifies content editing within GoHighLevel. A modern, user-friendly editing tool that makes updating funnels, emails, and pages quick and intuitive. Built with a responsive design for seamless editing across all devices.
+
+## Listed features
+- Easy content editing
+- Funnel page editing
+- Email template editing
+- Responsive design
+- User-friendly interface
+- Quick updates and changes
+
+## Use cases
+- Content Editing
+- Funnel Building
+- Page Design
+
+## Verification
+Provider details have not been independently reverified. Check current pricing, compatibility and availability with the provider.
+
+Source: https://highlevelkit.com/apps/supereditor
+
+---
+
+# GHL Hire: GoHighLevel jobs and hiring specialists
+
+A guide to remote GHL jobs, role selection, portfolio evidence and hiring briefs. GHL Hire had a rebuild waitlist when checked on November 16, 2026; this is not a list of open jobs.
+
+Canonical page: https://highlevelkit.com/guides/ghl-hire
+Provider: https://ghlhire.com/
+Categories: Hiring & careers
+
+Covers GHL virtual assistants, automation specialists, funnel builders and integration developers. Check the original employer listing for availability and working conditions.
+
+## Use cases
+- GoHighLevel jobs
+- GHL jobs remote
+- Hiring GoHighLevel specialists
+
+## Verification
+Status checked: 2026-11-16. Recheck the provider for current status.
+
+Source: https://highlevelkit.com/guides/ghl-hire

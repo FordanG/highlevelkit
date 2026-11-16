@@ -230,7 +230,7 @@
     "slug": "calendly",
     "tagline": "Smart scheduling made simple",
     "description": "Calendly is a smart scheduling tool that integrates with GoHighLevel to make meeting booking effortless. Features include time zone detection, buffer time settings, calendar integration, and automated reminders to reduce no-shows.",
-    "logo": "https://calendly.com/media/favicon/favicon.ico",
+    "logo": "/apps/calendly/logo-local.webp",
     "category": [
       "automation",
       "widgets"
@@ -267,7 +267,8 @@
     "website": "https://calendly.com",
     "affiliateLink": "https://calendly.com",
     "image": "/apps/calendly/og.jpg",
-    "imageOriginal": "https://images.ctfassets.net/k0lk9kiuza3o/6sN1GkuaBoQ67Nhkqa8Hgn/bcefc60aa064f94237bac2524bad875c/homepage.png"
+    "imageOriginal": "https://images.ctfassets.net/k0lk9kiuza3o/6sN1GkuaBoQ67Nhkqa8Hgn/bcefc60aa064f94237bac2524bad875c/homepage.png",
+    "logoOriginal": "https://calendly.com/media/favicon/favicon.ico"
   },
   {
     "id": "14",
@@ -546,7 +547,7 @@
     "slug": "extendly",
     "tagline": "Premium snapshots & white-label support",
     "description": "Industry-leading snapshots, 24/7 white-label tech support, done-for-you client onboarding, and captivating demo videos. Save 3-6 months of development time and $15,000+ in costs with comprehensive templates for SaaS, small business, and webinar niches.",
-    "logo": "https://extendly.com/wp-content/uploads/2023/09/extendly-logo.svg",
+    "logo": "/apps/extendly/logo-local.webp",
     "category": [
       "templates",
       "white-label",
@@ -582,7 +583,8 @@
     ],
     "website": "https://extendly.com",
     "affiliateLink": "https://getextendly.com?deal=f0yjv9",
-    "image": "/apps/extendly/og.webp"
+    "image": "/apps/extendly/og.webp",
+    "logoOriginal": "https://extendly.com/wp-content/uploads/2023/09/extendly-logo.svg"
   },
   {
     "id": "21",
@@ -635,7 +637,7 @@
     "slug": "level-up-marketplace",
     "tagline": "Unlimited apps for GoHighLevel agencies",
     "description": "Access 150+ apps with a single subscription. Fully white-labeled solution for CRM, marketing, e-commerce, and more. Includes unlimited support, 100+ video tutorials, and weekly new app releases. Powers 45% of the GHL App Marketplace.",
-    "logo": "https://levelupmarketplace.com/assets/logo.svg",
+    "logo": "/apps/level-up-marketplace/logo-local.webp",
     "category": [
       "automation",
       "widgets",
@@ -672,7 +674,8 @@
     "website": "https://levelupmarketplace.com",
     "affiliateLink": "https://marketplace.ghlcentral.com/business-tools/level-up-marketplace/",
     "image": "/apps/level-up-marketplace/og.jpg",
-    "imageOriginal": "https://assets.cdn.filesafe.space/OTzVLJMI3aHvXJhuMe5c/media/668d4a4a0ec0203670e34179.png"
+    "imageOriginal": "https://assets.cdn.filesafe.space/OTzVLJMI3aHvXJhuMe5c/media/668d4a4a0ec0203670e34179.png",
+    "logoOriginal": "https://levelupmarketplace.com/assets/logo.svg"
   },
   {
     "id": "23",
@@ -680,7 +683,7 @@
     "slug": "ghl-central",
     "tagline": "Ultimate GoHighLevel resource hub",
     "description": "Community-driven platform offering training courses, playbooks, snapshots, and white-label services. Features GHL 101 free course, University training, and marketplace partnerships with Extendly and other providers.",
-    "logo": "https://ghlcentral.com/wp-content/uploads/ghl-central-logo.svg",
+    "logo": "/apps/ghl-central/logo-local.webp",
     "category": [
       "templates",
       "analytics"
@@ -717,7 +720,8 @@
     "website": "https://ghlcentral.com",
     "affiliateLink": "https://ghlcentral.com",
     "image": "/apps/ghl-central/og.jpg",
-    "imageOriginal": "https://ghlcentral.com/wp-content/uploads/2024/03/GHL-Central-1-min-2.png"
+    "imageOriginal": "https://ghlcentral.com/wp-content/uploads/2024/03/GHL-Central-1-min-2.png",
+    "logoOriginal": "https://ghlcentral.com/wp-content/uploads/ghl-central-logo.svg"
   },
   {
     "id": "24",
@@ -725,7 +729,7 @@
     "slug": "snapshot-marketplace",
     "tagline": "#1 snapshot solution for agencies",
     "description": "Premium marketplace with 100+ done-for-you snapshots and 57+ more in development. Ready-to-deploy templates for any niche including sales funnels, pipelines, automated workflows, and message templates.",
-    "logo": "https://thesnapshotmarketplace.com/assets/logo.svg",
+    "logo": "/apps/snapshot-marketplace/logo-local.webp",
     "category": [
       "templates",
       "automation"
@@ -761,7 +765,8 @@
     "website": "https://thesnapshotmarketplace.com",
     "affiliateLink": "https://thesnapshotmarketplace.com",
     "image": "/apps/snapshot-marketplace/og.jpg",
-    "imageOriginal": "https://assets.cdn.filesafe.space/HvLNHd8Nu4e5YTvcuIhM/media/66b7dfc97eda5ceb2c646033.png"
+    "imageOriginal": "https://assets.cdn.filesafe.space/HvLNHd8Nu4e5YTvcuIhM/media/66b7dfc97eda5ceb2c646033.png",
+    "logoOriginal": "https://thesnapshotmarketplace.com/assets/logo.svg"
   },
   {
     "id": "25",
@@ -769,7 +774,7 @@
     "slug": "gohighlevel-shop",
     "tagline": "Turnkey plug & play solutions",
     "description": "Offering turnkey snapshots, themes, UI/UX designs, graphic kits, and white-label support services. Includes 15 days of customization support after purchase for any snapshot needs.",
-    "logo": "https://gohighlevelshop.com/assets/logo.svg",
+    "logo": "",
     "category": [
       "templates",
       "widgets"
@@ -805,7 +810,8 @@
     "website": "https://gohighlevelshop.com",
     "affiliateLink": "https://gohighlevelshop.com",
     "image": "/apps/gohighlevel-shop/og.jpg",
-    "imageOriginal": "https://topghlsnapshots.com/wp-admin/admin-ajax.php?action=rank_math_overlay_thumb&id=11487&type=top-ghl-snapshots&hash=6fa899390902e2f824735a90f8c03f45"
+    "imageOriginal": "https://topghlsnapshots.com/wp-admin/admin-ajax.php?action=rank_math_overlay_thumb&id=11487&type=top-ghl-snapshots&hash=6fa899390902e2f824735a90f8c03f45",
+    "logoOriginal": "https://gohighlevelshop.com/assets/logo.svg"
   },
   {
     "id": "26",
@@ -858,7 +864,7 @@
     "slug": "agencyanalytics",
     "tagline": "Customizable GoHighLevel dashboards",
     "description": "White-label reporting and analytics platform that integrates with GoHighLevel. Create customizable dashboards to monitor KPIs, track opportunities, contacts, conversations, and visualize campaign success for clients.",
-    "logo": "https://agencyanalytics.com/favicon.ico",
+    "logo": "",
     "category": [
       "analytics",
       "white-label"
@@ -894,7 +900,8 @@
     "website": "https://agencyanalytics.com",
     "affiliateLink": "https://agencyanalytics.com/integrations/highlevel",
     "image": "/apps/agencyanalytics/og.jpg",
-    "imageOriginal": "https://agencyanalytics.com/img/og-dashboard.png"
+    "imageOriginal": "https://agencyanalytics.com/img/og-dashboard.png",
+    "logoOriginal": "https://agencyanalytics.com/favicon.ico"
   },
   {
     "id": "28",
@@ -946,7 +953,7 @@
     "slug": "streamline-results",
     "tagline": "150+ ready-to-implement snapshots",
     "description": "Massive collection of 150+ GHL snapshots, white-label support partners, and done-for-you implementations. Comprehensive training and support for agencies looking to scale quickly with proven templates.",
-    "logo": "https://streamlineresults.com/assets/logo.svg",
+    "logo": "",
     "category": [
       "templates",
       "white-label"
@@ -982,7 +989,8 @@
     "website": "https://streamlineresults.com",
     "affiliateLink": "https://streamlineresults.com/ghl-snapshots/",
     "image": "/apps/streamline-results/og.jpg",
-    "imageOriginal": "https://streamlineresults.com/wp-content/uploads/2021/10/Full-SCale-Digital-Marketing.png"
+    "imageOriginal": "https://streamlineresults.com/wp-content/uploads/2021/10/Full-SCale-Digital-Marketing.png",
+    "logoOriginal": "https://streamlineresults.com/assets/logo.svg"
   },
   {
     "id": "30",
@@ -1360,7 +1368,7 @@
     "slug": "hippo-video",
     "tagline": "Video prospecting for every sales stage",
     "description": "Hippo Video stands out with unique features and sales video flows that cater to various stages of your sales process. Create personalized video messages, screen recordings, and video emails that can be embedded in your GHL campaigns. Share via email, LinkedIn, SMS, or social media.",
-    "logo": "https://www.hippovideo.io/ico/favicon.ico",
+    "logo": "",
     "category": [
       "video",
       "communication"
@@ -1395,7 +1403,9 @@
     ],
     "website": "https://www.hippovideo.io",
     "affiliateLink": "https://www.hippovideo.io",
-    "image": "https://www.hippovideo.io/images/home-2024/og-img.jpg"
+    "image": "",
+    "logoOriginal": "https://www.hippovideo.io/ico/favicon.ico",
+    "imageOriginal": "https://www.hippovideo.io/images/home-2024/og-img.jpg"
   },
   {
     "id": "39",
@@ -1681,7 +1691,7 @@
     "slug": "ghl-animation-studios",
     "tagline": "Animated explainer videos for your white-label GHL",
     "description": "Engage, explain, and sign up more customers easily with professional animated videos. GHL Animation Studios produces animated explainer videos, promotional content, feature GIFs, and dashboard screenshots to help your white-label GoHighLevel appear as a professional software company.",
-    "logo": "/apps/ghl-animation-studios/logo.png",
+    "logo": "/apps/ghl-animation-studios/logo-local.webp",
     "category": [
       "video",
       "white-label"
@@ -1716,7 +1726,8 @@
     ],
     "website": "https://ghlanimationstudios.com",
     "affiliateLink": "https://ghlanimationstudios.com/?deal=f0yjv9&playlist=5c92da6&video=6b82048",
-    "image": "/apps/ghl-animation-studios/og.png"
+    "image": "/apps/ghl-animation-studios/og.png",
+    "logoOriginal": "/apps/ghl-animation-studios/logo.png"
   },
   {
     "id": "47",
@@ -1724,7 +1735,7 @@
     "slug": "snapshot-store",
     "tagline": "The ultimate GoHighLevel snapshot marketplace",
     "description": "Access a comprehensive collection of ready-to-use GoHighLevel snapshots across multiple niches. Save time and money by implementing proven templates, workflows, and automations for your agency or SaaS business.",
-    "logo": "/apps/snapshot-store/logo.png",
+    "logo": "/apps/snapshot-store/logo-local.webp",
     "category": [
       "templates"
     ],
@@ -1759,7 +1770,8 @@
     ],
     "website": "https://extendly.com/highlevel-snapshot-store/",
     "affiliateLink": "https://getextendly.com/highlevel-snapshot-store/?deal=f0yjv9",
-    "image": "/apps/snapshot-store/og.webp"
+    "image": "/apps/snapshot-store/og.webp",
+    "logoOriginal": "/apps/snapshot-store/logo.png"
   },
   {
     "id": "48",

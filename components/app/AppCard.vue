@@ -6,24 +6,16 @@
   >
     <!-- Preview Image with 16:9 aspect ratio -->
     <div class="relative w-full aspect-video overflow-hidden" :style="showPlaceholder ? gradientStyle : {}">
-      <!-- Loading placeholder -->
-      <div
-        v-if="!imageLoaded && app.image && !imageError"
-        class="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 animate-pulse"
-      />
-      <!-- Real image with NuxtImg for optimization -->
-      <NuxtImg
-        v-if="app.image && !imageError"
+      <!-- Static responsive images also work before hydration. -->
+      <DirectoryImage
+        v-if="app.image"
         :src="app.image"
-        :alt="`${app.name} - ${app.tagline} preview screenshot`"
+        :alt="`${app.name} - ${app.tagline} preview`"
         width="640"
         height="360"
         loading="lazy"
-        format="webp"
-        quality="80"
-        :class="['w-full h-full object-cover group-hover:scale-105 transition-all duration-300', imageLoaded ? 'opacity-100' : 'opacity-0']"
-        @load="handleImageLoad"
-        @error="handleImageError"
+
+        class="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
       />
       <!-- Placeholder with gradient and app name -->
       <div v-if="showPlaceholder" class="w-full h-full flex items-center justify-center p-4">
@@ -57,15 +49,15 @@
       <div class="flex items-start gap-3 mb-3">
         <!-- Logo as profile photo -->
         <div v-if="isLogoUrl" class="w-10 h-10 rounded-lg overflow-hidden ring-1 ring-white/10 group-hover:ring-primary-500/30 flex-shrink-0 bg-white/5 group-hover:bg-white/10 flex items-center justify-center p-1.5 transition-all duration-300">
-          <NuxtImg
+          <DirectoryImage
             :src="app.logo"
             :alt="`${app.name} logo - GoHighLevel integration`"
             width="40"
             height="40"
+            sizes="40px"
             class="w-full h-full object-contain"
             loading="lazy"
-            format="webp"
-            quality="90"
+
           />
         </div>
         <div v-else class="w-10 h-10 rounded-lg ring-1 ring-white/10 group-hover:ring-primary-500/30 flex items-center justify-center flex-shrink-0 transition-all duration-300" :style="logoGradientStyle">
@@ -97,20 +89,14 @@
 
       <!-- Rating and Pricing -->
       <div class="flex items-center justify-between pt-3 border-t border-white/5">
-        <a
-          :href="`https://www.g2.com/search/products?query=${encodeURIComponent(app.name)}`"
-          target="_blank"
-          rel="noopener noreferrer"
+        <span
           class="flex items-center gap-1 hover:opacity-80 transition-opacity"
-          :aria-label="`Rating: ${app.rating} out of 5 stars, ${app.reviewCount} reviews on G2`"
-          @click.stop
         >
           <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
           </svg>
-          <span class="text-sm font-semibold text-white">{{ app.rating }}</span>
-          <span class="text-xs text-slate-400">({{ app.reviewCount }})</span>
-        </a>
+          <span class="text-xs text-slate-400">View details</span>
+        </span>
         <div class="text-sm font-semibold">
           <span v-if="app.pricing.model === 'free'" class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs">Free</span>
           <span v-else-if="app.pricing.model === 'freemium'" class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs">
@@ -159,10 +145,8 @@ const props = defineProps<{
   app: App
 }>()
 
-const imageError = ref(false)
-const imageLoaded = ref(false)
 
-const showPlaceholder = computed(() => !props.app.image || imageError.value)
+const showPlaceholder = computed(() => !props.app.image)
 
 const isLogoUrl = computed(() => {
   return props.app.logo && (props.app.logo.startsWith('http://') || props.app.logo.startsWith('https://') || props.app.logo.startsWith('/'))
@@ -228,11 +212,7 @@ const getCategoryName = (id: string) => {
   return category ? category.name : id
 }
 
-const handleImageLoad = () => {
-  imageLoaded.value = true
-}
 
-const handleImageError = () => {
-  imageError.value = true
-}
+
+
 </script>

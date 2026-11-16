@@ -61,7 +61,7 @@ const { setPageMeta, generateCollectionPageSchema, generateBreadcrumbSchema, gen
 setPageMeta({
   title: 'New GoHighLevel Apps & Integrations | Highlevel Kit',
   description: 'Discover the latest GoHighLevel apps and integrations recently added to our directory. Stay current with new tools, features, and solutions for your agency or SaaS business.',
-  image: `${siteUrl}/og-new.png`,
+  image: `${siteUrl}/og-image.png`,
   url: `${siteUrl}/new`,
   type: 'website',
   tags: ['new apps', 'latest GoHighLevel apps', 'new GHL integrations', 'new releases'],

@@ -60,19 +60,19 @@
             <div class="rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-primary-500/20 transition-all duration-300 group animate-scale-in">
               <p class="text-xs text-slate-400 mb-1">Apps curated</p>
               <p class="text-xl font-semibold tracking-tight text-white group-hover:text-primary-400 transition-colors" style="letter-spacing:-0.02em">
-                <span ref="appsCounter">0</span>+
+                {{ apps.length }}
               </p>
             </div>
             <div class="rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-primary-500/20 transition-all duration-300 group animate-scale-in" style="animation-delay: 0.1s">
               <p class="text-xs text-slate-400 mb-1">Categories</p>
               <p class="text-xl font-semibold tracking-tight text-white group-hover:text-primary-400 transition-colors" style="letter-spacing:-0.02em">
-                <span ref="categoriesCounter">0</span>
+                {{ categories.length }}
               </p>
             </div>
             <div class="rounded-lg border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-primary-500/20 transition-all duration-300 group animate-scale-in" style="animation-delay: 0.2s">
-              <p class="text-xs text-slate-400 mb-1">Happy users</p>
+              <p class="text-xs text-slate-400 mb-1">Directory access</p>
               <p class="text-xl font-semibold tracking-tight text-white group-hover:text-primary-400 transition-colors" style="letter-spacing:-0.02em">
-                <span ref="usersCounter">0</span>+
+                Free
               </p>
             </div>
           </div>
@@ -143,7 +143,7 @@
               Ready to Supercharge Your GoHighLevel?
             </h2>
             <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of agencies and entrepreneurs who have found their perfect tools
+              Compare tools by workflow, features and setup requirements.
             </p>
             <NuxtLink
               to="/apps"
@@ -176,55 +176,13 @@ const categories = categoriesData.filter(category =>
 )
 const featuredApps = prioritizeApps(apps.filter((app: any) => app.featured)).slice(0, 6)
 
-// Counter animation refs
-const appsCounter = ref<HTMLElement | null>(null)
-const categoriesCounter = ref<HTMLElement | null>(null)
-const usersCounter = ref<HTMLElement | null>(null)
-
-// Animate counter from 0 to target value
-const animateCounter = (element: HTMLElement | null, target: number, duration: number = 2000) => {
-  if (!element) return
-
-  const start = 0
-  const startTime = performance.now()
-
-  const updateCounter = (currentTime: number) => {
-    const elapsed = currentTime - startTime
-    const progress = Math.min(elapsed / duration, 1)
-
-    // Easing function for smooth animation
-    const easeOutQuart = 1 - Math.pow(1 - progress, 4)
-    const current = Math.floor(start + (target - start) * easeOutQuart)
-
-    element.textContent = current.toString()
-
-    if (progress < 1) {
-      requestAnimationFrame(updateCounter)
-    } else {
-      element.textContent = target.toString()
-    }
-  }
-
-  requestAnimationFrame(updateCounter)
-}
-
-// Start animations when component mounts
-onMounted(() => {
-  // Delay counters slightly to start after hero animations
-  setTimeout(() => {
-    animateCounter(appsCounter.value, apps.length, 2000)
-    animateCounter(categoriesCounter.value, categories.length, 1500)
-    animateCounter(usersCounter.value, 1000, 2500)
-  }, 500)
-})
-
 // SEO Configuration
 const { setPageMeta, generateOrganizationSchema, generateWebsiteSchema, generateFAQSchema, generateItemListSchema, setMultipleSchemas, siteUrl } = useSEO()
 
 setPageMeta({
   title: 'Highlevel Kit - Discover the Best GoHighLevel Apps & Integrations',
-  description: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers. Browse 100+ apps across 40+ categories.',
-  image: `${siteUrl}/og-home.png`,
+  description: 'The ultimate directory for GoHighLevel apps, integrations, and tools. Find curated solutions for agencies, SaaS providers, and freelancers. Compare tools by workflow, features and integration approach.',
+  image: `${siteUrl}/og-image.png`,
   url: siteUrl,
   type: 'website',
   tags: ['GoHighLevel', 'GHL apps', 'GoHighLevel integrations', 'agency tools', 'SaaS tools', 'CRM integrations'],

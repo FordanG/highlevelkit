@@ -56,6 +56,8 @@
                 Integration Guides
               </NuxtLink>
             </li>
+            <li><NuxtLink to="/for-agents" class="text-slate-400 hover:text-white text-sm">For agents & developers</NuxtLink></li>
+            <li><NuxtLink to="/guides/ghl-hire" class="text-slate-400 hover:text-white text-sm">GHL jobs & hiring guide</NuxtLink></li>
             <li>
               <NuxtLink to="/newsletter" class="text-slate-400 hover:text-white text-sm transition-colors">
                 Newsletter

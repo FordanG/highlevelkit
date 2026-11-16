@@ -2,16 +2,18 @@
   <div v-if="app">
     <!-- Preview Banner -->
     <div class="w-full h-48 sm:h-64 overflow-hidden relative" :style="!app.image ? gradientStyle : {}">
-      <NuxtImg
+      <DirectoryImage
         v-if="app.image"
         :src="app.image"
         :alt="`${app.name} - ${app.tagline} - GoHighLevel integration preview`"
         width="1200"
         height="400"
-        format="webp"
-        quality="85"
+
+
         class="w-full h-full object-cover"
         loading="eager"
+        fetchpriority="high"
+        sizes="100vw"
       />
       <div v-else class="w-full h-full flex items-center justify-center">
         <span class="text-3xl sm:text-4xl font-bold text-white/80 text-center drop-shadow-lg px-4">{{ app.name }}</span>
@@ -31,7 +33,7 @@
           <!-- Logo -->
           <div class="flex-shrink-0">
             <div v-if="isLogoUrl(app.logo)" class="w-32 h-32 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5 flex items-center justify-center p-4">
-              <img :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
+              <DirectoryImage :src="app.logo" :alt="app.name" class="w-full h-full object-contain" />
             </div>
             <div v-else class="w-32 h-32 rounded-2xl flex items-center justify-center ring-1 ring-white/10" :style="logoGradientStyle">
               <span class="text-4xl font-bold text-white drop-shadow">{{ appInitials }}</span>
@@ -86,8 +88,7 @@
                 <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <span class="text-lg font-semibold text-white">{{ app.rating }}</span>
-                <span class="text-slate-400">({{ app.reviewCount }} reviews on G2)</span>
+                <span class="text-sm text-slate-300">Search for reviews on G2</span>
               </a>
               <div class="flex items-center gap-2">
                 <span class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm font-medium">
@@ -108,7 +109,8 @@
                 v-if="app.affiliateLink || app.website"
                 :href="app.affiliateLink || app.website"
                 target="_blank"
-                rel="noopener noreferrer"
+                :rel="app.affiliateLink ? 'sponsored noopener noreferrer' : 'noopener noreferrer'"
+                @click="trackAppVisit"
                 class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-white bg-primary-500 hover:bg-primary-400 rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-primary-400/30 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
               >
                 Visit Website
@@ -190,9 +192,14 @@ const { getSimilarApps } = useSimilarApps()
 
 const route = useRoute()
 const slug = route.params.slug as string
+const trackAppVisit = () => {
+  const gtag = (window as any).gtag
+  if (typeof gtag === 'function') gtag('event', 'app_website_click', { app_slug: slug, app_name: app?.name, transport_type: 'beacon' })
+}
 
 // Find the app
 const app = appsData.find((a: any) => a.slug === slug)
+if (!app) throw createError({ statusCode: 404, statusMessage: 'App not found' })
 
 // Get similar apps using improved algorithm with multiple criteria
 const relatedApps = app
@@ -290,8 +297,8 @@ if (app) {
   const categoryNames = app.category.map((catId: string) => getCategoryName(catId))
 
   // Enhanced page title with long-tail keywords for better rankings
-  const pageTitle = `${app.name} for GoHighLevel - ${app.tagline} | Best GHL Integration`
-  const pageDescription = `${app.description} Compare ${app.name} with other GoHighLevel apps. Rating: ${app.rating}/5 from ${app.reviewCount} reviews. ${app.pricing.model === 'free' ? 'Free to use.' : `Starting at $${app.pricing.startingPrice}/mo.`} Perfect for agencies and SaaS businesses.`
+  const pageTitle = `${app.name}: Features & GoHighLevel Use Cases | HighLevelKit`
+  const pageDescription = `${app.tagline}. Explore ${app.name} features, setup requirements and alternatives for your GoHighLevel workflow.`
 
   // Set page meta tags with Open Graph and hreflang
   setPageMetaWithHreflang({
@@ -299,7 +306,7 @@ if (app) {
     description: pageDescription,
     image: app.image || `${siteUrl}/og-image.png`,
     url: `${siteUrl}/apps/${app.slug}`,
-    type: 'product',
+    type: 'website',
     tags: [
       app.name,
       'GoHighLevel',
@@ -311,7 +318,7 @@ if (app) {
       'agency tools',
       'SaaS tools'
     ],
-  }, true) // Enable hreflang
+  }) // Only translated pages should advertise language alternatives.
 
   // Related apps for structured data
   const relatedAppsItems = relatedApps.map((relApp: any, index: number) => ({
@@ -339,7 +346,6 @@ if (app) {
   // Add structured data - include both SoftwareApplication and Product schemas
   const schemas = [
     generateAppSchema(appSeoData),
-    generateProductSchema(appSeoData),
     generateBreadcrumbSchema([
       { name: 'Home', url: '/' },
       { name: 'Apps', url: '/apps' },
